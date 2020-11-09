@@ -1,13 +1,11 @@
 /* ==UserStyle==
 @name           DTF Nocturne
-@namespace      github.com/openstyles/stylus
-@version        0.2.1
+@version        0.2.2
 @description    Shitsureishimasu ga shinde kudasai
 @author         Ureshii 死者
-@preprocessor stylus
 ==/UserStyle== */
 
-@-moz-document domain("dtf.ru/") {
+@-moz-document domain("dtf.ru") {
 :root {
     --text-color-gray: rgba(255, 255, 255, 0.75);
     --text-color-title: rgba(255, 255, 255, 0.87);
