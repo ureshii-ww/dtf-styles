@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.3.0
+@version        0.3.1
 @description    Shitsureishimasu ga shinde kudasai
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -434,7 +434,7 @@ a.content-header-number:hover time {
 }
 
 .content-header__title {
-    color: var(--text-color-title);
+    color: var(--text-color-title) !important;
 }
 
 .widget_wrapper--type-blue {
@@ -627,7 +627,7 @@ a.content-header-number:hover time {
     color: var(--text-color-minor);
 }
 
-.t-link:hover .widget_entry__subsite__avatar__title, .t-link:hover .widget_entry__title, .t-link:hover .widget_subsite__name, .t-link:hover .widget_comment__author, .t-link:hover .widget_comment__entry, a.content-header-author:hover .content-header-author__name, .content-editorial-tick {
+.t-link:hover .widget_entry__subsite__avatar__title, .t-link:hover .widget_entry__title, .t-link:hover .widget_subsite__name, .t-link:hover .widget_comment__author, .t-link:hover .widget_comment__entry, a.content-header-author:hover .content-header-author__name, .content-editorial-tick, .ui-tab:hover {
     color: var(--text-color-blue);
 }
 /************************************************************************************************************/
@@ -1317,7 +1317,7 @@ a.content-header-number:hover time {
 }
 
 .l-island-a {
-    color: var(--text-color-gray) !important;
+    color: var(--text-color-gray);
 }
 
 .paid_account__number {
