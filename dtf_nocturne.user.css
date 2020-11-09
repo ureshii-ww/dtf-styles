@@ -1,16 +1,16 @@
 /* ==UserStyle==
-@name           DTF Nocturne
+@name           DTF Nocturne Test
 @namespace      github.com/openstyles/stylus
-@version        0.2.2
+@version        0.2.4
 @description    Shitsureishimasu ga shinde kudasai
 @author         Ureshii 死者
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru") {
 :root {
-    --text-color-gray: rgba(255, 255, 255, 0.75);
+    --text-color-gray: rgba(255, 255, 255, 0.69);
     --text-color-title: rgba(255, 255, 255, 0.87);
-    --text-color-blue: #84d1ff;
+    --text-color-blue: #82b1ff;
     --text-color-minor: rgba(255, 255, 255, 0.38);
     --text-color-red: #ff5857;
     --text-color-green: #56d469;
@@ -20,8 +20,8 @@
     --icon-color: #bec0c1;
     --icon-color-dim: #767879;
     --icon-color-light: #818384;
-    --back-color-blue-button: #0072a8;
-    --color-hover-blue: #84d1ff;
+    --back-color-blue-button: #4d82cb;
+    --color-hover-blue: #82b1ff;
     --color-yellow: #ffea60;
     --back-green: rgba(63, 227, 118, .08);
     --back-red: rgba(255, 73, 95, .08);
@@ -61,16 +61,14 @@ body {
 .site-header {
     color: var(--text-color-gray);
     box-shadow: none;
-    /*border-bottom: 1px solid var(--border-color);*/
 }
 
 .search__input {
-    background-color: var(--color-01ev);
-    /*border: 1px solid var(--border-color);*/
+    background-color: var(--color-04ev);
 }
 
 .search__input::placeholder {
-    color: var(--text-color-gray-dim);
+    color: var(--text-color-minor);
 }
 
 .icon--search {
@@ -80,7 +78,7 @@ body {
 .search--active .search__input,
 .search--filled .search__input {
     background-color: var(--color-01ev);
-    border: 1px solid var(--text-color-gray);
+    /*border: 1px solid var(--text-color-gray);*/
     caret-color: var(--text-color-gray);
     color: var(--text-color-gray);
 }
@@ -166,8 +164,8 @@ body {
 }
 
 .u-notification--border,
-.head-notifies__header {
-    border-bottom: 1px solid var(--border-color-dim);
+.head-notifies__header, .head-notifies__footer, .messenger-panel__down-footer {
+    border-bottom: none;
 }
 
 .head-notifies--showed .head-notifies__toggler::after {
@@ -289,7 +287,7 @@ body {
 }
 
 .live__item--comment .live__item__user__name:hover,
-.live__item--comment .live__item__title:hover {
+.live__item--comment .live__item__title:hover, .audit_log__item__log a:hover, .live__item--comment .live__item__user:hover .live__item__user__name, .t-link-hovered {
     color: var(--text-color-blue) !important;
 }
 
@@ -1216,6 +1214,85 @@ a.content-header-number:hover time {
     color: var(--text-color-green);
 }
 
+.t-link:hover .comments__item__user__name {
+    color: var(--text-color-blue);
+}
+
+/******************************************************************/
+/* Messager */
+
+.contacts__item, .chat-header-info__title, .channel-item--current, .chat-messages__day span, .message__content-name {
+    color: var(--text-color-title) !important;
+}
+
+.channel-item__info-second-line, .aside-search input, .etc-controls--active .etc-controls__dropdown, .message__content-text, .chat-form__textarea, .chat-form__attach, .emoji-picker__invoker, .emoji-picker__tabs span {
+    color: var(--text-color-gray) !important;
+}
+
+.chat-header-info__title .icon--mute, .channel-item__time, .channel-item__status, .chat-header-info__subline, .chat-placeholder__content, .message__time, .chat-form__textarea::placeholder, .chat-form__send--disabled, .emoji-picker__panel-list-section-name, .chat-bottom-actions__right {
+    color: var(--text-color-minor) !important;
+}
+
+.aside__header-button svg path, .etc-controls {
+    fill: var(--text-color-gray) !important;
+    color: var(--text-color-gray) !important;
+}
+
+.channel-item__name .searched,
+.contacts .searched{
+    background: rgba(78, 160, 204, .64) !important;
+}
+
+.etc-controls__dropdown {
+    box-shadow: none;
+}
+
+.channel-item__unread-count {
+    background-color: var(--text-color-blue);
+    color: #000;
+}
+
+.chat-messages__unread-label span, .message--selected .message__actions-select, .chat-bottom-actions__button, .message__content-text a, .emoji-picker__tabs span:hover, .emoji-picker__invoker:hover, .emoji-picker__tabs span.active, .chat-form__attach:hover, .chat-bottom-actions__right-button {
+    color: var(--text-color-blue) !important;
+}
+
+.chat-messages__unread-label {
+    background: var(--border-color) !important;
+}
+
+.message--selected .message__actions-select {
+    border-color: var(--text-color-blue) !important;
+}
+
+.message__actions-select {
+    border-color: var(--text-color-minor);
+}
+
+.chat-bottom-actions__button--red {
+    color: var(--text-color-red) !important;
+}
+
+.chat-form__send {
+    color: var(--back-color-blue-button) !important;
+}
+
+.emoji-picker__panel-list-section-name {
+    box-shadow: 0px 2px 5px var(--color-03ev) !important;
+}
+
+.channel-item__online, .channel-item:hover .channel-item__online {
+    border: 1px solid var(--color-02ev);
+    background: var(--text-color-green);
+}
+
+.chat-header-info .online {
+    color: var(--text-color-green) !important;
+}
+
+.comments__item__more--root--5.comments__item__more--root--active, .comments__item__more--root--5:hover, .comments__item__more--root.comments__item__more--root--active, .comments__item__more--root:hover, .ui-button--5.ui-button--active, .ui-button--5:hover {
+    border: none;
+}
+
 /*******************************************************************************************************************/
 /*  EVALUATION SETTINGS */
 #notify .notify__item {
@@ -1263,7 +1340,7 @@ a.content-header-number:hover time {
 .reposters_list:before,
 .vote .vote__value:hover .vote__users--not-empty:before,
 .form-picture::before,
-.quote-tool__photo-wrapper::before {
+.quote-tool__photo-wrapper::before, .chat-messages__day span, .head-notifies__items-wrapper {
     background-color: var(--color-08ev) !important;
 }
 
@@ -1299,7 +1376,9 @@ a.content-header-number:hover time {
 .quiz,
 .quiz__loader,
 .andropov_link,
-.authorCard {
+.authorCard,
+.etc-controls--active .etc-controls__dropdown,
+.etc-controls__dropdown:before {
     background-color: var(--color-04ev) !important;
 }
 
@@ -1309,7 +1388,11 @@ a.content-header-number:hover time {
 .tg-legend__checkbox,
 .attachButton,
 .cdx-input,
-.ce-redactor a.andropov_link {
+.ce-redactor a.andropov_link,
+.emoji-picker__panel,
+.emoji-picker__panel-list-section-name,
+.emoji-picker__tabs,
+.emoji-picker__panel::after {
     background-color: var(--color-03ev) !important;
 }
 
@@ -1317,7 +1400,10 @@ a.content-header-number:hover time {
 .tg-header__type-switcher,
 .v-list-tab--active,
 .v-list-tab:hover,
-.media-item-zoomed__inner {
+.media-item-zoomed__inner,
+.messenger,
+.aside-search input,
+.chat-messages__unread-label span, .chat-form__textarea {
     background-color: var(--color-02ev) !important;
 }
 
@@ -1332,20 +1418,21 @@ a.content-header-number:hover time {
 .header,
 .writing-title,
 .gall,
-.gl__container {
+.gl__container,
+.aside__list-heading,
+.feed__horizon
+{
     background-color: var(--color-01ev) !important;
 }
 
-.media-item-zoomed__inner-media {
+.media-item-zoomed__inner-media
+{
     background-color: var(--color-00ev) !important;
 }
 
 /* Hovers */
 .item:hover,
 .item--selected,
-.u-notification--unread,
-.u-notification--hover:hover,
-.u-notification--unread:hover,
 .channel-item:hover,
 .channel-item--focused,
 .v-split-button-option:hover,
@@ -1362,7 +1449,7 @@ tc_control__item:hover,
 .ui-dropdown__item:hover,
 .etc_control__item:hover,
 .comments_updates:hover,
-.ui-dropdown__item:hover {
+.ui-dropdown__item:hover, .comments__item__more--root--5.comments__item__more--root--active, .comments__item__more--root--5:hover, .comments__item__more--root.comments__item__more--root--active, .comments__item__more--root:hover, .ui-button--5.ui-button--active, .ui-button--5:hover, .u-notification--unread, .u-notification--hover:hover, .u-notification--unread:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -1378,7 +1465,8 @@ tc_control__item:hover,
 .cdx-plugin-settings__item--active,
 .ce-settings__remove-block-button--confirm:hover,
 .upload-button:hover,
-.avatar-input::after {
+.avatar-input::after,
+.etc-controls__dropdownItem:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1388,7 +1476,10 @@ tc_control__item:hover,
 
 .sidebar-tree-list-item__child-item:hover,
 .tg-header__details-item--current,
-.tg-header__type-switcher--current {
+.tg-header__type-switcher--current,
+.channel-item--current,
+.aside__scrollable .channel-item:hover,
+.contacts:not(.contacts--disabled) .contacts__item:hover, .message--selected{
     background-color: var(--hover-02ev) !important;
 }
 
