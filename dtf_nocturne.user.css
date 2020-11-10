@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.5.1
+@version        0.6.0
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -266,6 +266,10 @@ body {
 .site-header-progressbar__runner {
     background-color: var(--back-color-blue-button);
 }
+
+.notify-new-items-label {
+    color: var(--text-color-blue);
+}
 /*--------------------------------------------------------*/
 /* Left bar */
 .sidebar {
@@ -463,7 +467,7 @@ a.content-header-number:hover time {
 
 .new_entries__counter,
 .new_entries:hover .new_entries__counter {
-    background-color: var(--text-color-blue);
+    background-color: var(--back-color-blue-button);
 }
 
 .v-tab__label {
@@ -561,6 +565,14 @@ a.content-header-number:hover time {
 .blogs_entries__title,
 .blogs_entries__subsite {
     color: var(--text-color-minor) !important;
+}
+
+.island--blogs_entries .blogs_entries__title {
+    color: var(--text-color-title) !Important;
+}
+
+.island--blogs_entries .blogs_entries__subsite {
+    color: var(--text-color-gray) !important;
 }
 
 /*class=notify__item notify__item--error notify__item--shown*/
@@ -804,6 +816,92 @@ a.content-header-author:hover .content-header-author__name,
 #ui_cancel path {
     fill: var(--text-color-red) !important;
 }
+
+.ui-dotted-button {
+    color: var(--text-color-title) !important;
+}
+
+.ui-dotted-button span {
+    border-color: var(--text-color-title) !important;
+}
+
+.subsites_tune__header {
+    border: none;
+}
+
+.subsites_tune__select-all, .t-link-inline {
+    color: var(--text-color-blue);
+}
+
+.content__thanks a:hover span, .subsites_tune__select-all:hover, .t-link-inline:hover {
+    color: var(--text-color-red);
+}
+
+.subsites_tune__item__link {
+    color: var(--text-color-title);
+}
+
+.subsites_tune__item__check {
+    border-color: var(--text-color-minor);
+}
+
+.subsites_tune__panel {
+    border: none;
+}
+
+.special-vk-quiz__title {
+    color: var(--text-color-title);
+}
+
+.special-vk-quiz__results {
+    color: var(--text-color-gray);
+}
+
+.email_subscribe__subtitle, .email_subscribe__title, .auth-form__title {
+    color: var(--text-color-title);
+}
+
+.email_subscribe_form__inner {
+    border: none;
+    border-radius: 8px;
+}
+
+.email_subscribe_form {
+    background: none;
+}
+
+.email_subscribe_form .icon--ui_email_2, .email_subscribe_form__submit, .social-auth, .auth-form__back {
+    color: var(--text-color-gray);
+}
+
+.email_subscribe_form__input::placeholder, .auth-form__help, .auth-form__note {
+    color: var(--text-color-minor);
+}
+
+.social-auth__button {
+    border: none;
+}
+
+.ui_form input[type="submit"] {
+    background: var(--back-color-blue-button);
+}
+
+.ui_form input[type="submit"]:hover {
+    background: var(--blue-button-hover);
+}
+
+.auth-form__help:hover {
+    color: var(--text-color-red);
+    border-color: var(--text-color-red);
+}
+
+.auth-form__art {
+    filter: opacity(70%);
+}
+
+.notification__image {
+    filter: grayscale(100%) invert(1);
+}
 /************************************************************************************************************/
 /*Profile*/
 .v-header-avatar {
@@ -828,6 +926,10 @@ a.content-header-author:hover .content-header-author__name,
 .chart .tg-header__title,
 .v-list-subsites-item__label {
     color: var(--text-color-title);
+}
+
+.profile_comment_favorite__user__name:hover {
+    color: var(--text-color-blue);
 }
 
 .v-button--blue {
@@ -1358,7 +1460,16 @@ a.content-header-author:hover .content-header-author__name,
 .andropov_tweet__date:hover time,
 .andropov_tweet__user:hover .andropov_telegram__user__name,
 .andropov_tweet__user:hover .andropov_tweet__user__name,
-.andropov_tweet__user:hover .andropov_tweet__user__nickname {
+.andropov_tweet__user:hover .andropov_tweet__user__nickname,
+#notify .notify__item p a,
+.advice__caption a,
+.advice__list a,
+.andropov_telegram__text a,
+.andropov_tweet__text a,
+.island__container--with_links a,
+.island__info a,
+.island__list__link,
+.subsite_about__text a {
     color: var(--text-color-blue);
 }
 
@@ -1370,7 +1481,60 @@ a.content-header-author:hover .content-header-author__name,
 }
 
 .content__thanks {
+    color: var(--color-00ev);
+    background-color: var(--text-color-blue);
+}
+
+#notify .notify__item p a,
+.advice__caption a,
+.advice__list a,
+.andropov_telegram__text a,
+.andropov_tweet__text a,
+.island__container--with_links a,
+.island__info a,
+.island__list__link,
+.subsite_about__text a {
+    border-color: var(--text-color-blue);
+}
+
+#notify .notify__item p a:hover,
+.advice__caption a:hover,
+.advice__list a:hover,
+.andropov_telegram__text a:hover,
+.andropov_tweet__text a:hover,
+.island__container--with_links a:hover,
+.island__info a:hover,
+.island__list__link:hover,
+.subsite_about__text a:hover {
+    border-color: var(--text-color-red);
+    color: var(--text-color-red);
+}
+
+.andropov_telegram__logo .icon,
+.andropov_tweet__logo .icon {
+    fill: var(--text-color-blue) !important;
+}
+
+.floating_player,
+.floating_screen_film--fixed {
+    box-shadow: none;
+}
+
+.audio_player--theme-compact .audio_player__control--title {
+    color: var(--text-color-gray) !important;
+}
+
+.floating_screen_film__title {
     color: var(--text-color-title);
+}
+
+.floating_screen_film__sourceLink {
+    color: var(--text-color-gray);
+}
+
+.floating_screen_film__title:hover,
+.floating_screen_film__control:hover {
+    color: var(--text-color-blue);
 }
 /*******************************************************************************************************************/
 /*** Comments ***/
@@ -1552,6 +1716,24 @@ a.content-header-author:hover .content-header-author__name,
 .comments_updates__counter {
     background-color: var(--back-color-blue-button);
 }
+
+.v-form-input input {
+    color: var(--text-color-title);
+    border: none;
+}
+
+.v-form-input input:focus {
+    border-color: var(--text-color-blue);
+}
+
+.v-form-range .vue-slider-rail,
+.v-form-range .vue-slider-dot-handle {
+    background: var(--text-color-title);
+}
+
+.v-form-range .vue-slider-process {
+    background: var(--back-color-blue-button);
+}
 /******************************************************************/
 /* Messenger */
 .contacts__item,
@@ -1623,6 +1805,7 @@ a.content-header-author:hover .content-header-author__name,
 
 .message--selected .message__actions-select {
     border-color: var(--text-color-blue) !important;
+    background-color: var(--text-color-blue) !important;
 }
 
 .message__actions-select {
@@ -1667,6 +1850,94 @@ a.content-header-author:hover .content-header-author__name,
     fill: var(--text-color-gray) !important;
 }
 
+.m-floating {
+    box-shadow: none !important;
+}
+
+.mf-header__user {
+    color: var(--text-color-title);
+}
+
+.mf-header__close .icon--cross g path,
+.etc-controls__dropdownIcon .icon--toggle-down g path,
+.etc-controls__dropdownIcon .icon--maximize g path {
+    fill: var(--text-color-gray);
+}
+
+.mf-header__close:hover .icon--cross g path,
+.aside__button svg g g path {
+    fill: var(--text-color-blue) !important;
+}
+
+.mf-header__menu .etc-controls:hover .icon--dots,
+.aside__button {
+    color: var(--text-color-blue) !important;
+}
+
+.chat-nav {
+    color: var(--text-color-title);
+}
+
+.chat-info-form .ui-input {
+    border: none;
+}
+
+.chat-info-form .ui-input::placeholder,
+.chat-info-form__picture,
+.chat-info__label {
+    color: var(--text-color-minor);
+}
+
+
+.chat-info__bottom .b:not(.b--submit) {
+    color: var(--text-color-gray) !important;
+}
+
+.chat-info__bottom .b:hover:not(.b--submit) {
+    color: var(--text-color-red) !important;
+}
+
+.b--submit {
+    background: var(--back-color-blue-button) !important;
+    color: var(--text-color-title) !important;
+}
+
+.b--submit:hover {
+    background: var(--blue-button-hover) !important;
+}
+
+.aside-search input::placeholder {
+    color: var(--text-color-minor) !important;
+}
+
+.aside-search,
+.user__cross {
+    color: var(--text-color-minor) !important;
+}
+
+.chat-info__search .user {
+    color: var(--text-color-gray) !important;
+}
+
+.user__cross:hover .icon {
+    color: var(--text-color-red) !important;
+}
+
+.contacts__item--selected .contacts__item-checkbox {
+    border-color: var(--back-color-blue-button) !important;
+}
+
+.contacts__item--selected .contacts__item-checkbox::after {
+    background: var(--back-color-blue-button) !important;
+}
+
+.chat-nav {
+    font-weight: 500;
+}
+
+.message__status--read {
+    color: var(--text-color-blue);
+}
 /* Settings */
 .subsite_settings__head,
 .subsite_settings__section__title,
@@ -1877,6 +2148,34 @@ input {
 .subsites_catalog__label--bordered {
     border-color: var(--border-color);
 }
+
+/*About */
+.block-special-button a {
+    background-color: var(--back-color-blue-button) !important;
+    color: var(--text-color-title) !important;
+}
+
+.v-header-description a:not(.t-link-inline) {
+    color: var(--text-color-blue);
+    border-color: var(--text-color-blue);
+}
+
+.v-header-description a:not(.t-link-inline):hover {
+    color: var(--text-color-red);
+    border-color: var(--text-color-red);
+}
+
+.sidebar-tree-list-item--bold {
+    color: var(--text-color-title);
+}
+
+.ad-contacts__title {
+    color: var(--text-color-minor);
+}
+
+.ad-contacts__user:after {
+    background: none;
+}
 /*******************************************************************************************************************/
 /*  EVALUATION SETTINGS */
 #notify .notify__item,
@@ -1889,7 +2188,7 @@ input {
 .head-notifies__panel,
 .messenger-panel__down,
 .v-split-button__dropdown,
-.search-dropdown {
+.search-dropdown, .notification {
     background-color: var(--color-16ev) !important;
 }
 
@@ -1939,7 +2238,9 @@ input {
 .page--editor .bubble,
 .page--editor .bubble:before,
 .page--editor .bubble__container .search input,
-.cdx-helper {
+.cdx-helper,
+.mf-header__menu .etc-controls .etc-controls__dropdown,
+.m-floating .etc-controls .etc-controls__dropdown:before {
     background-color: var(--color-06ev) !important
 }
 
@@ -1995,7 +2296,8 @@ input {
 .andropov_tweet,
 .andropov_telegram,
 .instagram-tool__widget iframe,
-.content__thanks {
+.m-floating,
+.m-floating__header:hover, .social-auth__button {
     background-color: var(--color-04ev) !important;
 }
 
@@ -2011,7 +2313,8 @@ input {
 .emoji-picker__tabs,
 .emoji-picker__panel::after,
 .island__social_links--type_1 .island__social_links__item,
-.list-editable__item__remove {
+.list-editable__item__remove,
+.m-floating .chat-messages--compact {
     background-color: var(--color-03ev) !important;
 }
 
@@ -2030,7 +2333,11 @@ input {
 .vacancies_widget__new,
 .adviser__container,
 .adviser__container::after,
-.page--plus .plus-features {
+.page--plus .plus-features,
+.floating_screen_film--fixed,
+.floating_player,
+.chat-info__search,
+.chat-info__bottom, .subsites_tune__panel {
     background-color: var(--color-02ev) !important;
 }
 
@@ -2053,7 +2360,8 @@ input {
 .vacancies_widget,
 .v-ui-checkbox,
 .popup__container__window--styled .popup__container__window__tpl,
-.subsites_catalog__search__bar {
+.subsites_catalog__search__bar,
+.chat-messages, .special-vk-quiz, .email_subscribe, .auth-form {
     background-color: var(--color-01ev) !important;
 }
 
@@ -2075,7 +2383,8 @@ input {
 .search-dropdown-item--focused,
 .search-dropdown-item--submit:hover,
 .input-suggestion__item--selected[data-v-608bac96],
-.input-suggestion__item[data-v-608bac96]:hover {
+.input-suggestion__item[data-v-608bac96]:hover,
+.notify-new-items-label {
     background-color: var(--hover-16ev) !important;
 }
 
@@ -2101,7 +2410,8 @@ tc_control__item:hover,
 .channel-item--focused,
 .repost_button__list .bubble .item--selected,
 .repost_button__list .bubble .item--focused,
-.repost_button__list .bubble .item:hover {
+.repost_button__list .bubble .item:hover,
+.v-form-input input {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -2145,7 +2455,14 @@ tc_control__item:hover,
 .channel-item--current,
 .aside__scrollable .channel-item:hover,
 .contacts:not(.contacts--disabled) .contacts__item:hover,
-.message--selected {
+.message--selected,
+.aside__button:hover,
+.aside-placeholder__picture,
+.aside-placeholder__line1,
+.aside-placeholder__line2,
+.chat-info-form__picture,
+.chat-info-form .ui-input,
+.chat-info__search .user {
     background-color: var(--hover-02ev) !important;
 }
 
@@ -2159,7 +2476,7 @@ tc_control__item:hover,
 .u-notification--blue.u-notification--bg,
 .vb > .vb-dragger > .vb-dragger-styler,
 .daily-promo-unit-label__inner:hover,
-.table__row--me {
+.table__row--me, .email_subscribe_form__inner, .email_subscribe_form__input {
     background-color: var(--hover-01ev) !important;
 }
 
