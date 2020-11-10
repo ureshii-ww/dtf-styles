@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.5.0
-@description    Shitsureishimasu ga shinde kudasai
+@version        0.5.1
+@description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
 
@@ -1368,6 +1368,10 @@ a.content-header-author:hover .content-header-author__name,
     -moz-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
     box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
 }
+
+.content__thanks {
+    color: var(--text-color-title);
+}
 /*******************************************************************************************************************/
 /*** Comments ***/
 .comments__subscribe__label:after,
@@ -1990,7 +1994,8 @@ input {
 .input-suggestion input,
 .andropov_tweet,
 .andropov_telegram,
-.instagram-tool__widget iframe {
+.instagram-tool__widget iframe,
+.content__thanks {
     background-color: var(--color-04ev) !important;
 }
 
