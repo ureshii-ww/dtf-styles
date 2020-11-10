@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.6.0
+@version        0.6.1
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -902,6 +902,10 @@ a.content-header-author:hover .content-header-author__name,
 .notification__image {
     filter: grayscale(100%) invert(1);
 }
+
+.content-header-author__avatar img {
+    border-radius: 2px;
+}
 /************************************************************************************************************/
 /*Profile*/
 .v-header-avatar {
@@ -1524,6 +1528,10 @@ a.content-header-author:hover .content-header-author__name,
     color: var(--text-color-gray) !important;
 }
 
+.audio_player__control--listens {
+    color: var(--text-color-minor);
+}
+
 .floating_screen_film__title {
     color: var(--text-color-title);
 }
@@ -1535,6 +1543,19 @@ a.content-header-author:hover .content-header-author__name,
 .floating_screen_film__title:hover,
 .floating_screen_film__control:hover {
     color: var(--text-color-blue);
+}
+
+.quiz__panel__button__label {
+    border-color: var(--text-color-blue);
+}
+
+.quiz__item__progressbar__runner, .quiz__item__progressbar {
+    background-color: var(--text-color-blue);
+}
+
+.editor .marked-text, .miniEditor .marked-text, .profile_comment_favorite__text mark, .profile_comment_self__text mark, .subsite_card_simple__description mark, .content mark {
+    color: var(--text-color-title);
+    background: var(--hover-08ev);
 }
 /*******************************************************************************************************************/
 /*** Comments ***/
