@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.6.1
+@version        0.6.3
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -1557,6 +1557,14 @@ a.content-header-author:hover .content-header-author__name,
     color: var(--text-color-title);
     background: var(--hover-08ev);
 }
+
+.v-island__grayed {
+    color: var(--text-color-minor);
+}
+
+a.v-list__item:hover {
+    color: var(--text-color-blue);
+}
 /*******************************************************************************************************************/
 /*** Comments ***/
 .comments__subscribe__label:after,
@@ -2147,6 +2155,42 @@ input {
     color: #8577e1;
 }
 
+.page--plus p a{
+    color: var(--text-color-blue);
+    border-color: var(--text-color-blue);
+}
+
+.popup__content--payments .payments_popup__label {
+    color: var(--text-color-gray);
+}
+
+.ui_select {
+    border: none;
+}
+
+.popup__content--payments .payments_popup__name, .title--cancel {
+    color: var(--text-color-title);
+}
+
+.announcement-stats, .popup__content--payments .payments_popup .agreement label, .ui_select select, .ui_select .icon, .popup__content--pay_card .order_details__label, .popup__content--pay_card .order_details__num, .payments_popup__info, .popup__container__window--styled .popup__container__window__tpl  {
+    color: var(--text-color-gray);
+}
+
+.popup__content--payments .payments_popup__info p{
+    color: var(--text-color-minor);
+}
+
+.popup__content--pay_card .order_details__line {
+    background-color: var(--text-color-gray);
+}
+
+.card_form__bg {
+    filter: invert(1) opacity(40%);
+}
+
+.popup__content--pay_card .card_form__card_number, .popup__content--pay_card .card_form__cvv, .popup__content--pay_card .card_form__exp_month, .popup__content--pay_card .card_form__exp_year {
+    border: none;
+}
 /* Subscriptions */
 .subsites_catalog__search {
     border: none;
@@ -2358,7 +2402,7 @@ input {
 .floating_screen_film--fixed,
 .floating_player,
 .chat-info__search,
-.chat-info__bottom, .subsites_tune__panel {
+.chat-info__bottom, .subsites_tune__panel, .popup__content--pay_card .card_form__card_number, .popup__content--pay_card .card_form__card_number, .popup__content--pay_card .card_form__cvv, .popup__content--pay_card .card_form__exp_month, .popup__content--pay_card .card_form__exp_year {
     background-color: var(--color-02ev) !important;
 }
 
@@ -2382,7 +2426,7 @@ input {
 .v-ui-checkbox,
 .popup__container__window--styled .popup__container__window__tpl,
 .subsites_catalog__search__bar,
-.chat-messages, .special-vk-quiz, .email_subscribe, .auth-form {
+.chat-messages, .special-vk-quiz, .email_subscribe, .auth-form, .popup .popup__content .line {
     background-color: var(--color-01ev) !important;
 }
 
@@ -2497,7 +2541,7 @@ tc_control__item:hover,
 .u-notification--blue.u-notification--bg,
 .vb > .vb-dragger > .vb-dragger-styler,
 .daily-promo-unit-label__inner:hover,
-.table__row--me, .email_subscribe_form__inner, .email_subscribe_form__input {
+.table__row--me, .email_subscribe_form__inner, .email_subscribe_form__input, .ui_select, .ui_select select {
     background-color: var(--hover-01ev) !important;
 }
 
