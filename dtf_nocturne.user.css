@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.3.1
+@version        0.4.0
 @description    Shitsureishimasu ga shinde kudasai
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -62,6 +62,10 @@ body {
 .site-header {
     color: var(--text-color-gray);
     box-shadow: none;
+}
+
+.site-header-logo:hover {
+    color: var(--text-color-blue);
 }
 
 .search__input {
@@ -146,9 +150,15 @@ body {
     background-color: var(--color-16ev) !important;
 }
 
+.head-notifies--showed .head-notifies__toggler .icon, .head-notifies__toggler:hover .icon, .site-header-user-profile__toggle:hover, .site-header-burger:hover {
+    color: var(--text-color-blue);
+    fill: var(--text-color-blue);
+    opacity: 1;
+}
+
 .item--selected {
-    background-color: var(--color-16ev) !important;
     color: var(--text-color-title) !important;
+    font-weight: 500 !important;
 }
 
 .head-notifies__panel,
@@ -156,7 +166,13 @@ body {
     background-color: var(--color-24ev) !important;
     color: var(--text-color-gray) !important;
     border: none !important;
-    box-shadow: none !important;
+}
+
+.head-notifies__panel,
+.messenger-panel__down, .v-split-button__dropdown, .search-dropdown, .site-header-user .bubble {
+   --webkit-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    -moz-box-shadow:    1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    box-shadow:         1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
 }
 
 .head-notifies__footer,
@@ -251,15 +267,27 @@ body {
 }
 
 .sidebar-tree-list-item__favourite {
-    color: var(--icon-color-light) !important;
+    color: var(--text-color-minor) !important;
 }
 
 .sidebar-tree-list__show-more-button {
     background-color: var(--color-01ev) !important;
 }
 
+.sidebar-tree-list-item__icon, .sidebar-tree-list-item__child-item{
+    color: var(--text-color-gray) !important;
+}
+
+.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon, .sidebar-tree-list-item__child-item--active {
+    color: var(--text-color-blue) !important;
+}
+
 .sidebar__button .v-button {
     color: #FFF !important;
+    background-color: var(--back-color-blue-button) !important;
+}
+
+.sidebar-tree-list-item__child-item--with-badge::after {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -273,10 +301,6 @@ body {
 
 .sidebar__footer__icon--youtube {
     color: #eb5757 !important;
-}
-
-.vb > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(0, 0, 0, .55);
 }
 
 /*--------------------------------------------------------*/
@@ -293,6 +317,7 @@ body {
 .live__item--comment .live__item__user__name,
 .live__item--comment .live__item__title {
     color: var(--text-color-title);
+    font-weight: 500;
 }
 
 .live__item--comment .live__item__user__name:hover,
@@ -327,6 +352,15 @@ a.content-header-number:hover time {
 
 .andropov_link_mini {
     color: var(--text-color-minor);
+}
+
+#ui_sidebar_live g rect {
+    fill: var(--back-red) !important;
+    fill-opacity: 1 !important;
+}
+
+#ui_sidebar_live g {
+    opacity: 1;
 }
 
 /*--------------------------------------------------------*/
@@ -376,6 +410,11 @@ a.content-header-number:hover time {
 .news_widget__load_more,
 .news_widget__header {
     color: var(--text-color-title);
+}
+
+.news_widget__load_more,
+.news_widget__header p {
+    font-weight: 500;
 }
 
 .news_widget__load_more:hover {
@@ -481,6 +520,10 @@ a.content-header-number:hover time {
 .blogs_entries__load_more,
 .widget_comment__label {
     color: var(--text-color-title);
+}
+
+.widget_wrapper__more {
+    font-weight: 500;
 }
 
 .island--blogs_entries .island__header__title,
@@ -629,6 +672,62 @@ a.content-header-number:hover time {
 
 .t-link:hover .widget_entry__subsite__avatar__title, .t-link:hover .widget_entry__title, .t-link:hover .widget_subsite__name, .t-link:hover .widget_comment__author, .t-link:hover .widget_comment__entry, a.content-header-author:hover .content-header-author__name, .content-editorial-tick, .ui-tab:hover {
     color: var(--text-color-blue);
+}
+
+.favorite_marker:hover:not(.favorite_marker--just_clicked) .icon {
+    fill: var(--text-color-red);
+}
+
+.favorite_marker--active .favorite_marker__count {
+    color: var(--text-color-red);
+}
+
+.daily-promo-unit-label__inner {
+    color: var(--text-color-blue) !important;
+}
+
+.daily-promo-unit__button, .vacancies_widget__new {
+    border-color: var(--text-color-minor) !important;
+}
+
+.daily-promo-unit-label__inner:hover {
+    opacity: 1 !important;
+}
+
+.daily-promo-unit__title {
+    color: var(--text-color-title);
+}
+
+.daily-promo-unit__button:hover, .vacancies_widget__new:hover {
+    box-shadow: none !important;
+    color: var(--text-color-blue) !important;
+    border-color: var(--text-color-blue) !important;
+}
+
+.daily-promo-unit-label__hide {
+    color: var(--text-color-minor);
+}
+
+.vacancies_widget__title, .vacancies_widget__title:hover, .vacancies_widget__item__title:hover, .vacancies_widget__item__city:hover, .vacancies_widget__item__company:hover {
+    color: var(--text-color-blue);
+}
+
+.vacancies_widget__new {
+    color: var(--text-color-gray);
+}
+
+.vacancies_widget__item__city, .vacancies_widget__item__company, .vacancies_widget__item__salary, .content-header-promoted {
+    color: var(--text-color-minor)
+}
+
+.vacancies_widget__load_more, .sp-button--blue, .sp-button--red {
+    color: var(--text-color-title);
+    font-weight: 500;
+}
+
+.vacancies_widget__item__company img {
+    background: var(--color-00ev) !important;
+    filter: opacity(85%);
 }
 /************************************************************************************************************/
 /*Profile*/
@@ -788,6 +887,14 @@ a.content-header-number:hover time {
     color: var(--text-color-red);
 }
 
+.v-subscribe-button .icon--ui_close {
+    color: var(--text-color-red);
+}
+
+.v-subscribe-button .icon--ui_check {
+    color: var(--text-color-green);
+}
+
 
 @media (min-width: 860px) {
     .profile_comment_favorite .vote__value {
@@ -840,7 +947,7 @@ a.content-header-number:hover time {
 }
 
 .cdx-icon {
-    filter: invert(1) opacity(85%);
+    filter: invert(1) opacity(69%);
 }
 
 .ce-toolbar__tools,
@@ -863,7 +970,7 @@ a.content-header-number:hover time {
 
 .writing-title::placeholder,
 .ce-settings__anchor-input::placeholder {
-    color: var(--text-color-minor);
+    color: var(--text-color-minor) !important;
 }
 
 .cdx-inline-toolbar__button-wrapper--active .cdx-icon {
@@ -997,7 +1104,40 @@ a.content-header-number:hover time {
     filter: invert(1) opacity(80%)
 }
 
+.adviser__toggler {
+    background-color: var(--color-00ev) !important;
+}
+
+.adviser__container, .adviser__toggler, .adviser__container::after {
+    border: none;
+    color: var(--text-color-gray);
+}
+
+.advice__title {
+    color: var(--text-color-title);
+}
+
+.advice__list li::before {
+    background: var(--text-color-gray);
+}
+
+.adviser__close, .adviser__show-next {
+    color: var(--text-color-blue);
+}
+
+.adviser__close:hover, .adviser__show-next:hover {
+    color: var(--text-color-red);
+}
+
+.adviser__cross::after, .adviser__cross::before {
+    background-color: var(--text-color-minor);
+}
+
 /*Posts*/
+
+#ui_verified path {
+    fill: var(--text-color-blue);
+}
 .content .content-image-caption__author,
 .gl__author,
 .gl__counter,
@@ -1100,6 +1240,14 @@ a.content-header-number:hover time {
 .subsite_head__description--edit span:after,
 .ui-bubble:after {
     border-top: 6px solid var(--color-12ev);
+}
+
+.comments__item__collapse_subtree:hover {
+    border-color: var(--text-color-blue);
+}
+
+.authorCard, .comments_pseudo_form, .comments_form {
+    border-radius: 8px;
 }
 
 .thesis__placeholder {
@@ -1213,8 +1361,7 @@ a.content-header-number:hover time {
 
 .shares__close,
 .shares__open,
-.comments__item__self--minor .comments__item__user__name,
-.new-entries-horizon {
+.comments__item__self--minor .comments__item__user__name {
     color: var(--text-color-title);
 }
 
@@ -1224,15 +1371,34 @@ a.content-header-number:hover time {
 }
 
 .widget_comment__likes {
-    color: var(--text-color-green);
+    color: var(--text-color-green) !important;
 }
 
 .t-link:hover .comments__item__user__name {
     color: var(--text-color-blue);
 }
 
+.new-entries-horizon {
+    color: var(--text-color-gray);
+}
+
+.new-entries-horizon svg path:nth-of-type(4){
+    stroke: var(--color-00ev) !important;
+}
+
+.new-entries-horizon svg [data-accent-color-fill] {
+    fill: var(--back-color-blue-button);
+}
+
+.new-entries-horizon svg [data-accent-color-stroke] {
+    stroke: var(--text-color-blue);
+}
+
+.comments__item__user__name {
+    font-weight: 500;
+}
 /******************************************************************/
-/* Messeger */
+/* Messenger */
 
 .contacts__item, .chat-header-info__title, .channel-item--current, .chat-messages__day span, .message__content-name {
     color: var(--text-color-title) !important;
@@ -1358,7 +1524,7 @@ input {
     color: var(--text-color-gray);
 }
 
-.list-editable__item, .l-ml-auto {
+.list-editable__item, .icon--ui_email, .icon--bell {
     color: var(--text-color-gray) !important;
 }
 
@@ -1368,6 +1534,62 @@ input {
 
 .ui_modal_window__close:hover .icon {
     fill: var(--text-color-blue);
+}
+/* Vacancies */
+.v-button--blue:hover {
+    background-color: var(--blue-button-hover) !important;
+}
+
+.content-footer-watchers, .contentFilter__title, .contentFilterCheckbox__counter {
+    color: var(--text-color-minor);
+}
+
+.content-footer-watchers:before {
+    background-color: var(--text-color-green);
+}
+
+.select .icon--ui_arrow_down {
+    color: var(--text-color-gray) !important;
+}
+
+.select__current:hover .icon--ui_arrow_down {
+    color: var(--text-color-blue) !important;
+}
+
+.v-ui-checkbox {
+    border-color: var(--text-color-minor);
+}
+
+.v-ui-checkbox--checked:before {
+    border-color: var(--text-color-gray);
+}
+/* Rating */
+.subsite_head__name, .table__row--header .table__cell:first-child, .table__row--footer {
+    color: var(--text-color-title);
+}
+
+.subsite_subscribe_button .icon--ui_check {
+    color: var(--text-color-green);
+}
+
+.subsite_subscribe_button .icon--ui_close {
+    color: var(--text-color-red);
+}
+
+.table__row--header .table__cell:not(:first-child) {
+    color: var(--text-color-minor) !important;
+}
+
+.table__cell:hover .subsite__name, .table__cell:hover .subsite__rank, .table__row--footer:hover .table__more {
+    color: var(--text-color-blue);
+}
+
+.subsite__trend .icon--ui_arrow_up {
+    color: var(--text-color-green) !important;
+}
+
+.subsite__trend .icon--ui_arrow_down {
+    color: var(--text-color-red) !important;
 }
 /*******************************************************************************************************************/
 /*  EVALUATION SETTINGS */
@@ -1416,8 +1638,12 @@ input {
 .reposters_list:before,
 .vote .vote__value:hover .vote__users--not-empty:before,
 .form-picture::before,
-.quote-tool__photo-wrapper::before, .chat-messages__day span, .head-notifies__items-wrapper, .messenger-panel__down-list, .ui-limited-input::after, .rc-anchor-light {
+.quote-tool__photo-wrapper::before, .chat-messages__day span, .head-notifies__items-wrapper, .messenger-panel__down-list, .ui-limited-input::after, .rc-anchor-light, .repost_button__list .bubble, .repost_button__list .bubble:before {
     background-color: var(--color-08ev) !important;
+}
+
+.page--editor .bubble, .page--editor .bubble:before, .page--editor .bubble__container .search input {
+    background-color: var(--color-06ev) !important
 }
 
 .comments_pseudo_form,
@@ -1479,7 +1705,7 @@ input {
 .media-item-zoomed__inner,
 .messenger,
 .aside-search input,
-.chat-messages__unread-label span, .chat-form__textarea, .captcha_wall__box, .ui_modal_window {
+.chat-messages__unread-label span, .chat-form__textarea, .captcha_wall__box, .ui_modal_window, .daily-promo-unit__button, .vacancies_widget__new, .adviser__container, .adviser__container::after {
     background-color: var(--color-02ev) !important;
 }
 
@@ -1496,7 +1722,7 @@ input {
 .gall,
 .gl__container,
 .aside__list-heading,
-.feed__horizon
+.feed__horizon, .daily-promo-unit, .daily-promo-unit-label__inner, .vacancies_widget, .v-ui-checkbox
 {
     background-color: var(--color-01ev) !important;
 }
@@ -1528,8 +1754,12 @@ tc_control__item:hover,
 .etc_control__item:hover,
 .comments_updates:hover,
 .ui-dropdown__item:hover, .comments__item__more--root--5.comments__item__more--root--active, .comments__item__more--root--5:hover, .comments__item__more--root.comments__item__more--root--active, .comments__item__more--root:hover, .ui-button--5.ui-button--active, .ui-button--5:hover, .u-notification--unread, .u-notification--hover:hover, .u-notification--unread:hover, .channel-item:hover,
-.channel-item--focused {
+.channel-item--focused, .repost_button__list .bubble .item--selected, .repost_button__list .bubble .item--focused, .repost_button__list .bubble .item:hover {
     background-color: var(--hover-08ev) !important;
+}
+
+.page--editor .bubble .item--selected, .page--editor .bubble .item--focused, .page--editor .bubble .item:hover {
+    background-color: var(--hover-06ev) !important;
 }
 
 .ce-toolbar__tools-item--selected,
@@ -1569,7 +1799,7 @@ tc_control__item:hover,
 .v-island .u-notification--hover:hover,
 .v-island .u-notification--unread:hover,
 .sidebar-tree-list-item--active,
-.u-notification--blue.u-notification--bg {
+.u-notification--blue.u-notification--bg, .vb > .vb-dragger > .vb-dragger-styler, .daily-promo-unit-label__inner:hover, .table__row--me {
     background-color: var(--hover-01ev) !important;
 }
 
