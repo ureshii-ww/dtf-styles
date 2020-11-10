@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.4.0
+@version        0.5.0
 @description    Shitsureishimasu ga shinde kudasai
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -51,7 +51,7 @@
 }
 
 body {
-    background-color: var(--color-00ev);
+    background-color: var(--color-00ev) !important;
 }
 
 .updown:after {
@@ -150,7 +150,10 @@ body {
     background-color: var(--color-16ev) !important;
 }
 
-.head-notifies--showed .head-notifies__toggler .icon, .head-notifies__toggler:hover .icon, .site-header-user-profile__toggle:hover, .site-header-burger:hover {
+.head-notifies--showed .head-notifies__toggler .icon,
+.head-notifies__toggler:hover .icon,
+.site-header-user-profile__toggle:hover,
+.site-header-burger:hover {
     color: var(--text-color-blue);
     fill: var(--text-color-blue);
     opacity: 1;
@@ -169,10 +172,13 @@ body {
 }
 
 .head-notifies__panel,
-.messenger-panel__down, .v-split-button__dropdown, .search-dropdown, .site-header-user .bubble {
-   --webkit-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
-    -moz-box-shadow:    1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
-    box-shadow:         1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+.messenger-panel__down,
+.v-split-button__dropdown,
+.search-dropdown,
+.site-header-user .bubble {
+    --webkit-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
 }
 
 .head-notifies__footer,
@@ -181,7 +187,9 @@ body {
 }
 
 .u-notification--border,
-.head-notifies__header, .head-notifies__footer, .messenger-panel__down-footer {
+.head-notifies__header,
+.head-notifies__footer,
+.messenger-panel__down-footer {
     border-bottom: none;
 }
 
@@ -245,11 +253,13 @@ body {
 }
 
 .item__badge {
-    background-color: transparent !important;
-    color: var(--text-color-blue) !Important;
+    background-color: var(--back-color-blue-button) !important;
+    color: var(--text-color-title) !Important;
 }
 
-.messenger-panel__loader-image, .messenger-panel__loader-line-1, .messenger-panel__loader-line-2 {
+.messenger-panel__loader-image,
+.messenger-panel__loader-line-1,
+.messenger-panel__loader-line-2 {
     background: var(--color-04ev) !important;
 }
 
@@ -274,11 +284,13 @@ body {
     background-color: var(--color-01ev) !important;
 }
 
-.sidebar-tree-list-item__icon, .sidebar-tree-list-item__child-item{
+.sidebar-tree-list-item__icon,
+.sidebar-tree-list-item__child-item {
     color: var(--text-color-gray) !important;
 }
 
-.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon, .sidebar-tree-list-item__child-item--active {
+.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon,
+.sidebar-tree-list-item__child-item--active {
     color: var(--text-color-blue) !important;
 }
 
@@ -303,6 +315,22 @@ body {
     color: #eb5757 !important;
 }
 
+.sidebar-tree-list-item__child-item::before {
+    background-color: var(--border-color) !important;
+}
+
+.sidebar__footer__item--sponsor span {
+    background-image: none !important;
+    background-color: var(--text-color-blue) !important;
+}
+
+.email_subscribe_vue__form {
+    border: none !important;
+}
+
+.email_subscribe_vue__form__button:hover {
+    color: var(--text-color-blue) !important;
+}
 /*--------------------------------------------------------*/
 /* Right bar */
 .live__title,
@@ -321,7 +349,10 @@ body {
 }
 
 .live__item--comment .live__item__user__name:hover,
-.live__item--comment .live__item__title:hover, .audit_log__item__log a:hover, .live__item--comment .live__item__user:hover .live__item__user__name, .t-link-hovered {
+.live__item--comment .live__item__title:hover,
+.audit_log__item__log a:hover,
+.live__item--comment .live__item__user:hover .live__item__user__name,
+.t-link-hovered {
     color: var(--text-color-blue) !important;
 }
 
@@ -670,7 +701,14 @@ a.content-header-number:hover time {
     color: var(--text-color-minor);
 }
 
-.t-link:hover .widget_entry__subsite__avatar__title, .t-link:hover .widget_entry__title, .t-link:hover .widget_subsite__name, .t-link:hover .widget_comment__author, .t-link:hover .widget_comment__entry, a.content-header-author:hover .content-header-author__name, .content-editorial-tick, .ui-tab:hover {
+.t-link:hover .widget_entry__subsite__avatar__title,
+.t-link:hover .widget_entry__title,
+.t-link:hover .widget_subsite__name,
+.t-link:hover .widget_comment__author,
+.t-link:hover .widget_comment__entry,
+a.content-header-author:hover .content-header-author__name,
+.content-editorial-tick,
+.ui-tab:hover {
     color: var(--text-color-blue);
 }
 
@@ -686,7 +724,8 @@ a.content-header-number:hover time {
     color: var(--text-color-blue) !important;
 }
 
-.daily-promo-unit__button, .vacancies_widget__new {
+.daily-promo-unit__button,
+.vacancies_widget__new {
     border-color: var(--text-color-minor) !important;
 }
 
@@ -698,7 +737,8 @@ a.content-header-number:hover time {
     color: var(--text-color-title);
 }
 
-.daily-promo-unit__button:hover, .vacancies_widget__new:hover {
+.daily-promo-unit__button:hover,
+.vacancies_widget__new:hover {
     box-shadow: none !important;
     color: var(--text-color-blue) !important;
     border-color: var(--text-color-blue) !important;
@@ -708,7 +748,11 @@ a.content-header-number:hover time {
     color: var(--text-color-minor);
 }
 
-.vacancies_widget__title, .vacancies_widget__title:hover, .vacancies_widget__item__title:hover, .vacancies_widget__item__city:hover, .vacancies_widget__item__company:hover {
+.vacancies_widget__title,
+.vacancies_widget__title:hover,
+.vacancies_widget__item__title:hover,
+.vacancies_widget__item__city:hover,
+.vacancies_widget__item__company:hover {
     color: var(--text-color-blue);
 }
 
@@ -716,11 +760,16 @@ a.content-header-number:hover time {
     color: var(--text-color-gray);
 }
 
-.vacancies_widget__item__city, .vacancies_widget__item__company, .vacancies_widget__item__salary, .content-header-promoted {
+.vacancies_widget__item__city,
+.vacancies_widget__item__company,
+.vacancies_widget__item__salary,
+.content-header-promoted {
     color: var(--text-color-minor)
 }
 
-.vacancies_widget__load_more, .sp-button--blue, .sp-button--red {
+.vacancies_widget__load_more,
+.sp-button--blue,
+.sp-button--red {
     color: var(--text-color-title);
     font-weight: 500;
 }
@@ -728,6 +777,32 @@ a.content-header-number:hover time {
 .vacancies_widget__item__company img {
     background: var(--color-00ev) !important;
     filter: opacity(85%);
+}
+
+.widget_wrapper--type-blue .widget_wrapper__col:after {
+    background-color: var(--border-color);
+}
+
+.live-stream__title {
+    color: var(--text-color-title);
+}
+
+.icon--ui_minify {
+    color: var(--text-color-gray);
+}
+
+.live-stream {
+    --webkit-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+}
+
+#ui_success path {
+    fill: var(--text-color-green) !important;
+}
+
+#ui_cancel path {
+    fill: var(--text-color-red) !important;
 }
 /************************************************************************************************************/
 /*Profile*/
@@ -1108,7 +1183,9 @@ a.content-header-number:hover time {
     background-color: var(--color-00ev) !important;
 }
 
-.adviser__container, .adviser__toggler, .adviser__container::after {
+.adviser__container,
+.adviser__toggler,
+.adviser__container::after {
     border: none;
     color: var(--text-color-gray);
 }
@@ -1121,20 +1198,32 @@ a.content-header-number:hover time {
     background: var(--text-color-gray);
 }
 
-.adviser__close, .adviser__show-next {
+.adviser__close,
+.adviser__show-next {
     color: var(--text-color-blue);
 }
 
-.adviser__close:hover, .adviser__show-next:hover {
+.adviser__close:hover,
+.adviser__show-next:hover {
     color: var(--text-color-red);
 }
 
-.adviser__cross::after, .adviser__cross::before {
+.adviser__cross::after,
+.adviser__cross::before {
     background-color: var(--text-color-minor);
 }
 
-/*Posts*/
+.u-notification__content__reply-text b {
+    color: var(--text-color-title);
+}
 
+@media (max-width: 1024px) {
+    .ce-toolbar {
+        background-color: var(--color-04ev);
+    }
+}
+
+/*Posts*/
 #ui_verified path {
     fill: var(--text-color-blue);
 }
@@ -1232,6 +1321,53 @@ a.content-header-number:hover time {
 .authorCard__karma--negative {
     color: var(--text-color-red);
 }
+
+.content--legacy .block-html iframe.framed,
+.content--legacy .block-html img.framed,
+.content-image--with_border > div {
+    border: none;
+}
+
+.andropov_tweet,
+.andropov_telegram {
+    border: none;
+}
+
+.andropov_telegram__user__name,
+.andropov_tweet__user__name {
+    color: var(--text-color-title);
+}
+
+.andropov_telegram__user__nickname,
+.andropov_tweet__user__nickname,
+.andropov_telegram__date time,
+.andropov_tweet__date time,
+.andropov_telegram__social_activity,
+.andropov_tweet__social_activity,
+.andropov_telegram__text--forwarded-from,
+.andropov_telegram__text--unsupported,
+.andropov_tweet__text--forwarded-from,
+.andropov_tweet__text--unsupported {
+    color: var(--text-color-minor);
+}
+
+.andropov_telegram__date:hover time,
+.andropov_telegram__user:hover .andropov_telegram__user__name,
+.andropov_telegram__user:hover .andropov_tweet__user__name,
+.andropov_telegram__user:hover .andropov_tweet__user__nickname,
+.andropov_tweet__date:hover time,
+.andropov_tweet__user:hover .andropov_telegram__user__name,
+.andropov_tweet__user:hover .andropov_tweet__user__name,
+.andropov_tweet__user:hover .andropov_tweet__user__nickname {
+    color: var(--text-color-blue);
+}
+
+.cdx-helper {
+    color: var(--text-color-gray);
+    --webkit-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+    box-shadow: 1px 1px 6px 0px rgba(0, 18, 18, 0.6) !important;
+}
 /*******************************************************************************************************************/
 /*** Comments ***/
 .comments__subscribe__label:after,
@@ -1246,7 +1382,9 @@ a.content-header-number:hover time {
     border-color: var(--text-color-blue);
 }
 
-.authorCard, .comments_pseudo_form, .comments_form {
+.authorCard,
+.comments_pseudo_form,
+.comments_form {
     border-radius: 8px;
 }
 
@@ -1269,7 +1407,7 @@ a.content-header-number:hover time {
     background: var(--text-color-green);
 }
 
-.icon--ui_rouble {
+.thesis__attach_something .icon--ui_rouble {
     color: #b183d7;
 }
 
@@ -1382,7 +1520,7 @@ a.content-header-number:hover time {
     color: var(--text-color-gray);
 }
 
-.new-entries-horizon svg path:nth-of-type(4){
+.new-entries-horizon svg path:nth-of-type(4) {
     stroke: var(--color-00ev) !important;
 }
 
@@ -1397,28 +1535,60 @@ a.content-header-number:hover time {
 .comments__item__user__name {
     font-weight: 500;
 }
+
+.popup__content h4 {
+    color: var(--text-color-title);
+}
+
+.ui_form .help,
+.ui_form .label {
+    color: var(--text-color-minor);
+}
+
+.comments_updates__counter {
+    background-color: var(--back-color-blue-button);
+}
 /******************************************************************/
 /* Messenger */
-
-.contacts__item, .chat-header-info__title, .channel-item--current, .chat-messages__day span, .message__content-name {
+.contacts__item,
+.chat-header-info__title,
+.channel-item--current,
+.chat-messages__day span,
+.message__content-name {
     color: var(--text-color-title) !important;
 }
 
-.channel-item__info-second-line, .aside-search input, .etc-controls--active .etc-controls__dropdown, .message__content-text, .chat-form__textarea, .chat-form__attach, .emoji-picker__invoker, .emoji-picker__tabs span {
+.channel-item__info-second-line,
+.aside-search input,
+.etc-controls--active .etc-controls__dropdown,
+.message__content-text,
+.chat-form__textarea,
+.chat-form__attach,
+.emoji-picker__invoker,
+.emoji-picker__tabs span {
     color: var(--text-color-gray) !important;
 }
 
-.chat-header-info__title .icon--mute, .channel-item__time, .channel-item__status, .chat-header-info__subline, .chat-placeholder__content, .message__time, .chat-form__textarea::placeholder, .chat-form__send--disabled, .emoji-picker__panel-list-section-name, .chat-bottom-actions__right {
+.chat-header-info__title .icon--mute,
+.channel-item__time,
+.channel-item__status,
+.chat-header-info__subline,
+.chat-placeholder__content,
+.message__time,
+.chat-form__textarea::placeholder,
+.emoji-picker__panel-list-section-name,
+.chat-bottom-actions__right {
     color: var(--text-color-minor) !important;
 }
 
-.aside__header-button svg path, .etc-controls {
+.aside__header-button svg path,
+.etc-controls {
     fill: var(--text-color-gray) !important;
     color: var(--text-color-gray) !important;
 }
 
 .channel-item__name .searched,
-.contacts .searched{
+.contacts .searched {
     background: rgba(78, 160, 204, .64) !important;
 }
 
@@ -1431,7 +1601,15 @@ a.content-header-number:hover time {
     color: #000;
 }
 
-.chat-messages__unread-label span, .message--selected .message__actions-select, .chat-bottom-actions__button, .message__content-text a, .emoji-picker__tabs span:hover, .emoji-picker__invoker:hover, .emoji-picker__tabs span.active, .chat-form__attach:hover, .chat-bottom-actions__right-button {
+.chat-messages__unread-label span,
+.message--selected .message__actions-select,
+.chat-bottom-actions__button,
+.message__content-text a,
+.emoji-picker__tabs span:hover,
+.emoji-picker__invoker:hover,
+.emoji-picker__tabs span.active,
+.chat-form__attach:hover,
+.chat-bottom-actions__right-button {
     color: var(--text-color-blue) !important;
 }
 
@@ -1455,11 +1633,15 @@ a.content-header-number:hover time {
     color: var(--back-color-blue-button) !important;
 }
 
+.chat-form__send--disabled {
+    color: var(--text-color-minor) !important;
+}
 .emoji-picker__panel-list-section-name {
     box-shadow: 0px 2px 5px var(--color-03ev) !important;
 }
 
-.channel-item__online, .channel-item:hover .channel-item__online {
+.channel-item__online,
+.channel-item:hover .channel-item__online {
     border: 1px solid var(--color-02ev);
     background: var(--text-color-green);
 }
@@ -1468,17 +1650,30 @@ a.content-header-number:hover time {
     color: var(--text-color-green) !important;
 }
 
-.comments__item__more--root--5.comments__item__more--root--active, .comments__item__more--root--5:hover, .comments__item__more--root.comments__item__more--root--active, .comments__item__more--root:hover, .ui-button--5.ui-button--active, .ui-button--5:hover {
+.comments__item__more--root--5.comments__item__more--root--active,
+.comments__item__more--root--5:hover,
+.comments__item__more--root.comments__item__more--root--active,
+.comments__item__more--root:hover,
+.ui-button--5.ui-button--active,
+.ui-button--5:hover {
     border: none;
 }
 
-/* Settings */
+.chat__header-back svg g path {
+    fill: var(--text-color-gray) !important;
+}
 
-.subsite_settings__head, .subsite_settings__section__title, .input-suggestion__item, .captcha_wall__box, .ui_modal_window__title {
+/* Settings */
+.subsite_settings__head,
+.subsite_settings__section__title,
+.input-suggestion__item,
+.captcha_wall__box,
+.ui_modal_window__title {
     color: var(--text-color-title) !important;
 }
 
-.ui-limited-input::after, .ui_modal_window__content {
+.ui-limited-input::after,
+.ui_modal_window__content {
     color: var(--text-color-gray);
 }
 
@@ -1491,11 +1686,13 @@ a.content-header-number:hover time {
     filter: invert(90%);
 }
 
-.ui-button--1:hover, .ui-button--1.ui-button--hovered {
+.ui-button--1:hover,
+.ui-button--1.ui-button--hovered {
     background-color: var(--blue-button-hover);
 }
 
-.ui-checkbox, .ui_form--nickname .nickname-controls__button--cancel {
+.ui-checkbox,
+.ui_form--nickname .nickname-controls__button--cancel {
     border-color: var(--text-color-minor);
 }
 
@@ -1507,16 +1704,38 @@ a.content-header-number:hover time {
     border-color: var(--border-color);
 }
 
-.ui_form label, .ui_form--nickname .caption, .subsite_settings--description-field label, .subsite_settings__section__label, .ui_form--nickname .nickname-controls__button--cancel, .input-suggestion input::placeholder, .ui_modal_window--get_api_token .ui_modal_window__content__rules, .ui_modal_window__close .icon {
+.ui_form label,
+.ui_form--nickname .caption,
+.subsite_settings--description-field label,
+.subsite_settings__section__label,
+.ui_form--nickname .nickname-controls__button--cancel,
+.input-suggestion input::placeholder,
+.ui_modal_window--get_api_token .ui_modal_window__content__rules,
+.ui_modal_window__close .icon {
     color: var(--text-color-minor);
 }
 
-.ui_form input[type="text"], .ui_form input[type="password"], .ui_form input[type="email"], .ui_form input[type="name"], .ui_form textarea, .ui_form select, .ui_form input[type="text"]:disabled, .ui_form input[type="password"]:disabled, .ui_form input[type="email"]:disabled, .ui_form input[type="name"]:disabled, .ui_form textarea:disabled, .ui_form select:disabled, .island__social_links--type_1 .island__social_links__item {
+.ui_form input[type="text"],
+.ui_form input[type="password"],
+.ui_form input[type="email"],
+.ui_form input[type="name"],
+.ui_form textarea,
+.ui_form select,
+.ui_form input[type="text"]:disabled,
+.ui_form input[type="password"]:disabled,
+.ui_form input[type="email"]:disabled,
+.ui_form input[type="name"]:disabled,
+.ui_form textarea:disabled,
+.ui_form select:disabled,
+.island__social_links--type_1 .island__social_links__item {
     border: none;
     color: var(--text-color-gray);
 }
 
-.form2__inline-editor, .input-suggestion input, .ui_modal_window__footer, .ui_modal_window__header--border {
+.form2__inline-editor,
+.input-suggestion input,
+.ui_modal_window__footer,
+.ui_modal_window__header--border {
     border: none !important;
 }
 
@@ -1524,7 +1743,9 @@ input {
     color: var(--text-color-gray);
 }
 
-.list-editable__item, .icon--ui_email, .icon--bell {
+.list-editable__item,
+.icon--ui_email,
+.icon--bell {
     color: var(--text-color-gray) !important;
 }
 
@@ -1540,7 +1761,9 @@ input {
     background-color: var(--blue-button-hover) !important;
 }
 
-.content-footer-watchers, .contentFilter__title, .contentFilterCheckbox__counter {
+.content-footer-watchers,
+.contentFilter__title,
+.contentFilterCheckbox__counter {
     color: var(--text-color-minor);
 }
 
@@ -1563,8 +1786,14 @@ input {
 .v-ui-checkbox--checked:before {
     border-color: var(--text-color-gray);
 }
+
+.v-header-cover {
+    background-color: var(--text-color-blue) !important;
+}
 /* Rating */
-.subsite_head__name, .table__row--header .table__cell:first-child, .table__row--footer {
+.subsite_head__name,
+.table__row--header .table__cell:first-child,
+.table__row--footer {
     color: var(--text-color-title);
 }
 
@@ -1580,7 +1809,9 @@ input {
     color: var(--text-color-minor) !important;
 }
 
-.table__cell:hover .subsite__name, .table__cell:hover .subsite__rank, .table__row--footer:hover .table__more {
+.table__cell:hover .subsite__name,
+.table__cell:hover .subsite__rank,
+.table__row--footer:hover .table__more {
     color: var(--text-color-blue);
 }
 
@@ -1591,9 +1822,61 @@ input {
 .subsite__trend .icon--ui_arrow_down {
     color: var(--text-color-red) !important;
 }
+
+.table__row:not(:last-child):not(.table__row--header) {
+    border-color: var(--border-color-dim) !important;
+}
+/* PLUS page */
+.page--plus .name,
+.page--plus h1,
+.plus-features__item__title {
+    color: var(--text-color-title);
+}
+
+.v-plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #8577e1), color-stop(7%, #534bae), to(#1b237e));
+    background-image: linear-gradient(90deg, #8577e1 -41%, #534bae 7%, #1b237e 100%);
+}
+
+.plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #8577e1), color-stop(7%, #534bae), to(#1b237e));
+    background-image: linear-gradient(90deg, #8577e1 -41%, #534bae 7%, #1b237e 100%);
+}
+
+.page--plus .plus-avatar {
+    border-color: var(--back-color-blue-button);
+}
+
+.page--plus .plus-features__item .icon {
+    color: #8577e1;
+}
+
+/* Subscriptions */
+.subsites_catalog__search {
+    border: none;
+}
+
+.subsite_card_simple_short__title,
+.subsites_catalog__dummy,
+.subsites_catalog__label {
+    color: var(--text-color-title);
+}
+
+.subsites_catalog_item:before {
+    background: transparent;
+}
+
+.subsites_catalog__open_wrapped:hover {
+    color: var(--text-color-blue);
+}
+
+.subsites_catalog__label--bordered {
+    border-color: var(--border-color);
+}
 /*******************************************************************************************************************/
 /*  EVALUATION SETTINGS */
-#notify .notify__item {
+#notify .notify__item,
+.live-stream {
     background-color: var(--color-24ev) !important;
 }
 
@@ -1638,11 +1921,21 @@ input {
 .reposters_list:before,
 .vote .vote__value:hover .vote__users--not-empty:before,
 .form-picture::before,
-.quote-tool__photo-wrapper::before, .chat-messages__day span, .head-notifies__items-wrapper, .messenger-panel__down-list, .ui-limited-input::after, .rc-anchor-light, .repost_button__list .bubble, .repost_button__list .bubble:before {
+.quote-tool__photo-wrapper::before,
+.chat-messages__day span,
+.head-notifies__items-wrapper,
+.messenger-panel__down-list,
+.ui-limited-input::after,
+.rc-anchor-light,
+.repost_button__list .bubble,
+.repost_button__list .bubble:before {
     background-color: var(--color-08ev) !important;
 }
 
-.page--editor .bubble, .page--editor .bubble:before, .page--editor .bubble__container .search input {
+.page--editor .bubble,
+.page--editor .bubble:before,
+.page--editor .bubble__container .search input,
+.cdx-helper {
     background-color: var(--color-06ev) !important
 }
 
@@ -1680,7 +1973,24 @@ input {
 .andropov_link,
 .authorCard,
 .etc-controls--active .etc-controls__dropdown,
-.etc-controls__dropdown:before, .ui_form input[type="text"]:disabled, .ui_form input[type="password"]:disabled, .ui_form input[type="email"]:disabled, .ui_form input[type="name"]:disabled, .ui_form textarea:disabled, .ui_form select:disabled, .ui_form input[type="text"], .ui_form input[type="password"], .ui_form input[type="email"], .ui_form input[type="name"], .ui_form textarea, .ui_form select, .form2__inline-editor, .input-suggestion input {
+.etc-controls__dropdown:before,
+.ui_form input[type="text"]:disabled,
+.ui_form input[type="password"]:disabled,
+.ui_form input[type="email"]:disabled,
+.ui_form input[type="name"]:disabled,
+.ui_form textarea:disabled,
+.ui_form select:disabled,
+.ui_form input[type="text"],
+.ui_form input[type="password"],
+.ui_form input[type="email"],
+.ui_form input[type="name"],
+.ui_form textarea,
+.ui_form select,
+.form2__inline-editor,
+.input-suggestion input,
+.andropov_tweet,
+.andropov_telegram,
+.instagram-tool__widget iframe {
     background-color: var(--color-04ev) !important;
 }
 
@@ -1694,7 +2004,9 @@ input {
 .emoji-picker__panel,
 .emoji-picker__panel-list-section-name,
 .emoji-picker__tabs,
-.emoji-picker__panel::after, .island__social_links--type_1 .island__social_links__item, .list-editable__item__remove {
+.emoji-picker__panel::after,
+.island__social_links--type_1 .island__social_links__item,
+.list-editable__item__remove {
     background-color: var(--color-03ev) !important;
 }
 
@@ -1705,7 +2017,15 @@ input {
 .media-item-zoomed__inner,
 .messenger,
 .aside-search input,
-.chat-messages__unread-label span, .chat-form__textarea, .captcha_wall__box, .ui_modal_window, .daily-promo-unit__button, .vacancies_widget__new, .adviser__container, .adviser__container::after {
+.chat-messages__unread-label span,
+.chat-form__textarea,
+.captcha_wall__box,
+.ui_modal_window,
+.daily-promo-unit__button,
+.vacancies_widget__new,
+.adviser__container,
+.adviser__container::after,
+.page--plus .plus-features {
     background-color: var(--color-02ev) !important;
 }
 
@@ -1722,13 +2042,20 @@ input {
 .gall,
 .gl__container,
 .aside__list-heading,
-.feed__horizon, .daily-promo-unit, .daily-promo-unit-label__inner, .vacancies_widget, .v-ui-checkbox
-{
+.feed__horizon,
+.daily-promo-unit,
+.daily-promo-unit-label__inner,
+.vacancies_widget,
+.v-ui-checkbox,
+.popup__container__window--styled .popup__container__window__tpl,
+.subsites_catalog__search__bar {
     background-color: var(--color-01ev) !important;
 }
 
-.media-item-zoomed__inner-media, .ui-checkbox--disabled
-{
+.media-item-zoomed__inner-media,
+.ui-checkbox--disabled,
+.page:after,
+.l-page--loading {
     background-color: var(--color-00ev) !important;
 }
 
@@ -1741,7 +2068,9 @@ input {
 .item--selected,
 .v-split-button-option:hover,
 .search-dropdown-item--focused,
-.search-dropdown-item--submit:hover, .input-suggestion__item--selected[data-v-608bac96], .input-suggestion__item[data-v-608bac96]:hover {
+.search-dropdown-item--submit:hover,
+.input-suggestion__item--selected[data-v-608bac96],
+.input-suggestion__item[data-v-608bac96]:hover {
     background-color: var(--hover-16ev) !important;
 }
 
@@ -1753,12 +2082,27 @@ tc_control__item:hover,
 .ui-dropdown__item:hover,
 .etc_control__item:hover,
 .comments_updates:hover,
-.ui-dropdown__item:hover, .comments__item__more--root--5.comments__item__more--root--active, .comments__item__more--root--5:hover, .comments__item__more--root.comments__item__more--root--active, .comments__item__more--root:hover, .ui-button--5.ui-button--active, .ui-button--5:hover, .u-notification--unread, .u-notification--hover:hover, .u-notification--unread:hover, .channel-item:hover,
-.channel-item--focused, .repost_button__list .bubble .item--selected, .repost_button__list .bubble .item--focused, .repost_button__list .bubble .item:hover {
+.ui-dropdown__item:hover,
+.comments__item__more--root--5.comments__item__more--root--active,
+.comments__item__more--root--5:hover,
+.comments__item__more--root.comments__item__more--root--active,
+.comments__item__more--root:hover,
+.ui-button--5.ui-button--active,
+.ui-button--5:hover,
+.u-notification--unread,
+.u-notification--hover:hover,
+.u-notification--unread:hover,
+.channel-item:hover,
+.channel-item--focused,
+.repost_button__list .bubble .item--selected,
+.repost_button__list .bubble .item--focused,
+.repost_button__list .bubble .item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
-.page--editor .bubble .item--selected, .page--editor .bubble .item--focused, .page--editor .bubble .item:hover {
+.page--editor .bubble .item--selected,
+.page--editor .bubble .item--focused,
+.page--editor .bubble .item:hover {
     background-color: var(--hover-06ev) !important;
 }
 
@@ -1775,11 +2119,18 @@ tc_control__item:hover,
 .ce-settings__remove-block-button--confirm:hover,
 .upload-button:hover,
 .avatar-input::after,
-.etc-controls__dropdownItem:hover {
+.etc-controls__dropdownItem:hover,
+.ce-settings__anchor-wrapper:hover input,
+.andropov_telegram__media--photo,
+.andropov_telegram__media--video,
+.andropov_tweet__media--photo,
+.andropov_tweet__media--video {
     background-color: var(--hover-04ev) !important;
 }
 
-.attachButton:hover {
+.attachButton:hover,
+.email_subscribe_vue__form,
+.email_subscribe_vue__form input {
     background-color: var(--hover-03ev) !important;
 }
 
@@ -1788,7 +2139,8 @@ tc_control__item:hover,
 .tg-header__type-switcher--current,
 .channel-item--current,
 .aside__scrollable .channel-item:hover,
-.contacts:not(.contacts--disabled) .contacts__item:hover, .message--selected{
+.contacts:not(.contacts--disabled) .contacts__item:hover,
+.message--selected {
     background-color: var(--hover-02ev) !important;
 }
 
@@ -1799,7 +2151,10 @@ tc_control__item:hover,
 .v-island .u-notification--hover:hover,
 .v-island .u-notification--unread:hover,
 .sidebar-tree-list-item--active,
-.u-notification--blue.u-notification--bg, .vb > .vb-dragger > .vb-dragger-styler, .daily-promo-unit-label__inner:hover, .table__row--me {
+.u-notification--blue.u-notification--bg,
+.vb > .vb-dragger > .vb-dragger-styler,
+.daily-promo-unit-label__inner:hover,
+.table__row--me {
     background-color: var(--hover-01ev) !important;
 }
 
