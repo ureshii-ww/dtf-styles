@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.0
+@version        0.7.1
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -361,7 +361,8 @@ tc_control__item:hover,
 .andropov_tweet__media--photo,
 .andropov_tweet__media--video,
 .andropov_preview--image,
-.donate-attachment {
+.donate-attachment,
+.cdx-inline-toolbar__link-back:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -939,7 +940,9 @@ a.v-list__item:hover,
 .v-header-description a:not(.t-link-inline),
 .comments__subscribe--active .icon--bell,
 .comments__item__expand,
-.comments__item__more--inner {
+.comments__item__more--inner,
+.editor .ce-redactor a,
+.miniEditor .ce-redactor a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1611,6 +1614,27 @@ a.v-list__item:hover,
 
 .tab--active .tab__label[data-v-9dab5d00]:after {
     background-color: var(--text-color-blue);
+}
+
+.cdx-inline-toolbar__button-wrapper--active .cdx-icon {
+    filter: hue-rotate(370deg) brightness(130%) saturate(40%);
+}
+
+.cdx-inline-toolbar__link-back {
+    filter: invert(1) opacity(69%)
+}
+
+.cdx-inline-toolbar__link-back:hover {
+    filter: none;
+}
+
+.editor .ce-redactor a,
+.miniEditor .ce-redactor a {
+    border-color: var(--text-color-blue);
+}
+
+.cdx-helper:before {
+    border-color: transparent transparent var(--color-06ev);
 }
 
 /*Posts*/
