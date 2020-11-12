@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.4
+@version        0.7.5
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -118,7 +118,8 @@ body {
 .repost_button__list .bubble,
 .repost_button__list .bubble:before,
 .bubble,
-.bubble:before {
+.bubble:before,
+.herzen__command_list {
     background-color: var(--color-08ev) !important;
 }
 
@@ -338,7 +339,9 @@ body {
 .repost_button__list .bubble .item--selected,
 .repost_button__list .bubble .item--focused,
 .repost_button__list .bubble .item:hover,
-.v-form-input input {
+.v-form-input input,
+.herzen__command_list__item--selected,
+.herzen__command_list__item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -971,7 +974,9 @@ a.v-list__item:hover,
 .miniEditor .ce-redactor a,
 .comments__item__go_to_original,
 .u-notification__content__title a:hover b,
-.cdx-plugin-external-settings__item--active {
+.cdx-plugin-external-settings__item--active,
+.herzen .content_editable ce-command,
+.subsite__cover__add__button:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1148,7 +1153,8 @@ a.v-list__item:hover,
 .donate-attachment,
 .select__current,
 .andropov_iframe,
-.ui_sub_menu--bordered {
+.ui_sub_menu--bordered,
+.herzen__command_list__item {
     border: none !important;
 }
 
@@ -1250,7 +1256,6 @@ a.v-list__item:hover,
     .search__field .icon {
         color: var(--text-color-minor) !important;
     }
-
 }
 
 .v-split-button {
