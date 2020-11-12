@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.5
+@version        0.7.6
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -202,7 +202,10 @@ body {
 .ui_sub_menu,
 .ui_sub_menu--left-arrow:before,
 .ui_sub_menu--right-arrow:before,
-.ui_sub_menu--center-arrow:before {
+.ui_sub_menu--center-arrow:before,
+.form2__field--text .text,
+.form2__field--text .text__input,
+.form2__field--advanced_list .text__input {
     background-color: var(--color-04ev) !important;
 }
 
@@ -532,7 +535,8 @@ announcement-stats,
 .donate-attachment,
 .u-notification__content__title,
 .select__current,
-.ui_sub_menu {
+.ui_sub_menu,
+.form2__field--checkbox label {
     color: var(--text-color-gray) !important;
 }
 
@@ -810,7 +814,8 @@ attachButton:hover,
 .ui-button--4,
 .navigationDropdown__current__button,
 .navigationDropdown__current__link,
-#INVADERS-NAVIGATION {
+#INVADERS-NAVIGATION,
+.form2__field label {
     color: var(--text-color-minor) !important;
 }
 
@@ -977,7 +982,11 @@ a.v-list__item:hover,
 .cdx-plugin-external-settings__item--active,
 .herzen .content_editable ce-command,
 .subsite__cover__add__button:hover,
-.item__check {
+.item__check,
+.ce-block__content a,
+.inline-search-item,
+.t-link-classic,
+.form2__field--advanced_list .advanced_list__list .adv_list_item a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1040,7 +1049,9 @@ a.v-list__item:hover,
 .remover,
 .comments__item__expand:hover,
 .comments__item__more--inner:hover,
-.comments__item__go_to_original:hover {
+.comments__item__go_to_original:hover,
+.t-link-classic:hover,
+.form2__field--advanced_list .advanced_list__list .adv_list_item a:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1155,7 +1166,11 @@ a.v-list__item:hover,
 .select__current,
 .andropov_iframe,
 .ui_sub_menu--bordered,
-.herzen__command_list__item {
+.herzen__command_list__item,
+.form2__field--text .text,
+.form2__field--advanced_list .text__input,
+.form2__field--advanced_list .advanced_list__list,
+.form2__field--sticky {
     border: none !important;
 }
 
@@ -1298,6 +1313,22 @@ a.v-list__item:hover,
 }
 /*--------------------------------------------------------*/
 /* Center */
+.ce-block__content a,
+.t-link-classic,
+.form2__field--advanced_list .advanced_list__list .adv_list_item a {
+    border-color: var(--text-color-blue);
+}
+
+.t-link-classic:hover,
+.form2__field--advanced_list .advanced_list__list .adv_list_item a:hover {
+    border-color: var(--text-color-red);
+}
+
+.form2__field--advanced_list .advanced_list__list .adv_list_item__remove:before,
+.form2__field--advanced_list .advanced_list__list .adv_list_item__remove:after {
+    background-color: var(--text-color-red);
+}
+
 .comments_counter--has_new .comments_counter__count__ico svg,
 .comments_counter--has_new .comments_counter__count__value_new svg,
 .comments_counter:hover .comments_counter__count__unit,
