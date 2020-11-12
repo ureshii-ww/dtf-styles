@@ -976,7 +976,8 @@ a.v-list__item:hover,
 .u-notification__content__title a:hover b,
 .cdx-plugin-external-settings__item--active,
 .herzen .content_editable ce-command,
-.subsite__cover__add__button:hover {
+.subsite__cover__add__button:hover,
+.item__check {
     color: var(--text-color-blue) !important;
 }
 
