@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.1
+@version        0.8.2
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -420,6 +420,8 @@ body {
 .v-island .u-notification--unread:hover,
 .sidebar-tree-list-item--active,
 .u-notification--blue.u-notification--bg,
+.u-notification--green.u-notification--bg,
+.u-notification--red.u-notification--bg,
 .vb > .vb-dragger > .vb-dragger-styler,
 .daily-promo-unit-label__inner:hover,
 .table__row--me,
@@ -894,7 +896,6 @@ a.content-header-author:hover .content-header-author__name,
 .site-header-user-login:hover,
 .profile_comment_favorite__user__name:hover,
 .v-list__more,
-.v-list__label:hover,
 .donate-cabinet-header a,
 .v-dummy__text a,
 .v-list-subsites-item__label:hover,
@@ -991,7 +992,8 @@ a.v-list__item:hover,
 .ce-block__content a,
 .inline-search-item,
 .t-link-classic,
-.form2__field--advanced_list .advanced_list__list .adv_list_item a {
+.form2__field--advanced_list .advanced_list__list .adv_list_item a,
+.v-list__label a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1056,7 +1058,8 @@ a.v-list__item:hover,
 .comments__item__more--inner:hover,
 .comments__item__go_to_original:hover,
 .t-link-classic:hover,
-.form2__field--advanced_list .advanced_list__list .adv_list_item a:hover {
+.form2__field--advanced_list .advanced_list__list .adv_list_item a:hover,
+.v-list__label a:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1333,6 +1336,14 @@ a.v-list__item:hover,
 
 .u-notification--blue .u-notification__avatar-icon {
     background: var(--back-color-blue-button);
+}
+
+.u-notification--green .u-notification__avatar-icon {
+    background: var(--text-color-green);
+}
+
+.u-notification--red .u-notification__avatar-icon {
+    background: var(--text-color-red);
 }
 /*--------------------------------------------------------*/
 /* Center */
@@ -1628,6 +1639,14 @@ a.v-list__item:hover,
     .subsite-details {
         background-color: var(--color-00ev) !important;
     }
+}
+
+.v-list__label a {
+    border-color: var(--text-color-blue);
+}
+
+.v-list__label a:hover {
+    border-color: var(--text-color-red);
 }
 
 /*Post editor*/
