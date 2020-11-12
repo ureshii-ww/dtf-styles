@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.1
+@version        0.7.3
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
 
-@-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
+@-moz-document domain("dtf.ru") {
 :root {
     --text-color-gray: rgba(255, 255, 255, 0.69);
     --text-color-title: rgba(255, 255, 255, 0.87);
@@ -63,8 +63,9 @@ body {
     background-color: var(--color-24ev) !important;
 }
 
-.bubble,
-.bubble:before,
+.site-header-user .bubble,
+.site-header-user .bubble:before,
+.site-header-user .item,
 .head-notifies__panel,
 .messenger-panel__down,
 .v-split-button__dropdown,
@@ -75,7 +76,8 @@ body {
 }
 
 .site-header,
-.u-notification--unread {
+.u-notification--unread,
+.floating-popup__button .ui-button {
     background-color: var(--color-12ev) !important;
 }
 
@@ -129,7 +131,9 @@ body {
 .item,
 .avatar-input__remove,
 .andropov_uploader__preview_item__remove,
-.remover {
+.remover,
+.gallery-image__media .upload-button,
+#INVADERS-NAVIGATION {
     background-color: var(--color-06ev) !important
 }
 
@@ -192,7 +196,12 @@ body {
 .messenger-panel__loader-image,
 .messenger-panel__loader-line-1,
 .messenger-panel__loader-line-2,
-.m-floating .chat-form__textarea {
+.m-floating .chat-form__textarea,
+.cdx-plugin-external-settings__item,
+.ui_sub_menu,
+.ui_sub_menu--left-arrow:before,
+.ui_sub_menu--right-arrow:before,
+.ui_sub_menu--center-arrow:before {
     background-color: var(--color-04ev) !important;
 }
 
@@ -295,7 +304,7 @@ body {
 }
 
 /* Hovers */
-.item:hover,
+.site-header-user .item:hover,
 .item--selected,
 .v-split-button-option:hover,
 .search-dropdown-item--focused,
@@ -309,7 +318,7 @@ body {
 .attacher--active .attacher__button,
 .attacher__button:hover,
 .attacher__button:hover .icon--ui_rouble,
-tc_control__item:hover,
+.tc_control__item:hover,
 .comments_updates:hover,
 .ui-dropdown__item:hover,
 .etc_control__item:hover,
@@ -337,7 +346,8 @@ tc_control__item:hover,
 .page--editor .bubble .item--focused,
 .page--editor .bubble .item:hover,
 .add-members__icon,
-.item:hover {
+.item:hover,
+.gallery-image__media .upload-button:hover {
     background-color: var(--hover-06ev) !important;
 }
 
@@ -362,7 +372,10 @@ tc_control__item:hover,
 .andropov_tweet__media--video,
 .andropov_preview--image,
 .donate-attachment,
-.cdx-inline-toolbar__link-back:hover {
+.cdx-inline-toolbar__link-back:hover,
+.media-tool-settings__item:hover,
+.media-tool-settings__item--active,
+.ui_sub_menu__item:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -404,7 +417,8 @@ tc_control__item:hover,
 .email_subscribe_form__inner,
 .email_subscribe_form__input,
 .ui_select,
-.ui_select select {
+.ui_select select,
+.gallery-image--with-background .gallery-image__media {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -514,7 +528,8 @@ announcement-stats,
 .popup__content--pay_card .order_details__line,
 .donate-attachment,
 .u-notification__content__title,
-.select__current {
+.select__current,
+.ui_sub_menu {
     color: var(--text-color-gray) !important;
 }
 
@@ -524,7 +539,6 @@ announcement-stats,
 .messenger-panel__down-head,
 .channel-item__name,
 .item__badge,
-.v-split-button,
 .sidebar__button .v-button,
 .live__title,
 .live__toggle,
@@ -658,7 +672,15 @@ attachButton:hover,
 .sidebar-tree-list-item--bold,
 .ad-contacts__user__name,
 .donate-attachment__sum,
-.u-notification__content__title b {
+.u-notification__content__title b,
+.media-tool-settings__item--active,
+.v-header-description mark,
+.form2__inline-editor b,
+.marked-text,
+.v-header-description b,
+.v-header-description strong,
+#INVADERS-POINTS,
+.floating-popup__title {
     color: var(--text-color-title) !important;
 }
 
@@ -781,7 +803,11 @@ attachButton:hover,
 .table__row--header .table__cell:not(:first-child),
 .popup__content--payments .payments_popup__info p,
 .ad-contacts__title,
-.sidebar-tree-list-item__favourite:hover {
+.sidebar-tree-list-item__favourite:hover,
+.ui-button--4,
+.navigationDropdown__current__button,
+.navigationDropdown__current__link,
+#INVADERS-NAVIGATION {
     color: var(--text-color-minor) !important;
 }
 
@@ -942,7 +968,10 @@ a.v-list__item:hover,
 .comments__item__expand,
 .comments__item__more--inner,
 .editor .ce-redactor a,
-.miniEditor .ce-redactor a {
+.miniEditor .ce-redactor a,
+.comments__item__go_to_original,
+.u-notification__content__title a:hover b,
+.cdx-plugin-external-settings__item--active {
     color: var(--text-color-blue) !important;
 }
 
@@ -1004,7 +1033,8 @@ a.v-list__item:hover,
 .v-header-description a:not(.t-link-inline):hover,
 .remover,
 .comments__item__expand:hover,
-.comments__item__more--inner:hover {
+.comments__item__more--inner:hover,
+.comments__item__go_to_original:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1107,7 +1137,6 @@ a.v-list__item:hover,
 .andropov_tweet,
 .andropov_telegram,
 .attacher__form,
-.comments__item__user__status,
 .v-form-input input,
 .popup__content--pay_card .card_form__card_number,
 .popup__content--pay_card .card_form__cvv,
@@ -1117,7 +1146,9 @@ a.v-list__item:hover,
 .tab__content,
 .andropov_uploader__preview_item__remove,
 .donate-attachment,
-.select__current {
+.select__current,
+.andropov_iframe,
+.ui_sub_menu--bordered {
     border: none !important;
 }
 
@@ -1153,10 +1184,6 @@ a.v-list__item:hover,
 }
 
 /* Header */
-.icon--search {
-    fill: var(--text-color-minor);
-}
-
 #ui_briefcase path {
     stroke: var(--text-color-gray) !important;
 }
@@ -1219,6 +1246,14 @@ a.v-list__item:hover,
     .search .icon {
         color: var(--text-color-gray) !important;
     }
+
+    .search__field .icon {
+        color: var(--text-color-minor) !important;
+    }
+}
+
+.v-split-button {
+    color: #FFF;
 }
 
 /*--------------------------------------------------------*/
@@ -1314,12 +1349,23 @@ a.v-list__item:hover,
 }
 
 @media (max-width: 859px) {
-    .ui-filters--responsive {
+    .ui-filters--responsive,
+    .ui-rounded-button--active .ui-rounded-button__link {
         background-color: var(--color-01ev) !important;
     }
 
-    .ui-filters__inner {
+    .ui-filters__inner,
+    .ui-rounded-button__link {
         background-color: var(--color-00ev) !important;
+    }
+
+    .ui-rounded-button__link:hover {
+        background-color: var(--color-00ev) !important;
+        color: var(--text-color-blue) !important;
+    }
+
+    .ui-rounded-button--active .ui-rounded-button__link:hover {
+        background-color: var(--hover-01ev) !important;
     }
 
     .ui-rounded-button--has-active-child .ui-rounded-button__link {
@@ -1448,6 +1494,10 @@ a.v-list__item:hover,
 
 #notify .notify__item--success {
     border-left-color: var(--text-color-green);
+}
+
+.ui_sub_menu--bordered:before {
+    border-color: var(--color-04ev) !important;
 }
 /************************************************************************************************************/
 /*Profile*/
@@ -1620,7 +1670,8 @@ a.v-list__item:hover,
     filter: hue-rotate(370deg) brightness(130%) saturate(40%);
 }
 
-.cdx-inline-toolbar__link-back {
+.cdx-inline-toolbar__link-back,
+.cdx-inline-toolbar__link-remover:before {
     filter: invert(1) opacity(69%)
 }
 
@@ -1635,6 +1686,17 @@ a.v-list__item:hover,
 
 .cdx-helper:before {
     border-color: transparent transparent var(--color-06ev);
+}
+
+.gallery-image--with-border .gallery-image__media img,
+.gallery-image--with-border .gallery-image__media video {
+    border-color: var(--text-color-gray);
+}
+
+.gallery-image__media .upload-button {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*Posts*/
@@ -1714,7 +1776,9 @@ a.v-list__item:hover,
 .profile_comment_favorite__text mark,
 .profile_comment_self__text mark,
 .subsite_card_simple__description mark,
-.content mark {
+.content mark,
+.v-header-description mark,
+.marked-text {
     background: var(--hover-08ev);
 }
 
@@ -1757,6 +1821,7 @@ a.v-list__item:hover,
 
 .comments__item__user__status {
     background: var(--text-color-green);
+    border-color: var(--color-01ev);
 }
 
 .thesis__attach_something .icon--ui_rouble {
@@ -1865,6 +1930,10 @@ a.v-list__item:hover,
 
 .v-form-range .vue-slider-process {
     background: var(--back-color-blue-button);
+}
+
+.ui-button--4::after {
+    border-bottom-color: var(--text-color-minor);
 }
 /******************************************************************/
 /* Messenger */
@@ -2137,5 +2206,74 @@ a.v-list__item:hover,
 
 .hljs-strong {
     font-weight: bold;
+}
+}
+
+@-moz-document domain("instagram.com") {
+:root {
+    --text-color-gray: rgba(255, 255, 255, 0.69);
+    --text-color-title: rgba(255, 255, 255, 0.87);
+    --text-color-blue: #AAB6FE;
+    --text-color-minor: rgba(255, 255, 255, 0.38);
+    --text-color-red: #ff5857;
+    --back-color-blue-button: #534bae;
+    --blue-button-hover: #49599a;
+    --color-04ev: #272727;
+    --color-06ev: #2c2c2c;
+}
+
+html[stylus-iframe*="dtf.ru"] body,
+html[stylus-iframe*="dtf.ru"] .AvatarContainer,
+html[stylus-iframe*="dtf.ru"] .PrimaryCTA {
+    background-color: var(--color-04ev) !important;
+}
+
+html[stylus-iframe*="dtf.ru"] .HoverCard .HoverCardRoot {
+    background-color: var(--color-06ev);
+}
+
+html[stylus-iframe*="dtf.ru"] .UsernameText,
+html[stylus-iframe*="dtf.ru"] .PrimaryCTA a,
+html[stylus-iframe*="dtf.ru"] .SocialProof a,
+html[stylus-iframe*="dtf.ru"] .HoverCardUserName .Username {
+    color: var(--text-color-title);
+}
+
+html[stylus-iframe*="dtf.ru"] .FollowerCountText,
+html[stylus-iframe*="dtf.ru"] .HoverCardStatus span,
+html[stylus-iframe*="dtf.ru"] a.CommentInput {
+    color: var(--text-color-minor);
+}
+
+html[stylus-iframe*="dtf.ru"] .UsernameText:hover {
+    color: var(--text-color-blue);
+}
+
+html[stylus-iframe*="dtf.ru"] a.ViewProfileButton,
+html[stylus-iframe*="dtf.ru"] a.FollowButton {
+    background-color: var(--back-color-blue-button);
+}
+
+html[stylus-iframe*="dtf.ru"] a.ViewProfileButton:hover,
+html[stylus-iframe*="dtf.ru"] a.FollowButton:hover {
+    background-color: var(--blue-button-hover);
+}
+
+html[stylus-iframe*="dtf.ru"] a:active {
+    opacity: 1;
+}
+
+html[stylus-iframe*="dtf.ru"] .VerifiedSprite {
+    filter: hue-rotate(370deg) brightness(130%) saturate(40%)
+}
+
+html[stylus-iframe*="dtf.ru"] .Feedback a,
+html[stylus-iframe*="dtf.ru"] .Glyph {
+    filter: invert(1) opacity(69%);
+}
+
+html[stylus-iframe*="dtf.ru"] .PrimaryCTA,
+html[stylus-iframe*="dtf.ru"] .Footer {
+    border-color: var(--text-color-minor);
 }
 }
