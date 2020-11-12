@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.2
+@version        0.8.3
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -77,7 +77,8 @@ body {
 
 .site-header,
 .u-notification--unread,
-.floating-popup__button .ui-button {
+.floating-popup__button .ui-button,
+.andropov_uploader__preview_item__remove {
     background-color: var(--color-12ev) !important;
 }
 
@@ -119,7 +120,8 @@ body {
 .repost_button__list .bubble:before,
 .bubble,
 .bubble:before,
-.herzen__command_list {
+.herzen__command_list,
+.andropov_preview {
     background-color: var(--color-08ev) !important;
 }
 
@@ -131,7 +133,6 @@ body {
 .m-floating .etc-controls .etc-controls__dropdown:before,
 .item,
 .avatar-input__remove,
-.andropov_uploader__preview_item__remove,
 .remover,
 .gallery-image__media .upload-button,
 #INVADERS-NAVIGATION {
@@ -694,7 +695,8 @@ attachButton:hover,
 .v-header-description b,
 .v-header-description strong,
 #INVADERS-POINTS,
-.floating-popup__title {
+.floating-popup__title,
+.andropov_preview__title {
     color: var(--text-color-title) !important;
 }
 
@@ -822,7 +824,8 @@ attachButton:hover,
 .navigationDropdown__current__button,
 .navigationDropdown__current__link,
 #INVADERS-NAVIGATION,
-.form2__field label {
+.form2__field label,
+.andropov_preview--link .andropov_preview__hostname {
     color: var(--text-color-minor) !important;
 }
 
@@ -2126,6 +2129,9 @@ a.v-list__item:hover,
     border-color: var(--border-color);
 }
 /* Settings */
+.icon--toggle-up g path {
+    fill: var(--text-color-gray);
+}
 .paid_account__number {
     color: #000;
     filter: invert(90%);
