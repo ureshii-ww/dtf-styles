@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.0
+@version        0.8.1
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -1864,6 +1864,10 @@ a.v-list__item:hover,
 .channel-item__name .searched,
 .contacts .searched {
     background-color: rgba(168, 187, 200, .16) !important;
+}
+
+.block-warning {
+    background-color: #3e2723;
 }
 /*******************************************************************************************************************/
 /*** Comments ***/
