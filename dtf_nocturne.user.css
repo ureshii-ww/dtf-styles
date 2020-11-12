@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.7
+@version        0.7.8
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -205,7 +205,8 @@ body {
 .ui_sub_menu--center-arrow:before,
 .form2__field--text .text,
 .form2__field--text .text__input,
-.form2__field--advanced_list .text__input, .inline-dropdown  {
+.form2__field--advanced_list .text__input,
+.inline-dropdown {
     background-color: var(--color-04ev) !important;
 }
 
@@ -344,7 +345,7 @@ body {
 .repost_button__list .bubble .item:hover,
 .v-form-input input,
 .herzen__command_list__item--selected,
-.herzen__command_list__item:hover{
+.herzen__command_list__item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -381,7 +382,9 @@ body {
 .cdx-inline-toolbar__link-back:hover,
 .media-tool-settings__item:hover,
 .media-tool-settings__item--active,
-.ui_sub_menu__item:hover, .dropdown__found__item--selected, .dropdown__found__item:hover {
+.ui_sub_menu__item:hover,
+.dropdown__found__item--selected,
+.dropdown__found__item:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -536,7 +539,9 @@ announcement-stats,
 .u-notification__content__title,
 .select__current,
 .ui_sub_menu,
-.form2__field--checkbox label, .inline-dropdown, .inline-dropdown__found-item--hashtag::before {
+.form2__field--checkbox label,
+.inline-dropdown,
+.inline-dropdown__found-item--hashtag::before {
     color: var(--text-color-gray) !important;
 }
 
@@ -1192,10 +1197,28 @@ a.v-list__item:hover,
 .shares--mobile .shares__open,
 .shares--open .shares__close,
 .etc-controls__dropdown,
-#notify .notify__item, .inline-dropdown {
-    --webkit-box-shadow: 1px 1px 6px 0px rgba(18, 18, 18, 0.6) !important;
-    -moz-box-shadow: 1px 1px 6px 0px rgba(18, 18, 18, 0.6) !important;
-    box-shadow: 1px 1px 6px 0px rgba(18, 18, 18, 0.6) !important;
+#notify .notify__item,
+.inline-dropdown {
+    --webkit-box-shadow: 0 2.6px 2.2px rgba(0, 0, 0, 0.023),
+    0 5.4px 5.3px rgba(0, 0, 0, 0.032),
+    0 8.8px 10px rgba(0, 0, 0, 0.038),
+    0 13.7px 17.9px rgba(0, 0, 0, 0.044),
+    0 23px 33.4px rgba(0, 0, 0, 0.051),
+    0 58px 80px rgba(0, 0, 0, 0.07) !important;
+
+    -moz-box-shadow: 0 2.6px 2.2px rgba(0, 0, 0, 0.023),
+    0 5.4px 5.3px rgba(0, 0, 0, 0.032),
+    0 8.8px 10px rgba(0, 0, 0, 0.038),
+    0 13.7px 17.9px rgba(0, 0, 0, 0.044),
+    0 23px 33.4px rgba(0, 0, 0, 0.051),
+    0 58px 80px rgba(0, 0, 0, 0.07) !important;
+
+    box-shadow: 0 2.6px 2.2px rgba(0, 0, 0, 0.023),
+    0 5.4px 5.3px rgba(0, 0, 0, 0.032),
+    0 8.8px 10px rgba(0, 0, 0, 0.038),
+    0 13.7px 17.9px rgba(0, 0, 0, 0.044),
+    0 23px 33.4px rgba(0, 0, 0, 0.051),
+    0 58px 80px rgba(0, 0, 0, 0.07) !important;
 }
 
 .v-split-button,
@@ -1833,8 +1856,14 @@ a.v-list__item:hover,
     fill: var(--color-04ev) !important;
 }
 
-.editor .marked-text, .miniEditor .marked-text, .profile_comment_favorite__text mark, .profile_comment_self__text mark, .subsite_card_simple__description mark, .channel-item__name .searched, .contacts .searched {
-    background-color: rgba(168,187,200,.16) !important;
+.editor .marked-text,
+.miniEditor .marked-text,
+.profile_comment_favorite__text mark,
+.profile_comment_self__text mark,
+.subsite_card_simple__description mark,
+.channel-item__name .searched,
+.contacts .searched {
+    background-color: rgba(168, 187, 200, .16) !important;
 }
 /*******************************************************************************************************************/
 /*** Comments ***/
