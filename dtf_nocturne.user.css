@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.7.3
+@version        0.7.4
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -1250,6 +1250,7 @@ a.v-list__item:hover,
     .search__field .icon {
         color: var(--text-color-minor) !important;
     }
+
 }
 
 .v-split-button {
@@ -2086,13 +2087,13 @@ a.v-list__item:hover,
 
 /* PLUS page */
 .v-plus-badge {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #8577e1), color-stop(7%, #534bae), to(#1b237e));
-    background-image: linear-gradient(90deg, #8577e1 -41%, #534bae 7%, #1b237e 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #a49aee), color-stop(7%, #534bae), to(#333a82));
+    background-image: linear-gradient(90deg, #a49aee -41%, #534bae 7%, #333a82 100%);
 }
 
 .plus-badge {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #8577e1), color-stop(7%, #534bae), to(#1b237e));
-    background-image: linear-gradient(90deg, #8577e1 -41%, #534bae 7%, #1b237e 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #a49aee), color-stop(7%, #534bae), to(#333a82));
+    background-image: linear-gradient(90deg, #a49aee -41%, #534bae 7%, #333a82 100%);
 }
 
 .page--plus .plus-avatar {
