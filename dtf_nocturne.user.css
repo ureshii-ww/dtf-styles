@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.4
+@version        0.8.5
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -1573,6 +1573,10 @@ a.v-list__item:hover,
 
 .ui_sub_menu--bordered:before {
     border-color: var(--color-04ev) !important;
+}
+
+.vote .vote__users {
+    border-radius: 4px;
 }
 /************************************************************************************************************/
 /*Profile*/
