@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.3
+@version        0.8.4
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -112,8 +112,6 @@ body {
 .form-picture::before,
 .quote-tool__photo-wrapper::before,
 .chat-messages__day span,
-.head-notifies__items-wrapper,
-.messenger-panel__down-list,
 .ui-limited-input::after,
 .rc-anchor-light,
 .repost_button__list .bubble,
@@ -207,7 +205,9 @@ body {
 .form2__field--text .text,
 .form2__field--text .text__input,
 .form2__field--advanced_list .text__input,
-.inline-dropdown {
+.inline-dropdown,
+.head-notifies__items-wrapper,
+.messenger-panel__down-list {
     background-color: var(--color-04ev) !important;
 }
 
@@ -311,7 +311,7 @@ body {
 
 /* Hovers */
 .site-header-user .item:hover,
-.item--selected,
+.site-header-user .item--selected,
 .v-split-button-option:hover,
 .search-dropdown-item--focused,
 .search-dropdown-item--submit:hover,
@@ -336,10 +336,6 @@ body {
 .comments__item__more--root:hover,
 .ui-button--5.ui-button--active,
 .ui-button--5:hover,
-.u-notification--unread,
-.u-notification--hover:hover,
-.u-notification--unread:hover,
-.channel-item:hover,
 .channel-item--focused,
 .repost_button__list .bubble .item--selected,
 .repost_button__list .bubble .item--focused,
@@ -385,7 +381,11 @@ body {
 .media-tool-settings__item--active,
 .ui_sub_menu__item:hover,
 .dropdown__found__item--selected,
-.dropdown__found__item:hover {
+.dropdown__found__item:hover,
+.u-notification--unread,
+.u-notification--hover:hover,
+.u-notification--unread:hover,
+.channel-item:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1285,7 +1285,7 @@ a.v-list__item:hover,
 .messenger-panel__loader-image,
 .messenger-panel__loader-line-1,
 .messenger-panel__loader-line-2 {
-    background: var(--color-04ev) !important;
+    background: var(--hover-04ev) !important;
     /*НЕ ТРОГАТЬ*/
 }
 
