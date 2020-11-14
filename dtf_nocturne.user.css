@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.6
+@version        0.8.7
 @description    💗💗💗
 @author         Ureshii 死者
 ==/UserStyle== */
@@ -298,7 +298,8 @@ body {
 .widget_wrapper--type-blue,
 .subsite-details-mobile-navbar,
 .comments__item__expand,
-.comments__item__more--inner {
+.comments__item__more--inner,
+.comments__link_to_all {
     background-color: var(--color-01ev) !important;
 }
 
@@ -1730,7 +1731,8 @@ a.v-list__item:hover,
 }
 
 .andropov_link .andropov_image {
-    filter: invert(1) opacity(80%)
+    /*filter: invert(1) opacity(80%)*/
+    border-radius: 4px;
 }
 
 .adviser__toggler {
