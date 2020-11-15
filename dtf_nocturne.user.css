@@ -1,12 +1,14 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        0.8.7
+@version        1.0.0
 @description    💗💗💗
 @author         Ureshii 死者
+@preprocessor stylus
+@var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 ==/UserStyle== */
 
-@-moz-document domain("dtf.ru") {
+@-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
 :root {
     --text-color-gray: rgba(255, 255, 255, 0.69);
     --text-color-title: rgba(255, 255, 255, 0.87);
@@ -15,10 +17,10 @@
     --text-color-red: #ff5857;
     --text-color-green: #56d469;
     --back-color-deep: #121212;
-    --border-color: #343536;
-    --border-color-dim: #252526;
     --back-color-blue-button: #534bae;
     --blue-button-hover: #49599a;
+    --border-color: #343536;
+    --border-color-dim: #252526;
     --color-hover-blue: #82b1ff;
     --color-yellow: #ffea60;
     --back-green: rgba(63, 227, 118, .08);
@@ -208,7 +210,8 @@ body {
 .form2__field--advanced_list .text__input,
 .inline-dropdown,
 .head-notifies__items-wrapper,
-.messenger-panel__down-list {
+.messenger-panel__down-list,
+.audio_player__control__panel {
     background-color: var(--color-04ev) !important;
 }
 
@@ -263,7 +266,8 @@ body {
 .avatar-grid__item,
 .tab__content,
 .shares--mobile .shares__open,
-.shares--open .shares__close {
+.shares--open .shares__close,
+.events_widget__new {
     background-color: var(--color-02ev) !important;
 }
 
@@ -299,7 +303,12 @@ body {
 .subsite-details-mobile-navbar,
 .comments__item__expand,
 .comments__item__more--inner,
-.comments__link_to_all {
+.comments__link_to_all,
+.widget_wrapper--type-yellow,
+.widget_wrapper--type-pink,
+.events_widget,
+.island--company_entries,
+.layout__left-column {
     background-color: var(--color-01ev) !important;
 }
 
@@ -546,7 +555,9 @@ announcement-stats,
 .ui_sub_menu,
 .form2__field--checkbox label,
 .inline-dropdown,
-.inline-dropdown__found-item--hashtag::before {
+.inline-dropdown__found-item--hashtag::before,
+.audio_player__control__mute,
+.audio_player__control__rate {
     color: var(--text-color-gray) !important;
 }
 
@@ -698,7 +709,13 @@ attachButton:hover,
 .v-header-description strong,
 #INVADERS-POINTS,
 .floating-popup__title,
-.andropov_preview__title {
+.andropov_preview__title,
+.widget_wrapper--type-yellow .widget_wrapper__title,
+.widget_wrapper--type-pink .widget_wrapper__title,
+.events_widget__title,
+.events_widget__item__title,
+.island--company_entries .island__header__title,
+.island--company_entries .company_entries__title {
     color: var(--text-color-title) !important;
 }
 
@@ -833,7 +850,6 @@ attachButton:hover,
 }
 
 .site-header-logo:hover,
-.v-split-button-option:hover,
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
 .site-header-user-profile__toggle:hover,
@@ -999,7 +1015,21 @@ a.v-list__item:hover,
 .inline-search-item,
 .t-link-classic,
 .form2__field--advanced_list .advanced_list__list .adv_list_item a,
-.v-list__label a {
+.v-list__label a,
+.events_widget__item a.events_widget__item__city:hover,
+.events_widget__item__title:hover,
+.events_widget__title:hover,
+.andropov_telegram__text__more,
+.andropov_tweet__text__more,
+.audio_player__control--download:hover,
+.with-icon:hover,
+.audio_player__control__rwd:hover,
+.audio_player__control__fwd:hover,
+.audio_player__control__play:hover,
+.audio_player__control__pause:hover,
+.audio_player__control__rate:hover,
+.audio_player__control__mute:hover,
+.audio_player__control__volume:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1065,7 +1095,9 @@ a.v-list__item:hover,
 .comments__item__go_to_original:hover,
 .t-link-classic:hover,
 .form2__field--advanced_list .advanced_list__list .adv_list_item a:hover,
-.v-list__label a:hover {
+.v-list__label a:hover,
+.andropov_telegram__text__more:hover,
+.andropov_tweet__text__more:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -2316,6 +2348,179 @@ a.v-list__item:hover,
 .hljs-strong {
     font-weight: bold;
 }
+
+if scrollbar {
+    ::-webkit-scrollbar {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    width: 12px;
+    background-color: #333437;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+}
+
+}
+
+@-moz-document domain("vc.ru") {
+:root {
+    --back-color-blue-button: #af4448;
+    --blue-button-hover: #ba6b6c;
+    --site-color: #ffa4a2;
+}
+
+.sidebar-tree-list-item--active,
+.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon,
+.sidebar-tree-list-item__child-item--active,
+.site-header-burger:hover,
+.head-notifies__toggler:hover .icon,
+.site-header-user-profile__toggle:hover,
+.ui-rounded-button--active .ui-rounded-button__link,
+.content-editorial-tick,
+.site-header-logo:hover,
+.site-header-user-login:hover,
+.quiz__panel__button,
+.quiz__panel__button__label,
+.quiz__item__voted__count,
+.page--plus .plus-features__item .icon {
+    color: var(--site-color) !important;
+}
+
+.sidebar__footer__item--sponsor span,
+.v-tab--active .v-tab__label::after,
+.quiz__item__progressbar__runner,
+.quiz__item__progressbar,
+.ui-tab--active .ui-tab__label:after {
+    background-color: var(--site-color) !important;
+}
+
+.st0 {
+    fill: var(--text-color-gray) !important;
+}
+
+.head-notifies--showed .head-notifies__toggler .icon,
+.head-notifies__toggler:hover .icon,
+.site-header-user-profile__toggle:hover,
+.site-header-burger:hover {
+    fill: var(--site-color) !important;
+}
+
+.new-entries-horizon svg [data-accent-color-stroke] {
+    stroke: var(--site-color);
+}
+
+#ui_flag2 path {
+    stroke: var(--text-color-gray) !important;
+}
+
+.widget_wrapper--type-pink .widget_wrapper__item {
+    border-color: var(--border-color) !important;
+}
+
+.quiz__item__check {
+    border-color: var(--site-color);
+}
+
+.quiz__panel__button__label {
+    border-color: var(--site-color);
+}
+
+.v-plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #e57373), color-stop(7%, #e57373), to(#af4448));
+    background-image: linear-gradient(90deg, #e57373 -41%, #e57373 7%, #af4448 100%);
+}
+
+.plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #e57373), color-stop(7%, #e57373), to(#af4448));
+    background-image: linear-gradient(90deg, #e57373 -41%, #e57373 7%, #af4448 100%);
+}
+}
+
+@-moz-document domain("tjournal.ru") {
+:root {
+    --back-color-blue-button: #f9a825;
+    --blue-button-hover: #fbc02d;
+    --site-color: rgba(255, 224, 130, 0.93);
+}
+
+.v-split-button,
+.new_entries__counter,
+.page--editor .icon--writing-save,
+.v-button--blue .v-button__label,
+.v-button--blue .v-button__icon,
+.ui-button--1 {
+    color: #000;
+}
+
+.sidebar-tree-list-item--active,
+.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon,
+.sidebar-tree-list-item__child-item--active,
+.site-header-burger:hover,
+.head-notifies__toggler:hover .icon,
+.site-header-user-profile__toggle:hover,
+.ui-rounded-button--active .ui-rounded-button__link,
+.content-editorial-tick,
+.site-header-logo:hover,
+.site-header-user-login:hover,
+.quiz__panel__button,
+.quiz__panel__button__label,
+.quiz__item__voted__count,
+.page--plus .plus-features__item .icon {
+    color: var(--site-color) !important;
+}
+
+.sidebar__footer__item--sponsor span,
+.v-tab--active .v-tab__label::after,
+.quiz__item__progressbar__runner,
+.quiz__item__progressbar,
+.ui-tab--active .ui-tab__label:after {
+    background-color: var(--site-color) !important;
+}
+
+.st0 {
+    fill: var(--text-color-gray) !important;
+}
+
+.head-notifies--showed .head-notifies__toggler .icon,
+.head-notifies__toggler:hover .icon,
+.site-header-user-profile__toggle:hover,
+.site-header-burger:hover {
+    fill: var(--site-color) !important;
+}
+
+.new-entries-horizon svg [data-accent-color-stroke] {
+    stroke: var(--site-color);
+}
+
+.widget_wrapper--type-yellow .widget_wrapper__item {
+    border-color: var(--border-color) !important;
+}
+
+.widget_wrapper--type-yellow .widget_wrapper__col:after,
+.island--blogs_entries .blogs_entries__item:before {
+    background-color: var(--border-color) !important;
+}
+
+.quiz__item__check {
+    border-color: var(--site-color);
+}
+
+.quiz__panel__button__label {
+    border-color: var(--site-color);
+}
+
+.v-plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
+    background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
+}
+
+.plus-badge {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
+    background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
+}
 }
 
 @-moz-document domain("instagram.com") {
@@ -2332,57 +2537,101 @@ a.v-list__item:hover,
 }
 
 html[stylus-iframe*="dtf.ru"] body,
+html[stylus-iframe*="tjournal.ru"] body,
+html[stylus-iframe*="vc.ru"] body,
 html[stylus-iframe*="dtf.ru"] .AvatarContainer,
-html[stylus-iframe*="dtf.ru"] .PrimaryCTA {
+html[stylus-iframe*="tjournal.ru"] .AvatarContainer,
+html[stylus-iframe*="vc.ru"] .AvatarContainer,
+html[stylus-iframe*="dtf.ru"] .PrimaryCTA,
+html[stylus-iframe*="tjournal.ru"] .PrimaryCTA,
+html[stylus-iframe*="vc.ru"] .PrimaryCTA {
     background-color: var(--color-04ev) !important;
 }
 
-html[stylus-iframe*="dtf.ru"] .HoverCard .HoverCardRoot {
+html[stylus-iframe*="dtf.ru"] .HoverCard .HoverCardRoot,
+html[stylus-iframe*="tjournal.ru"] .HoverCard .HoverCardRoot,
+html[stylus-iframe*="vc.ru"] .HoverCard .HoverCardRoot {
     background-color: var(--color-06ev);
 }
 
 html[stylus-iframe*="dtf.ru"] .UsernameText,
+html[stylus-iframe*="tjournal.ru"] .UsernameText,
+html[stylus-iframe*="vc.ru"] .UsernameText,
 html[stylus-iframe*="dtf.ru"] .PrimaryCTA a,
+html[stylus-iframe*="tjournal.ru"] .PrimaryCTA a,
+html[stylus-iframe*="vc.ru"] .PrimaryCTA a,
 html[stylus-iframe*="dtf.ru"] .SocialProof a,
-html[stylus-iframe*="dtf.ru"] .HoverCardUserName .Username {
+html[stylus-iframe*="tjournal.ru"] .SocialProof a,
+html[stylus-iframe*="vc.ru"] .SocialProof a,
+html[stylus-iframe*="dtf.ru"] .HoverCardUserName .Username,
+html[stylus-iframe*="tjournal.ru"] .HoverCardUserName .Username,
+html[stylus-iframe*="vc.ru"] .HoverCardUserName .Username {
     color: var(--text-color-title);
 }
 
 html[stylus-iframe*="dtf.ru"] .FollowerCountText,
+html[stylus-iframe*="tjournal.ru"] .FollowerCountText,
+html[stylus-iframe*="vc.ru"] .FollowerCountText,
 html[stylus-iframe*="dtf.ru"] .HoverCardStatus span,
-html[stylus-iframe*="dtf.ru"] a.CommentInput {
+html[stylus-iframe*="tjournal.ru"] .HoverCardStatus span,
+html[stylus-iframe*="vc.ru"] .HoverCardStatus span,
+html[stylus-iframe*="dtf.ru"] a.CommentInput,
+html[stylus-iframe*="tjournal.ru"] a.CommentInput,
+html[stylus-iframe*="vc.ru"] a.CommentInput {
     color: var(--text-color-minor);
 }
 
-html[stylus-iframe*="dtf.ru"] .UsernameText:hover {
+html[stylus-iframe*="dtf.ru"] .UsernameText:hover,
+html[stylus-iframe*="tjournal.ru"] .UsernameText:hover,
+html[stylus-iframe*="vc.ru"] .UsernameText:hover {
     color: var(--text-color-blue);
 }
 
 html[stylus-iframe*="dtf.ru"] a.ViewProfileButton,
-html[stylus-iframe*="dtf.ru"] a.FollowButton {
+html[stylus-iframe*="tjournal.ru"] a.ViewProfileButton,
+html[stylus-iframe*="vc.ru"] a.ViewProfileButton,
+html[stylus-iframe*="dtf.ru"] a.FollowButton,
+html[stylus-iframe*="tjournal.ru"] a.FollowButton,
+html[stylus-iframe*="vc.ru"] a.FollowButton {
     background-color: var(--back-color-blue-button);
 }
 
 html[stylus-iframe*="dtf.ru"] a.ViewProfileButton:hover,
-html[stylus-iframe*="dtf.ru"] a.FollowButton:hover {
+html[stylus-iframe*="tjournal.ru"] a.ViewProfileButton:hover,
+html[stylus-iframe*="vc.ru"] a.ViewProfileButton:hover,
+html[stylus-iframe*="dtf.ru"] a.FollowButton:hover,
+html[stylus-iframe*="tjournal.ru"] a.FollowButton:hover,
+html[stylus-iframe*="vc.ru"] a.FollowButton:hover {
     background-color: var(--blue-button-hover);
 }
 
-html[stylus-iframe*="dtf.ru"] a:active {
+html[stylus-iframe*="dtf.ru"] a:active,
+html[stylus-iframe*="tjournal.ru"] a:active,
+html[stylus-iframe*="vc.ru"] a:active {
     opacity: 1;
 }
 
-html[stylus-iframe*="dtf.ru"] .VerifiedSprite {
+html[stylus-iframe*="dtf.ru"] .VerifiedSprite,
+html[stylus-iframe*="tjournal.ru"] .VerifiedSprite,
+html[stylus-iframe*="vc.ru"] .VerifiedSprite {
     filter: hue-rotate(370deg) brightness(130%) saturate(40%)
 }
 
 html[stylus-iframe*="dtf.ru"] .Feedback a,
-html[stylus-iframe*="dtf.ru"] .Glyph {
+html[stylus-iframe*="tjournal.ru"] .Feedback a,
+html[stylus-iframe*="vc.ru"] .Feedback a,
+html[stylus-iframe*="dtf.ru"] .Glyph,
+html[stylus-iframe*="tjournal.ru"] .Glyph,
+html[stylus-iframe*="vc.ru"] .Glyph {
     filter: invert(1) opacity(69%);
 }
 
 html[stylus-iframe*="dtf.ru"] .PrimaryCTA,
-html[stylus-iframe*="dtf.ru"] .Footer {
+html[stylus-iframe*="tjournal.ru"] .PrimaryCTA,
+html[stylus-iframe*="vc.ru"] .PrimaryCTA,
+html[stylus-iframe*="dtf.ru"] .Footer,
+html[stylus-iframe*="tjournal.ru"] .Footer,
+html[stylus-iframe*="vc.ru"] .Footer {
     border-color: var(--text-color-minor);
 }
 }
