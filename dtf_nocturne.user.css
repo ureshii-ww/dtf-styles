@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.3
+@version        1.0.4
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -313,7 +313,8 @@ body {
 .island--company_entries,
 .layout__left-column,
 .content-header__subscribe .ui-button,
-.content-header__subscribe .ui-button:hover {
+.content-header__subscribe .ui-button:hover,
+.entry_stub {
     background-color: var(--color-01ev) !important;
 }
 
@@ -858,7 +859,8 @@ attachButton:hover,
 .andropov_preview--link .andropov_preview__hostname,
 .content__updating, 
 .content-info, 
-.v-shares__button {
+.v-shares__button,
+.entry_stub__option[data-state="2"] {
     color: var(--text-color-minor) !important;
 }
 
@@ -1045,7 +1047,8 @@ a.v-list__item:hover,
 .audio_player__control__volume:hover, 
 .v-shares__button:hover,
 .content-header__subscribe .ui-button,
-.content-header__subscribe .ui-button .icon {
+.content-header__subscribe .ui-button .icon,
+.entry_stub__button {
     color: var(--text-color-blue) !important;
 }
 
