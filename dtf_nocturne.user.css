@@ -1,11 +1,13 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
+@version        1.0.2
 @description    💗💗💗
 @author         Ureshii 死者
-@prepocessor stylus
+@preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
+@var            checkbox  likeButtons "Вернуть кнопки лайков" 1
+ */
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2362,17 +2364,30 @@ a.v-list__item:hover,
 }
 
 
-
+if scrollbar{
     ::-webkit-scrollbar {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    width: 12px;
-    background-color: #333437;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        width: 12px;
+        background-color: #333437;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #555;
+    }
 }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
+if likeButtons{
+    .vote--content .vote__button, 
+    .vote--content .vote__button--minus:hover,
+    .vote--content.vote--voted-negative .vote__button--minus,
+    .vote--content.vote--voted-positive .vote__button--plus,
+    .vote--content .vote__button--plus:hover {
+        background-color: var(--color-01ev) !important;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+    }
 }
 }
 
