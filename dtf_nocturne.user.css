@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.2.1
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  likeButtons "Вернуть кнопки лайков" 1
- */
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -312,7 +311,9 @@ body {
 .widget_wrapper--type-pink,
 .events_widget,
 .island--company_entries,
-.layout__left-column {
+.layout__left-column,
+.content-header__subscribe .ui-button,
+.content-header__subscribe .ui-button:hover {
     background-color: var(--color-01ev) !important;
 }
 
@@ -1042,7 +1043,9 @@ a.v-list__item:hover,
 .audio_player__control__rate:hover,
 .audio_player__control__mute:hover,
 .audio_player__control__volume:hover, 
-.v-shares__button:hover {
+.v-shares__button:hover,
+.content-header__subscribe .ui-button,
+.content-header__subscribe .ui-button .icon {
     color: var(--text-color-blue) !important;
 }
 
