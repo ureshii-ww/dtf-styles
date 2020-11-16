@@ -7,6 +7,7 @@
 @preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  likeButtons "Вернуть кнопки лайков" 1
+@var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -1638,6 +1639,12 @@ a.v-list__item:hover,
 
 .page--error .error__ico {
     fill: var(--text-color-gray);
+}
+
+if noTitle{
+    .content--short.content--notitle {
+        font-size: 16px;
+    }
 }
 /************************************************************************************************************/
 /*Profile*/
