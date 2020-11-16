@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.4
+@version        1.0.5
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -1048,7 +1048,8 @@ a.v-list__item:hover,
 .v-shares__button:hover,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button .icon,
-.entry_stub__button {
+.entry_stub__button,
+.repost_button__button--active {
     color: var(--text-color-blue) !important;
 }
 
