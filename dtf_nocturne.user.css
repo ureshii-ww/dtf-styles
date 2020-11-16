@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.6
+@version        1.0.7
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -271,7 +271,8 @@ body {
 .tab__content,
 .shares--mobile .shares__open,
 .shares--open .shares__close,
-.events_widget__new {
+.events_widget__new,
+.v-shares-mobile-popover__list {
     background-color: var(--color-02ev) !important;
 }
 
@@ -315,7 +316,8 @@ body {
 .layout__left-column,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button:hover,
-.entry_stub {
+.entry_stub,
+.v-popup-window--gray .v-popup-window__content {
     background-color: var(--color-01ev) !important;
 }
 
@@ -570,7 +572,9 @@ announcement-stats,
 .inline-dropdown__found-item--hashtag::before,
 .audio_player__control__mute,
 .audio_player__control__rate,
-.v-shares-popover__icon {
+.v-shares-popover__icon,
+.v-shares-mobile-popover__list,
+.v-shares-mobile-popover__icon {
     color: var(--text-color-gray) !important;
 }
 
@@ -728,7 +732,9 @@ attachButton:hover,
 .events_widget__title,
 .events_widget__item__title,
 .island--company_entries .island__header__title,
-.island--company_entries .company_entries__title, .content-title {
+.island--company_entries .company_entries__title,
+.content-title,
+.v-shares-mobile-popover__name {
     color: var(--text-color-title) !important;
 }
 
