@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.1
 @description    💗💗💗
 @author         Ureshii 死者
-@preprocessor stylus
+@prepocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 ==/UserStyle== */
 
@@ -122,7 +122,8 @@ body {
 .bubble:before,
 .herzen__command_list,
 .andropov_preview,
-.repost_button__list .bubble .item {
+.repost_button__list .bubble .item,
+.v-shares-popover {
     background-color: var(--color-08ev) !important;
 }
 
@@ -232,7 +233,8 @@ body {
 .v-button,
 .v-tabs-navigation,
 .v-header-avatar-manage,
-.tg-tooltip {
+.tg-tooltip,
+.vote--content .vote__button {
     background-color: var(--color-03ev) !important;
 }
 
@@ -353,7 +355,8 @@ body {
 .repost_button__list .bubble .item:hover,
 .v-form-input input,
 .herzen__command_list__item--selected,
-.herzen__command_list__item:hover {
+.herzen__command_list__item:hover,
+.v-shares-popover__item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -402,7 +405,11 @@ body {
 
 .attachButton:hover,
 .email_subscribe_vue__form,
-.email_subscribe_vue__form input {
+.email_subscribe_vue__form input,
+.vote--content .vote__button--minus:hover,
+.vote--content.vote--voted-negative .vote__button--minus,
+.vote--content.vote--voted-positive .vote__button--plus,
+.vote--content .vote__button--plus:hover {
     background-color: var(--hover-03ev) !important;
 }
 
@@ -557,7 +564,8 @@ announcement-stats,
 .inline-dropdown,
 .inline-dropdown__found-item--hashtag::before,
 .audio_player__control__mute,
-.audio_player__control__rate {
+.audio_player__control__rate,
+.v-shares-popover__icon {
     color: var(--text-color-gray) !important;
 }
 
@@ -715,7 +723,7 @@ attachButton:hover,
 .events_widget__title,
 .events_widget__item__title,
 .island--company_entries .island__header__title,
-.island--company_entries .company_entries__title {
+.island--company_entries .company_entries__title, .content-title {
     color: var(--text-color-title) !important;
 }
 
@@ -845,7 +853,9 @@ attachButton:hover,
 #INVADERS-NAVIGATION,
 .form2__field label,
 .andropov_preview--link .andropov_preview__hostname,
-.content__updating {
+.content__updating, 
+.content-info, 
+.v-shares__button {
     color: var(--text-color-minor) !important;
 }
 
@@ -1029,7 +1039,8 @@ a.v-list__item:hover,
 .audio_player__control__pause:hover,
 .audio_player__control__rate:hover,
 .audio_player__control__mute:hover,
-.audio_player__control__volume:hover {
+.audio_player__control__volume:hover, 
+.v-shares__button:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1240,7 +1251,8 @@ a.v-list__item:hover,
 .etc-controls__dropdown,
 #notify .notify__item,
 .inline-dropdown,
-.m-floating {
+.m-floating,
+.v-shares-popover {
     --webkit-box-shadow: 0 0.3px 2.2px rgba(18, 18, 18, 0.02),
     0 0.7px 5.3px rgba(18, 18, 18, 0.028),
     0 1.3px 10px rgba(18, 18, 18, 0.035),
@@ -2349,7 +2361,8 @@ a.v-list__item:hover,
     font-weight: bold;
 }
 
-if scrollbar {
+
+
     ::-webkit-scrollbar {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     width: 12px;
@@ -2361,8 +2374,6 @@ if scrollbar {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
-}
-
 }
 
 @-moz-document domain("vc.ru") {
