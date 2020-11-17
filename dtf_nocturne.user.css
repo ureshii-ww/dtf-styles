@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.7
+@version        1.0.8
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -1124,7 +1124,8 @@ a.v-list__item:hover,
 .form2__field--advanced_list .advanced_list__list .adv_list_item a:hover,
 .v-list__label a:hover,
 .andropov_telegram__text__more:hover,
-.andropov_tweet__text__more:hover {
+.andropov_tweet__text__more:hover,
+.v-number-change--negative {
     color: var(--text-color-red) !important;
 }
 
