@@ -1,14 +1,13 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.9
+@version        1.0.10
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  likeButtons "Вернуть кнопки лайков" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
-@var            checkbox  alternativePost "Альтернативный вид поста в ленте (экспериментальная функция)" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2412,94 +2411,6 @@ if likeButtons{
     }
 }
 
-if alternativePost{
-    .content-feed {
-        display: grid;
-        grid-template-areas:
-            "repost""header1""content""footer";
-    }
-
-    .content-header-repost {
-        grid-area: repost;
-    }
-
-    .content-feed .content-header {
-        grid-area: header1;
-    }
-
-    .content-feed .content-info {
-        grid-area: header1;
-        margin: 0;
-    }
-
-    .content-feed .content {
-        grid-area: content;
-    }
-
-    .content-feed .content-footer {
-        grid-area: footer;
-    }
-
-    .content-header--short {
-        margin-bottom: 13px;
-    }
-
-    .content-info--short {
-        padding-top: 16px;
-        padding-bottom: 11px;
-        padding-right: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 15px;
-    }
-
-    .content-info--short .time {
-        padding-right: 72px;
-    }
-
-    .content-header-repost, .content-header--short {
-        padding-top: 16px;
-    }
-
-    .content-header-repost {
-        font-size: 12px;
-    }
-
-    .content-header-repost .icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-    }
-
-    .content-title--short {
-        margin-top: 0;
-    }
-
-    .content-footer--short {
-        margin-top: 13px;
-    }
-
-    .content-info--short .views {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .content-info--short .views {
-        display: none;
-    }
-
-    .content-header--short .content-header__subscribe {
-        padding-right: 72px;
-        margin-top: 0;
-    }
-
-    @media (max-width: 420px) {
-        .content-info--short {
-            display: none;
-        }
-    }
-}
 }
 
 @-moz-document domain("vc.ru") {
