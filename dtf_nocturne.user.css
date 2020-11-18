@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.10
+@version        1.0.11
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
-@var            checkbox  likeButtons "Вернуть кнопки лайков" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
+@var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -235,8 +235,7 @@ body {
 .v-button,
 .v-tabs-navigation,
 .v-header-avatar-manage,
-.tg-tooltip,
-.vote--content .vote__button {
+.tg-tooltip {
     background-color: var(--color-03ev) !important;
 }
 
@@ -412,11 +411,7 @@ body {
 
 .attachButton:hover,
 .email_subscribe_vue__form,
-.email_subscribe_vue__form input,
-.vote--content .vote__button--minus:hover,
-.vote--content.vote--voted-negative .vote__button--minus,
-.vote--content.vote--voted-positive .vote__button--plus,
-.vote--content .vote__button--plus:hover {
+.email_subscribe_vue__form input {
     background-color: var(--hover-03ev) !important;
 }
 
@@ -2399,18 +2394,17 @@ if scrollbar{
     }
 }
 
-if likeButtons{
-    .vote--content .vote__button, 
-    .vote--content .vote__button--minus:hover,
-    .vote--content.vote--voted-negative .vote__button--minus,
-    .vote--content.vote--voted-positive .vote__button--plus,
-    .vote--content .vote__button--plus:hover {
-        background-color: var(--color-01ev) !important;
-        box-shadow: none !important;
-        -webkit-box-shadow: none !important;
+if alternativePost{
+    .content-header-repost {
+        font-size: 12px;
+    }
+
+    .content-header-repost .icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
     }
 }
-
 }
 
 @-moz-document domain("vc.ru") {
