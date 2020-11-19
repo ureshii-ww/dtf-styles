@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.11
+@version        1.0.12
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -862,7 +862,8 @@ attachButton:hover,
 .content__updating, 
 .content-info, 
 .v-shares__button,
-.entry_stub__option[data-state="2"] {
+.entry_stub__option[data-state="2"],
+.profile_comment_favorite__expand {
     color: var(--text-color-minor) !important;
 }
 
@@ -1051,7 +1052,8 @@ a.v-list__item:hover,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button .icon,
 .entry_stub__button,
-.repost_button__button--active {
+.repost_button__button--active,
+.profile_comment_favorite__expand:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -2041,7 +2043,8 @@ if noTitle{
 .sitemap a,
 .subsite_card_simple__description a,
 .subsite_head__description a,
-.t-link-classic {
+.t-link-classic,
+.profile_comment_favorite__expand:hover {
     border-color: var(--text-color-blue);
 }
 
@@ -2106,6 +2109,10 @@ if noTitle{
 
 .ui-button--4::after {
     border-bottom-color: var(--text-color-minor);
+}
+
+.profile_comment_favorite__expand {
+    border-color: var(--text-color-minor);
 }
 /******************************************************************/
 /* Messenger */
@@ -2306,6 +2313,10 @@ if noTitle{
 
 .ad-contacts__user:after {
     background: none;
+}
+
+#notify .notify__item--error {
+    border-left-color: var(--text-color-red) !important;
 }
 /*******************************************************************************************************************/
 /******* HLJS THEME FOR BLOCK CODE *******/
