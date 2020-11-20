@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.15
+@version        1.0.16
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -735,7 +735,8 @@ attachButton:hover,
 .island--company_entries .company_entries__title,
 .content-title,
 .v-shares-mobile-popover__name,
-.chat-form__reply-name {
+.chat-form__reply-name,
+.content__thanks a:hover span {
     color: var(--text-color-title) !important;
 }
 
@@ -1070,7 +1071,6 @@ a.v-list__item:hover,
 .vote__button--minus:hover,
 .vote .vote__users__item--minus,
 .favorite_marker--active .favorite_marker__count,
-.content__thanks a:hover span,
 .subsites_tune__select-all:hover,
 .t-link-inline:hover,
 .auth-form__help:hover,
