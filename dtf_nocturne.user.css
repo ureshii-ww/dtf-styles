@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.17
+@version        1.0.18
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -454,7 +454,8 @@ body {
 .ui_select,
 .ui_select select,
 .gallery-image--with-background .gallery-image__media,
-.v-header-avatar {
+.v-header-avatar,
+.popup__content--misprint .selected_text span {
     background-color: var(--hover-01ev) !important;
 }
 
