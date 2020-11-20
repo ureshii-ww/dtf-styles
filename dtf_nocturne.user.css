@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.16
+@version        1.0.17
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -1926,6 +1926,11 @@ if noTitle{
 .text_loop__grd--r {
     background-image: -webkit-gradient(linear, right top, left top, from(var(--color-04ev)), to(rgba(255, 255, 255, 0)));
     background-image: linear-gradient(to left, var(--color-04ev), rgba(255, 255, 255, 0));
+}
+
+.text_loop__grd--l {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-04ev)), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, var(--color-04ev), rgba(255, 255, 255, 0));
 }
 
 .quiz__panel__button__label {
