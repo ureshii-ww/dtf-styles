@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.12
+@version        1.0.13
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -316,7 +316,8 @@ body {
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button:hover,
 .entry_stub,
-.v-popup-window--gray .v-popup-window__content {
+.v-popup-window--gray .v-popup-window__content,
+.v-header-avatar {
     background-color: var(--color-01ev) !important;
 }
 
