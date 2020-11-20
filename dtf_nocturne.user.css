@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.14
+@version        1.0.15
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -271,8 +271,7 @@ body {
 .shares--mobile .shares__open,
 .shares--open .shares__close,
 .events_widget__new,
-.v-shares-mobile-popover__list,
-.v-header-avatar {
+.v-shares-mobile-popover__list {
     background-color: var(--color-02ev) !important;
 }
 
@@ -412,7 +411,10 @@ body {
 
 .attachButton:hover,
 .email_subscribe_vue__form,
-.email_subscribe_vue__form input {
+.email_subscribe_vue__form input,
+.comments__item__space--pinned .andropov_link,
+.comments__item__space--new .andropov_link,
+.comments__item__space--highlighted .andropov_link {
     background-color: var(--hover-03ev) !important;
 }
 
@@ -451,7 +453,8 @@ body {
 .email_subscribe_form__input,
 .ui_select,
 .ui_select select,
-.gallery-image--with-background .gallery-image__media {
+.gallery-image--with-background .gallery-image__media,
+.v-header-avatar {
     background-color: var(--hover-01ev) !important;
 }
 
