@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.13
+@version        1.0.14
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -271,7 +271,8 @@ body {
 .shares--mobile .shares__open,
 .shares--open .shares__close,
 .events_widget__new,
-.v-shares-mobile-popover__list {
+.v-shares-mobile-popover__list,
+.v-header-avatar {
     background-color: var(--color-02ev) !important;
 }
 
@@ -316,8 +317,7 @@ body {
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button:hover,
 .entry_stub,
-.v-popup-window--gray .v-popup-window__content,
-.v-header-avatar {
+.v-popup-window--gray .v-popup-window__content {
     background-color: var(--color-01ev) !important;
 }
 
@@ -570,7 +570,8 @@ announcement-stats,
 .audio_player__control__rate,
 .v-shares-popover__icon,
 .v-shares-mobile-popover__list,
-.v-shares-mobile-popover__icon {
+.v-shares-mobile-popover__icon,
+.chat-form__reply-text {
     color: var(--text-color-gray) !important;
 }
 
@@ -730,7 +731,8 @@ attachButton:hover,
 .island--company_entries .island__header__title,
 .island--company_entries .company_entries__title,
 .content-title,
-.v-shares-mobile-popover__name {
+.v-shares-mobile-popover__name,
+.chat-form__reply-name {
     color: var(--text-color-title) !important;
 }
 
