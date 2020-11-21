@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.18
+@version        1.0.19
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -2698,5 +2698,11 @@ html[stylus-iframe*="dtf.ru"] .Footer,
 html[stylus-iframe*="tjournal.ru"] .Footer,
 html[stylus-iframe*="vc.ru"] .Footer {
     border-color: var(--text-color-minor);
+}
+}
+
+@-moz-document url-prefix("https://api.dtf.ru/") {
+body {
+    color: var(--text-color-gray);
 }
 }
