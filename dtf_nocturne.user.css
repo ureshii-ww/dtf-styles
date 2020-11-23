@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.19
+@version        1.0.20
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
+@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -432,7 +433,8 @@ body {
 .chat-info-form__picture,
 .chat-info-form .ui-input,
 .chat-info__search .user,
-.popup__container__window .select__current {
+.popup__container__window .select__current,
+.ui_modal_window--unpublish textarea {
     background-color: var(--hover-02ev) !important;
 }
 
@@ -2426,6 +2428,12 @@ if alternativePost{
         width: 16px;
         height: 16px;
         margin-right: 5px;
+    }
+}
+
+if messagesScroll{
+    .chat-messages {
+        margin-right: 0 !important;
     }
 }
 }
