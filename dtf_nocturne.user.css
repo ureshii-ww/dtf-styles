@@ -1,10 +1,11 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.21
+@version        1.0.22
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
+@var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
@@ -2435,6 +2436,13 @@ if alternativePost{
 if messagesScroll{
     .chat-messages {
         margin-right: 0 !important;
+    }
+}
+
+if likesBack{
+    .vote--content.vote--voted-positive .vote__button--plus:before,
+    .vote--content.vote--voted-negative .vote__button--minus:before {
+        background-color: transparent; !important;
     }
 }
 }
