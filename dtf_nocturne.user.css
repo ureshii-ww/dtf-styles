@@ -2442,7 +2442,7 @@ if messagesScroll{
 if likesBack{
     .vote--content.vote--voted-positive .vote__button--plus:before,
     .vote--content.vote--voted-negative .vote__button--minus:before {
-        background-color: transparent; !important;
+        background-color: transparent !important;
     }
 }
 }
