@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.23
+@version        1.0.24
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -579,7 +579,8 @@ announcement-stats,
 .v-shares-mobile-popover__list,
 .v-shares-mobile-popover__icon,
 .chat-form__reply-text,
-.ui_modal_window--unpublish textarea {
+.ui_modal_window--unpublish textarea,
+.sidebar-tree-list-item--colored {
     color: var(--text-color-gray) !important;
 }
 
