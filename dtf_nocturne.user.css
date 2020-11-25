@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.22
+@version        1.0.23
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -2441,7 +2441,9 @@ if messagesScroll{
 
 if likesBack{
     .vote--content.vote--voted-positive .vote__button--plus:before,
-    .vote--content.vote--voted-negative .vote__button--minus:before {
+    .vote--content.vote--voted-negative .vote__button--minus:before,
+    .vote--content .vote__button--plus:hover:before,
+    .vote--content .vote__button--minus:hover:before {
         background-color: transparent !important;
     }
 }
