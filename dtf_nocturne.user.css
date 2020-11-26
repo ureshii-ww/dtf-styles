@@ -9,7 +9,7 @@
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
-@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0 
+@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
