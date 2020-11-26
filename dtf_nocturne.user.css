@@ -10,6 +10,7 @@
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
 @var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
+@var            checkbox  
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2448,12 +2449,17 @@ if likesBack{
         background-color: transparent !important;
     }
 }
-/* TJ/DTF cashe names*/
+/************************************************************************************************************/
+/** ADDONS **/
+/* TJ/DTF cashe names */
 .tjnames__list {
-    background-color: #2f2f2f;
+    background-color: var(--color-08ev);
     border-color: var(--border-color);
     box-shadow: 0 4px 14px 0 rgb(18 18 18 / 98%);
-
+}
+/* Osnova Underside */
+.thesis__spy_button.thesis__attach_something {
+    color: #4b4bcc;
 }
 }
 
