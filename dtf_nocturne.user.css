@@ -2453,8 +2453,8 @@ if likesBack{
 /* ADDONS */
 /* TJ/DTF cashe names */
 .tjnames__list {
-    background-color: var(--color-08ev);
-    border-color: var(--border-color);
+    background-color: #2f2f2f;
+    border-color: #343536;
     box-shadow: 0 4px 14px 0 rgb(18 18 18 / 98%);
 }
 /* Osnova Underside */
