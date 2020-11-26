@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.24
+@version        1.0.25
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -2447,6 +2447,13 @@ if likesBack{
     .vote--content .vote__button--minus:hover:before {
         background-color: transparent !important;
     }
+}
+/* TJ/DTF cashe names*/
+.tjnames__list {
+    background-color: #2f2f2f;
+    border-color: var(--border-color);
+    box-shadow: 0 4px 14px 0 rgb(18 18 18 / 98%);
+
 }
 }
 
