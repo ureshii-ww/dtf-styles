@@ -2460,6 +2460,12 @@ if likesBack{
 .thesis__spy_button.thesis__attach_something {
     color: #4b4bcc;
 }
+.comment-unspy-button .material-icons {
+    color: var(--text-color-minor);
+}
+.comment-unspy-button.is-active .material-icons {
+    color: var(--color-24ev);
+}
 
 }
 
