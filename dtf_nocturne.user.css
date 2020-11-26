@@ -9,8 +9,7 @@
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
-@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
-@var            checkbox  
+@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0 
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2450,11 +2449,11 @@ if likesBack{
     }
 }
 /************************************************************************************************************/
-/* ADDONS */
+/*** ADDONS ***/
 /* TJ/DTF cashe names */
 .tjnames__list {
-    background-color: #2f2f2f;
-    border-color: #343536;
+    background-color: var(--color-08ev);
+    border-color: var(--border-color);
     box-shadow: 0 4px 14px 0 rgb(18 18 18 / 98%);
 }
 /* Osnova Underside */
