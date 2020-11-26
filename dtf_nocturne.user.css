@@ -2450,7 +2450,7 @@ if likesBack{
     }
 }
 /************************************************************************************************************/
-/** ADDONS **/
+/* ADDONS */
 /* TJ/DTF cashe names */
 .tjnames__list {
     background-color: var(--color-08ev);
@@ -2461,6 +2461,7 @@ if likesBack{
 .thesis__spy_button.thesis__attach_something {
     color: #4b4bcc;
 }
+
 }
 
 @-moz-document domain("vc.ru") {
