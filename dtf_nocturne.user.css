@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.26
+@version        1.0.27
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -2143,7 +2143,7 @@ if noTitle{
 }
 
 .comment-unspy-button.is-active, .comment-unspy-button.is-active .material-icons {
-    color: var(--back-color-blue-button);
+    color: var(--back-color-blue-button) !important;
 }
 /******************************************************************/
 /* Messenger */
