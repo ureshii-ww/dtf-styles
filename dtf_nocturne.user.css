@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.25
+@version        1.0.26
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -365,7 +365,8 @@ body {
 .v-form-input input,
 .herzen__command_list__item--selected,
 .herzen__command_list__item:hover,
-.v-shares-popover__item:hover {
+.v-shares-popover__item:hover,
+.thesis__attach_something:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -878,7 +879,8 @@ attachButton:hover,
 .content-info, 
 .v-shares__button,
 .entry_stub__option[data-state="2"],
-.profile_comment_favorite__expand {
+.profile_comment_favorite__expand,
+.comment-unspy-button .material-icons {
     color: var(--text-color-minor) !important;
 }
 
@@ -2134,6 +2136,14 @@ if noTitle{
 
 .profile_comment_favorite__expand {
     border-color: var(--text-color-minor);
+}
+
+.thesis__spy_button.thesis__attach_something {
+    color: #26a69a;
+}
+
+.comment-unspy-button.is-active, .comment-unspy-button.is-active .material-icons {
+    color: var(--back-color-blue-button);
 }
 /******************************************************************/
 /* Messenger */
