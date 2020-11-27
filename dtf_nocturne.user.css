@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.24
+@version        1.0.25
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -127,7 +127,8 @@ body {
 .herzen__command_list,
 .andropov_preview,
 .repost_button__list .bubble .item,
-.v-shares-popover {
+.v-shares-popover,
+.tjnames__list, .tjnames__list.active {
     background-color: var(--color-08ev) !important;
 }
 
@@ -742,7 +743,8 @@ attachButton:hover,
 .content-title,
 .v-shares-mobile-popover__name,
 .chat-form__reply-name,
-.content__thanks a:hover span {
+.content__thanks a:hover span,
+.tjnames__list b {
     color: var(--text-color-title) !important;
 }
 
@@ -1253,7 +1255,8 @@ a.v-list__item:hover,
 .form2__field--text .text,
 .form2__field--advanced_list .text__input,
 .form2__field--advanced_list .advanced_list__list,
-.form2__field--sticky {
+.form2__field--sticky,
+.tjnames__list, .tjnames__list.active {
     border: none !important;
 }
 
@@ -1278,7 +1281,8 @@ a.v-list__item:hover,
 #notify .notify__item,
 .inline-dropdown,
 .m-floating,
-.v-shares-popover {
+.v-shares-popover,
+.tjnames__list, .tjnames__list.active {
     --webkit-box-shadow: 0 0.3px 2.2px rgba(18, 18, 18, 0.02),
     0 0.7px 5.3px rgba(18, 18, 18, 0.028),
     0 1.3px 10px rgba(18, 18, 18, 0.035),
