@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.27
+@version        1.0.29
 @description    💗💗💗
 @author         Ureshii 死者
 @preprocessor stylus
@@ -217,7 +217,8 @@ body {
 .inline-dropdown,
 .head-notifies__items-wrapper,
 .messenger-panel__down-list,
-.audio_player__control__panel {
+.audio_player__control__panel,
+.etc-controls__dropdown {
     background-color: var(--color-04ev) !important;
 }
 
@@ -880,7 +881,8 @@ attachButton:hover,
 .v-shares__button,
 .entry_stub__option[data-state="2"],
 .profile_comment_favorite__expand,
-.comment-unspy-button .material-icons {
+.comment-unspy-button .material-icons,
+.v-date__main {
     color: var(--text-color-minor) !important;
 }
 
@@ -1702,6 +1704,10 @@ if noTitle{
 
 .v-island__header::after {
     background-color: var(--border-color-dim) !important;
+}
+
+.v-table__row:not(:last-child) {
+    border-color: var(--color-01ev);
 }
 
 .tg-grid__section {
