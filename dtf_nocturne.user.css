@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.30
+@version        1.0.31
 @description    💗💗💗
-@author         Ureshii 死者
-@author         Farid
+@author         Ureshii 死者, helped by Farid
 @preprocessor stylus
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
