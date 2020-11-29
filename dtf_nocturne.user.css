@@ -2495,9 +2495,6 @@ a[href="/terms"], a[href="/agreement"] {
 .v-message__error {
     color: var(--text-color-minor);
 }
-.icon.icon--ui_close {
-fill: var(--text-color-red);
-}
 
 .v-receipt__label, .v-receipt__value, .v-message__text {
     color: var(--text-color-gray) !important;
