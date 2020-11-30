@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.35
+@version        1.0.36
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -2323,6 +2323,10 @@ if noTitle{
 .island__social_links--type_1 .island__social_links__item--active {
     background-color: var(--text-color-blue) !important;
     color: #000 !important;
+}
+
+.island__social_links--type_1 .island__social_links__item__delete .icon {
+    fill: #000 !important;
 }
 /* Vacancies */
 .v-button--blue:hover {
