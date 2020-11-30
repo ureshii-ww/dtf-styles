@@ -615,7 +615,6 @@ announcement-stats,
 .widget_comment__entry,
 .widget_wrapper__more,
 .blogs_entries__load_more,
-.widget_comment__label,
 .island--blogs_entries .blogs_entries__title,
 .content-header-author__name,
 .daily-promo-unit__title,
@@ -894,7 +893,8 @@ attachButton:hover,
 .audio_listen_button,
 .v-form-card .v-form-input input::placeholder,
 .v-form__legal,
-.v-date__expires {
+.v-date__expires,
+.widget_comment__label {
     color: var(--text-color-minor) !important;
 }
 
