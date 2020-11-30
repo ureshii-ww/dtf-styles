@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.32
+@version        1.0.33
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -588,7 +588,8 @@ announcement-stats,
 .chat-form__reply-text,
 .ui_modal_window--unpublish textarea,
 .sidebar-tree-list-item--colored,
-.v-receipt {
+.v-receipt,
+.v-message__text {
     color: var(--text-color-gray) !important;
 }
 
@@ -752,7 +753,8 @@ attachButton:hover,
 .chat-form__reply-name,
 .content__thanks a:hover span,
 .tjnames__list b,
-.v-form__title {
+.v-form__title,
+.v-message__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1168,7 +1170,8 @@ a.v-list__item:hover,
 .chat-header-info .online,
 .subsite_subscribe_button .icon--ui_check,
 .subsite__trend .icon--ui_arrow_up,
-.ui-button--success .icon {
+.ui-button--success .icon,
+.v-message__title .icon--ui_check {
     color: var(--text-color-green) !important;
 }
 
