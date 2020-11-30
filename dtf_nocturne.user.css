@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.36
+@version        1.0.37
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -893,7 +893,8 @@ attachButton:hover,
 .v-date__main,
 .audio_listen_button,
 .v-form-card .v-form-input input::placeholder,
-.v-form__legal {
+.v-form__legal,
+.v-date__expires {
     color: var(--text-color-minor) !important;
 }
 
