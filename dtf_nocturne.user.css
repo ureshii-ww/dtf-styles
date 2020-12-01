@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.38
+@version        1.0.39
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -1086,7 +1086,8 @@ a.v-list__item:hover,
 .repost_button__button--active,
 .profile_comment_favorite__expand:hover,
 .audio_listen_button:hover,
-.v-form__legal a {
+.v-form__legal a,
+.etc_control--open {
     color: var(--text-color-blue) !important;
 }
 
