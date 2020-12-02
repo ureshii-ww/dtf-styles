@@ -1,10 +1,11 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.40
+@version        1.0.41
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
+@var            checkbox  standardSidebars "Стандартные боковые панели" 0
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
@@ -2526,6 +2527,36 @@ if likesBack{
     .vote--content .vote__button--plus:hover:before,
     .vote--content .vote__button--minus:hover:before {
         background-color: transparent !important;
+    }
+}
+
+if standardSidebars {
+    .sidebar,
+    .live,
+    .sidebar-tree-list__show-more-button,
+    .layout__left-column  {
+        background-color: var(--color-00ev) !important;
+    }
+
+    .u-notification--blue.u-notification--bg,
+    .u-notification--green.u-notification--bg,
+    .u-notification--red.u-notification--bg {
+        background-color: var(--hover-00ev) !important;
+    }
+
+    .sidebar-tree-list-item--active,
+    .sidebar-tree-list-item:hover {
+        background-color: var(--color-01ev) !important;
+    }
+
+    .sidebar-tree-list-item__child-item:hover {
+        background-color: var(--hover-01ev) !important;
+    }
+
+    @media (max-width: 1560px) and (min-width: 860px) {
+        .page--entry {
+            border: none !important;
+        }
     }
 }
 }
