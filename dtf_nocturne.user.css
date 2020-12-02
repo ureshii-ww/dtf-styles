@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.41
+@version        1.0.42
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -219,7 +219,8 @@ body {
 .head-notifies__items-wrapper,
 .messenger-panel__down-list,
 .audio_player__control__panel,
-.etc-controls__dropdown {
+.etc-controls__dropdown,
+.gallery-item__zoomer {
     background-color: var(--color-04ev) !important;
 }
 
