@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.39
+@version        1.0.40
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -323,7 +323,8 @@ body {
 .entry_stub,
 .v-popup-window--gray .v-popup-window__content,
 .v-popup-window__content,
-.v-form__legal:before {
+.v-form__legal:before,
+.search_results__horizon {
     background-color: var(--color-01ev) !important;
 }
 
@@ -1087,7 +1088,8 @@ a.v-list__item:hover,
 .profile_comment_favorite__expand:hover,
 .audio_listen_button:hover,
 .v-form__legal a,
-.etc_control--open {
+.etc_control--open,
+.t-link-site {
     color: var(--text-color-blue) !important;
 }
 
@@ -1156,7 +1158,8 @@ a.v-list__item:hover,
 .andropov_telegram__text__more:hover,
 .andropov_tweet__text__more:hover,
 .v-number-change--negative,
-.v-form__legal a:hover {
+.v-form__legal a:hover,
+.t-link-site:hover {
     color: var(--text-color-red) !important;
 }
 
