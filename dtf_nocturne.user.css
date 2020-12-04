@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.43
+@version        1.0.44
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -1300,7 +1300,6 @@ a.v-list__item:hover,
 .tab__content,
 .attacher__form,
 .content-editorial-tick span,
-.andropov_uploader__preview_item__remove,
 .shares--mobile .shares__open,
 .shares--open .shares__close,
 .etc-controls__dropdown,
