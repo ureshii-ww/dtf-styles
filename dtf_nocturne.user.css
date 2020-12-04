@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.44
+@version        1.0.45
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -11,6 +11,7 @@
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
 @var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
+@var            checkbox  imgBrightness "Затемнять изображения" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2200,6 +2201,10 @@ if noTitle{
 .v-form__legal a:hover {
     border-color: var(--text-color-red) !important;
 }
+
+.andropov_preview {
+    color: rgba(18, 18, 18, 0.6);
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
@@ -2557,6 +2562,18 @@ if standardSidebars {
         .page--entry {
             border: none !important;
         }
+    }
+}
+
+if imgBrightness {
+    .andropov_image__inner img, .andropov_video, .gall__item, .block-person .andropov_image {
+        filter: brightness(0.6);
+        transition: filter, 0.5s;
+    }
+
+    .andropov_image__inner img:hover, .entry_wrapper:hover .andropov_image__inner img, .entry_wrapper:hover .andropov_video, .andropov_video:hover, .gall__item:hover, .content-feed:hover .andropov_image img, .content-feed:hover .andropov_video, .block-person .andropov_image:hover {
+        filter: brightness(1);
+        transition: filter, 0.5s;
     }
 }
 }
