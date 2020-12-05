@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.45
+@version        1.0.46
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -242,7 +242,8 @@ body {
 .v-button,
 .v-tabs-navigation,
 .v-header-avatar-manage,
-.tg-tooltip {
+.tg-tooltip,
+.chat-messages--compact .chat-messages__unread-label span{
     background-color: var(--color-03ev) !important;
 }
 
@@ -593,7 +594,8 @@ announcement-stats,
 .ui_modal_window--unpublish textarea,
 .sidebar-tree-list-item--colored,
 .v-receipt,
-.v-message__text {
+.v-message__text,
+.andropov_preview__description {
     color: var(--text-color-gray) !important;
 }
 
