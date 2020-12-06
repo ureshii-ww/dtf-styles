@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.46
+@version        1.0.47
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -2299,6 +2299,12 @@ if noTitle{
 .message__content-reply {
     border-color: var(--border-color);
 }
+
+.chat-header-info__title .icon--verified g path,
+.channel-item__name path {
+    fill: var(--text-color-blue) !important;
+}
+
 /* Settings */
 .icon--toggle-up g path {
     fill: var(--text-color-gray);
