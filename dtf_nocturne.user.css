@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.48
+@version        1.0.49
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @preprocessor stylus
@@ -763,7 +763,8 @@ attachButton:hover,
 .tjnames__list b,
 .v-form__title,
 .v-message__title,
-.bp-unit__title {
+.bp-unit__title,
+.subsite-card-title__item--name {
     color: var(--text-color-title) !important;
 }
 
@@ -905,7 +906,8 @@ attachButton:hover,
 .v-form__legal,
 .v-date__expires,
 .widget_comment__label,
-.booster-promo__hide {
+.booster-promo__hide,
+.content-info__item {
     color: var(--text-color-minor) !important;
 }
 
@@ -1529,8 +1531,9 @@ a.v-list__item:hover,
 /*class=notify__item notify__item--error notify__item--shown*/
 @media (max-width: 1560px) and (min-width: 860px) {
     .page--entry {
-        border-right: 1px solid var(--border-color);
-        border-left: 1px solid var(--border-color);
+        border-right: 1px solid;
+        border-left: 1px solid;
+        border-color: var(--color-00ev);
     }
 }
 
