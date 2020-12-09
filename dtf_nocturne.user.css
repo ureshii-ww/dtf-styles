@@ -1,9 +1,10 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.49
+@version        1.0.50
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
+@homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
 @var            checkbox  standardSidebars "Стандартные боковые панели" 0
 @var            checkbox  likesBack "Убрать фон у лайков" 1
@@ -1533,7 +1534,7 @@ a.v-list__item:hover,
     .page--entry {
         border-right: 1px solid;
         border-left: 1px solid;
-        border-color: var(--color-00ev);
+        border-color: var(--border-color);
     }
 }
 
