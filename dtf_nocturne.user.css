@@ -222,7 +222,8 @@ body {
 .messenger-panel__down-list,
 .audio_player__control__panel,
 .etc-controls__dropdown,
-.gallery-item {
+.gallery-item,
+.wtf_bc--skin--bg-primary {
     background-color: var(--color-04ev) !important;
 }
 
@@ -378,8 +379,17 @@ body {
 .herzen__command_list__item--selected,
 .herzen__command_list__item:hover,
 .v-shares-popover__item:hover,
-.thesis__attach_something:hover {
+.thesis__attach_something:hover,
+.wtf_bc--feed-item--share--list {
     background-color: var(--hover-08ev) !important;
+}
+
+.wtf_bc--feed-item--share--list:before {
+    border-bottom-color: var(--hover-08ev) !important;
+}
+
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:not(:first-child) {
+    border-top-color: var(--border-color) !important;
 }
 
 .page--editor .bubble .item--selected,
@@ -421,7 +431,8 @@ body {
 .u-notification--unread,
 .u-notification--hover:hover,
 .u-notification--unread:hover,
-.channel-item:hover {
+.channel-item:hover,
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -599,7 +610,8 @@ announcement-stats,
 .sidebar-tree-list-item--colored,
 .v-receipt,
 .v-message__text,
-.andropov_preview__description {
+.andropov_preview__description,
+.wtf_bc--skin--main-text {
     color: var(--text-color-gray) !important;
 }
 
@@ -766,7 +778,9 @@ attachButton:hover,
 .bp-unit__title,
 .subsite-card-title__item--name,
 .block-warning__title,
-.kojur-nav__item span {
+.kojur-nav__item span,
+.wtf_bc--skin--main-text.ng-binding,
+.wtf_bc--skin--item-header .wtf_bc--skin--link {
     color: var(--text-color-title) !important;
 }
 
@@ -909,7 +923,8 @@ attachButton:hover,
 .v-date__expires,
 .widget_comment__label,
 .booster-promo__hide,
-.content-info__item {
+.content-info__item,
+.wtf_bc--skin--sec-text.ng-binding {
     color: var(--text-color-minor) !important;
 }
 
@@ -1104,7 +1119,8 @@ a.v-list__item:hover,
 .v-form__legal a,
 .etc_control--open,
 .t-link-site,
-.kojur-nav__item a {
+.kojur-nav__item a,
+.wtf_bc--skin--item-header .wtf_bc--skin--link:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -2899,3 +2915,55 @@ body {
     color: var(--text-color-gray);
 }
 }
+
+@-moz-document domain("twitter.com") {
+    :root {
+        --text-color-gray: rgba(255, 255, 255, 0.69);
+        --text-color-title: rgba(255, 255, 255, 0.87);
+        --text-color-blue: #AAB6FE;
+        --text-color-minor: rgba(255, 255, 255, 0.38);
+        --text-color-red: #ff5857;
+        --back-color-blue-button: #534bae;
+        --blue-button-hover: #49599a;
+        --color-04ev: #272727;
+        --color-06ev: #2c2c2c;
+        --color-08ev: #2f2f2f;
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-9x6qib {
+        border-color: var(--text-color-minor) !important;
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-zv2cs0 {
+        background-color: rgba(170, 182, 254, 0.1);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-14lw9ot {
+        background-color: var(--color-04ev);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-1u4rsef {
+        background-color: var(--color-06ev);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-vqp9x9 {
+        background-color: var(--color-08ev);    
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0 {
+        color: var(--text-color-title);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0:hover {
+        color: var(--text-color-blue);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .css-901oao.r-hkyrab.r-1dqbpge.r-1qd0xha.r-1b6yd1w.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0,
+    html[stylus-iframe*="tjournal.ru"] .r-1re7ezh {
+        color: var(--text-color-gray);
+    }
+    
+    html[stylus-iframe*="tjournal.ru"] .r-13gxpu9 {
+        color: var(--text-color-blue);
+    }
+    }
