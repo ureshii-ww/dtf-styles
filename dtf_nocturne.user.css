@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.55
+@version        1.0.56
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -765,7 +765,8 @@ attachButton:hover,
 .v-message__title,
 .bp-unit__title,
 .subsite-card-title__item--name,
-.block-warning__title {
+.block-warning__title,
+.kojur-nav__item span {
     color: var(--text-color-title) !important;
 }
 
@@ -1102,7 +1103,8 @@ a.v-list__item:hover,
 .audio_listen_button:hover,
 .v-form__legal a,
 .etc_control--open,
-.t-link-site {
+.t-link-site,
+.kojur-nav__item a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1172,7 +1174,8 @@ a.v-list__item:hover,
 .andropov_tweet__text__more:hover,
 .v-number-change--negative,
 .v-form__legal a:hover,
-.t-link-site:hover {
+.t-link-site:hover,
+.kojur-nav__item a:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1419,6 +1422,18 @@ a.v-list__item:hover,
 
 .v-split-button {
     color: #FFF;
+}
+
+.kojur-nav__item a {
+    border-color: var(--text-color-blue);
+}
+
+.kojur-nav__item a:hover {
+    opacity: 1;
+}
+
+.kojur-nav__item a:hover {
+    border-color: var(--text-color-red);
 }
 
 /*--------------------------------------------------------*/
