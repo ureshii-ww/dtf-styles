@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.63
+@version        1.0.64
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -931,7 +931,8 @@ attachButton:hover,
 .widget_comment__label,
 .booster-promo__hide,
 .content-info__item,
-.wtf_bc--skin--sec-text.ng-binding {
+.wtf_bc--skin--sec-text.ng-binding,
+.wtf_bc--at-time.ng-binding {
     color: var(--text-color-minor) !important;
 }
 
@@ -1129,7 +1130,8 @@ a.v-list__item:hover,
 .kojur-nav__item a,
 .wtf_bc--skin--item-header .wtf_bc--skin--link:hover,
 .wtf_bc--skin--link:hover,
-.wtf_broadcast .wtf_bc-copyright a:hover {
+.wtf_broadcast .wtf_bc-copyright a:hover,
+.wtf_bc--username.ng-binding:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -2928,7 +2930,7 @@ body {
 }
 }
 
-/*  @-moz-document domain("twitter.com") {
+@-moz-document domain("twitter.com") {
 :root {
     --text-color-gray: rgba(255, 255, 255, 0.69);
     --text-color-title: rgba(255, 255, 255, 0.87);
@@ -2940,10 +2942,11 @@ body {
     --color-04ev: #272727;
     --color-06ev: #2c2c2c;
     --color-08ev: #2f2f2f;
+    --color-12ev: #333333;
 }
     
 html[stylus-iframe*="tjournal.ru"] .r-9x6qib {
-    border-color: var(--text-color-minor) !important;
+    border: none !important;
 }
     
 html[stylus-iframe*="tjournal.ru"] .r-zv2cs0 {
@@ -2951,15 +2954,15 @@ html[stylus-iframe*="tjournal.ru"] .r-zv2cs0 {
 }
     
 html[stylus-iframe*="tjournal.ru"] .r-14lw9ot {
-    background-color: var(--color-04ev);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-1u4rsef {
     background-color: var(--color-06ev);
 }
     
+html[stylus-iframe*="tjournal.ru"] .r-1u4rsef {
+    background-color: var(--color-08ev);
+}
+    
 html[stylus-iframe*="tjournal.ru"] .r-vqp9x9 {
-    background-color: var(--color-08ev);    
+    background-color: var(--color-12ev);    
 }
 html[stylus-iframe*="tjournal.ru"] .r-vrwoeq{
     background-color: var(--text-color-minor);
@@ -2969,11 +2972,10 @@ html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a
     color: var(--text-color-title);
 }
     
-html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0:hover {
-    color: var(--text-color-blue);
-}
-html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-d0pm55.r-bcqeeo.r-1ny4l3l.r-1ddef8g.r-qvutc0 {
-    color: var(--text-color-red) !important;
+html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-d0pm55.r-bcqeeo.r-1ny4l3l.r-1ddef8g.r-qvutc0,
+html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0:hover,
+html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.css-16my406.r-1re7ezh.r-1loqt21.r-1qd0xha.r-ad9z0x.r-bcqeeo.r-qvutc0:hover {
+    color: var(--text-color-blue) !important;
 }
 html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-d0pm55.r-bcqeeo.r-qvutc0 {
     color: var(--text-color-minor) !important;
@@ -2987,4 +2989,4 @@ html[stylus-iframe*="tjournal.ru"] .r-hkyrab {
 html[stylus-iframe*="tjournal.ru"] .r-13gxpu9 {
     color: var(--text-color-blue);
 }
-}   */
+}
