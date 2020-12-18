@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.60
+@version        1.0.63
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -223,7 +223,8 @@ body {
 .audio_player__control__panel,
 .etc-controls__dropdown,
 .gallery-item,
-.wtf_bc--skin--bg-primary {
+.wtf_bc--skin--bg-primary,
+.wtf_bubble-body textarea {
     background-color: var(--color-04ev) !important;
 }
 
@@ -332,7 +333,8 @@ body {
 .v-form__legal:before,
 .search_results__horizon,
 .bp-unit,
-.booster-promo__button {
+.booster-promo__button,
+.wtf_bubble-body {
     background-color: var(--color-01ev) !important;
 }
 
@@ -389,11 +391,7 @@ body {
 }
 
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:not(:first-child) {
-    border-top-color: var(--border-color) !important;
-}
-
-.wtf_bc--og.wtf_bc--skin--bg-gray {
-    border: none !important;    
+    border-top-color: var(--hover-08ev) !important;
 }
 
 .page--editor .bubble .item--selected,
@@ -616,7 +614,10 @@ announcement-stats,
 .v-receipt,
 .v-message__text,
 .andropov_preview__description,
-.wtf_bc--skin--main-text {
+.wtf_bc--skin--main-text,
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span,
+.ng-binding,
+.wtf_bubble-body textarea {
     color: var(--text-color-gray) !important;
 }
 
@@ -1126,7 +1127,9 @@ a.v-list__item:hover,
 .etc_control--open,
 .t-link-site,
 .kojur-nav__item a,
-.wtf_bc--skin--item-header .wtf_bc--skin--link:hover {
+.wtf_bc--skin--item-header .wtf_bc--skin--link:hover,
+.wtf_bc--skin--link:hover,
+.wtf_broadcast .wtf_bc-copyright a:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1197,8 +1200,7 @@ a.v-list__item:hover,
 .v-number-change--negative,
 .v-form__legal a:hover,
 .t-link-site:hover,
-.kojur-nav__item a:hover,
-.wtf_bc--skin--link:hover {
+.kojur-nav__item a:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1319,7 +1321,9 @@ a.v-list__item:hover,
 .form2__field--advanced_list .text__input,
 .form2__field--advanced_list .advanced_list__list,
 .form2__field--sticky,
-.tjnames__list, .tjnames__list.active {
+.tjnames__list, .tjnames__list.active,
+.wtf_bubble-body textarea,
+.wtf_bc--og.wtf_bc--skin--bg-gray {
     border: none !important;
 }
 
@@ -1351,7 +1355,8 @@ a.v-list__item:hover,
 .v-split-button,
 .site-header-progressbar__runner,
 .sidebar__button .v-button,
-.sidebar-tree-list-item__child-item--with-badge::after {
+.sidebar-tree-list-item__child-item--with-badge::after,
+.wtf_bc--need-more-items--button {
     background-color: var(--back-color-blue-button) !important;
 }
 
