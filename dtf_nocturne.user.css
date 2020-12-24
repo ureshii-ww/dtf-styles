@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.66
+@version        1.0.67
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -334,7 +334,8 @@ body {
 .search_results__horizon,
 .bp-unit,
 .booster-promo__button,
-.wtf_bubble-body {
+.wtf_bubble-body,
+.vacancy_footer {
     background-color: var(--color-01ev) !important;
 }
 
@@ -935,7 +936,8 @@ attachButton:hover,
 .content-info__item,
 .wtf_bc--skin--sec-text.ng-binding,
 .wtf_bc--at-time.ng-binding,
-.counter__number {
+.counter__number,
+.dummy__text {
     color: var(--text-color-minor) !important;
 }
 
@@ -1353,7 +1355,9 @@ a.v-list__item:hover,
 .inline-dropdown,
 .m-floating,
 .v-shares-popover,
-.tjnames__list, .tjnames__list.active {
+.tjnames__list, .tjnames__list.active,
+.floating_player,
+.floating_screen_film--fixed {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -2012,11 +2016,6 @@ if noTitle{
 .andropov_telegram__logo .icon,
 .andropov_tweet__logo .icon {
     fill: var(--text-color-blue) !important;
-}
-
-.floating_player,
-.floating_screen_film--fixed {
-    box-shadow: none;
 }
 
 .text_loop__grd--r {
