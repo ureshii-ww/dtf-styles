@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.72
+@version        1.0.73
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -491,7 +491,9 @@ body {
 .v-header-avatar,
 .popup__content--misprint .selected_text span,
 .v-popup-window__cover,
-.booster-promo__button:hover {
+.booster-promo__button:hover,
+.ui_modal_window__title__input,
+.ui_modal_window__textarea {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -620,7 +622,8 @@ announcement-stats,
 .wtf_bc--skin--main-text,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span,
 .ng-binding,
-.wtf_bubble-body textarea {
+.wtf_bubble-body textarea,
+.ui_modal_window__textarea {
     color: var(--text-color-gray) !important;
 }
 
@@ -939,7 +942,8 @@ attachButton:hover,
 .wtf_bc--skin--sec-text.ng-binding,
 .wtf_bc--at-time.ng-binding,
 .counter__number,
-.dummy__text {
+.dummy__text,
+.ui_modal_window__textarea::placeholder {
     color: var(--text-color-minor) !important;
 }
 
@@ -1333,7 +1337,8 @@ a.v-list__item:hover,
 .form2__field--sticky,
 .tjnames__list, .tjnames__list.active,
 .wtf_bubble-body textarea,
-.wtf_bc--og.wtf_bc--skin--bg-gray {
+.wtf_bc--og.wtf_bc--skin--bg-gray,
+.ui_modal_window__title__input {
     border: none !important;
 }
 
