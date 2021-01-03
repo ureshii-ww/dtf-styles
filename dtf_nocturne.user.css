@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.65
+@version        1.0.74
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -131,7 +131,7 @@ body {
 .andropov_preview,
 .repost_button__list .bubble .item,
 .v-shares-popover,
-.tjnames__list, .tjnames__list.active {
+.site-names__list, .site-names__list.active {
     background-color: var(--color-08ev) !important;
 }
 
@@ -334,7 +334,10 @@ body {
 .search_results__horizon,
 .bp-unit,
 .booster-promo__button,
-.wtf_bubble-body {
+.wtf_bubble-body,
+.vacancy_footer,
+.live__caption,
+.live__content {
     background-color: var(--color-01ev) !important;
 }
 
@@ -342,7 +345,7 @@ body {
 .ui-checkbox--disabled,
 .page:after,
 .l-page--loading,
-.layout__content {
+.layout {
     background-color: var(--color-00ev) !important;
 }
 
@@ -488,7 +491,9 @@ body {
 .v-header-avatar,
 .popup__content--misprint .selected_text span,
 .v-popup-window__cover,
-.booster-promo__button:hover {
+.booster-promo__button:hover,
+.ui_modal_window__title__input,
+.ui_modal_window__textarea {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -617,7 +622,8 @@ announcement-stats,
 .wtf_bc--skin--main-text,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span,
 .ng-binding,
-.wtf_bubble-body textarea {
+.wtf_bubble-body textarea,
+.ui_modal_window__textarea {
     color: var(--text-color-gray) !important;
 }
 
@@ -778,7 +784,7 @@ attachButton:hover,
 .v-shares-mobile-popover__name,
 .chat-form__reply-name,
 .content__thanks a:hover span,
-.tjnames__list b,
+.site-names__list b,
 .v-form__title,
 .v-message__title,
 .bp-unit__title,
@@ -788,7 +794,8 @@ attachButton:hover,
 .wtf_bc--skin--main-text.ng-binding,
 .wtf_bc--skin--item-header .wtf_bc--skin--link,
 .wtf_bc--skin--link,
-.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:hover {
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:hover,
+.list__category-name {
     color: var(--text-color-title) !important;
 }
 
@@ -933,7 +940,10 @@ attachButton:hover,
 .booster-promo__hide,
 .content-info__item,
 .wtf_bc--skin--sec-text.ng-binding,
-.wtf_bc--at-time.ng-binding {
+.wtf_bc--at-time.ng-binding,
+.counter__number,
+.dummy__text,
+.ui_modal_window__textarea::placeholder {
     color: var(--text-color-minor) !important;
 }
 
@@ -1132,7 +1142,8 @@ a.v-list__item:hover,
 .wtf_bc--skin--item-header .wtf_bc--skin--link:hover,
 .wtf_bc--skin--link:hover,
 .wtf_broadcast .wtf_bc-copyright a:hover,
-.wtf_bc--username.ng-binding:hover {
+.wtf_bc--username.ng-binding:hover,
+.restriction a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1324,9 +1335,10 @@ a.v-list__item:hover,
 .form2__field--advanced_list .text__input,
 .form2__field--advanced_list .advanced_list__list,
 .form2__field--sticky,
-.tjnames__list, .tjnames__list.active,
+.site-names__list, .site-names__list.active,
 .wtf_bubble-body textarea,
-.wtf_bc--og.wtf_bc--skin--bg-gray {
+.wtf_bc--og.wtf_bc--skin--bg-gray,
+.ui_modal_window__title__input {
     border: none !important;
 }
 
@@ -1351,7 +1363,9 @@ a.v-list__item:hover,
 .inline-dropdown,
 .m-floating,
 .v-shares-popover,
-.tjnames__list, .tjnames__list.active {
+.site-names__list, .site-names__list.active,
+.floating_player,
+.floating_screen_film--fixed {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -1469,6 +1483,10 @@ a.v-list__item:hover,
 
 .sidebar-tree-list-item__favourite:hover {
     opacity: 1 !important;
+}
+
+.kojima-sidebar-item:hover {
+    background-color: transparent !important;
 }
 /*--------------------------------------------------------*/
 /* Right bar */
@@ -1746,6 +1764,11 @@ if noTitle{
 .subsite-card-entry {
     border-color: var(--border-color-dim);
 }
+
+.bp-unit__button .v-button {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1), 0 4px 7px rgba(0,0,0,.08), 0 -1px 0 rgba(0,0,0,.05), -1px 0 0 rgba(0,0,0,.05), 1px 0 0 rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1), 0 4px 7px rgba(0,0,0,.08), 0 -1px 0 rgba(0,0,0,.05), -1px 0 0 rgba(0,0,0,.05), 1px 0 0 rgba(0,0,0,.05);
+}
 /************************************************************************************************************/
 /*Profile*/
 .v-header-avatar {
@@ -2010,11 +2033,6 @@ if noTitle{
 .andropov_telegram__logo .icon,
 .andropov_tweet__logo .icon {
     fill: var(--text-color-blue) !important;
-}
-
-.floating_player,
-.floating_screen_film--fixed {
-    box-shadow: none;
 }
 
 .text_loop__grd--r {
@@ -2615,8 +2633,10 @@ if standardSidebars {
     .sidebar,
     .live,
     .sidebar-tree-list__show-more-button,
-    .layout__left-column  {
-        background-color: var(--color-00ev) !important;
+    .layout__left-column,
+    .live__caption,
+    .live__content  {
+        background-color: transparent !important;
     }
 
     .u-notification--blue.u-notification--bg,
