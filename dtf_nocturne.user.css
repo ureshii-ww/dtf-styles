@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.73
+@version        1.0.74
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -131,7 +131,7 @@ body {
 .andropov_preview,
 .repost_button__list .bubble .item,
 .v-shares-popover,
-.tjnames__list, .tjnames__list.active {
+.site-names__list, .site-names__list.active {
     background-color: var(--color-08ev) !important;
 }
 
@@ -784,7 +784,7 @@ attachButton:hover,
 .v-shares-mobile-popover__name,
 .chat-form__reply-name,
 .content__thanks a:hover span,
-.tjnames__list b,
+.site-names__list b,
 .v-form__title,
 .v-message__title,
 .bp-unit__title,
@@ -1335,7 +1335,7 @@ a.v-list__item:hover,
 .form2__field--advanced_list .text__input,
 .form2__field--advanced_list .advanced_list__list,
 .form2__field--sticky,
-.tjnames__list, .tjnames__list.active,
+.site-names__list, .site-names__list.active,
 .wtf_bubble-body textarea,
 .wtf_bc--og.wtf_bc--skin--bg-gray,
 .ui_modal_window__title__input {
@@ -1363,7 +1363,7 @@ a.v-list__item:hover,
 .inline-dropdown,
 .m-floating,
 .v-shares-popover,
-.tjnames__list, .tjnames__list.active,
+.site-names__list, .site-names__list.active,
 .floating_player,
 .floating_screen_film--fixed {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
