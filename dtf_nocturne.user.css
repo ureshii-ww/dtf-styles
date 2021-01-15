@@ -493,8 +493,7 @@ body {
 .v-popup-window__cover,
 .booster-promo__button:hover,
 .ui_modal_window__title__input,
-.ui_modal_window__textarea,
-.chat-dropdown-pointer {
+.ui_modal_window__textarea {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1377,6 +1376,10 @@ a.v-list__item:hover,
 .sidebar-tree-list-item__child-item--with-badge::after,
 .wtf_bc--need-more-items--button {
     background-color: var(--back-color-blue-button) !important;
+}
+
+.chat-dropdown-pointer {
+    background-color: rgba(30, 30, 30, .94) !important;
 }
 
 /* Header */
