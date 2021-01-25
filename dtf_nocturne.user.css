@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.76
+@version        1.0.77
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
-@var            checkbox  standardSidebars "Стандартные боковые панели" 0
+@var            checkbox  standardSidebars "Стандартные боковые панели" 1
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
