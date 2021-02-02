@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.77
+@version        1.0.78
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -54,6 +54,8 @@
     --hover-12ev: #3b3b3b;
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
+
+    --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
 }
 
 body {
@@ -131,7 +133,8 @@ body {
 .andropov_preview,
 .repost_button__list .bubble .item,
 .v-shares-popover,
-.site-names__list, .site-names__list.active {
+.site-names__list, .site-names__list.active,
+.s42-stonks-popup {
     background-color: var(--color-08ev) !important;
 }
 
@@ -624,7 +627,9 @@ announcement-stats,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span,
 .ng-binding,
 .wtf_bubble-body textarea,
-.ui_modal_window__textarea {
+.ui_modal_window__textarea,
+.s42-stonks-popup,
+.s42-stonks-popup__text-regular {
     color: var(--text-color-gray) !important;
 }
 
@@ -947,7 +952,8 @@ attachButton:hover,
 .counter__number,
 .dummy__text,
 .ui_modal_window__textarea::placeholder,
-.chat-dropdown-pointer {
+.chat-dropdown-pointer,
+.s42-stonks-popup__text-off {
     color: var(--text-color-minor) !important;
 }
 
@@ -1147,7 +1153,8 @@ a.v-list__item:hover,
 .wtf_bc--skin--link:hover,
 .wtf_broadcast .wtf_bc-copyright a:hover,
 .wtf_bc--username.ng-binding:hover,
-.restriction a {
+.restriction a,
+.s42-stonks-popup__text-marked {
     color: var(--text-color-blue) !important;
 }
 
@@ -1218,7 +1225,9 @@ a.v-list__item:hover,
 .v-number-change--negative,
 .v-form__legal a:hover,
 .t-link-site:hover,
-.kojur-nav__item a:hover {
+.kojur-nav__item a:hover,
+.s42-stonks-popup__text-red,
+.s42-stonks-popup__text-marked:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1235,7 +1244,8 @@ a.v-list__item:hover,
 .subsite_subscribe_button .icon--ui_check,
 .subsite__trend .icon--ui_arrow_up,
 .ui-button--success .icon,
-.v-message__title .icon--ui_check {
+.v-message__title .icon--ui_check,
+.s42-stonks-popup__text-green {
     color: var(--text-color-green) !important;
 }
 
@@ -1244,7 +1254,8 @@ a.v-list__item:hover,
 }
 
 .site-header,
-.v-split-button {
+.v-split-button,
+.s42-stonks-popup__footer__button {
     box-shadow: none;
 }
 
@@ -1377,8 +1388,13 @@ a.v-list__item:hover,
 .site-header-progressbar__runner,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
-.wtf_bc--need-more-items--button {
+.wtf_bc--need-more-items--button,
+.s42-stonks-popup__footer__button {
     background-color: var(--back-color-blue-button) !important;
+}
+
+.s42-stonks-popup__footer__button:hover {
+    background-color: var(--blue-button-hover) !important;
 }
 
 .chat-dropdown-pointer {
@@ -1476,6 +1492,10 @@ a.v-list__item:hover,
 
 .icon--verified path {
     fill: var(--text-color-blue) !important;
+}
+
+.s42-stonks-popup__head {
+    border-color: var(--border-color);
 }
 
 /*--------------------------------------------------------*/
