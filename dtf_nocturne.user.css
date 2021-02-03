@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.80
+@version        1.0.81
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -804,7 +804,9 @@ attachButton:hover,
 .list__category-name,
 .wtf_bc--header--counter.ng-binding,
 .wtf_bc--username.ng-binding,
-.system-message a:hover {
+.system-message a:hover,
+.s42-stonks-popup__text-splited-right span:last-child,
+.s42-stonks-popup__big-text {
     color: var(--text-color-title) !important;
 }
 
