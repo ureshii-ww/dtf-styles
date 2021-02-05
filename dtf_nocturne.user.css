@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.82
+@version        1.0.83
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -630,7 +630,8 @@ announcement-stats,
 .wtf_bubble-body textarea,
 .ui_modal_window__textarea,
 .s42-stonks-popup,
-.s42-stonks-popup__text-regular {
+.s42-stonks-popup__text-regular,
+.adult__message {
     color: var(--text-color-gray) !important;
 }
 
@@ -808,7 +809,8 @@ attachButton:hover,
 .system-message a:hover,
 .s42-stonks-popup__text-splited-right span:last-child,
 .s42-stonks-popup__big-text,
-.tjnames__list b {
+.tjnames__list b,
+.adult__title {
     color: var(--text-color-title) !important;
 }
 
