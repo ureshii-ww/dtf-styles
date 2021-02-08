@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.84
+@version        1.0.85
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -229,7 +229,8 @@ body {
 .gallery-item,
 .wtf_bc--skin--bg-primary,
 .wtf_bubble-body textarea,
-.ce-popover {
+.ce-popover,
+.anchor-tool input {
     background-color: var(--color-04ev) !important;
 }
 
