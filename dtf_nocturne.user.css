@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.83
+@version        1.0.84
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -228,7 +228,8 @@ body {
 .etc-controls__dropdown,
 .gallery-item,
 .wtf_bc--skin--bg-primary,
-.wtf_bubble-body textarea {
+.wtf_bubble-body textarea,
+.ce-popover {
     background-color: var(--color-04ev) !important;
 }
 
@@ -442,7 +443,8 @@ body {
 .u-notification--hover:hover,
 .u-notification--unread:hover,
 .channel-item:hover,
-.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg {
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg,
+.ce-block-settings__item:not(.no-hover):hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1361,7 +1363,8 @@ a.v-list__item:hover,
 .wtf_bubble-body textarea,
 .wtf_bc--og.wtf_bc--skin--bg-gray,
 .ui_modal_window__title__input,
-.tjnames__list, .site-names__list {
+.tjnames__list, .site-names__list,
+.ce-popover {
     border: none !important;
 }
 
@@ -1390,7 +1393,8 @@ a.v-list__item:hover,
 .floating_player,
 .floating_screen_film--fixed,
 .s42-stonks-popup,
-.tjnames__list, .site-names__list {
+.tjnames__list, .site-names__list,
+.ce-popover {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
