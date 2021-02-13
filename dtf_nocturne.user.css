@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.87
+@version        1.0.88
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -230,7 +230,8 @@ body {
 .wtf_bc--skin--bg-primary,
 .wtf_bubble-body textarea,
 .ce-popover,
-.anchor-tool input {
+.anchor-tool input,
+.remove-tool--confirm {
     background-color: var(--color-04ev) !important;
 }
 
@@ -1237,7 +1238,8 @@ a.v-list__item:hover,
 .t-link-site:hover,
 .kojur-nav__item a:hover,
 .s42-stonks-popup__text-red,
-.s42-stonks-popup__text-marked:hover {
+.s42-stonks-popup__text-marked:hover,
+.remove-tool--confirm {
     color: var(--text-color-red) !important;
 }
 
@@ -2036,6 +2038,10 @@ if noTitle{
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cdx-icon--cover-blue {
+    filter: invert(0) grayscale(100%) opacity(100%) brightness(130%) !important;
 }
 
 /*Posts*/
