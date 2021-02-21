@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.88
+@version        1.0.89
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1545,6 +1545,10 @@ a.v-list__item:hover,
 
 .kojima-sidebar-item:hover {
     background-color: transparent !important;
+}
+
+.spotify-sidebar-button:hover {
+    background-color: rgba(255,255,255,0.5) !important;
 }
 /*--------------------------------------------------------*/
 /* Right bar */
