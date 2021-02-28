@@ -62,27 +62,6 @@
     --primary-color--faded26: #3b3b3b;
 }
 
-
-
-#s42-feed-link-new-entries-badge {
-    background-color: var(--back-color-blue-button);
-}
-
-.switcher-layout__header__supporting-text {
-    color: var(--text-color-minor);
-}
-
-.mdl-radio__sub-label {
-    color: var(--text-color-gray);
-}
-
-.mdl-radio__outer-circle,
-.mdl-checkbox__box-outline {
-    border-color: var(--text-color-minor);
-}
-
-
-
 body {
     background-color: var(--color-00ev) !important;
 }
@@ -660,7 +639,8 @@ announcement-stats,
 .ui_modal_window__textarea,
 .s42-stonks-popup,
 .s42-stonks-popup__text-regular,
-.adult__message {
+.adult__message,
+.mdl-radio__sub-label {
     color: var(--text-color-gray) !important;
 }
 
@@ -1431,7 +1411,8 @@ a.v-list__item:hover,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
 .wtf_bc--need-more-items--button,
-.s42-stonks-popup__footer__button {
+.s42-stonks-popup__footer__button,
+#s42-feed-link-new-entries-badge {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -2300,6 +2281,15 @@ if noTitle{
 .subsite_head__description a:hover,
 .t-link-classic:hover {
     border-color: var(--text-color-red);
+}
+
+.mdl-radio__outer-circle,
+.mdl-checkbox__box-outline {
+    border-color: var(--text-color-minor);
+}
+
+.switcher-layout__header__supporting-text {
+    color: var(--text-color-minor);
 }
 
 .shares--desktop .shares__close,
