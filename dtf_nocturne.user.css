@@ -295,7 +295,8 @@ body {
 .shares--open .shares__close,
 .events_widget__new,
 .v-shares-mobile-popover__list,
-.v-form-card .v-form-input input {
+.v-form-card .v-form-input input,
+.msngrConfirmWindow {
     background-color: var(--color-02ev) !important;
 }
 
@@ -640,7 +641,8 @@ announcement-stats,
 .s42-stonks-popup,
 .s42-stonks-popup__text-regular,
 .adult__message,
-.mdl-radio__sub-label {
+.mdl-radio__sub-label,
+.msngrConfirmMessage {
     color: var(--text-color-gray) !important;
 }
 
