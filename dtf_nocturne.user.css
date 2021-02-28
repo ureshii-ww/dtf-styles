@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.77
+@version        1.0.97
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -54,6 +54,8 @@
     --hover-12ev: #3b3b3b;
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
+
+    --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
 }
 
 body {
@@ -64,7 +66,7 @@ body {
     filter: grayscale(100%) sepia(100%) saturate(50%) brightness(25%);
 }
 
-/*  EVALUATION SETTINGS */
+/*  ELEVATION SETTINGS */
 #notify .notify__item,
 .live-stream,
 .head-notifies__panel,
@@ -131,7 +133,9 @@ body {
 .andropov_preview,
 .repost_button__list .bubble .item,
 .v-shares-popover,
-.site-names__list, .site-names__list.active {
+.site-names__list, .site-names__list.active,
+.s42-stonks-popup,
+.tjnames__list, .site-names__list {
     background-color: var(--color-08ev) !important;
 }
 
@@ -224,7 +228,10 @@ body {
 .etc-controls__dropdown,
 .gallery-item,
 .wtf_bc--skin--bg-primary,
-.wtf_bubble-body textarea {
+.wtf_bubble-body textarea,
+.ce-popover,
+.anchor-tool input,
+.remove-tool--confirm {
     background-color: var(--color-04ev) !important;
 }
 
@@ -438,7 +445,8 @@ body {
 .u-notification--hover:hover,
 .u-notification--unread:hover,
 .channel-item:hover,
-.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg {
+.wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg,
+.ce-block-settings__item:not(.no-hover):hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -624,7 +632,10 @@ announcement-stats,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span,
 .ng-binding,
 .wtf_bubble-body textarea,
-.ui_modal_window__textarea {
+.ui_modal_window__textarea,
+.s42-stonks-popup,
+.s42-stonks-popup__text-regular,
+.adult__message {
     color: var(--text-color-gray) !important;
 }
 
@@ -798,7 +809,12 @@ attachButton:hover,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:hover,
 .list__category-name,
 .wtf_bc--header--counter.ng-binding,
-.wtf_bc--username.ng-binding {
+.wtf_bc--username.ng-binding,
+.system-message a:hover,
+.s42-stonks-popup__text-splited-right span:last-child,
+.s42-stonks-popup__big-text,
+.tjnames__list b,
+.adult__title {
     color: var(--text-color-title) !important;
 }
 
@@ -947,7 +963,8 @@ attachButton:hover,
 .counter__number,
 .dummy__text,
 .ui_modal_window__textarea::placeholder,
-.chat-dropdown-pointer {
+.chat-dropdown-pointer,
+.s42-stonks-popup__text-off {
     color: var(--text-color-minor) !important;
 }
 
@@ -1147,7 +1164,8 @@ a.v-list__item:hover,
 .wtf_bc--skin--link:hover,
 .wtf_broadcast .wtf_bc-copyright a:hover,
 .wtf_bc--username.ng-binding:hover,
-.restriction a {
+.restriction a,
+.s42-stonks-popup__text-marked {
     color: var(--text-color-blue) !important;
 }
 
@@ -1218,7 +1236,10 @@ a.v-list__item:hover,
 .v-number-change--negative,
 .v-form__legal a:hover,
 .t-link-site:hover,
-.kojur-nav__item a:hover {
+.kojur-nav__item a:hover,
+.s42-stonks-popup__text-red,
+.s42-stonks-popup__text-marked:hover,
+.remove-tool--confirm {
     color: var(--text-color-red) !important;
 }
 
@@ -1235,7 +1256,8 @@ a.v-list__item:hover,
 .subsite_subscribe_button .icon--ui_check,
 .subsite__trend .icon--ui_arrow_up,
 .ui-button--success .icon,
-.v-message__title .icon--ui_check {
+.v-message__title .icon--ui_check,
+.s42-stonks-popup__text-green {
     color: var(--text-color-green) !important;
 }
 
@@ -1244,7 +1266,8 @@ a.v-list__item:hover,
 }
 
 .site-header,
-.v-split-button {
+.v-split-button,
+.s42-stonks-popup__footer__button {
     box-shadow: none;
 }
 
@@ -1342,7 +1365,9 @@ a.v-list__item:hover,
 .site-names__list, .site-names__list.active,
 .wtf_bubble-body textarea,
 .wtf_bc--og.wtf_bc--skin--bg-gray,
-.ui_modal_window__title__input {
+.ui_modal_window__title__input,
+.tjnames__list, .site-names__list,
+.ce-popover {
     border: none !important;
 }
 
@@ -1369,7 +1394,10 @@ a.v-list__item:hover,
 .v-shares-popover,
 .site-names__list, .site-names__list.active,
 .floating_player,
-.floating_screen_film--fixed {
+.floating_screen_film--fixed,
+.s42-stonks-popup,
+.tjnames__list, .site-names__list,
+.ce-popover {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -1377,8 +1405,13 @@ a.v-list__item:hover,
 .site-header-progressbar__runner,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
-.wtf_bc--need-more-items--button {
+.wtf_bc--need-more-items--button,
+.s42-stonks-popup__footer__button {
     background-color: var(--back-color-blue-button) !important;
+}
+
+.s42-stonks-popup__footer__button:hover {
+    background-color: var(--blue-button-hover) !important;
 }
 
 .chat-dropdown-pointer {
@@ -1478,6 +1511,23 @@ a.v-list__item:hover,
     fill: var(--text-color-blue) !important;
 }
 
+.s42-stonks-popup__head {
+    border-color: var(--border-color);
+}
+
+.s42-stonks-popup__footer__button--light,
+.s42-stonks-popup__footer__button--light:hover {
+    background-color: transparent !important;
+}
+
+.comments__item__reply:hover .icon {
+    stroke: var(--text-color-blue);
+}
+
+.comments__item__reply .icon {
+    stroke: var(--text-color-minor);
+}
+
 /*--------------------------------------------------------*/
 /* Left bar */
 .sidebar-tree-list-item__child-item::before {
@@ -1495,6 +1545,10 @@ a.v-list__item:hover,
 
 .kojima-sidebar-item:hover {
     background-color: transparent !important;
+}
+
+.spotify-sidebar-button:hover {
+    background-color: none !important;
 }
 /*--------------------------------------------------------*/
 /* Right bar */
@@ -1565,8 +1619,18 @@ a.v-list__item:hover,
     fill: var(--text-color-minor);
 }
 
+.favorite_marker .icon,
+.comments__item__replied_to .icon {
+    stroke: #747474;
+}
+
+.comments__item__replied_to:hover .icon {
+    stroke: var(--text-color-blue);
+}
+
 .favorite_marker--active .icon {
     fill: var(--text-color-red);
+    stroke: var(--text-color-red);
 }
 
 .widget_wrapper--type-blue .widget_wrapper__item {
@@ -1654,6 +1718,7 @@ a.v-list__item:hover,
 
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .icon {
     fill: var(--text-color-red);
+    stroke: var(--text-color-red);
 }
 
 .daily-promo-unit__button,
@@ -1988,6 +2053,10 @@ if noTitle{
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cdx-icon--cover-blue {
+    filter: invert(0) grayscale(100%) opacity(100%) brightness(130%) !important;
 }
 
 /*Posts*/
@@ -2665,6 +2734,17 @@ if standardSidebars {
     @media (max-width: 1560px) and (min-width: 860px) {
         .page--entry {
             border: none !important;
+        }
+    }
+
+    @media (max-width: 859px) {
+        .sidebar,
+        .live,
+        .sidebar-tree-list__show-more-button,
+        .layout__left-column,
+        .live__caption,
+        .live__content {
+            background-color: var(--color-00ev) !important;
         }
     }
 }
