@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.105
+@version        1.0.106
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -645,7 +645,9 @@ announcement-stats,
 .s42-stonks-popup__text-regular,
 .adult__message,
 .mdl-radio__sub-label,
-.msngrConfirmMessage {
+.msngrConfirmMessage,
+.v-form__content,
+.v-popup-window__close--inside {
     color: var(--text-color-gray) !important;
 }
 
@@ -974,7 +976,9 @@ attachButton:hover,
 .dummy__text,
 .ui_modal_window__textarea::placeholder,
 .chat-dropdown-pointer,
-.s42-stonks-popup__text-off {
+.s42-stonks-popup__text-off,
+.auth-email-recover,
+.v-form-input input::placeholder {
     color: var(--text-color-minor) !important;
 }
 
@@ -1249,7 +1253,8 @@ a.v-list__item:hover,
 .kojur-nav__item a:hover,
 .s42-stonks-popup__text-red,
 .s42-stonks-popup__text-marked:hover,
-.remove-tool--confirm {
+.remove-tool--confirm,
+.auth-email-recover:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1431,6 +1436,14 @@ a.v-list__item:hover,
 
 .v-button--blue {
     box-shadow: none !important;
+}
+
+.auth-email-recover {
+    border-color: var(--text-color-minor) !important;
+}
+
+.auth-email-recover:hover {
+    border-color: var(--text-color-red) !important;
 }
 
 /* Header */
@@ -2684,6 +2697,25 @@ if noTitle{
 .hljs-strong {
     font-weight: bold;
 }
+
+/**KEKW TAGS**/
+input[type="color" i] {
+    background-color: var(--hover-03ev) !important;
+    border: none !important;
+}
+
+.popup__content--misprint .ui_form .selected_text span {
+    background-color: var(--color-01ev) !important;
+}
+
+#_kekw_dtf_tag_set_user, #_kekw_dtf_tag_clear_user {
+    color: var(--text-color-title) !important;
+}
+
+#_kekw_dtf_tag::placeholder {
+    color: var(--text-color-minor) !important;
+}
+/****/
 
 
 if scrollbar{
