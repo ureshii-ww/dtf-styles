@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.108
+@version        1.0.109
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -141,7 +141,9 @@ body {
 .site-names__list, .site-names__list.active,
 .s42-stonks-popup,
 .tjnames__list, .site-names__list,
-.tab__content .item {
+.tab__content .item,
+.__vcbf__popup,
+.__vcbf__popup::before {
     background-color: var(--color-08ev) !important;
 }
 
@@ -648,7 +650,8 @@ announcement-stats,
 .msngrConfirmMessage,
 .v-form__content,
 .v-popup-window__close--inside,
-.auth__back {
+.auth__back,
+.__vcbf__popup-content > div {
     color: var(--text-color-gray) !important;
 }
 
@@ -827,7 +830,9 @@ attachButton:hover,
 .s42-stonks-popup__text-splited-right span:last-child,
 .s42-stonks-popup__big-text,
 .tjnames__list b,
-.adult__title {
+.adult__title,
+.__vcbf__popup-header_name,
+.__vcbf__popup-content > div > span {
     color: var(--text-color-title) !important;
 }
 
@@ -1255,7 +1260,8 @@ a.v-list__item:hover,
 .s42-stonks-popup__text-red,
 .s42-stonks-popup__text-marked:hover,
 .remove-tool--confirm,
-.auth-email-recover:hover {
+.auth-email-recover:hover,
+.__vcbf__popup-header_karma--negative {
     color: var(--text-color-red) !important;
 }
 
@@ -1273,7 +1279,8 @@ a.v-list__item:hover,
 .subsite__trend .icon--ui_arrow_up,
 .ui-button--success .icon,
 .v-message__title .icon--ui_check,
-.s42-stonks-popup__text-green {
+.s42-stonks-popup__text-green,
+.__vcbf__popup-header_karma--positive {
     color: var(--text-color-green) !important;
 }
 
@@ -1413,7 +1420,9 @@ a.v-list__item:hover,
 .floating_screen_film--fixed,
 .s42-stonks-popup,
 .tjnames__list, .site-names__list,
-.ce-popover {
+.ce-popover,
+.__vcbf__popup,
+.__vcbf__popup::before {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
