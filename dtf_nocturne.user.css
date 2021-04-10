@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.113
+@version        1.0.114
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -14,7 +14,6 @@
 @var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
 @var            checkbox  imgBrightness "Затемнять изображения" 0
 @var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
-@var            checkbox  hideShittyButton "Скрыть кнопку «Мне повезет»" 1
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -2893,11 +2892,11 @@ if editorHeaderTop {
     }
 }
 
-if hideShittyButton {
+/*if hideShittyButton {
     .ui-filters__inner > .ui-rounded-button:nth-of-type(3) {
         display: none !important;
     }
-}
+}*/
 }
 
 @-moz-document domain("vc.ru") {
