@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.116
+@version        1.0.118
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -512,7 +512,8 @@ body {
 .v-popup-window__cover,
 .booster-promo__button:hover,
 .ui_modal_window__title__input,
-.ui_modal_window__textarea {
+.ui_modal_window__textarea,
+.commercial-list__item:hover, .commercial-list__item--active {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -651,7 +652,9 @@ announcement-stats,
 .v-form__content,
 .v-popup-window__close--inside,
 .auth__back,
-.__vcbf__popup-content > div {
+.__vcbf__popup-content > div,
+.v-shares-popover,
+.commercial-list__name {
     color: var(--text-color-gray) !important;
 }
 
@@ -2743,6 +2746,19 @@ input[type="color" i] {
 .__vcbf__popup-header {
     border: none;
 }
+
+/**KEKW BLOCK**/
+#blockListId {
+    color: var(--text-color-gray);
+}
+
+#blockListId:hover {
+    color: var(--text-color-blue);
+}
+
+#listedBlockDTFKEKW ol li::marker{
+    color: var(--text-color-gray) !important;
+};
 
 
 if scrollbar{
