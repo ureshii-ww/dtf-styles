@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.121
+@version        1.0.122
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -240,7 +240,8 @@ body {
 .ce-popover,
 .anchor-tool input,
 .remove-tool--confirm,
-.tab__content {
+.tab__content,
+.editor-history-item {
     background-color: var(--color-04ev) !important;
 }
 
@@ -460,7 +461,8 @@ body {
 .u-notification--unread:hover,
 .channel-item:hover,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg,
-.ce-block-settings__item:not(.no-hover):hover {
+.ce-block-settings__item:not(.no-hover):hover,
+.editor-history-item:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1195,7 +1197,8 @@ a.v-list__item:hover,
 .wtf_bc--username.ng-binding:hover,
 .restriction a,
 .s42-stonks-popup__text-marked,
-.editor-subsite-select__current:hover {
+.editor-subsite-select__current:hover,
+.editor-cp-tab__label:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1579,6 +1582,10 @@ a.v-list__item:hover,
 
 .comments__item__reply .icon {
     stroke: var(--text-color-minor);
+}
+
+.editor-cp-tab--active .editor-cp-tab__label:after {
+    background-color: var(--text-color-blue);
 }
 
 /*--------------------------------------------------------*/
