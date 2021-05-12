@@ -161,7 +161,7 @@ body {
 .gallery-image__media .upload-button,
 #INVADERS-NAVIGATION,
 .header__left .v-button,
-.editor-cp-desktop .v-button {
+.editor-cp__left .v-button {
     background-color: var(--color-06ev) !important
 }
 
