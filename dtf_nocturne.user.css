@@ -310,8 +310,7 @@ body {
 .msngrConfirmWindow,
 .header__content::before,
 .editor-cp,
-.editor-cp__content::before,
-.dstr-unit__outer {
+.editor-cp__content::before {
     background-color: var(--color-02ev) !important;
 }
 
@@ -529,7 +528,8 @@ body {
 .booster-promo__button:hover,
 .ui_modal_window__title__input,
 .ui_modal_window__textarea,
-.commercial-list__item:hover, .commercial-list__item--active {
+.commercial-list__item:hover, .commercial-list__item--active,
+.dstr-unit__outer {
     background-color: var(--hover-01ev) !important;
 }
 
