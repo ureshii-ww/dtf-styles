@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.129
+@version        1.0.131
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -528,7 +528,8 @@ body {
 .booster-promo__button:hover,
 .ui_modal_window__title__input,
 .ui_modal_window__textarea,
-.commercial-list__item:hover, .commercial-list__item--active {
+.commercial-list__item:hover, .commercial-list__item--active,
+.dstr-unit__outer {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -672,7 +673,8 @@ announcement-stats,
 .commercial-list__name,
 .v-mobile-menu,
 .v-mobile-menu__icon,
-.mini-editor__button {
+.mini-editor__button,
+.ancientrussia-branding__title {
     color: var(--text-color-gray) !important;
 }
 
@@ -1211,7 +1213,8 @@ a.v-list__item:hover,
 .restriction a,
 .s42-stonks-popup__text-marked,
 .editor-subsite-select__current:hover,
-.editor-cp-tab__label:hover {
+.editor-cp-tab__label:hover,
+.dstr-unit__text:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1306,7 +1309,8 @@ a.v-list__item:hover,
 .ui-button--success .icon,
 .v-message__title .icon--ui_check,
 .s42-stonks-popup__text-green,
-.__vcbf__popup-header_karma--positive {
+.__vcbf__popup-header_karma--positive,
+.spotify-sidebar-button {
     color: var(--text-color-green) !important;
 }
 
@@ -1450,6 +1454,15 @@ a.v-list__item:hover,
 .__vcbf__popup,
 .__vcbf__popup::before {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
+}
+
+.dstr-unit__text-link:hover,
+.dstr-unit__close:hover {
+    opacity: 1;
+}
+
+.spotify-sidebar-button:hover {
+    background-color: transparent;
 }
 
 .v-split-button,
