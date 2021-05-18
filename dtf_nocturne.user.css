@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.134
+@version        1.0.135
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -2994,7 +2994,8 @@ if reversedEditorButtons {
 
         .editor-cp__left {
             margin-right: 0;
-            margin-left: auto; 
+            margin-left: auto;
+            flex-direction: row-reverse; 
         }
 
         .editor-cp__right {
