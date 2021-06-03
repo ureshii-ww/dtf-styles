@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.142
+@version        1.0.143
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -10,8 +10,6 @@
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  noTitle "Уменьшить шрифт у постов без заголовка в ленте" 0
-@var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
-@var            checkbox  messagesScroll "Скроллбар в мессенджере" 0
 @var            checkbox  imgBrightness "Затемнять изображения" 0
 @var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
 @var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
@@ -2854,7 +2852,7 @@ if scrollbar{
     }
 }
 
-if alternativePost{
+/*if alternativePost{
     .content-header-repost {
         font-size: 12px;
     }
@@ -2864,13 +2862,13 @@ if alternativePost{
         height: 16px;
         margin-right: 5px;
     }
-}
+}*/
 
-if messagesScroll{
+/*if messagesScroll{
     .chat-messages {
         margin-right: 0 !important;
     }
-}
+}*/
 
 if likesBack{
     .vote--content.vote--voted-positive .vote__button--plus:before,
