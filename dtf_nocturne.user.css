@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.144
+@version        1.0.145
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -13,6 +13,7 @@
 @var            checkbox  imgBrightness "Затемнять изображения" 0
 @var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
 @var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
+@var            checkbox  alternativeHiddenBlock "Альтернативный вид скрытого блока (с разымытием)" 0
 @var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
 ==/UserStyle== */
 
@@ -3042,6 +3043,41 @@ if reversedEditorButtons {
 if showHideBlockButton {
     .ce-block-indicator--hidden {
         display: block;
+    }
+}
+
+if alternativeHiddenBlock {
+    .block-hidden-wrapper::before, .block-hidden {
+        background-color: transparent !important;
+    }
+
+    .block-hidden {
+        backdrop-filter: blur(36px);
+    }
+
+    .block-hidden__text {
+        display: none;
+    }
+
+    .block-hidden-wrapper {
+        min-height: 36px;
+    }
+
+    .block-hidden__button {
+        background-color: var(--color-03ev);
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: var(--text-color-title) !important;
+        box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
+        height: 34px;
+    }
+
+    .block-hidden__button:hover {
+        color: var(--text-color-title) !important;
+    }
+
+    .block-hidden__button:active {
+        transform: translateY(1px);
     }
 }
 
