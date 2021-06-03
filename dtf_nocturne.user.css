@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.146
+@version        1.0.147
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3061,6 +3061,7 @@ if alternativeHiddenBlock {
 
     .block-hidden-wrapper {
         min-height: 36px;
+        margin-bottom: 5px;
     }
 
     .block-hidden__button {
