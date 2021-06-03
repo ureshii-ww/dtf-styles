@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.141
+@version        1.0.142
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -15,6 +15,7 @@
 @var            checkbox  imgBrightness "Затемнять изображения" 0
 @var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
 @var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
+@var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -3037,6 +3038,12 @@ if reversedEditorButtons {
         .editor-cp__left .v-button:last-of-type {
             margin-right: 12px;
         }
+    }
+}
+
+if showHideBlockButton {
+    .ce-block-indicator--hidden {
+        display: block;
     }
 }
 
