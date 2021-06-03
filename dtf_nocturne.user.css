@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.140
+@version        1.0.141
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -247,7 +247,8 @@ body {
 .remove-tool--confirm,
 .tab__content,
 .editor-history-item,
-.editor-cp-tab__content {
+.editor-cp-tab__content,
+.block-hidden {
     background-color: var(--color-04ev) !important;
 }
 
@@ -369,7 +370,8 @@ body {
 .editor__authors,
 .l-editor textarea,
 .v-popup-fp-window,
-.v-mobile-menu__header {
+.v-mobile-menu__header,
+.block-hidden-wrapper::before {
     background-color: var(--color-01ev) !important;
 }
 
@@ -1217,7 +1219,8 @@ a.v-list__item:hover,
 .s42-stonks-popup__text-marked,
 .editor-subsite-select__current:hover,
 .editor-cp-tab__label:hover,
-.dstr-unit__text:hover {
+.dstr-unit__text:hover,
+.block-hidden__button {
     color: var(--text-color-blue) !important;
 }
 
@@ -1293,7 +1296,8 @@ a.v-list__item:hover,
 .s42-stonks-popup__text-marked:hover,
 .remove-tool--confirm,
 .auth-email-recover:hover,
-.__vcbf__popup-header_karma--negative {
+.__vcbf__popup-header_karma--negative,
+.block-hidden__button:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -1460,7 +1464,8 @@ a.v-list__item:hover,
 }
 
 .dstr-unit__text-link:hover,
-.dstr-unit__close:hover {
+.dstr-unit__close:hover,
+.block-hidden__button:hover {
     opacity: 1;
 }
 
