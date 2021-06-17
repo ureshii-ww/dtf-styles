@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.150
+@version        1.0.151
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -2204,7 +2204,7 @@ a.v-list__item:hover,
     box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
 }
 
-.v-fieild--focused .v-field__wrapper {
+.v-field--focused .v-field__wrapper {
     border-color: var(--back-color-blue-button);
 }
 
