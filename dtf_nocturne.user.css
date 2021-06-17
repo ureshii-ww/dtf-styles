@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.149
+@version        1.0.150
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -147,7 +147,8 @@ body {
 .tjnames__list, .site-names__list,
 .tab__content .item,
 .__vcbf__popup,
-.__vcbf__popup::before {
+.__vcbf__popup::before,
+.popover {
     background-color: var(--color-08ev) !important;
 }
 
@@ -248,7 +249,8 @@ body {
 .tab__content,
 .editor-history-item,
 .editor-cp-tab__content,
-.block-hidden {
+.block-hidden,
+.v-field__wrapper {
     background-color: var(--color-04ev) !important;
 }
 
@@ -312,7 +314,8 @@ body {
 .msngrConfirmWindow,
 .header__content::before,
 .editor-cp,
-.editor-cp__content::before {
+.editor-cp__content::before,
+.editor__actions {
     background-color: var(--color-02ev) !important;
 }
 
@@ -421,7 +424,9 @@ body {
 .v-shares-popover__item:hover,
 .thesis__attach_something:hover,
 .wtf_bc--feed-item--share--list,
-.tab__content .item:hover {
+.tab__content .item:hover,
+.popover-item--selected,
+.popover-item:hover, .popover-item--focused {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -862,7 +867,8 @@ attachButton:hover,
 .__vcbf__popup-content > div > span,
 .l-editor textarea,
 .v-mobile-menu__name,
-.live-header {
+.live-header,
+.popover-item--selected .popover-item__label {
     color: var(--text-color-title) !important;
 }
 
@@ -1016,7 +1022,10 @@ attachButton:hover,
 .auth-email-recover,
 .v-form-input input::placeholder,
 .l-editor textarea::placeholder,
-.mini-editor__placeholder {
+.mini-editor__placeholder,
+.v-field__icon,
+.popover-title,
+.popover-item__details {
     color: var(--text-color-minor) !important;
 }
 
@@ -2187,6 +2196,16 @@ a.v-list__item:hover,
 
 .v-popup--zoomed-image .v-popup-window__content {
     background: transparent !important;
+}
+
+.popover__header,
+.popover--scrolled .popover__header {
+    -webkit-box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
+    box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
+}
+
+.v-fieild--focused .v-field__wrapper {
+    border-color: var(--back-color-blue-button);
 }
 
 /*Posts*/
