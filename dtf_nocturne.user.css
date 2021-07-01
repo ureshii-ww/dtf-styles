@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.152
+@version        1.0.153
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -148,7 +148,11 @@ body {
 .tab__content .item,
 .__vcbf__popup,
 .__vcbf__popup::before,
-.popover {
+.popover,
+.v-calendar__arrow,
+.v-range__bar,
+.v-range__point::after,
+.v-checkbox:hover .v-checkbox__control {
     background-color: var(--color-08ev) !important;
 }
 
@@ -250,7 +254,9 @@ body {
 .editor-history-item,
 .editor-cp-tab__content,
 .block-hidden,
-.v-field__wrapper {
+.v-field__wrapper,
+.v-calendar,
+.v-calendar__notice {
     background-color: var(--color-04ev) !important;
 }
 
@@ -375,7 +381,8 @@ body {
 .v-popup-fp-window,
 .v-mobile-menu__header,
 .block-hidden-wrapper::before,
-.sidebar__footer {
+.sidebar__footer,
+.boost_panel {
     background-color: var(--color-01ev) !important;
 }
 
@@ -383,7 +390,8 @@ body {
 .ui-checkbox--disabled,
 .page:after,
 .l-page--loading,
-.layout {
+.layout,
+.v-checkbox__control {
     background-color: var(--color-00ev) !important;
 }
 
@@ -426,7 +434,9 @@ body {
 .wtf_bc--feed-item--share--list,
 .tab__content .item:hover,
 .popover-item--selected,
-.popover-item:hover, .popover-item--focused {
+.popover-item:hover, .popover-item--focused,
+.v-calendar__arrow:hover,
+.v-range__handle::after {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -442,7 +452,8 @@ body {
 .page--editor .bubble .item--focused,
 .page--editor .bubble .item:hover,
 .add-members__icon,
-.gallery-image__media .upload-button:hover {
+.gallery-image__media .upload-button:hover,
+.v-calendar__cell--selected-sequence:hover {
     background-color: var(--hover-06ev) !important;
 }
 
@@ -479,7 +490,11 @@ body {
 .channel-item:hover,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg,
 .ce-block-settings__item:not(.no-hover):hover,
-.editor-history-item:hover {
+.editor-history-item:hover,
+.v-calendar__cell--selected-sequence,
+.v-calendar__day:hover,
+.v-calendar__button:hover,
+.v-calendar__cell--hovered {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -683,7 +698,10 @@ announcement-stats,
 .v-mobile-menu,
 .v-mobile-menu__icon,
 .mini-editor__button,
-.ancientrussia-branding__title {
+.ancientrussia-branding__title,
+.v-calendar__day--out,
+.v-etc__button,
+.popover-item {
     color: var(--text-color-gray) !important;
 }
 
@@ -868,7 +886,13 @@ attachButton:hover,
 .l-editor textarea,
 .v-mobile-menu__name,
 .live-header,
-.popover-item--selected .popover-item__label {
+.popover-item--selected .popover-item__label,
+.bp-unit-entry__subsite-name,
+.bp-unit-entry__title,
+.v-calendar__title,
+.v-calendar__day,
+.v-form-section__label,
+.bc-form-range__value {
     color: var(--text-color-title) !important;
 }
 
@@ -1025,7 +1049,13 @@ attachButton:hover,
 .mini-editor__placeholder,
 .v-field__icon,
 .popover-title,
-.popover-item__details {
+.popover-item__details,
+.v-select__placeholder,
+.v-calendar__weekday,
+.v-calendar__day--disabled,
+.v-calendar__notice,
+.bc-form-range__ends,
+.bc-form-range__hint {
     color: var(--text-color-minor) !important;
 }
 
@@ -1230,7 +1260,10 @@ a.v-list__item:hover,
 .editor-subsite-select__current:hover,
 .editor-cp-tab__label:hover,
 .dstr-unit__text:hover,
-.block-hidden__button {
+.block-hidden__button,
+.boost_panel__msg,
+.bc-form-hidden-block__label,
+.v-calendar__arrow {
     color: var(--text-color-blue) !important;
 }
 
@@ -1307,7 +1340,9 @@ a.v-list__item:hover,
 .remove-tool--confirm,
 .auth-email-recover:hover,
 .__vcbf__popup-header_karma--negative,
-.block-hidden__button:hover {
+.block-hidden__button:hover,
+.bc-form-hidden-block__label:hover,
+.v-calendar__day--current {
     color: var(--text-color-red) !important;
 }
 
@@ -1491,7 +1526,13 @@ a.v-list__item:hover,
 .s42-stonks-popup__footer__button,
 #s42-feed-link-new-entries-badge,
 .sidebar-tree-list-item__badge,
-.editor-cp__left .v-button--blue {
+.editor-cp__left .v-button--blue,
+.v-calendar__button--primary,
+.v-datepicker__date,
+.v-range__fill,
+.v-range__point--filled::before,
+.v-checkbox--checked .v-checkbox__control,
+.v-checkbox--checked:hover .v-checkbox__control {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -1521,6 +1562,12 @@ a.v-list__item:hover,
 
 #v_chevron_right path {
     fill: var(--text-color-title) !important;
+}
+
+.v-checkbox:hover .v-checkbox__control,
+.v-checkbox--checked .v-checkbox__control,
+.v-checkbox--checked:hover .v-checkbox__control {
+    border-color: var(--back-color-blue-button);
 }
 
 /* Header */
@@ -2624,6 +2671,10 @@ a.v-list__item:hover,
 
 .mf-header__badge {
     background-color: var(--back-color-blue-button);
+}
+
+.v-etc__button {
+    opacity: 1;
 }
 
 /* Settings */
