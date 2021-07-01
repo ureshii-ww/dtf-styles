@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.154
+@version        1.0.155
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -703,7 +703,7 @@ announcement-stats,
 .v-calendar__day--out,
 .v-etc__button,
 .popover-item,
-.v-calendar__day--out {
+.v-calendar__day .v-calendar__day--out {
     color: var(--text-color-gray) !important;
 }
 
@@ -1574,7 +1574,7 @@ a.v-list__item:hover,
 }
 
 .v-calendar__button:hover .v-calendar__button--primary:hover {
-    background-color: var(--back-color-blue-button);
+    background-color: var(--back-color-blue-button) !important;
     opacity: 0.8;
 }
 
