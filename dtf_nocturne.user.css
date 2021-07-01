@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.153
+@version        1.0.154
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -494,7 +494,8 @@ body {
 .v-calendar__cell--selected-sequence,
 .v-calendar__day:hover,
 .v-calendar__button:hover,
-.v-calendar__cell--hovered {
+.v-calendar__cell--hovered,
+.v-calendar__cell--selected .v-calendar__day {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -701,7 +702,8 @@ announcement-stats,
 .ancientrussia-branding__title,
 .v-calendar__day--out,
 .v-etc__button,
-.popover-item {
+.popover-item,
+.v-calendar__day--out {
     color: var(--text-color-gray) !important;
 }
 
@@ -1532,7 +1534,8 @@ a.v-list__item:hover,
 .v-range__fill,
 .v-range__point--filled::before,
 .v-checkbox--checked .v-checkbox__control,
-.v-checkbox--checked:hover .v-checkbox__control {
+.v-checkbox--checked:hover .v-checkbox__control,
+.v-select-tag {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -1568,6 +1571,11 @@ a.v-list__item:hover,
 .v-checkbox--checked .v-checkbox__control,
 .v-checkbox--checked:hover .v-checkbox__control {
     border-color: var(--back-color-blue-button);
+}
+
+.v-calendar__button:hover .v-calendar__button--primary:hover {
+    background-color: var(--back-color-blue-button);
+    opacity: 0.8;
 }
 
 /* Header */
