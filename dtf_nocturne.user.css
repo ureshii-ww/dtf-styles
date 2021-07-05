@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.155
+@version        1.0.156
 @description    💗💗💗
-@author         Ureshii 死者, helped by selpast
+@author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
 @var            checkbox  standardSidebars "Стандартные боковые панели" 1
@@ -62,6 +62,27 @@
     --switcher-layout-text: rgba(255, 255, 255, 0.87);
     --primary-color: #AAB6FE;
     --primary-color--faded26: #3b3b3b;
+}
+
+/* Ник Пользователя */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(1) > div:nth-child(2) {
+    color: var(--text-color-title);
+}
+/* Время */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(2) {
+    color: var(--text-color-minor);
+}
+/* Текст комментария */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > a {
+    color: var(--text-color-gray);
+}
+/* Заголовок поста */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div > a[title] {
+    color: var(--text-color-title);
+}
+/* Надпись Комментарии */
+.layout__right-column > div > div > div > div > div > span {
+    color: var(--text-color-title);
 }
 
 body {
