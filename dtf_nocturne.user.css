@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.156
+@version        1.0.157
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -124,7 +124,6 @@ body {
 }
 
 .thesis__attach_something,
-.comments_pseudo_form__button,
 .gallery-item__remover-button,
 .form-picture__remove,
 .quote-tool__photo-wrapper__remove,
@@ -2599,6 +2598,42 @@ a.v-list__item:hover,
 
 .andropov_preview {
     color: rgba(18, 18, 18, 0.6);
+}
+
+.comments_form--focused {
+    border-color: var(--back-color-blue-button) !important;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+}
+
+.comments_form:hover {
+    border-color: var(--text-color-blue);
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+}
+
+.thesis__attach_something .icon--v_image,
+.comments_pseudo_form__button .icon--v_image {
+    fill: var(--text-color-green);
+}
+
+.thesis__attach_something .icon--v_link,
+.comments_pseudo_form__button .icon--v_link {
+    fill: var(--text-color-blue);
+}
+
+.thesis__attach_something .icon--v_rouble,
+.comments_pseudo_form__button .icon--v_rouble{
+    fill: var(--back-color-blue-button);
+}
+
+.thesis__custom_button {
+  color: var(--text-color-minor);
+  border-color: var(--text-color-minor);
+}
+
+.comments_pseudo_form__text {
+  color: var(--text-color-minor)
 }
 /******************************************************************/
 /* Messenger */
