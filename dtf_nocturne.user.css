@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.158
+@version        1.0.159
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -385,6 +385,7 @@ body {
 .events_widget,
 .island--company_entries,
 .layout__left-column,
+.layout__right-column,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button:hover,
 .entry_stub,
@@ -3034,6 +3035,7 @@ if standardSidebars {
     .live,
     .sidebar-tree-list__show-more-button,
     .layout__left-column,
+    .layout__right-column,
     .live__caption,
     .live__content  {
         background-color: transparent !important;
