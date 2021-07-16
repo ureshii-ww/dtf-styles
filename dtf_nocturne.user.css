@@ -1365,7 +1365,7 @@ a.v-list__item:hover,
 .block-hidden__button:hover,
 .bc-form-hidden-block__label:hover,
 .v-calendar__day--current,
-.popover-item__label[style*="229, 46, 58"] {
+.popover-item__label[style*="color: rgb(229, 46, 58);"] {
     color: var(--text-color-red) !important;
 }
 
@@ -1386,7 +1386,7 @@ a.v-list__item:hover,
 .s42-stonks-popup__text-green,
 .__vcbf__popup-header_karma--positive,
 .spotify-sidebar-button,
-.popover-item__label[style*="46, 168, 58"] {
+.popover-item__label[style*="color: rgb(46, 168, 58);"] {
     color: var(--text-color-green) !important;
 }
 
