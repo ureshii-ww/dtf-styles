@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.158
+@version        1.0.157
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1364,8 +1364,7 @@ a.v-list__item:hover,
 .__vcbf__popup-header_karma--negative,
 .block-hidden__button:hover,
 .bc-form-hidden-block__label:hover,
-.v-calendar__day--current,
-.popover-item__label[style*="color: rgb(229, 46, 58);"] {
+.v-calendar__day--current {
     color: var(--text-color-red) !important;
 }
 
@@ -1385,8 +1384,7 @@ a.v-list__item:hover,
 .v-message__title .icon--ui_check,
 .s42-stonks-popup__text-green,
 .__vcbf__popup-header_karma--positive,
-.spotify-sidebar-button,
-.popover-item__label[style*="color: rgb(46, 168, 58);"] {
+.spotify-sidebar-button {
     color: var(--text-color-green) !important;
 }
 
@@ -1528,8 +1526,7 @@ a.v-list__item:hover,
 .tjnames__list, .site-names__list,
 .ce-popover,
 .__vcbf__popup,
-.__vcbf__popup::before,
-.popover {
+.__vcbf__popup::before {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
