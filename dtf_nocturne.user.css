@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.159
+@version        1.0.160
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1364,7 +1364,8 @@ a.v-list__item:hover,
 .__vcbf__popup-header_karma--negative,
 .block-hidden__button:hover,
 .bc-form-hidden-block__label:hover,
-.v-calendar__day--current {
+.v-calendar__day--current,
+ {
     color: var(--text-color-red) !important;
 }
 
@@ -1526,7 +1527,8 @@ a.v-list__item:hover,
 .tjnames__list, .site-names__list,
 .ce-popover,
 .__vcbf__popup,
-.__vcbf__popup::before {
+.__vcbf__popup::before,
+.popover {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -1720,7 +1722,15 @@ a.v-list__item:hover,
     --icon-color: var(--text-color-blue);
 }
 
+@css {
+    .popover-item__label[style="color: rgb(46, 168, 58);"] {
+        color:var(--text-color-green) !important
+    }
 
+    .popover-item__label[style="color: rgb(229, 46, 58);"] {
+        color:var(--text-color-red) !important
+    }
+}
 /*--------------------------------------------------------*/
 /* Left bar */
 .sidebar-tree-list-item__child-item::before {
