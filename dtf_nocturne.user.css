@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.163
+@version        1.0.164
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1742,8 +1742,8 @@ a.v-list__item:hover,
 
 .search__field .v-field:not(.v-field--focused) .v-field__wrapper:hover {
     border-color: var(--text-color-blue);
-    -webkit-box-shadow: 0 0 0 3px $newFormBorderShadowColor;
-    box-shadow: 0 0 0 3px $newFormBorderShadowColor;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
 }
 /*--------------------------------------------------------*/
 /* Left bar */
