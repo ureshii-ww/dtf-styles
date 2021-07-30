@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.165
+@version        1.0.166
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -15,6 +15,7 @@
 @var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
 @var            checkbox  alternativeHiddenBlock "Альтернативный вид скрытого блока (с разымытием)" 0
 @var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
+@var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -3261,6 +3262,16 @@ if alternativeHiddenBlock {
 
     .block-hidden__button:active {
         transform: translateY(1px);
+    }
+}
+
+if hideMiniEditorInFeed {
+    .page--index > .mini-editor {
+        display: none;
+    }
+
+    .app--content-feed #page_wrapper {
+        padding-top: 0;
     }
 }
 
