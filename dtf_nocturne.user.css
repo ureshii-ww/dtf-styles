@@ -1,12 +1,11 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.166
+@version        1.0.167
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
-@var            checkbox  standardSidebars "Стандартные боковые панели" 1
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
@@ -346,8 +345,6 @@ body {
     background-color: var(--color-02ev) !important;
 }
 
-.sidebar,
-.live,
 .l-island-bg,
 .new_entries,
 .ui-rounded-button__link,
@@ -373,7 +370,6 @@ body {
 .popup .popup__content .line,
 .search--active .search__input,
 .search--filled .search__input,
-.sidebar-tree-list__show-more-button,
 .widget_wrapper--type-blue,
 .subsite-details-mobile-navbar,
 .comments__item__expand,
@@ -383,7 +379,6 @@ body {
 .widget_wrapper--type-pink,
 .events_widget,
 .island--company_entries,
-.layout__left-column,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button:hover,
 .entry_stub,
@@ -395,15 +390,14 @@ body {
 .booster-promo__button,
 .wtf_bubble-body,
 .vacancy_footer,
-.live__caption,
-.live__content,
 .editor__authors,
 .l-editor textarea,
 .v-popup-fp-window,
 .v-mobile-menu__header,
 .block-hidden-wrapper::before,
-.sidebar__footer,
-.boost_panel {
+.boost_panel,
+.sidebar-tree-list-item--active,
+.sidebar-tree-list-item:hover {
     background-color: var(--color-01ev) !important;
 }
 
@@ -412,8 +406,30 @@ body {
 .page:after,
 .l-page--loading,
 .layout,
-.v-checkbox__control {
+.v-checkbox__control,
+.sidebar__footer {
     background-color: var(--color-00ev) !important;
+}
+
+.sidebar,
+.live,
+.sidebar-tree-list__show-more-button,
+.layout__left-column,
+.live__caption,
+.live__content  {
+    background-color: transparent !important;
+}
+
+
+@media (max-width: 859px) {
+    .sidebar,
+    .live,
+    .sidebar-tree-list__show-more-button,
+    .layout__left-column,
+    .live__caption,
+    .live__content {
+        background-color: var(--color-00ev) !important;
+    }
 }
 
 /* Hovers */
@@ -530,7 +546,6 @@ body {
     background-color: var(--hover-03ev) !important;
 }
 
-.sidebar-tree-list-item__child-item:hover,
 .tg-header__details-item--current,
 .tg-header__type-switcher--current,
 .channel-item--current,
@@ -551,15 +566,10 @@ body {
 }
 
 .ui-rounded-button__link:hover,
-.sidebar-tree-list-item:hover,
 .new_entries:hover,
 .v-island .u-notification--unread,
 .v-island .u-notification--hover:hover,
 .v-island .u-notification--unread:hover,
-.sidebar-tree-list-item--active,
-.u-notification--blue.u-notification--bg,
-.u-notification--green.u-notification--bg,
-.u-notification--red.u-notification--bg,
 .vb > .vb-dragger > .vb-dragger-styler,
 .daily-promo-unit-label__inner:hover,
 .table__row--me,
@@ -575,8 +585,15 @@ body {
 .ui_modal_window__title__input,
 .ui_modal_window__textarea,
 .commercial-list__item:hover, .commercial-list__item--active,
-.dstr-unit__outer {
+.dstr-unit__outer,
+.sidebar-tree-list-item__child-item:hover {
     background-color: var(--hover-01ev) !important;
+}
+
+.u-notification--blue.u-notification--bg,
+.u-notification--green.u-notification--bg,
+.u-notification--red.u-notification--bg {
+    background-color: var(--hover-00ev) !important;
 }
 
 .site-header,
@@ -1878,15 +1895,6 @@ a.v-list__item:hover,
     font-weight: 500;
 }
 
-/*class=notify__item notify__item--error notify__item--shown*/
-@media (max-width: 1560px) and (min-width: 860px) {
-    .page--entry {
-        border-right: 1px solid;
-        border-left: 1px solid;
-        border-color: var(--border-color);
-    }
-}
-
 @media (max-width: 859px) {
     .ui-filters--responsive,
     .ui-rounded-button--active .ui-rounded-button__link {
@@ -3054,7 +3062,7 @@ if likesBack{
     }
 }
 
-if standardSidebars {
+/*if standardSidebars {
     .sidebar,
     .live,
     .sidebar-tree-list__show-more-button,
@@ -3099,7 +3107,7 @@ if standardSidebars {
             background-color: var(--color-00ev) !important;
         }
     }
-}
+}*/
 
 if imgBrightness {
     .andropov_image__inner img, .andropov_video, .gall__item, .block-person .andropov_image {
