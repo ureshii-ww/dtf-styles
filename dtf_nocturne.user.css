@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.168
+@version        1.0.169
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3389,7 +3389,6 @@ if hideMiniEditorInFeed {
     --back-color-blue-button: #f9a825;
     --blue-button-hover: #fbc02d;
     --site-color: rgba(255, 224, 130, 0.93);
-    --primary-color: #f9a825;
 }
 
 .v-split-button,
@@ -3426,6 +3425,25 @@ if hideMiniEditorInFeed {
 .ui-tab--active .ui-tab__label:after {
     background-color: var(--site-color) !important;
 }
+
+#switchers-btn,
+#main_menu__auth__stats {
+    color: var(--back-color-blue-button) !important;
+}
+
+#switchers-btn .mdl-ripple,
+.mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-radio__ripple-container .mdl-ripple
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
+.mdl-radio__inner-circle {
+    background-color: var(--back-color-blue-button) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline,
+.mdl-radio.is-checked .mdl-radio__outer-circle {
+    border-color: var(--back-color-blue-button) !important;
+}
+
 
 .st0 {
     fill: var(--text-color-gray) !important;
