@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.169
+@version        1.0.170
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3330,7 +3330,8 @@ if hideMiniEditorInFeed {
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+#main_menu__auth__stats {
     color: var(--site-color) !important;
 }
 
@@ -3344,6 +3345,23 @@ if hideMiniEditorInFeed {
 
 .st0 {
     fill: var(--text-color-gray) !important;
+}
+
+#switchers-btn {
+    color: var(--back-color-blue-button) !important;
+}
+
+#switchers-btn .mdl-ripple,
+.mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-radio__ripple-container .mdl-ripple
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
+.mdl-radio__inner-circle {
+    background-color: var(--back-color-blue-button) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline,
+.mdl-radio.is-checked .mdl-radio__outer-circle {
+    border-color: var(--back-color-blue-button) !important;
 }
 
 .head-notifies--showed .head-notifies__toggler .icon,
@@ -3414,7 +3432,8 @@ if hideMiniEditorInFeed {
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+#main_menu__auth__stats {
     color: var(--site-color) !important;
 }
 
@@ -3426,8 +3445,7 @@ if hideMiniEditorInFeed {
     background-color: var(--site-color) !important;
 }
 
-#switchers-btn,
-#main_menu__auth__stats {
+#switchers-btn {
     color: var(--back-color-blue-button) !important;
 }
 
