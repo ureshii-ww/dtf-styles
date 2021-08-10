@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.167
+@version        1.0.168
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -397,7 +397,8 @@ body {
 .block-hidden-wrapper::before,
 .boost_panel,
 .sidebar-tree-list-item--active,
-.sidebar-tree-list-item:hover {
+.sidebar-tree-list-item:hover,
+.gallery-image__inputs .input {
     background-color: var(--color-01ev) !important;
 }
 
@@ -741,7 +742,8 @@ announcement-stats,
 .v-calendar__day--out,
 .v-etc__button,
 .popover-item,
-.v-calendar__day .v-calendar__day--out {
+.v-calendar__day .v-calendar__day--out,
+.gallery-image__inputs .input--title:empty:before {
     color: var(--text-color-gray) !important;
 }
 
@@ -1098,7 +1100,9 @@ attachButton:hover,
 .bc-form-range__hint,
 .search__field .v-field:not(.v-field--focused) .v-field__wrapper:not(:hover) .v-text-input__input::placeholder,
 .v-text-input__input::placeholder,
-.editor-cp__autosave {
+.editor-cp__autosave,
+.gallery-image__inputs .input--author:empty::before,
+.gallery-image__inputs .input--author {
     color: var(--text-color-minor) !important;
 }
 
@@ -1306,7 +1310,8 @@ a.v-list__item:hover,
 .block-hidden__button,
 .boost_panel__msg,
 .bc-form-hidden-block__label,
-.v-calendar__arrow {
+.v-calendar__arrow,
+.gallery-image__media-settings .media-tool-settings__item--active .icon {
     color: var(--text-color-blue) !important;
 }
 
@@ -2320,6 +2325,18 @@ a.v-list__item:hover,
 
 .v-field__wrapper:hover {
     border-color: var(--back-color-blue-button);
+}
+
+.gallery-image__media-settings .upload-button:hover {
+    background: rgba(0,0,0,0.75) !important;
+}
+
+.gallery-image__media-settings .media-tool-settings__item--active {
+    background-color: transparent !important;
+}
+
+.gallery-image__media-settings .media-tool-settings__item:hover {
+    background-color: rgba(255,255,255,0.15) !important; 
 }
 
 /*Posts*/
