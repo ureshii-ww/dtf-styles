@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.170
+@version        1.0.171
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -15,11 +15,7 @@
 @var            checkbox  alternativeHiddenBlock "Альтернативный вид скрытого блока (с разымытием)" 0
 @var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
 @var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
-@var            select    verticalImageViewInFeed "Отображение вертикальных картинок в ленте" [
-    "default:Стандартное",
-    "centered:По центру",
-    "stretched:Растянуто"
-]
+@var            checkbox  verticalImageViewInFeed "Центрировать вертикальные картинки в ленте" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -3309,16 +3305,9 @@ if hideMiniEditorInFeed {
     }
 }
 
-if verticalImageViewInFeed == centered {
+if verticalImageViewInFeed {
     .feed__item .content-image--vertical:not(.content-image--with_background) .andropov_image {
         margin: 0 auto 0 auto;
-    }
-}
-
-if verticalImageViewInFeed == stretched {
-    .feed__item .content-image--vertical:not(.content-image--with_background) .andropov_image {
-        max-width: none !important;
-        max-height: none !important;
     }
 }
 
