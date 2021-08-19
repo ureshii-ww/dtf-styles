@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.171
+@version        1.0.172
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -16,6 +16,7 @@
 @var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
 @var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
 @var            checkbox  verticalImageViewInFeed "Центрировать вертикальные картинки в ленте" 0
+@var            checkbox  oldCommentsAvatars "Квадратные аватарки у комментариев" 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -1103,7 +1104,8 @@ attachButton:hover,
 .v-text-input__input::placeholder,
 .editor-cp__autosave,
 .gallery-image__inputs .input--author:empty::before,
-.gallery-image__inputs .input--author {
+.gallery-image__inputs .input--author,
+.comments__item__replied_to span {
     color: var(--text-color-minor) !important;
 }
 
@@ -1412,7 +1414,8 @@ a.v-list__item:hover,
 .v-message__title .icon--ui_check,
 .s42-stonks-popup__text-green,
 .__vcbf__popup-header_karma--positive,
-.spotify-sidebar-button {
+.spotify-sidebar-button,
+.comments__item__status::after {
     color: var(--text-color-green) !important;
 }
 
@@ -2692,6 +2695,10 @@ a.v-list__item:hover,
 .comments_pseudo_form__text {
   color: var(--text-color-minor)
 }
+
+.comments__item__status::after {
+    border-color: var(--color-01ev);
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
@@ -3308,6 +3315,12 @@ if hideMiniEditorInFeed {
 if verticalImageViewInFeed {
     .feed__item .content-image--vertical:not(.content-image--with_background) .andropov_image {
         margin: 0 auto 0 auto;
+    }
+}
+
+if oldCommentsAvatars {
+    .comments__item__avatar img {
+        border-radius: 7px;
     }
 }
 
