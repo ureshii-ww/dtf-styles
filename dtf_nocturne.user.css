@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.0.176
+@version        1.0.177
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -16,7 +16,7 @@
 @var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
 @var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
 @var            checkbox  verticalImageViewInFeed "Центрировать вертикальные картинки в ленте" 0
-@var            checkbox  oldCommentsAvatars "Квадратные аватарки у комментариев" 0
+@var            checkbox  oldCommentsAvatars "Альтернативный вид комментариев" 0
 @var            checkbox  smallerSpaceBetweenComments "Уменьшить пространство между комментариями" 0
 ==/UserStyle== */
 
@@ -3327,8 +3327,12 @@ if oldCommentsAvatars {
 
     .comments__item__status::after {
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: 3px;
+        left: 3px;
+    }
+
+    .comments__item__space--replied-to .comments__item__info {
+        justify-content: flex-end;
     }
 }
 
