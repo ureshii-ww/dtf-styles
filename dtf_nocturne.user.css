@@ -62,7 +62,7 @@
 
     --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
     --switcher-layout-background: var(--color-16ev);
-    --switcher-layout-text: rgba(--text-color-title);
+    --switcher-layout-text: var(--text-color-title);
     --primary-color: var(--text-color-blue);
     --primary-color--faded26: var(--hover-16ev);
     --switchers-color: var(--text-color-blue);
