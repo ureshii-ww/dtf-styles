@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.1
+@version        1.1.2
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -61,10 +61,11 @@
     --hover-24ev: #404040;
 
     --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
-    --switcher-layout-background: #353535;
-    --switcher-layout-text: rgba(255, 255, 255, 0.87);
-    --primary-color: #AAB6FE;
-    --primary-color--faded26: #3b3b3b;
+    --switcher-layout-background: var(--color-16ev);
+    --switcher-layout-text: rgba(--text-color-title);
+    --primary-color: var(--text-color-blue);
+    --primary-color--faded26: var(--hover-16ev);
+    --switchers-color: var(--text-color-blue);
 }
 
 /* Ник Пользователя */
@@ -746,7 +747,9 @@ announcement-stats,
 .v-etc__button,
 .popover-item,
 .v-calendar__day .v-calendar__day--out,
-.gallery-image__inputs .input--title:empty:before {
+.gallery-image__inputs .input--title:empty:before,
+.mdl-radio__label,
+.mdl-checkbox__label {
     color: var(--text-color-gray) !important;
 }
 
@@ -3358,6 +3361,8 @@ if smallerSpaceBetweenComments {
     --back-color-blue-button: #af4448;
     --blue-button-hover: #ba6b6c;
     --site-color: #ffa4a2;
+    --primary-color: var(--site-color);
+    --switchers-color: var(--site-color);
 }
 
 .sidebar-tree-list-item--active,
@@ -3432,7 +3437,8 @@ if smallerSpaceBetweenComments {
     --back-color-blue-button: #f9a825;
     --blue-button-hover: #fbc02d;
     --site-color: rgba(255, 224, 130, 0.93);
-    --primary-color: #f9a825;
+    --primary-color: var(--back-color-blue-button);
+    --switchers-color: var(--back-color-blue-button);
 }
 
 .v-split-button,
