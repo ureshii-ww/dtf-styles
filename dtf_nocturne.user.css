@@ -189,7 +189,6 @@ body {
 .m-floating .etc-controls .etc-controls__dropdown:before,
 .avatar-input__remove,
 .remover,
-.gallery-image__media .upload-button,
 #INVADERS-NAVIGATION,
 .header__left .v-button,
 .editor-cp__left .v-button {
@@ -496,7 +495,6 @@ body {
 .page--editor .bubble .item--focused,
 .page--editor .bubble .item:hover,
 .add-members__icon,
-.gallery-image__media .upload-button:hover,
 .v-calendar__cell--selected-sequence:hover {
     background-color: var(--hover-06ev) !important;
 }
