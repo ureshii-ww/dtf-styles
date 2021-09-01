@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.2
+@version        1.1.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -176,7 +176,8 @@ body {
 .v-calendar__arrow,
 .v-range__bar,
 .v-range__point::after,
-.v-checkbox:hover .v-checkbox__control {
+.v-checkbox:hover .v-checkbox__control,
+.gallery-image__media-settings--small {
     background-color: var(--color-08ev) !important;
 }
 
@@ -478,7 +479,8 @@ body {
 .popover-item--selected,
 .popover-item:hover, .popover-item--focused,
 .v-calendar__arrow:hover,
-.v-range__handle::after {
+.v-range__handle::after,
+.gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -749,7 +751,8 @@ announcement-stats,
 .v-calendar__day .v-calendar__day--out,
 .gallery-image__inputs .input--title:empty:before,
 .mdl-radio__label,
-.mdl-checkbox__label {
+.mdl-checkbox__label,
+.gallery-image__media-settings--small .media-tool-settings__item .icon {
     color: var(--text-color-gray) !important;
 }
 
@@ -1562,7 +1565,8 @@ a.v-list__item:hover,
 .ce-popover,
 .__vcbf__popup,
 .__vcbf__popup::before,
-.popover {
+.popover,
+.gallery-image__media-settings--small {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -2335,11 +2339,12 @@ a.v-list__item:hover,
     border-color: var(--back-color-blue-button);
 }
 
-.gallery-image__media-settings .upload-button {
+.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.gallery-image__media-settings .upload-button:hover {
+.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button:hover,
+.gallery-image__media-dots:hover {
     background: rgba(0,0,0,0.75) !important;
 }
 
