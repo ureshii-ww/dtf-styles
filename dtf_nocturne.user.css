@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.4
+@version        1.1.5
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -177,7 +177,9 @@ body {
 .v-range__bar,
 .v-range__point::after,
 .v-checkbox:hover .v-checkbox__control,
-.gallery-image__media-settings--small {
+.gallery-image__media-settings--small,
+.v-etc__dropdown,
+.v-etc__item:first-child::before {
     background-color: var(--color-08ev) !important;
 }
 
@@ -280,7 +282,8 @@ body {
 .block-hidden,
 .v-field__wrapper,
 .v-calendar,
-.v-calendar__notice {
+.v-calendar__notice,
+.social-links__item {
     background-color: var(--color-04ev) !important;
 }
 
@@ -304,7 +307,8 @@ body {
 .tg-tooltip,
 .chat-messages--compact .chat-messages__unread-label span,
 .wtf_bc--skin--bg-gray,
-.mini-editor__button {
+.mini-editor__button,
+.mobile-navbar {
     background-color: var(--color-03ev) !important;
 }
 
@@ -402,7 +406,9 @@ body {
 .boost_panel,
 .sidebar-tree-list-item--active,
 .sidebar-tree-list-item:hover,
-.gallery-image__inputs .input {
+.gallery-image__inputs .input,
+.user-settings,
+.mobile-tab__icon {
     background-color: var(--color-01ev) !important;
 }
 
@@ -479,7 +485,8 @@ body {
 .popover-item:hover, .popover-item--focused,
 .v-calendar__arrow:hover,
 .v-range__handle::after,
-.gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover {
+.gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
+.v-etc__item:hover {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -537,7 +544,8 @@ body {
 .v-calendar__day:hover,
 .v-calendar__button:hover,
 .v-calendar__cell--hovered,
-.v-calendar__cell--selected .v-calendar__day {
+.v-calendar__cell--selected .v-calendar__day,
+.social-links__item:hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -750,7 +758,8 @@ announcement-stats,
 .gallery-image__inputs .input--title:empty:before,
 .mdl-radio__label,
 .mdl-checkbox__label,
-.gallery-image__media-settings--small .media-tool-settings__item .icon {
+.gallery-image__media-settings--small .media-tool-settings__item .icon,
+.mobile-tab__caption {
     color: var(--text-color-gray) !important;
 }
 
@@ -941,7 +950,12 @@ attachButton:hover,
 .v-calendar__title,
 .v-calendar__day,
 .v-form-section__label,
-.bc-form-range__value {
+.bc-form-range__value,
+.social-links__title,
+.plus-info__quantity,
+.mobile-navbar,
+.mobile-tab__label,
+.mobile-tab__icon {
     color: var(--text-color-title) !important;
 }
 
@@ -1111,7 +1125,16 @@ attachButton:hover,
 .gallery-image__inputs .input--author:empty::before,
 .gallery-image__inputs .input--author,
 .comments__item__replied_to span,
-.comments__item__text__edited {
+.comments__item__text__edited,
+.settings-header,
+.settings-header .icon--v_arrow_left,
+.user-settings__dev-tools,
+.v-list-tab__comment,
+.v-field__caption,
+.textarea-formatted__countdown,
+.v-text-input__countdown,
+.v-form-section__subtitle,
+.v-list-subsites-item__subtitle {
     color: var(--text-color-minor) !important;
 }
 
@@ -2855,6 +2878,15 @@ a.v-list__item:hover,
 .island__social_links--type_1 .island__social_links__item__delete .icon {
     fill: #000 !important;
 }
+
+.v-hashtag {
+    background-image: none;
+    background-color: var(--text-color-red);
+}
+
+.v-hashtag__text, .v-hashtag__close-button {
+    color:  #FFF;
+}
 /* Vacancies */
 .v-button--blue:hover {
     background-color: var(--blue-button-hover) !important;
@@ -2882,6 +2914,7 @@ a.v-list__item:hover,
 }
 
 /* PLUS page */
+
 .v-plus-badge {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #a49aee), color-stop(7%, #534bae), to(#333a82));
     background-image: linear-gradient(90deg, #a49aee -41%, #534bae 7%, #333a82 100%);
@@ -2890,6 +2923,14 @@ a.v-list__item:hover,
 .plus-badge {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #a49aee), color-stop(7%, #534bae), to(#333a82));
     background-image: linear-gradient(90deg, #a49aee -41%, #534bae 7%, #333a82 100%);
+}
+
+.v-button--plus {
+    background-image: linear-gradient(72.98deg, #a49aee 0%, #534bae 25%, #333a82 100%);
+}
+
+.v-button--plus:hover {
+    background-image: linear-gradient(-72.98deg, #a49aee 0%, #534bae 25%, #333a82 100%);
 }
 
 .page--plus .plus-avatar {
