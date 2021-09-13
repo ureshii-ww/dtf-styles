@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.5
+@version        1.1.6
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -407,7 +407,6 @@ body {
 .sidebar-tree-list-item--active,
 .sidebar-tree-list-item:hover,
 .gallery-image__inputs .input,
-.user-settings,
 .mobile-tab__icon {
     background-color: var(--color-01ev) !important;
 }
@@ -486,7 +485,8 @@ body {
 .v-calendar__arrow:hover,
 .v-range__handle::after,
 .gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
-.v-etc__item:hover {
+.v-etc__item:hover,
+.v-etc__item:first-child:hover::before {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -955,7 +955,9 @@ attachButton:hover,
 .plus-info__quantity,
 .mobile-navbar,
 .mobile-tab__label,
-.mobile-tab__icon {
+.mobile-tab__icon,
+.v-hashtag__text, .v-hashtag__close-button,
+.v-list-tab__label-text {
     color: var(--text-color-title) !important;
 }
 
@@ -2880,12 +2882,18 @@ a.v-list__item:hover,
 }
 
 .v-hashtag {
-    background-image: none;
-    background-color: var(--text-color-red);
+    background-image: none !important;
+    background-color: var(--color-08ev) !important;
 }
 
-.v-hashtag__text, .v-hashtag__close-button {
-    color:  #FFF;
+.v-hashtag__close-button::before {
+    background-color: var(--color-01ev) !important;
+}
+
+@media (max-width: 999px) {
+    .user-settings {
+        background-color: var(--color-01ev) !important;
+    }
 }
 /* Vacancies */
 .v-button--blue:hover {
