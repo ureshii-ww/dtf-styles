@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.8
+@version        1.1.9
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -407,7 +407,8 @@ body {
 .sidebar-tree-list-item--active,
 .sidebar-tree-list-item:hover,
 .gallery-image__inputs .input,
-.mobile-tab__icon {
+.mobile-tab__icon,
+.commercial-tabs {
     background-color: var(--color-01ev) !important;
 }
 
@@ -759,7 +760,8 @@ announcement-stats,
 .mdl-radio__label,
 .mdl-checkbox__label,
 .gallery-image__media-settings--small .media-tool-settings__item .icon,
-.mobile-tab__caption {
+.mobile-tab__caption,
+.user-settings__navigation .v-list-tab__icon {
     color: var(--text-color-gray) !important;
 }
 
@@ -957,7 +959,10 @@ attachButton:hover,
 .mobile-tab__label,
 .mobile-tab__icon,
 .v-hashtag__text, .v-hashtag__close-button,
-.v-list-tab__label-text {
+.v-list-tab--active .v-list-tab__label-text,
+.v-list-tab--active .v-list-tab__icon,
+.ad-contacts__title,
+.ad-user__name {
     color: var(--text-color-title) !important;
 }
 
@@ -1136,7 +1141,9 @@ attachButton:hover,
 .textarea-formatted__countdown,
 .v-text-input__countdown,
 .v-form-section__subtitle,
-.v-list-subsites-item__subtitle {
+.v-list-subsites-item__subtitle,
+.commercial-list__price,
+.ad-user__position {
     color: var(--text-color-minor) !important;
 }
 
@@ -2126,9 +2133,6 @@ a.v-list__item:hover,
     background-color: var(--back-color-blue-button) !important;
 }
 
-#v_gear {
-    fill: var(--text-color-title)
-}
 
 .v-tabs--overflown::after {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--color-01ev) 40%);
@@ -2953,11 +2957,11 @@ a.v-list__item:hover,
 }
 
 .v-button--plus {
-    background-image: linear-gradient(72.98deg, #a49aee 0%, #534bae 25%, #333a82 100%);
+    background-image: linear-gradient(72.98deg, #7463ea 0%, #534bae 25%, #333a82 100%);
 }
 
 .v-button--plus:hover {
-    background-image: linear-gradient(-72.98deg, #a49aee 0%, #534bae 25%, #333a82 100%);
+    background-image: linear-gradient(-72.98deg, #7463ea 0%, #534bae 25%, #333a82 100%);
 }
 
 .page--plus .plus-avatar {
