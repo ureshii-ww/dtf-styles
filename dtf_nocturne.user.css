@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.9
+@version        1.1.10
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -761,7 +761,8 @@ announcement-stats,
 .mdl-checkbox__label,
 .gallery-image__media-settings--small .media-tool-settings__item .icon,
 .mobile-tab__caption,
-.user-settings__navigation .v-list-tab__icon {
+.user-settings__navigation .v-list-tab__icon,
+.v-text-area__input {
     color: var(--text-color-gray) !important;
 }
 
@@ -962,7 +963,8 @@ attachButton:hover,
 .v-list-tab--active .v-list-tab__label-text,
 .v-list-tab--active .v-list-tab__icon,
 .ad-contacts__title,
-.ad-user__name {
+.ad-user__name,
+.subsite-ban-popup__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1084,7 +1086,6 @@ attachButton:hover,
 .feed_header__label,
 .table__row--header .table__cell:not(:first-child),
 .popup__content--payments .payments_popup__info p,
-.ad-contacts__title,
 .sidebar-tree-list-item__favourite:hover,
 .ui-button--4,
 .navigationDropdown__current__button,
@@ -1143,7 +1144,8 @@ attachButton:hover,
 .v-form-section__subtitle,
 .v-list-subsites-item__subtitle,
 .commercial-list__price,
-.ad-user__position {
+.ad-user__position,
+.v-text-area__input::placeholder {
     color: var(--text-color-minor) !important;
 }
 
