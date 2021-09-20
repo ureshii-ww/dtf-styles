@@ -1150,7 +1150,7 @@ attachButton:hover,
 .ad-user__position,
 .v-text-area__input::placeholder,
 .comment__reply,
-.comment__replied_to:hover,
+.comment__replied_to,
 .comment__text__edited {
     color: var(--text-color-minor) !important;
 }
