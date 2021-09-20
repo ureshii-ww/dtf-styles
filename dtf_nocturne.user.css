@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.10
+@version        1.1.11
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -408,7 +408,8 @@ body {
 .sidebar-tree-list-item:hover,
 .gallery-image__inputs .input,
 .mobile-tab__icon,
-.commercial-tabs {
+.commercial-tabs,
+.comment__expand {
     background-color: var(--color-01ev) !important;
 }
 
@@ -600,7 +601,8 @@ body {
 .ui_modal_window__textarea,
 .commercial-list__item:hover, .commercial-list__item--active,
 .dstr-unit__outer,
-.sidebar-tree-list-item__child-item:hover {
+.sidebar-tree-list-item__child-item:hover,
+.comment__space--highlighted::before, .comment__space--new::before {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -964,7 +966,8 @@ attachButton:hover,
 .v-list-tab--active .v-list-tab__icon,
 .ad-contacts__title,
 .ad-user__name,
-.subsite-ban-popup__title {
+.subsite-ban-popup__title,
+.comment-user__name:hover {
     color: var(--text-color-title) !important;
 }
 
@@ -1145,7 +1148,10 @@ attachButton:hover,
 .v-list-subsites-item__subtitle,
 .commercial-list__price,
 .ad-user__position,
-.v-text-area__input::placeholder {
+.v-text-area__input::placeholder,
+.comment__reply,
+.comment__replied_to:hover,
+.comment__text__edited {
     color: var(--text-color-minor) !important;
 }
 
@@ -1354,7 +1360,12 @@ a.v-list__item:hover,
 .boost_panel__msg,
 .bc-form-hidden-block__label,
 .v-calendar__arrow,
-.gallery-image__media-settings .media-tool-settings__item--active .icon {
+.gallery-image__media-settings .media-tool-settings__item--active .icon,
+.comment-user__name:hover,
+.comment__reply:hover,
+.comment__replied_to:hover,
+.comment__expand,
+.comment__text a {
     color: var(--text-color-blue) !important;
 }
 
@@ -1434,6 +1445,8 @@ a.v-list__item:hover,
 .block-hidden__button:hover,
 .bc-form-hidden-block__label:hover,
 .v-calendar__day--current,
+.comment__expand:hover,
+.comment__text a:hover
  {
     color: var(--text-color-red) !important;
 }
@@ -2584,7 +2597,8 @@ a.v-list__item:hover,
 .subsite_card_simple__description a,
 .subsite_head__description a,
 .t-link-classic,
-.profile_comment_favorite__expand:hover {
+.profile_comment_favorite__expand:hover
+{
     border-color: var(--text-color-blue);
 }
 
@@ -2740,9 +2754,24 @@ a.v-list__item:hover,
   color: var(--text-color-minor)
 }
 
+.comments {
+    --color-branch: #595959;
+    --color-branch-hover: var(--text-color-blue);
+}
+
 .comments__item__status::after {
     background-color: var(--text-color-green);
     border-color: var(--color-01ev);
+}
+
+.comment__space--highlighted::before, .comment__space--new::before {
+    box-shadow: 0 0 0 4px var(--hover-01ev);
+    -webkit-box-shadow: 0 0 0 4px var(--hover-01ev);
+}
+
+.comment__children > .comment:not(.comment--level-last):last-child {
+    -webkit-box-shadow: -19px 0 0 0 var(--color-01ev);
+    box-shadow: -19px 0 0 0 var(--color-01ev);
 }
 /******************************************************************/
 /* Messenger */
