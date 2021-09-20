@@ -1446,8 +1446,7 @@ a.v-list__item:hover,
 .bc-form-hidden-block__label:hover,
 .v-calendar__day--current,
 .comment__expand:hover,
-.comment__text a:hover
- {
+.comment__text a:hover {
     color: var(--text-color-red) !important;
 }
 
