@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.13
+@version        1.1.14
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -409,7 +409,8 @@ body {
 .gallery-image__inputs .input,
 .mobile-tab__icon,
 .commercial-tabs,
-.comment__expand {
+.comment__expand,
+.comment__space--highlighted::before, .comment__space--new::before {
     background-color: var(--color-01ev) !important;
 }
 
@@ -488,7 +489,8 @@ body {
 .v-range__handle::after,
 .gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
 .v-etc__item:hover,
-.v-etc__item:first-child:hover::before {
+.v-etc__item:first-child:hover::before,
+.comment__self--author .comment-user__name {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -601,8 +603,7 @@ body {
 .ui_modal_window__textarea,
 .commercial-list__item:hover, .commercial-list__item--active,
 .dstr-unit__outer,
-.sidebar-tree-list-item__child-item:hover,
-.comment__space--highlighted::before, .comment__space--new::before {
+.sidebar-tree-list-item__child-item:hover {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -2778,6 +2779,28 @@ a.v-list__item:hover,
     -webkit-box-shadow: -19px 0 0 0 var(--color-01ev);
     box-shadow: -19px 0 0 0 var(--color-01ev);
 }
+
+.comment__self--author .comment-user__name {
+    padding: 0 5px;
+}
+
+@media (min-width: 860px) and (hover: hover) {
+    .comment .comment__copy-link {
+        color:  var(--text-color-minor);
+    }
+
+    .comment .comment__copy-link:hover {
+        color: var(--text-color-blue);
+    }
+}
+
+.comment-more--root, .comment-more--root--5, .ui-button--5 {
+    background-color: var(--color-03ev);
+    border:  none;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.06),inset 0 -1px 0 rgba(0,0,0,.12),inset 1px 0 0 rgba(0,0,0,.06),inset -1px 0 0 rgba(0,0,0,.06);
+    box-shadow: 0 1px 2px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.06),inset 0 -1px 0 rgba(0,0,0,.12),inset 1px 0 0 rgba(0,0,0,.06),inset -1px 0 0 rgba(0,0,0,.06);
+}
+
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
