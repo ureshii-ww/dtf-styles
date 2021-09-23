@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.1.15
+@version        1.1.16
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -603,7 +603,9 @@ body {
 .commercial-list__item:hover, .commercial-list__item--active,
 .dstr-unit__outer,
 .sidebar-tree-list-item__child-item:hover,
-.comment__space--highlighted::before, .comment__space--new::before {
+.comment__space--highlighted::before, 
+.comment__space--new::before,
+.comment__space--pinned::before {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1152,7 +1154,8 @@ attachButton:hover,
 .v-text-area__input::placeholder,
 .comment__reply,
 .comment__replied_to,
-.comment__text__edited {
+.comment__text__edited,
+.comment__ico {
     color: var(--text-color-minor) !important;
 }
 
@@ -2770,7 +2773,9 @@ a.v-list__item:hover,
     border-color: var(--color-01ev);
 }
 
-.comment__space--highlighted::before, .comment__space--new::before {
+.comment__space--highlighted::before, 
+.comment__space--new::before,
+.comment__space--pinned::before {
     box-shadow: 0 0 0 4px var(--color-01ev);
     -webkit-box-shadow: 0 0 0 4px var(--color-01ev);
 }
@@ -3458,29 +3463,11 @@ if verticalImageViewInFeed {
 }
 
 if oldCommentsAvatars {
-    .comments__item__avatar img {
-        border-radius: 4px;
-    }
-
-    .comments__item__status::after {
-        position: absolute;
-        top: 3px;
-        left: 1px;
-    }
-
-    .comments__item__space--replied-to .comments__item__info {
-        justify-content: flex-end;
-    }
+    
 }
 
 if smallerSpaceBetweenComments {
-    .comments__item__space--has-children {
-        margin-bottom: 0px;
-    }
-
-    .comments__item:not(:last-child) {
-        margin-bottom: 5px;
-    }
+    
 }
 
 /*if hideShittyButton {
