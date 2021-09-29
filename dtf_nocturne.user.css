@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.2
+@version        1.3.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -123,7 +123,8 @@ body {
 .site-header,
 .u-notification--unread,
 .floating-popup__button .ui-button,
-.andropov_uploader__preview_item__remove {
+.andropov_uploader__preview_item__remove,
+.ce-toolbox-search {
     background-color: var(--color-12ev) !important;
 }
 
@@ -548,7 +549,9 @@ body {
 .v-calendar__button:hover,
 .v-calendar__cell--hovered,
 .v-calendar__cell--selected .v-calendar__day,
-.social-links__item:hover {
+.social-links__item:hover,
+.ce-toolbox__item--selected, 
+.ce-toolbox__item:not(.no-hover):hover {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -768,7 +771,8 @@ announcement-stats,
 .gallery-image__media-settings--small .media-tool-settings__item .icon,
 .mobile-tab__caption,
 .user-settings__navigation .v-list-tab__icon,
-.v-text-area__input {
+.v-text-area__input,
+.ce-popover__close svg path {
     color: var(--text-color-gray) !important;
 }
 
@@ -971,7 +975,9 @@ attachButton:hover,
 .ad-contacts__title,
 .ad-user__name,
 .subsite-ban-popup__title,
-.comment-user__name {
+.comment-user__name,
+.ce-popover__close::hover svg path,
+.ce-popover__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1157,7 +1163,11 @@ attachButton:hover,
 .comment__replied_to,
 .comment__text__edited,
 .comment__ico,
-.comment__self--ignored .comment__text, .comment__self--removed .comment__text {
+.comment__self--ignored .comment__text, 
+.comment__self--removed .comment__text,
+.ce-toolbox-search input::placeholder, 
+.ce-toolbox-search-icon, 
+.ce-toolbox__not-found {
     color: var(--text-color-minor) !important;
 }
 
@@ -2407,6 +2417,10 @@ a.v-list__item:hover,
 
 .gallery-image__media-settings .media-tool-settings__item:hover {
     background-color: rgba(255,255,255,0.15) !important; 
+}
+
+.ce-toolbox__item-icon {
+    filter: invert(100%) opacity(69%);
 }
 
 /*Posts*/
