@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.3
+@version        1.3.4
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -124,7 +124,8 @@ body {
 .u-notification--unread,
 .floating-popup__button .ui-button,
 .andropov_uploader__preview_item__remove,
-.ce-toolbox-search {
+.ce-toolbox-search,
+.cdx-inline-toolbar__input {
     background-color: var(--color-12ev) !important;
 }
 
@@ -551,7 +552,8 @@ body {
 .v-calendar__cell--selected .v-calendar__day,
 .social-links__item:hover,
 .ce-toolbox__item--selected, 
-.ce-toolbox__item:not(.no-hover):hover {
+.ce-toolbox__item:not(.no-hover):hover,
+.ce-block-settings__item--active {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -772,7 +774,8 @@ announcement-stats,
 .mobile-tab__caption,
 .user-settings__navigation .v-list-tab__icon,
 .v-text-area__input,
-.ce-popover__close svg path {
+.ce-popover__close svg path,
+.cdx-inline-toolbar__button-wrapper {
     color: var(--text-color-gray) !important;
 }
 
@@ -977,7 +980,22 @@ attachButton:hover,
 .subsite-ban-popup__title,
 .comment-user__name,
 .ce-popover__close::hover svg path,
-.ce-popover__title {
+.ce-popover__title,
+.content b, 
+.content strong, 
+.editor .ce-redactor b, 
+.editor .ce-redactor strong, 
+.miniEditor .ce-redactor b, 
+.miniEditor .ce-redactor strong, 
+.subsite_head__description b, 
+.user-option b, 
+.editor h2.ce-header, 
+.miniEditor h2.ce-header, 
+.editor h3.ce-header, 
+.miniEditor h3.ce-header, 
+.editor h4.ce-header, 
+.miniEditor h4.ce-header, 
+.ce-block-settings__item--active {
     color: var(--text-color-title) !important;
 }
 
@@ -1167,7 +1185,9 @@ attachButton:hover,
 .comment__self--removed .comment__text,
 .ce-toolbox-search input::placeholder, 
 .ce-toolbox-search-icon, 
-.ce-toolbox__not-found {
+.ce-toolbox__not-found,
+.cdx-inline-toolbar__input::placeholder, 
+.anchor-tool__input::placeholder {
     color: var(--text-color-minor) !important;
 }
 
@@ -1381,7 +1401,8 @@ a.v-list__item:hover,
 .comment__reply:hover,
 .comment__replied_to:hover,
 .comment__expand,
-.comment__text a {
+.comment__text a,
+.cdx-inline-toolbar__button-wrapper--active {
     color: var(--text-color-blue) !important;
 }
 
@@ -2421,6 +2442,14 @@ a.v-list__item:hover,
 
 .ce-toolbox__item-icon {
     filter: invert(100%) opacity(69%);
+}
+
+.ce-block-settings__item svg {
+    filter: invert(100%) opacity(69%);
+}
+
+.ce-block-settings__item--active svg {
+    filter: invert(1) opacity(0.87) grayscale(1) brightness(1.75);
 }
 
 /*Posts*/
