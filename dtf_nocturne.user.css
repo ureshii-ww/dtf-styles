@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.6
+@version        1.3.7
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1676,7 +1676,8 @@ a.v-list__item:hover,
 .v-range__point--filled::before,
 .v-checkbox--checked .v-checkbox__control,
 .v-checkbox--checked:hover .v-checkbox__control,
-.v-select-tag {
+.v-select-tag,
+.ui-rounded-button__indicator {
     background-color: var(--back-color-blue-button) !important;
 }
 
