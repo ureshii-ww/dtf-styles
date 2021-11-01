@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.5
+@version        1.3.8
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -69,7 +69,7 @@
 }
 
 /* Ник Пользователя */
-.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(1) > div:nth-child(2) {
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div[class]:not([class=""]) > a:nth-child(1) > div:nth-child(2) {
     color: var(--text-color-title);
 }
 /* Время */
@@ -77,11 +77,11 @@
     color: var(--text-color-minor);
 }
 /* Текст комментария */
-.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > a {
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > a {
     color: var(--text-color-gray);
 }
 /* Заголовок поста */
-.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div > a[title] {
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div > a[title] {
     color: var(--text-color-title);
 }
 /* Надпись Комментарии */
@@ -1676,7 +1676,8 @@ a.v-list__item:hover,
 .v-range__point--filled::before,
 .v-checkbox--checked .v-checkbox__control,
 .v-checkbox--checked:hover .v-checkbox__control,
-.v-select-tag {
+.v-select-tag,
+.ui-rounded-button__indicator {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -2035,7 +2036,7 @@ a.v-list__item:hover,
 }
 
 .reposters_list .icon {
-    fill: var(--color-12ev);
+    fill: var(--color-08ev);
 }
 
 .reposters_list__item:after {
@@ -2049,6 +2050,10 @@ a.v-list__item:hover,
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .icon {
     fill: var(--text-color-red);
     stroke: var(--text-color-red);
+}
+
+.v-shares .popover .icon--v_bookmark_solid {
+    fill: var(--text-color-red);
 }
 
 .daily-promo-unit__button,
