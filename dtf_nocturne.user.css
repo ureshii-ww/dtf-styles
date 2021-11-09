@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.8
+@version        1.3.9
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -64,8 +64,8 @@
     --switcher-layout-background: var(--color-16ev);
     --switcher-layout-text: var(--text-color-title);
     --primary-color: var(--text-color-blue);
-    --primary-color--faded26: var(--hover-16ev);
     --switchers-color: var(--text-color-blue);
+    --switchers-background-color: var(--hover-16ev);
 }
 
 /* Ник Пользователя */
