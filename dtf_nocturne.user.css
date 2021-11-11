@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.11
+@version        1.3.12
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -411,7 +411,8 @@ body {
 .gallery-image__inputs .input,
 .mobile-tab__icon,
 .commercial-tabs,
-.comment__expand {
+.comment__expand,
+.auth__controls-container {
     background-color: var(--color-01ev) !important;
 }
 
