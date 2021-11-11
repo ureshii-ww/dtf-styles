@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.8
+@version        1.3.12
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -64,8 +64,8 @@
     --switcher-layout-background: var(--color-16ev);
     --switcher-layout-text: var(--text-color-title);
     --primary-color: var(--text-color-blue);
-    --primary-color--faded26: var(--hover-16ev);
     --switchers-color: var(--text-color-blue);
+    --switchers-background-color: var(--hover-16ev);
 }
 
 /* Ник Пользователя */
@@ -411,7 +411,8 @@ body {
 .gallery-image__inputs .input,
 .mobile-tab__icon,
 .commercial-tabs,
-.comment__expand {
+.comment__expand,
+.auth__controls-container {
     background-color: var(--color-01ev) !important;
 }
 
@@ -541,7 +542,7 @@ body {
 .u-notification--unread,
 .u-notification--hover:hover,
 .u-notification--unread:hover,
-.channel-item:hover,
+.channel-item.channel-item--current:hover,
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item.wtf_bc--hot .wtf_bc--feed-item--bg,
 .ce-block-settings__item:not(.no-hover):hover,
 .editor-history-item:hover,
@@ -570,7 +571,7 @@ body {
 .tg-header__details-item--current,
 .tg-header__type-switcher--current,
 .channel-item--current,
-.aside__scrollable .channel-item:hover,
+.channel-item:hover,
 .contacts:not(.contacts--disabled) .contacts__item:hover,
 .message--selected,
 .aside__button:hover,
