@@ -286,7 +286,8 @@ body {
 .v-calendar,
 .v-calendar__notice,
 .social-links__item,
-.content--embed {
+.content--embed,
+.block-code {
     background-color: var(--color-04ev) !important;
 }
 
@@ -557,7 +558,13 @@ body {
 .ce-toolbox__item:not(.no-hover):hover,
 .ce-block-settings__item--active,
 .content--embed .content-image--with_background,
-.content--embed .andropov_link {
+.content--embed .andropov_link,
+.content--embed .block-incut,
+.content--embed .block-quote--default,
+.content--embed .block-code,
+.content--embed .block-number,
+.content--embed .quiz,
+.content--embed .block-audio {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1948,7 +1955,8 @@ a.v-list__item:hover,
 .comments_counter:hover .comments_counter__count__value,
 .comments_counter:hover .comments_counter__count__value_new.comments_counter__count__value_new,
 .comments_counter:hover .comments_counter__count__ico svg,
-.v-repost__button:hover .icon {
+.v-repost__button:hover .icon,
+.v-repost--active .icon {
     fill: var(--text-color-blue) !important;
 }
 
