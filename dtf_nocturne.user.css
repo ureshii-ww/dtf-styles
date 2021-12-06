@@ -1957,7 +1957,7 @@ a.v-list__item:hover,
 .comments_counter:hover .comments_counter__count__value_new.comments_counter__count__value_new,
 .comments_counter:hover .comments_counter__count__ico svg,
 .v-repost__button:hover .icon,
-.v-repost--active .icon {
+.v-repost--active .v-repost__button .icon {
     fill: var(--text-color-blue) !important;
 }
 
