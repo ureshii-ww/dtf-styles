@@ -1190,7 +1190,8 @@ attachButton:hover,
 .ce-toolbox-search-icon, 
 .ce-toolbox__not-found,
 .cdx-inline-toolbar__input::placeholder, 
-.anchor-tool__input::placeholder {
+.anchor-tool__input::placeholder,
+.v-repost__counter {
     color: var(--text-color-minor) !important;
 }
 
@@ -1405,7 +1406,9 @@ a.v-list__item:hover,
 .comment__replied_to:hover,
 .comment__expand,
 .comment__text a,
-.cdx-inline-toolbar__button-wrapper--active {
+.cdx-inline-toolbar__button-wrapper--active,
+.v-repost__button:hover .v-repost__counter,
+.v-repost .popover-item__slot {
     color: var(--text-color-blue) !important;
 }
 
