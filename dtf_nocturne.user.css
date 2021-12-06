@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.12
+@version        1.3.14
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -285,7 +285,8 @@ body {
 .v-field__wrapper,
 .v-calendar,
 .v-calendar__notice,
-.social-links__item {
+.social-links__item,
+.content--embed {
     background-color: var(--color-04ev) !important;
 }
 
@@ -554,7 +555,9 @@ body {
 .social-links__item:hover,
 .ce-toolbox__item--selected, 
 .ce-toolbox__item:not(.no-hover):hover,
-.ce-block-settings__item--active {
+.ce-block-settings__item--active,
+.content--embed .content-image--with_background,
+.content--embed .andropov_link {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1188,7 +1191,8 @@ attachButton:hover,
 .ce-toolbox-search-icon, 
 .ce-toolbox__not-found,
 .cdx-inline-toolbar__input::placeholder, 
-.anchor-tool__input::placeholder {
+.anchor-tool__input::placeholder,
+.v-repost__counter {
     color: var(--text-color-minor) !important;
 }
 
@@ -1403,7 +1407,9 @@ a.v-list__item:hover,
 .comment__replied_to:hover,
 .comment__expand,
 .comment__text a,
-.cdx-inline-toolbar__button-wrapper--active {
+.cdx-inline-toolbar__button-wrapper--active,
+.v-repost__button:hover .v-repost__counter,
+.v-repost .popover-item__slot {
     color: var(--text-color-blue) !important;
 }
 
@@ -1941,7 +1947,8 @@ a.v-list__item:hover,
 .comments_counter:hover .comments_counter__count__unit,
 .comments_counter:hover .comments_counter__count__value,
 .comments_counter:hover .comments_counter__count__value_new.comments_counter__count__value_new,
-.comments_counter:hover .comments_counter__count__ico svg {
+.comments_counter:hover .comments_counter__count__ico svg,
+.v-repost__button:hover .icon {
     fill: var(--text-color-blue) !important;
 }
 
@@ -1956,7 +1963,8 @@ a.v-list__item:hover,
 }
 
 .favorite_marker .icon,
-.comments_counter__count__ico svg {
+.comments_counter__count__ico svg,
+.v-repost__button .icon {
     fill: var(--text-color-minor);
 }
 
@@ -1989,6 +1997,11 @@ a.v-list__item:hover,
 .ui-button--5:active {
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.08), 0 -1px 0 rgba(0, 0, 0, 0.05), -1px 0 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.08), 0 -1px 0 rgba(0, 0, 0, 0.05), -1px 0 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05)
+}
+
+.content--embed {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .widget_wrapper__more {
