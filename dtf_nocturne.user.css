@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.6
+@version        1.4.7
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1450,7 +1450,7 @@ a.v-list__item:hover,
 .comment__icon-action:hover,
 a.comment__author:hover,
 a.comment__avatar:hover + a.comment__author,
-.comment__link-to-original {
+.comment__inline-action {
     color: var(--text-color-blue) !important;
 }
 
@@ -1532,7 +1532,7 @@ a.comment__avatar:hover + a.comment__author,
 .v-calendar__day--current,
 .comment__expand:hover,
 .comment__text a:hover,
-.comment__link-to-original:hover {
+.comment__inline-action:hover {
     color: var(--text-color-red) !important;
 }
 
@@ -3558,13 +3558,17 @@ if oldCommentsAvatars {
 }
 
 if alternativeThreads {
-    .comment__children > .comment:not(.comment--level-last):last-child {
-        -webkit-box-shadow: -19px 0 0 0 var(--color-01ev);
-        box-shadow: -19px 0 0 0 var(--color-01ev);
+    .comment__branch--hidden {
+        visibility: inherit;
     }
-
-    .comment__other:hover>.comment__children>.comment:not(.comment--level-last):last-child::before {
-        bottom: auto;
+    
+    .comment__branch--no-border {
+        height: auto;
+    }
+    
+    .comment__branch--highlighted {
+        border-color: var(--text-color-blue);
+        box-shadow: inset 1px 0 0 0 var(--text-color-blue);
     }
 }
 
