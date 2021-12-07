@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.3
+@version        1.4.4
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -625,7 +625,15 @@ body {
 .comment__space--highlighted::before, 
 .comment__space--new::before,
 .comment__space--pinned::before,
-.comment__space--with-donate::before {
+.comment__space--with-donate::before,
+.comment--highlighted .comment__branches::before,
+.comment--highlighted .comment__content::before,
+.comment--new .comment__branches::before,
+.comment--new .comment__content::before,
+.comment--pinned .comment__branches::before,
+.comment--pinned .comment__content::before,
+.comment--with-donate .comment__branches::before,
+.comment--with-donate .comment__content::before {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1209,7 +1217,7 @@ attachButton:hover,
 .cdx-inline-toolbar__input::placeholder, 
 .anchor-tool__input::placeholder,
 .v-repost__counter,
-.comment__icon-action {
+.comment__icon {
     color: var(--text-color-minor) !important;
 }
 
@@ -1432,7 +1440,8 @@ a.v-list__item:hover,
 .comment__detail .time:hover,
 .comment__icon-action:hover,
 a.comment__author:hover,
-a.comment__avatar:hover + a.comment__author {
+a.comment__avatar:hover + a.comment__author,
+.comment__link-to-original {
     color: var(--text-color-blue) !important;
 }
 
@@ -1513,7 +1522,8 @@ a.comment__avatar:hover + a.comment__author {
 .bc-form-hidden-block__label:hover,
 .v-calendar__day--current,
 .comment__expand:hover,
-.comment__text a:hover {
+.comment__text a:hover,
+.comment__link-to-original:hover {
     color: var(--text-color-red) !important;
 }
 
