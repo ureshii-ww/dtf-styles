@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.2
+@version        1.4.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -495,7 +495,8 @@ body {
 .gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
 .v-etc__item:hover,
 .v-etc__item:first-child:hover::before,
-.comment__self--author .comment-user__name {
+.comment__self--author .comment-user__name,
+.comment__author--highlighted {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -626,6 +627,11 @@ body {
 .comment__space--pinned::before,
 .comment__space--with-donate::before {
     background-color: var(--hover-01ev) !important;
+}
+
+.comment--highlighted,
+.comment--new {
+    --background-color: var(--hover-01ev) !important;
 }
 
 .u-notification--blue.u-notification--bg,
@@ -992,6 +998,7 @@ attachButton:hover,
 .ad-user__name,
 .subsite-ban-popup__title,
 .comment-user__name,
+.comment__author,
 .ce-popover__close:hover svg path,
 .ce-popover__title,
 .content b, 
@@ -1201,7 +1208,8 @@ attachButton:hover,
 .ce-toolbox__not-found,
 .cdx-inline-toolbar__input::placeholder, 
 .anchor-tool__input::placeholder,
-.v-repost__counter {
+.v-repost__counter,
+.comment__icon-action {
     color: var(--text-color-minor) !important;
 }
 
@@ -1418,7 +1426,13 @@ a.v-list__item:hover,
 .comment__text a,
 .cdx-inline-toolbar__button-wrapper--active,
 .v-repost__button:hover .v-repost__counter,
-.v-repost .popover-item__slot {
+.v-repost .popover-item__slot,
+.comment__action:hover,
+.comment__detail:hover,
+.comment__detail .time:hover,
+.comment__icon-action:hover,
+a.comment__author:hover,
+a.comment__avatar:hover + a.comment__author {
     color: var(--text-color-blue) !important;
 }
 
@@ -2860,7 +2874,8 @@ a.v-list__item:hover,
     box-shadow: calc(var(--offset-branch)*-1 - 1px) 0 0 0 var(--color-01ev);
 }
 
-.comment__self--author .comment-user__name {
+.comment__self--author .comment-user__name,
+.comment__author--highlighted {
     padding: 0 5px;
 }
 
