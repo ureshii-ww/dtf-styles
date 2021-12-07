@@ -1217,7 +1217,8 @@ attachButton:hover,
 .cdx-inline-toolbar__input::placeholder, 
 .anchor-tool__input::placeholder,
 .v-repost__counter,
-.comment__icon {
+.comment__icon,
+.comment__action {
     color: var(--text-color-minor) !important;
 }
 
