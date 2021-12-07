@@ -2873,6 +2873,7 @@ a.comment__avatar:hover + a.comment__author,
 .comment__branch--highlighted:not(.comment__branch--max-level):last-child::before {
     border-color: var(--text-color-blue);
     box-shadow: inset 1px 0 0 0 var(--text-color-blue);
+    -webkit-box-shadow: inset 1px 0 0 0 var(--text-color-blue);
 }
 
 .comment__status::after {
@@ -3569,6 +3570,7 @@ if alternativeThreads {
     .comment__branch--highlighted {
         border-color: var(--text-color-blue);
         box-shadow: inset 1px 0 0 0 var(--text-color-blue);
+        -webkit-box-shadow: inset 1px 0 0 0 var(--text-color-blue);
     }
 }
 
