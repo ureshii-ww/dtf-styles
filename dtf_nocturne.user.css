@@ -126,7 +126,8 @@ body {
 .floating-popup__button .ui-button,
 .andropov_uploader__preview_item__remove,
 .ce-toolbox-search,
-.cdx-inline-toolbar__input {
+.cdx-inline-toolbar__input,
+.mobile-bar {
     background-color: var(--color-12ev) !important;
 }
 
@@ -806,7 +807,10 @@ announcement-stats,
 .user-settings__navigation .v-list-tab__icon,
 .v-text-area__input,
 .ce-popover__close svg path,
-.cdx-inline-toolbar__button-wrapper {
+.cdx-inline-toolbar__button-wrapper,
+.mobile-bar__feed,
+.mobile-bar__messenger,
+.mobile-bar__notifications {
     color: var(--text-color-gray) !important;
 }
 
@@ -1027,7 +1031,8 @@ attachButton:hover,
 .miniEditor h3.ce-header, 
 .editor h4.ce-header, 
 .miniEditor h4.ce-header, 
-.ce-block-settings__item--active {
+.ce-block-settings__item--active,
+.notifications__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1447,7 +1452,11 @@ a.v-list__item:hover,
 a.comment__author:hover,
 a.comment__avatar:hover + a.comment__author,
 .comment__inline-action,
-.editor-cp-tab--active .editor-cp-tab__label {
+.editor-cp-tab--active .editor-cp-tab__label,
+.mobile-bar__feed--is-active,
+.mobile-bar__messenger--is-active,
+.mobile-bar__notifications--is-active,
+.mobile-bar__link:hover .mobile-bar__icon {
     color: var(--text-color-blue) !important;
 }
 
@@ -1563,6 +1572,10 @@ a.comment__avatar:hover + a.comment__author,
     box-shadow: none;
 }
 
+.mobile-bar__profile--is-active .navigation-user-profile__avatar-image {
+    box-shadow: inset 0 0 0 2px var(--text-color-blue) !important;
+}
+
 .bubble,
 .bubble:before,
 .head-notifies__panel,
@@ -1660,7 +1673,9 @@ a.comment__avatar:hover + a.comment__author,
 .ui_modal_window__title__input,
 .tjnames__list, .site-names__list,
 .ce-popover,
-.editor-history-item {
+.editor-history-item,
+.notifications__header,
+.mobile-bar__profile--is-active .navigation-user-profile__avatar-image {
     border: none !important;
 }
 
