@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.12
+@version        1.4.13
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -106,9 +106,9 @@ body {
     background-color: var(--color-24ev) !important;
 }
 
-.site-header-user .bubble,
-.site-header-user .bubble:before,
-.site-header-user .item,
+.site-header__item .bubble,
+.site-header__item .bubble:before,
+.site-header__item .item,
 .head-notifies__panel,
 .messenger-panel__down,
 .v-split-button__dropdown,
@@ -452,8 +452,8 @@ body {
 }
 
 /* Hovers */
-.site-header-user .item:hover,
-.site-header-user .item--selected,
+.site-header__item .item:hover,
+.site-header__item .item--selected,
 .v-split-button-option:hover,
 .search-dropdown-item--focused,
 .search-dropdown-item--submit:hover,
@@ -658,7 +658,7 @@ body {
 .search--filled .search__input,
 .search-dropdown,
 .search-dropdown-item--string,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .bubble,
 .bubble:before,
 .item,
@@ -1234,7 +1234,7 @@ attachButton:hover,
 .site-header-logo:hover,
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover,
 .t-link-inline,
 .u-notification__content__button,
@@ -1297,7 +1297,7 @@ a.content-header-author:hover .content-header-author__name,
 .vacancies_widget__item__company:hover,
 .subsites_tune__select-all,
 .t-link-inline,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .profile_comment_favorite__user__name:hover,
 .v-list__more,
 .donate-cabinet-header a,
@@ -1683,7 +1683,7 @@ a.comment__avatar:hover + a.comment__author,
 .messenger-panel__down,
 .v-split-button__dropdown,
 .search-dropdown,
-.site-header-user .bubble,
+.site-header__item .bubble,
 .etc_control__list,
 .vote .vote__users,
 .bubble,
@@ -1791,13 +1791,13 @@ a.comment__avatar:hover + a.comment__author,
     fill: var(--text-color-gray) !important;
 }
 
-.site-header-user-profile__toggle:hover {
+.navigation-profile__toggle:hover {
     opacity: 1;
 }
 
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--text-color-blue);
     opacity: 1;
@@ -3612,11 +3612,11 @@ if alternativeThreads {
 .sidebar-tree-list-item__child-item--active,
 .site-header-burger:hover,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .ui-rounded-button--active .ui-rounded-button__link,
 .content-editorial-tick,
 .site-header-logo:hover,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
@@ -3638,7 +3638,7 @@ if alternativeThreads {
 
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--site-color) !important;
 }
@@ -3698,11 +3698,11 @@ if alternativeThreads {
 .sidebar-tree-list-item__child-item--active,
 .site-header-burger:hover,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .ui-rounded-button--active .ui-rounded-button__link,
 .content-editorial-tick,
 .site-header-logo:hover,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
@@ -3724,7 +3724,7 @@ if alternativeThreads {
 
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--site-color) !important;
 }
