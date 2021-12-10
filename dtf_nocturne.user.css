@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.14
+@version        1.4.15
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -638,7 +638,9 @@ body {
 .comment--pinned .comment__branches::before,
 .comment--pinned .comment__content::before,
 .comment--with-donate .comment__branches::before,
-.comment--with-donate .comment__content::before {
+.comment--with-donate .comment__content::before,
+.notifications.l-island-bg .u-notification--unread,
+.notifications.l-island-bg .u-notification--hover:hover {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1228,7 +1230,8 @@ attachButton:hover,
 .anchor-tool__input::placeholder,
 .v-repost__counter,
 .comment__icon,
-.comment__action {
+.comment__action,
+.v-popup-window__close {
     color: var(--text-color-minor) !important;
 }
 
@@ -1457,7 +1460,8 @@ a.comment__avatar:hover + a.comment__author,
 .mobile-bar__feed--is-active,
 .mobile-bar__messenger--is-active,
 .mobile-bar__notifications--is-active,
-.mobile-bar__link:hover .mobile-bar__icon {
+.mobile-bar__link:hover .mobile-bar__icon,
+.v-popup-window__close:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1903,6 +1907,14 @@ a.comment__avatar:hover + a.comment__author,
 
 .mini-editor__button:last-child {
     --icon-color: var(--text-color-blue);
+}
+
+.v-popup-window__close {
+    opacity: 1;
+}
+
+.ui_modal_window__close .icon {
+    fill: var(--text-color-minor);
 }
 
 @css {
