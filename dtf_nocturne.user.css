@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.15
+@version        1.4.16
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -183,7 +183,8 @@ body {
 .v-checkbox:hover .v-checkbox__control,
 .gallery-image__media-settings--small,
 .v-etc__dropdown,
-.v-etc__item:first-child::before {
+.v-etc__item:first-child::before,
+.league-block-card {
     background-color: var(--color-08ev) !important;
 }
 
@@ -1461,8 +1462,13 @@ a.comment__avatar:hover + a.comment__author,
 .mobile-bar__messenger--is-active,
 .mobile-bar__notifications--is-active,
 .mobile-bar__link:hover .mobile-bar__icon,
-.v-popup-window__close:hover {
+.v-popup-window__close:hover,
+.league-block-card a {
     color: var(--text-color-blue) !important;
+}
+
+.league-block-card a {
+    border-bottom-color: var(--text-color-blue);
 }
 
 .t-link-inline:hover,
@@ -1543,8 +1549,13 @@ a.comment__avatar:hover + a.comment__author,
 .v-calendar__day--current,
 .comment__expand:hover,
 .comment__text a:hover,
-.comment__inline-action:hover {
+.comment__inline-action:hover,
+.league-block-card a:hover {
     color: var(--text-color-red) !important;
+}
+    
+.league-block-card a:hover {
+    border-bottom-color: var(--text-color-red);
 }
 
 .vote--sum-positive .vote__value,
@@ -1714,7 +1725,8 @@ a.comment__avatar:hover + a.comment__author,
 .__vcbf__popup,
 .__vcbf__popup::before,
 .popover,
-.gallery-image__media-settings--small {
+.gallery-image__media-settings--small,
+.league-block-card {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
@@ -2767,6 +2779,10 @@ a.comment__avatar:hover + a.comment__author,
 .switcher-layout__header__supporting-text {
     color: var(--text-color-minor);
 }
+    
+.league-block-card::before {
+    border-top-color: var(--color-08ev);
+}
 
 .shares--desktop .shares__close,
 .shares--desktop .shares__open {
@@ -3742,7 +3758,8 @@ if alternativeThreads {
     fill: var(--site-color) !important;
 }
 
-.new-entries-horizon svg [data-accent-color-stroke] {
+.new-entries-horizon svg [data-accent-color-stroke],
+.league-logo path {
     stroke: var(--site-color);
 }
 
