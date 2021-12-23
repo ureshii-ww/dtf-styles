@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.17
+@version        1.4.18
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -184,7 +184,8 @@ body {
 .gallery-image__media-settings--small,
 .v-etc__dropdown,
 .v-etc__item:first-child::before,
-.league-block-card {
+.league-block-card,
+.v-radio:hover .v-radio__control     {
     background-color: var(--color-08ev) !important;
 }
 
@@ -417,7 +418,8 @@ body {
 .mobile-tab__icon,
 .commercial-tabs,
 .comment__expand,
-.auth__controls-container {
+.auth__controls-container,
+.search-filters-footer {
     background-color: var(--color-01ev) !important;
 }
 
@@ -427,7 +429,8 @@ body {
 .l-page--loading,
 .layout,
 .v-checkbox__control,
-.sidebar__footer {
+.sidebar__footer,
+.v-radio__control {
     background-color: var(--color-00ev) !important;
 }
 
@@ -1756,7 +1759,9 @@ a.comment__avatar:hover + a.comment__author,
 .v-checkbox--checked .v-checkbox__control,
 .v-checkbox--checked:hover .v-checkbox__control,
 .v-select-tag,
-.ui-rounded-button__indicator {
+.ui-rounded-button__indicator,
+.v-radio--checked .v-radio__control,
+.v-radio--checked:hover .v-radio__control {
     background-color: var(--back-color-blue-button) !important;
 }
 
@@ -1790,13 +1795,15 @@ a.comment__avatar:hover + a.comment__author,
 
 .v-checkbox:hover .v-checkbox__control,
 .v-checkbox--checked .v-checkbox__control,
-.v-checkbox--checked:hover .v-checkbox__control {
+.v-checkbox--checked:hover .v-checkbox__control,
+.v-radio:hover .v-radio__control,
+.v-radio--checked .v-radio__control
+.v-radio--checked:hover .v-radio__control {
     border-color: var(--back-color-blue-button);
 }
 
-.v-calendar__button:hover .v-calendar__button--primary:hover {
-    background-color: var(--back-color-blue-button) !important;
-    opacity: 0.8;
+.v-calendar__button--primary:hover {
+    background-color: var(--blue-button-hover) !important;
 }
 
 /* Header */
