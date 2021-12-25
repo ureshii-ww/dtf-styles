@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.19
+@version        1.4.20
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -434,7 +434,8 @@ body {
 .commercial-tabs,
 .comment__expand,
 .auth__controls-container,
-.search-filters-footer {
+.search-filters-footer,
+.v-popup-header {
     background-color: var(--color-01ev) !important;
 }
 
@@ -834,7 +835,9 @@ announcement-stats,
 .mobile-bar__feed,
 .mobile-bar__messenger,
 .mobile-bar__notifications,
-.mobile-bar__profile {
+.mobile-bar__profile,
+.v-popup-header__btn,
+.v-list-subsites-item__title {
     color: var(--text-color-gray) !important;
 }
 
@@ -1054,7 +1057,8 @@ attachButton:hover,
 .editor h4.ce-header, 
 .miniEditor h4.ce-header, 
 .ce-block-settings__item--active,
-.notifications__title {
+.notifications__title,
+.v-popup-header {
     color: var(--text-color-title) !important;
 }
 
@@ -1713,7 +1717,8 @@ a.comment__avatar:hover + a.comment__author,
 .notifications__header,
 .mobile-bar__profile--is-active .navigation-user-profile__avatar-image,
 .comments_pseudo_form--banned-panel .restriction--comments,
-.comments_form--banned-panel .restriction--comments {
+.comments_form--banned-panel .restriction--comments,
+.v-popup-header {
     border: none !important;
 }
 
