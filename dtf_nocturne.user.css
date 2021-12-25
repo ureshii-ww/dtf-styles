@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.18
+@version        1.4.19
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -73,17 +73,30 @@
 .layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div[class]:not([class=""]) > a:nth-child(1) > div:nth-child(2) {
     color: var(--text-color-title);
 }
+/* Ник Пользователя hover */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div[class]:not([class=""]) > a:nth-child(1):hover > div:nth-child(2) {
+    color: var(--text-color-blue);
+}
 /* Время */
 .layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(2) {
     color: var(--text-color-minor);
+}
+/* Время  hover*/
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(2):hover {
+    color: var(--text-color-blue);
 }
 /* Текст комментария */
 .layout__right-column > div > div > div:nth-of-type(2) > div > div > div > a {
     color: var(--text-color-gray);
 }
 /* Заголовок поста */
-.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div > a[title] {
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div {
     color: var(--text-color-title);
+}
+/* Заголовок поста hover */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div:hover,
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div > a:hover {
+    color: var(--text-color-blue);
 }
 /* Надпись Комментарии */
 .layout__right-column > div > div > div > div > div > span {
@@ -291,7 +304,9 @@ body {
 .v-calendar__notice,
 .social-links__item,
 .content--embed,
-.block-code {
+.block-code,
+.comments_pseudo_form--banned-panel .restriction--comments,
+.comments_form--banned-panel .restriction--comments {
     background-color: var(--color-04ev) !important;
 }
 
@@ -682,6 +697,8 @@ body {
 .ui-rounded-button__link,
 .widget_entry__description,
 .widget_wrapper--type-blue .widget_wrapper__title,
+.widget_wrapper--type-yellow .widget_wrapper__title,
+.widget_wrapper--type-pink .widget_wrapper__title,
 .widget_subsite__rank,
 .blogs_entries__desc,
 .widget_comment__content__text,
@@ -834,7 +851,7 @@ announcement-stats,
 .live__item--comment .live__item__title,
 .news_widget__load_more,
 .news_widget__header,
-.v-tab__label,
+.v-tab,
 .content-header__title,
 .widget_entry__subsite__avatar__title,
 .widget_entry__title,
@@ -968,8 +985,6 @@ attachButton:hover,
 #INVADERS-POINTS,
 .floating-popup__title,
 .andropov_preview__title,
-.widget_wrapper--type-yellow .widget_wrapper__title,
-.widget_wrapper--type-pink .widget_wrapper__title,
 .events_widget__title,
 .events_widget__item__title,
 .island--company_entries .island__header__title,
@@ -1235,7 +1250,8 @@ attachButton:hover,
 .v-repost__counter,
 .comment__icon,
 .comment__action,
-.v-popup-window__close {
+.v-popup-window__close,
+.comment--removed {
     color: var(--text-color-minor) !important;
 }
 
@@ -1466,7 +1482,8 @@ a.comment__avatar:hover + a.comment__author,
 .mobile-bar__notifications--is-active,
 .mobile-bar__link:hover .mobile-bar__icon,
 .v-popup-window__close:hover,
-.league-block-card a {
+.league-block-card a,
+.v-tab:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -1694,7 +1711,9 @@ a.comment__avatar:hover + a.comment__author,
 .ce-popover,
 .editor-history-item,
 .notifications__header,
-.mobile-bar__profile--is-active .navigation-user-profile__avatar-image {
+.mobile-bar__profile--is-active .navigation-user-profile__avatar-image,
+.comments_pseudo_form--banned-panel .restriction--comments,
+.comments_form--banned-panel .restriction--comments {
     border: none !important;
 }
 
