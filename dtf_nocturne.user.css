@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.20
+@version        1.4.21
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -299,14 +299,14 @@ body {
 .editor-history-item,
 .editor-cp-tab__content,
 .block-hidden,
-.v-field__wrapper,
 .v-calendar,
 .v-calendar__notice,
 .social-links__item,
 .content--embed,
 .block-code,
 .comments_pseudo_form--banned-panel .restriction--comments,
-.comments_form--banned-panel .restriction--comments {
+.comments_form--banned-panel .restriction--comments,
+.v-field__wrapper {
     background-color: var(--color-04ev) !important;
 }
 
@@ -837,7 +837,8 @@ announcement-stats,
 .mobile-bar__notifications,
 .mobile-bar__profile,
 .v-popup-header__btn,
-.v-list-subsites-item__title {
+.v-list-subsites-item__title,
+.v-field__wrapper .v-text-input__input {
     color: var(--text-color-gray) !important;
 }
 
@@ -1221,8 +1222,6 @@ attachButton:hover,
 .v-calendar__notice,
 .bc-form-range__ends,
 .bc-form-range__hint,
-.search__field .v-field:not(.v-field--focused) .v-field__wrapper:not(:hover) .v-text-input__input::placeholder,
-.v-text-input__input::placeholder,
 .editor-cp__autosave,
 .gallery-image__inputs .input--author:empty::before,
 .gallery-image__inputs .input--author,
@@ -1255,7 +1254,8 @@ attachButton:hover,
 .comment__icon,
 .comment__action,
 .v-popup-window__close,
-.comment--removed {
+.comment--removed,
+.v-field__wrapper .v-text-input__input::placeholder {
     color: var(--text-color-minor) !important;
 }
 
@@ -1970,17 +1970,6 @@ a.comment__avatar:hover + a.comment__author,
     }
 }
 
-.search__field .v-field--focused .v-field__wrapper {
-    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    border-color: var(--back-color-blue-button) !important;
-}
-
-.search__field .v-field:not(.v-field--focused) .v-field__wrapper:hover {
-    border-color: var(--text-color-blue);
-    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-}
 /*--------------------------------------------------------*/
 /* Left bar */
 .sidebar-tree-list-item__child-item::before {
@@ -2546,14 +2535,6 @@ a.comment__avatar:hover + a.comment__author,
     box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
 }
 
-.v-field--focused .v-field__wrapper {
-    border-color: var(--back-color-blue-button);
-}
-
-.v-field__wrapper:hover {
-    border-color: var(--back-color-blue-button);
-}
-
 .gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -2995,6 +2976,17 @@ a.comment__avatar:hover + a.comment__author,
     box-shadow: 0 1px 2px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.06),inset 0 -1px 0 rgba(0,0,0,.12),inset 1px 0 0 rgba(0,0,0,.06),inset -1px 0 0 rgba(0,0,0,.06);
 }
 
+.v-field:not(.v-field--focused) .v-field__wrapper:hover {
+    border-color: var(--text-color-blue) !important;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
+
+.v-field--focused .v-field__wrapper {
+    border-color: var(--back-color-blue-button) !important;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
