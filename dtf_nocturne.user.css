@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.23
+@version        1.4.24
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3384,7 +3384,8 @@ if snowBackground {
         .l-island-bg,
         .widget_wrapper--type-blue,
         .widget_wrapper--type-yellow, 
-        .widget_wrapper--type-ping {
+        .widget_wrapper--type-ping,
+        .content-header__subscribe .ui-button {
             background-color: transparent !important;
         }
     }
