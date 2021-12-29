@@ -3385,7 +3385,8 @@ if snowBackground {
         .widget_wrapper--type-blue,
         .widget_wrapper--type-yellow, 
         .widget_wrapper--type-ping,
-        .content-header__subscribe .ui-button {
+        .content-header__subscribe .ui-button,
+        .content-header__subscribe .ui-button:hover {
             background-color: transparent !important;
         }
     }
