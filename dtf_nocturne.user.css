@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.22
+@version        1.4.23
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
 @var            checkbox  snowBackground "Включить снег на фоне" 0
+@var            range     snowRange "Степень прозрачности для новогоднего фона" [2, 1, 3, 1]
 @var            checkbox  alternativeSidebars "Альтернативный вид боковых панелей" 0
 @var            checkbox  likesBack "Убрать фон у лайков" 1
 @var            checkbox  scrollbar  "Перекрасить скроллбар" 1
@@ -452,24 +453,10 @@ body {
 }
 
 .sidebar,
-.live,
 .sidebar-tree-list__show-more-button,
 .layout__left-column,
-.live__caption,
-.live__content  {
-    background-color: transparent !important;
-}
-
-
-@media (max-width: 859px) {
-    .sidebar,
-    .live,
-    .sidebar-tree-list__show-more-button,
-    .layout__left-column,
-    .live__caption,
-    .live__content {
-        background-color: var(--color-00ev) !important;
-    }
+.layout__right-column  {
+    background-color: var(--color-00ev) !important;
 }
 
 /* Hovers */
@@ -3380,8 +3367,26 @@ input[type="color" i] {
 }
 
 if snowBackground {
-    .live, .sidebar, .sidebar-tree-list__show-more-button {
-        background-color: transparent !important;
+    if snowRange == 2 {
+        .sidebar,
+        .layout__left-column,
+        .layout__right-column,
+        .sidebar-tree-list__show-more-button,
+        .sidebar__footer {
+            background-color: transparent !important;
+        }
+    } else if snowRange == 3 {
+        .sidebar,
+        .layout__left-column,
+        .layout__right-column,
+        .sidebar-tree-list__show-more-button,
+        .sidebar__footer,
+        .l-island-bg,
+        .widget_wrapper--type-blue,
+        .widget_wrapper--type-yellow, 
+        .widget_wrapper--type-ping {
+            background-color: transparent !important;
+        }
     }
     
     .main {
