@@ -63,7 +63,6 @@
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
 
-    --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
     --switcher-layout-background: var(--color-16ev);
     --switcher-layout-text: var(--text-color-title);
     --primary-color: var(--text-color-blue);
@@ -186,7 +185,6 @@ body {
 .repost_button__list .bubble .item,
 .v-shares-popover,
 .site-names__list, .site-names__list.active,
-.s42-stonks-popup,
 .tjnames__list, .site-names__list,
 .tab__content .item,
 .__vcbf__popup,
@@ -794,8 +792,6 @@ announcement-stats,
 .ng-binding,
 .wtf_bubble-body textarea,
 .ui_modal_window__textarea,
-.s42-stonks-popup,
-.s42-stonks-popup__text-regular,
 .adult__message,
 .mdl-radio__sub-label,
 .msngrConfirmMessage,
@@ -1003,8 +999,6 @@ attachButton:hover,
 .wtf_bc--header--counter.ng-binding,
 .wtf_bc--username.ng-binding,
 .system-message a:hover,
-.s42-stonks-popup__text-splited-right span:last-child,
-.s42-stonks-popup__big-text,
 .tjnames__list b,
 .adult__title,
 .__vcbf__popup-header_name,
@@ -1200,7 +1194,6 @@ attachButton:hover,
 .dummy__text,
 .ui_modal_window__textarea::placeholder,
 .chat-dropdown-pointer,
-.s42-stonks-popup__text-off,
 .auth-email-recover,
 .v-form-input input::placeholder,
 .l-editor textarea::placeholder,
@@ -1448,7 +1441,6 @@ a.v-list__item:hover,
 .wtf_broadcast .wtf_bc-copyright a:hover,
 .wtf_bc--username.ng-binding:hover,
 .restriction a,
-.s42-stonks-popup__text-marked,
 .editor-subsite-select__current:hover,
 .editor-cp-tab__label:hover,
 .dstr-fl__text:hover,
@@ -1556,8 +1548,6 @@ a.comment__avatar:hover + a.comment__author,
 .v-form__legal a:hover,
 .t-link-site:hover,
 .kojur-nav__item a:hover,
-.s42-stonks-popup__text-red,
-.s42-stonks-popup__text-marked:hover,
 .remove-tool--confirm,
 .auth-email-recover:hover,
 .__vcbf__popup-header_karma--negative,
@@ -1589,7 +1579,6 @@ a.comment__avatar:hover + a.comment__author,
 .subsite__trend .icon--ui_arrow_up,
 .ui-button--success .icon,
 .v-message__title .icon--ui_check,
-.s42-stonks-popup__text-green,
 .__vcbf__popup-header_karma--positive,
 .spotify-sidebar-button {
     color: var(--text-color-green) !important;
@@ -1600,8 +1589,7 @@ a.comment__avatar:hover + a.comment__author,
 }
 
 .site-header,
-.v-split-button,
-.s42-stonks-popup__footer__button {
+.v-split-button {
     box-shadow: none;
 }
 
@@ -1739,7 +1727,6 @@ a.comment__avatar:hover + a.comment__author,
 .site-names__list, .site-names__list.active,
 .floating_player,
 .floating_screen_film--fixed,
-.s42-stonks-popup,
 .tjnames__list, .site-names__list,
 .ce-popover,
 .__vcbf__popup,
@@ -1765,8 +1752,6 @@ a.comment__avatar:hover + a.comment__author,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
 .wtf_bc--need-more-items--button,
-.s42-stonks-popup__footer__button,
-#s42-feed-link-new-entries-badge,
 .sidebar-tree-list-item__badge,
 .editor-cp__left .v-button--blue,
 .v-calendar__button--primary,
@@ -1780,10 +1765,6 @@ a.comment__avatar:hover + a.comment__author,
 .v-radio--checked .v-radio__control,
 .v-radio--checked:hover .v-radio__control {
     background-color: var(--back-color-blue-button) !important;
-}
-
-.s42-stonks-popup__footer__button:hover {
-    background-color: var(--blue-button-hover) !important;
 }
 
 .chat-dropdown-pointer {
@@ -1927,15 +1908,6 @@ a.comment__avatar:hover + a.comment__author,
 
 .icon--verified path {
     fill: var(--text-color-blue) !important;
-}
-
-.s42-stonks-popup__head {
-    border-color: var(--border-color);
-}
-
-.s42-stonks-popup__footer__button--light,
-.s42-stonks-popup__footer__button--light:hover {
-    background-color: transparent !important;
 }
 
 .comments__item__reply:hover .icon {
