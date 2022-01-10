@@ -3977,7 +3977,7 @@ html[stylus-iframe*="vc.ru"] .Footer {
 }
 }
 
-@-moz-document url-prefix("https://api.dtf.ru/"), url-prefix("https://api.tjournal.ru/"), url-prefix("https://api.vs.ru/") {
+@-moz-document url-prefix("https://api.dtf.ru/"), url-prefix("https://api.tjournal.ru/"), url-prefix("https://api.vс.ru/") {
 body {
     color: var(--text-color-gray);
 }
