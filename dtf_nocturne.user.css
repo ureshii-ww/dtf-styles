@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.29
+@version        1.4.30
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -563,7 +563,7 @@ body {
 .v-calendar__cell--hovered,
 .v-calendar__cell--selected .v-calendar__day,
 .social-links__item:hover,
-.ce-toolbox__item--selected, 
+.ce-toolbox__item--selected,
 .ce-toolbox__item:not(.no-hover):hover,
 .ce-block-settings__item--active,
 .content--embed .content-image--with_background,
@@ -635,7 +635,7 @@ body {
 .commercial-list__item:hover, .commercial-list__item--active,
 .dstr-fl__outer,
 .sidebar-tree-list-item__child-item:hover,
-.comment__space--highlighted::before, 
+.comment__space--highlighted::before,
 .comment__space--new::before,
 .comment__space--pinned::before,
 .comment__space--with-donate::before,
@@ -1028,20 +1028,20 @@ attachButton:hover,
 .comment__author,
 .ce-popover__close:hover svg path,
 .ce-popover__title,
-.content b, 
-.content strong, 
-.editor .ce-redactor b, 
-.editor .ce-redactor strong, 
-.miniEditor .ce-redactor b, 
-.miniEditor .ce-redactor strong, 
-.subsite_head__description b, 
-.user-option b, 
-.editor h2.ce-header, 
-.miniEditor h2.ce-header, 
-.editor h3.ce-header, 
-.miniEditor h3.ce-header, 
-.editor h4.ce-header, 
-.miniEditor h4.ce-header, 
+.content b,
+.content strong,
+.editor .ce-redactor b,
+.editor .ce-redactor strong,
+.miniEditor .ce-redactor b,
+.miniEditor .ce-redactor strong,
+.subsite_head__description b,
+.user-option b,
+.editor h2.ce-header,
+.miniEditor h2.ce-header,
+.editor h3.ce-header,
+.miniEditor h3.ce-header,
+.editor h4.ce-header,
+.miniEditor h4.ce-header,
 .ce-block-settings__item--active,
 .notifications__title,
 .v-popup-header,
@@ -1174,8 +1174,8 @@ attachButton:hover,
 #INVADERS-NAVIGATION,
 .form2__field label,
 .andropov_preview--link .andropov_preview__hostname,
-.content__updating, 
-.content-info, 
+.content__updating,
+.content-info,
 .v-shares__button,
 .entry_stub__option[data-state="2"],
 .profile_comment_favorite__expand,
@@ -1228,12 +1228,12 @@ attachButton:hover,
 .comment__replied_to,
 .comment__text__edited,
 .comment__ico,
-.comment__self--ignored .comment__text, 
+.comment__self--ignored .comment__text,
 .comment__self--removed .comment__text,
-.ce-toolbox-search input::placeholder, 
-.ce-toolbox-search-icon, 
+.ce-toolbox-search input::placeholder,
+.ce-toolbox-search-icon,
 .ce-toolbox__not-found,
-.cdx-inline-toolbar__input::placeholder, 
+.cdx-inline-toolbar__input::placeholder,
 .anchor-tool__input::placeholder,
 .v-repost__button,
 .comment__icon,
@@ -1364,6 +1364,7 @@ a.v-list__item:hover,
 .content h4 a,
 .content ol a,
 .content p a,
+.content p a b,
 .content ul a,
 .page--error .error__message a,
 .profile_comment_favorite__text a,
@@ -1424,7 +1425,7 @@ a.v-list__item:hover,
 .audio_player__control__pause:hover,
 .audio_player__control__rate:hover,
 .audio_player__control__mute:hover,
-.audio_player__control__volume:hover, 
+.audio_player__control__volume:hover,
 .v-shares__button:hover,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button .icon,
@@ -1520,6 +1521,7 @@ a.comment__avatar:hover + a.comment__author,
 .content h4 a:hover,
 .content ol a:hover,
 .content p a:hover,
+.content p a b:hover,
 .content ul a:hover,
 .page--error .error__message a:hover,
 .profile_comment_favorite__text a:hover,
@@ -1560,7 +1562,7 @@ a.comment__avatar:hover + a.comment__author,
 .league-block-card a:hover {
     color: var(--text-color-red) !important;
 }
-    
+
 .league-block-card a:hover {
     border-bottom-color: var(--text-color-red);
 }
@@ -2521,7 +2523,7 @@ a.comment__avatar:hover + a.comment__author,
 }
 
 .gallery-image__media-settings .media-tool-settings__item:hover {
-    background-color: rgba(255,255,255,0.15) !important; 
+    background-color: rgba(255,255,255,0.15) !important;
 }
 
 .ce-toolbox__item-icon {
@@ -2763,7 +2765,7 @@ a.comment__avatar:hover + a.comment__author,
 .switcher-layout__header__supporting-text {
     color: var(--text-color-minor);
 }
-    
+
 .league-block-card::before {
     border-top-color: var(--color-08ev);
 }
@@ -2913,7 +2915,7 @@ a.comment__avatar:hover + a.comment__author,
     border-color: var(--color-01ev);
 }
 
-.comment__space--highlighted::before, 
+.comment__space--highlighted::before,
 .comment__space--new::before,
 .comment__space--pinned::before,
 .comment__space--with-donate::before {
@@ -3123,12 +3125,12 @@ a.comment__avatar:hover + a.comment__author,
     }
 }
 
-.social-links__item--active, 
+.social-links__item--active,
 .social-links__item--active:hover {
     background-color: var(--text-color-blue) !important;
 }
 
-.social-links__item--active .social-links__title, 
+.social-links__item--active .social-links__title,
 .social-links__item--active .social-links__icon,,
 .social-links__item--active .social-links__item-delete
 .social-links__item--active .social-links__item-delete:hover {
@@ -3364,14 +3366,14 @@ if snowBackground {
         .sidebar__footer,
         .l-island-bg,
         .widget_wrapper--type-blue,
-        .widget_wrapper--type-yellow, 
+        .widget_wrapper--type-yellow,
         .widget_wrapper--type-ping,
         .content-header__subscribe .ui-button,
         .content-header__subscribe .ui-button:hover {
             background-color: transparent !important;
         }
     }
-    
+
     .main {
         background-image: url('https://leonardo.osnova.io/5b271ae9-265c-514d-906b-5f41352195df'), url('https://leonardo.osnova.io/b88d8f54-7d8d-56c3-8ece-35f39026a92d'), url('https://leonardo.osnova.io/da5405da-6951-50d5-926d-b1ba038b55c7') !important;
         -webkit-animation: shnow 20s linear infinite;
@@ -3379,7 +3381,7 @@ if snowBackground {
         -ms-animation: shnow 20s linear infinite;
         animation: shnow 20s linear infinite;
     }
-    
+
     @keyframes shnow {
         0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
         100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
@@ -3471,16 +3473,16 @@ if editorHeaderTop {
         .page--editor .wrapper {
             padding-top: 0 !important;
         }
-        
+
         .page--editor .header {
             margin-bottom: 30px;
             top: 60px !important;
         }
-        
+
         .page--editor .tab__content {
             bottom: auto !important;
         }
-        
+
         .tab--active .tab__label:after {
             bottom: 0 !important;
             top: auto !important;
@@ -3529,7 +3531,7 @@ if editorHeaderTop {
         }
     }
 
-    
+
     .page--editor .header {
         order: unset;
     }
@@ -3544,7 +3546,7 @@ if reversedEditorButtons {
         .editor-cp__left {
             margin-right: 0;
             margin-left: auto;
-            flex-direction: row-reverse; 
+            flex-direction: row-reverse;
         }
 
         .editor-cp__right {
@@ -3622,7 +3624,7 @@ if hideMiniEditorInFeed {
     div[data-analytics="Feed New — Mini Editor"] {
         display: none !important;
     }
-    
+
     .ui-sorting--with-tabs {
         margin-top: 0px !important;
     }
@@ -3646,18 +3648,18 @@ if oldCommentsAvatars {
 
     .comment__avatar::after {
         display: none;
-    }   
+    }
 }
 
 if alternativeThreads {
     .comment__branch--hidden {
         visibility: inherit;
     }
-    
+
     .comment__branch--no-border {
         height: auto;
     }
-    
+
     .comment__branch--highlighted {
         border-color: var(--text-color-blue);
         box-shadow: inset 1px 0 0 0 var(--text-color-blue);
