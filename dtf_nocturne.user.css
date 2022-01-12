@@ -3667,11 +3667,6 @@ if alternativeThreads {
     }
 }
 
-/*if hideShittyButton {
-    .ui-filters__inner > .ui-rounded-button:nth-of-type(3) {
-        display: none !important;
-    }
-}*/
 }
 
 @-moz-document domain("vc.ru") {
