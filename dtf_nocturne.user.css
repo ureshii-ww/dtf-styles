@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.31
+@version        1.4.32
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -649,7 +649,8 @@ body {
 .comment--with-donate .comment__branches::before,
 .comment--with-donate .comment__content::before,
 .notifications.l-island-bg .u-notification--unread,
-.notifications.l-island-bg .u-notification--hover:hover {
+.notifications.l-island-bg .u-notification--hover:hover,
+.league-block {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1474,11 +1475,13 @@ a.comment__avatar:hover + a.comment__author,
 .mobile-bar__link:hover .mobile-bar__icon,
 .v-popup-window__close:hover,
 .league-block-card a,
-.v-tab:hover {
+.v-tab:hover,
+.league-block a {
     color: var(--text-color-blue) !important;
 }
 
-.league-block-card a {
+.league-block-card a,
+.league-block a {
     border-bottom-color: var(--text-color-blue);
 }
 
@@ -1560,11 +1563,13 @@ a.comment__avatar:hover + a.comment__author,
 .comment__expand:hover,
 .comment__text a:hover,
 .comment__inline-action:hover,
-.league-block-card a:hover {
+.league-block-card a:hover,
+.league-block a:hover {
     color: var(--text-color-red) !important;
 }
 
-.league-block-card a:hover {
+.league-block-card a:hover,
+.league-block a:hover {
     border-bottom-color: var(--text-color-red);
 }
 
