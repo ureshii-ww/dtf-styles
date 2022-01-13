@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.30
+@version        1.4.31
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -10,7 +10,6 @@
 @var            range     snowRange "Степень прозрачности для новогоднего фона" [2, 1, 3, 1]
 @var            checkbox  alternativeSidebars "Альтернативный вид боковых панелей" 0
 @var            checkbox  likesBack "Убрать фон у лайков" 1
-@var            checkbox  scrollbar  "Перекрасить скроллбар" 1
 @var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
 @var            checkbox  imgBrightness "Затемнять изображения" 0
 @var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
@@ -62,6 +61,8 @@
     --hover-12ev: #3b3b3b;
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
+    
+    color-scheme: dark;
 
     --switcher-layout-background: var(--color-16ev);
     --switcher-layout-text: var(--text-color-title);
@@ -3396,24 +3397,6 @@ if snowBackground {
         0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
         50% {background-color:#d9f5ff;}
         100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#d9f5ff;}
-    }
-}
-
-if scrollbar{
-    ::-webkit-scrollbar {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        width: 12px;
-        background-color: #333437;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        background-color: #555;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 12px;
     }
 }
 
