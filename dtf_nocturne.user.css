@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.33
+@version        1.4.34
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -286,7 +286,7 @@ body {
 .form2__field--text .text__input,
 .form2__field--advanced_list .text__input,
 .inline-dropdown,
-.head-notifies__items-wrapper,
+.u-notification,
 .messenger-panel__down-list,
 .audio_player__control__panel,
 .etc-controls__dropdown,
@@ -308,7 +308,8 @@ body {
 .comments_pseudo_form--banned-panel .restriction--comments,
 .comments_form--banned-panel .restriction--comments,
 .v-field__wrapper,
-.wrapper {
+.wrapper,
+.notifications__loader {
     background-color: var(--color-04ev) !important;
 }
 
@@ -834,7 +835,6 @@ announcement-stats,
 
 .item--selected,
 .u-notification__content__title a,
-.head-notifies__header-title,
 .messenger-panel__down-head,
 .channel-item__name,
 .item__badge,
@@ -1610,11 +1610,10 @@ a.comment__avatar:hover + a.comment__author,
 .bubble:before,
 .head-notifies__panel,
 .messenger-panel__down,
-.head-notifies__footer,
 .messenger-panel__down-footer,
 .u-notification--border,
-.head-notifies__header,
-.head-notifies__footer,
+.notifications__header,
+.notifications__footer,
 .messenger-panel__down-footer,
 .messenger-panel__down-head,
 .email_subscribe_vue__form,
