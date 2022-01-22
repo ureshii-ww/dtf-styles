@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.37
+@version        1.4.38
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1246,13 +1246,14 @@ attachButton:hover,
 .v-popup-window__close,
 .comment--removed,
 .v-field__wrapper .v-text-input__input::placeholder,
-.v-field__wrapper .v-text-input--disabled .v-text-input__input {
+.v-field__wrapper .v-text-input--disabled .v-text-input__input,
+.bookmarks_return {
     color: var(--text-color-minor) !important;
 }
+
 .v-field__wrapper .v-text-input--disabled .v-text-input__input {
     -webkit-text-fill-color: var(--text-color-minor) !important;
 }
-
 
 .site-header-logo:hover,
 .head-notifies--showed .head-notifies__toggler .icon,
@@ -1500,12 +1501,9 @@ a.comment__avatar:hover + a.comment__author,
 .vote--voted-negative .vote__button--minus,
 .vote__button--minus:hover,
 .vote .vote__users__item--minus,
-.favorite_marker--active .favorite_marker__count,
 .subsites_tune__select-all:hover,
 .t-link-inline:hover,
 .auth-form__help:hover,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .favorite_marker__count,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .favorite_marker__title,
 .v-list__more:hover,
 .donate-cabinet-header a:hover,
 .v-dummy__text a:hover,
@@ -1573,7 +1571,9 @@ a.comment__avatar:hover + a.comment__author,
 .comment__text a:hover,
 .comment__inline-action:hover,
 .league-block-card a:hover,
-.league-block a:hover {
+.league-block a:hover,
+.favorite_marker--active .bookmarks_return,
+.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return {
     color: var(--text-color-red) !important;
 }
 
