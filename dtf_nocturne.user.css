@@ -1572,7 +1572,8 @@ a.comment__avatar:hover + a.comment__author,
 .league-block-card a:hover,
 .league-block a:hover,
 .favorite_marker--active .bookmarks_return,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return {
+.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
+.block-person__title a b:hover {
     color: var(--text-color-red) !important;
 }
 
