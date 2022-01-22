@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.38
+@version        1.4.39
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -69,6 +69,7 @@
     --primary-color: var(--text-color-blue);
     --switchers-color: var(--text-color-blue);
     --switchers-background-color: var(--hover-16ev);
+    --verified-svg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' id='ui_verified'%3E%3Cpath fill='%23AAB6FE' fill-rule='evenodd' d='M0 7a7 7 0 1114 0A7 7 0 010 7zm2.695.009l3.22 3.221 5.445-5.444-1.237-1.238-4.208 4.208-1.983-1.984-1.237 1.237z' clip-rule='evenodd'%3E%3C/path%3E%3Cpath fill='%23fff' fill-opacity='.2' fill-rule='evenodd' d='M0 7a7 7 0 1114 0A7 7 0 010 7zm2.695.009l3.22 3.221 5.445-5.444-1.237-1.238-4.208 4.208-1.983-1.984-1.237 1.237z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* Ник Пользователя */
@@ -136,7 +137,6 @@ body {
     background-color: var(--color-16ev) !important;
 }
 
-.site-header,
 .u-notification--unread,
 .floating-popup__button .ui-button,
 .andropov_uploader__preview_item__remove,
@@ -669,7 +669,6 @@ body {
     background-color: var(--hover-00ev) !important;
 }
 
-.site-header,
 .search--active .search__input,
 .search--filled .search__input,
 .search-dropdown,
@@ -1255,7 +1254,6 @@ attachButton:hover,
     -webkit-text-fill-color: var(--text-color-minor) !important;
 }
 
-.site-header-logo:hover,
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
 .navigation-user-profile__toggle:hover,
@@ -1605,7 +1603,6 @@ a.comment__avatar:hover + a.comment__author,
     color: var(--color-yellow) !important;
 }
 
-.site-header,
 .v-split-button {
     box-shadow: none;
 }
@@ -1764,7 +1761,6 @@ a.comment__avatar:hover + a.comment__author,
 }
 
 .v-split-button,
-.site-header-progressbar__runner,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
 .wtf_bc--need-more-items--button,
@@ -1805,6 +1801,10 @@ a.comment__avatar:hover + a.comment__author,
 
 #v_chevron_right path {
     fill: var(--text-color-title) !important;
+}
+
+#ui_info path {
+    fill: var(--color-01ev)
 }
 
 .v-checkbox:hover .v-checkbox__control,
@@ -1852,6 +1852,48 @@ a.comment__avatar:hover + a.comment__author,
 }
 
 /* Header */
+.site-header {
+    background-color: var(--color-12ev);
+    color: var(--text-color-gray);
+    box-shadow: none;
+}
+
+.site-header-logo:hover {
+    color: var(--text-color-blue);
+}
+
+.navigation-profile__toggle:hover {
+    opacity: 1;
+}
+
+.head-notifies--showed .head-notifies__toggler .icon,
+.head-notifies__toggler:hover .icon {
+    color: var(--text-color-blue);
+    fill: var(--text-color-blue);
+}
+
+.navigation-user-profile__toggle:hover,
+.site-header-burger:hover {
+    fill: var(--text-color-blue);
+    opacity: 1;
+}
+
+.item--selected {
+    font-weight: 500 !important;
+}
+
+.head-notifies--showed .head-notifies__toggler::after {
+    border-bottom: 7px solid var(--color-24ev);
+}
+
+.head-notifies__badge {
+    background-color: var(--text-color-red);
+}
+
+.site-header-progressbar__runner {
+    background-color: var(--back-color-blue-button);
+}
+
 #ui_briefcase path {
     stroke: var(--text-color-gray) !important;
 }
@@ -1867,29 +1909,6 @@ a.comment__avatar:hover + a.comment__author,
 #v_google_night path,
 #v_apple_night path {
     fill: var(--color-01ev);
-}
-
-.navigation-profile__toggle:hover {
-    opacity: 1;
-}
-
-.head-notifies--showed .head-notifies__toggler .icon,
-.head-notifies__toggler:hover .icon,
-.navigation-user-profile__toggle:hover,
-.site-header-burger:hover {
-    fill: var(--text-color-blue);
-    opacity: 1;
-}
-
-.item--selected {
-    font-weight: 500 !important;
-}
-.head-notifies--showed .head-notifies__toggler::after {
-    border-bottom: 7px solid var(--color-24ev);
-}
-
-.head-notifies__badge {
-    background-color: var(--text-color-red);
 }
 
 .u-notification__content__button:hover {
@@ -2239,7 +2258,6 @@ a.comment__avatar:hover + a.comment__author,
 .ui-dotted-button span {
     border-color: var(--text-color-title) !important;
 }
-
 
 .subsites_tune__item__check {
     border-color: var(--text-color-minor);
