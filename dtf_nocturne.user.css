@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.45
+@version        1.4.46
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1371,7 +1371,7 @@ a.v-list__item:hover,
 .content h4 a,
 .content ol a,
 .content p a,
-.content p a b,
+.l-island-a a b,
 .content ul a,
 .page--error .error__message a,
 .profile_comment_favorite__text a,
@@ -1482,8 +1482,7 @@ a.comment__avatar:hover + a.comment__author,
 .league-block-card a,
 .v-tab:hover,
 .league-block a,
-.editor .ce-redactor a:not(.t-link-inline):not(.andropov_link),
-.block-person__title a b {
+.editor .ce-redactor a:not(.t-link-inline):not(.andropov_link) {
     color: var(--text-color-blue) !important;
 }
 
@@ -1529,7 +1528,7 @@ a.comment__avatar:hover + a.comment__author,
 .content h4 a:hover,
 .content ol a:hover,
 .content p a:hover,
-.content p a b:hover,
+.l-island-a a b:hover,
 .content ul a:hover,
 .page--error .error__message a:hover,
 .profile_comment_favorite__text a:hover,
@@ -1570,8 +1569,7 @@ a.comment__avatar:hover + a.comment__author,
 .league-block-card a:hover,
 .league-block a:hover,
 .favorite_marker--active .bookmarks_return,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
-.block-person__title a b:hover {
+.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return {
     color: var(--text-color-red) !important;
 }
 
