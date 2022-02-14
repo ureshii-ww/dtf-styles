@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.46
+@version        1.4.47
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -2130,13 +2130,15 @@ a.comment__avatar:hover + a.comment__author,
     background-color: var(--back-color-blue-button);
 }
 
-.favorite_marker .icon,
+.bookmark .icon {
+    fill: var(--text-color-minor) !important;
+}
+
 .comments_counter__count__ico svg,
 .v-repost__button .icon {
     fill: var(--text-color-minor);
 }
 
-.favorite_marker .icon,
 .comments__item__replied_to .icon {
     stroke: #747474;
 }
@@ -2145,9 +2147,8 @@ a.comment__avatar:hover + a.comment__author,
     stroke: var(--text-color-blue);
 }
 
-.favorite_marker--active .icon {
-    fill: var(--text-color-red);
-    stroke: var(--text-color-red);
+.bookmark--active .icon {
+    fill: var(--text-color-red) !important;
 }
 
 .widget_wrapper--type-blue .widget_wrapper__item {
@@ -2229,9 +2230,8 @@ a.comment__avatar:hover + a.comment__author,
     display: none;
 }
 
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .icon {
-    fill: var(--text-color-red);
-    stroke: var(--text-color-red);
+.bookmark:hover:not(.bookmark--just_clicked) .icon {
+    fill: var(--text-color-red) !important;
 }
 
 .v-shares .popover .icon--v_bookmark_solid {
