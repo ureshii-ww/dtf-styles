@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.48
+@version        1.4.49
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -437,7 +437,8 @@ body {
 .auth__controls-container,
 .search-filters-footer,
 .v-popup-header,
-.l-island-bg .u-notification {
+.l-island-bg .u-notification,
+.feed-navigation {
     background-color: var(--color-01ev) !important;
 }
 
@@ -2008,17 +2009,19 @@ a.comment__avatar:hover + a.comment__author,
     }
 }
 
-.v-subscribe-button--inline .v-button,
-.bookmarks .ui-rounded-button__link {
+.v-subscribe-button--inline .v-button {
     background-color: transparent !important;
 }
 
-.bookmarks .ui-rounded-button__link {
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
     color: var(--text-color-title) !important;
+    background-color: transparent !important;
     font-weight: 500 !important;
 }
 
-.bookmarks .ui-rounded-button__link:hover {
+.bookmarks .ui-rounded-button__link:hover,
+.sorting-filters .ui-rounded-button__link:hover {
     color: var(--text-color-blue) !important;
 }
 
@@ -3726,6 +3729,11 @@ if alternativeThreads {
     color: var(--site-color) !important;
 }
 
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
+    color: var(--text-color-title) !important;
+}
+
 .sidebar__footer__item--sponsor span,
 .v-tab--active .v-tab__label::after,
 .quiz__item__progressbar__runner,
@@ -3810,6 +3818,11 @@ if alternativeThreads {
 .quiz__item__voted__count,
 .page--plus .plus-features__item .icon {
     color: var(--site-color) !important;
+}
+
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
+    color: var(--text-color-title) !important;
 }
 
 .sidebar__footer__item--sponsor span,
