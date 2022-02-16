@@ -1,23 +1,25 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.4.50
+@version        1.5.0
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
-@var            checkbox  alternativeSidebars "Альтернативный вид боковых панелей" 0
-@var            checkbox  likesBack "Убрать фон у лайков" 1
-@var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
-@var            checkbox  imgBrightness "Затемнять изображения" 0
-@var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
-@var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
-@var            checkbox  alternativeHiddenBlock "Альтернативный вид скрытого блока (с разымытием)" 0
-@var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
-@var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
-@var            checkbox  verticalImageViewInFeed "Центрировать вертикальные картинки в ленте" 0
-@var            checkbox  oldCommentsAvatars "Квадратные аватарки у комментариев" 0
-@var            checkbox  alternativeThreads "Альтернативный вид веток комментариев" 0
+@var            checkbox  alternativeSidebars 'Альтернативный вид боковых панелей' 0
+@var            checkbox  likesBack 'Убрать фон у лайков' 1
+@var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
+@var            checkbox  imgBrightness 'Затемнять изображения' 0
+@var            checkbox  editorHeaderTop 'Переместить кнопки в редакторе наверх' 0
+@var            checkbox  reversedEditorButtons 'Отразить кнопки в редакторе' 0
+@var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
+@var            checkbox  showHideBlockButton 'Показать кнопку скрытия блока в редакторе' 0
+@var            checkbox  hideMiniEditorInFeed 'Скрыть поле создания поста в ленте' 0
+@var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
+@var            checkbox  oldCommentsAvatars 'Квадратные аватарки у комментариев' 0
+@var            checkbox  alternativeThreads 'Альтернативный вид веток комментариев' 0
+@var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
+@var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -3706,6 +3708,24 @@ if alternativeThreads {
         border-color: var(--text-color-blue);
         box-shadow: inset 1px 0 0 0 var(--text-color-blue);
         -webkit-box-shadow: inset 1px 0 0 0 var(--text-color-blue);
+    }
+}
+
+if hideAllFeedSidebar {
+    .sidebar-tree-list-item[href="/new"],
+    .sidebar-tree-list-item[href="/popular"] {
+        display: none;
+    }
+}
+
+if hideTrashSidebar {
+    .sidebar-tree-list-item[href="/cabinet"],
+    .sidebar-tree-list-item[href="/job"],
+    .sidebar-tree-list-item[href="/rating"],
+    .sidebar-tree-list-item[href="/subs"],
+    .sidebar-tree-list-item[href="/events"],
+    .sidebar-tree-list-item[href="/companies"] {
+        display: none;
     }
 }
 
