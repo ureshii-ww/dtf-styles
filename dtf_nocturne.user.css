@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.1
+@version        1.5.2
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -62,7 +62,7 @@
     --hover-12ev: #3b3b3b;
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
-    
+
     color-scheme: dark;
 
     --switcher-layout-background: var(--color-16ev);
@@ -656,7 +656,8 @@ body {
 .comment--with-donate .comment__content::before,
 .l-island-bg .u-notification--unread,
 .l-island-bg .u-notification:hover,
-.league-block {
+.league-block,
+.get-api-token__text--token {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -832,7 +833,8 @@ announcement-stats,
 .v-popup-header__btn,
 .v-list-subsites-item__title,
 .v-field__wrapper .v-text-input__input,
-.bp-unit-link__description {
+.bp-unit-link__description,
+.v-popup-content__body {
     color: var(--text-color-gray) !important;
 }
 
@@ -1714,7 +1716,8 @@ a.comment__avatar:hover + a.comment__author,
 .mobile-bar__profile--is-active .navigation-user-profile__avatar-image,
 .comments_pseudo_form--banned-panel .restriction--comments,
 .comments_form--banned-panel .restriction--comments,
-.v-popup-header {
+.v-popup-header,
+.get-api-token__text--token {
     border: none !important;
 }
 
@@ -3777,6 +3780,10 @@ if hideRecommendations {
     background-color: var(--site-color) !important;
 }
 
+.sidebar__footer__item--sponsor span {
+    -webkit-text-fill-color: var(--site-color) !important;
+}
+
 .st0 {
     fill: var(--text-color-gray) !important;
 }
@@ -3866,6 +3873,10 @@ if hideRecommendations {
 .quiz__item__progressbar,
 .ui-tab--active .ui-tab__label:after {
     background-color: var(--site-color) !important;
+}
+
+.sidebar__footer__item--sponsor span {
+    -webkit-text-fill-color: var(--site-color) !important;
 }
 
 .st0 {
