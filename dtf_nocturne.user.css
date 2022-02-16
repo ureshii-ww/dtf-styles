@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.2
+@version        1.5.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -17,7 +17,6 @@
 @var            checkbox  reversedEditorButtons 'Отразить кнопки в редакторе' 0
 @var            checkbox  showHideBlockButton 'Показать кнопку скрытия блока в редакторе' 0
 @var            checkbox  likesBack 'Убрать фон у лайков' 1
-@var            checkbox  hideMiniEditorInFeed 'Скрыть поле создания поста в ленте' 0
 @var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
 @var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
 @var            checkbox  hideRecommendations 'Скрыть рекомендации' 0
@@ -1250,7 +1249,8 @@ attachButton:hover,
 .comment--removed,
 .v-field__wrapper .v-text-input__input::placeholder,
 .v-field__wrapper .v-text-input--disabled .v-text-input__input,
-.bookmarks_return {
+.bookmarks_return,
+.get-api-token__text--warn {
     color: var(--text-color-minor) !important;
 }
 
@@ -3665,16 +3665,6 @@ if alternativeHiddenBlock {
 
     .block-hidden__button:active {
         transform: translateY(1px);
-    }
-}
-
-if hideMiniEditorInFeed {
-    div[data-analytics="Feed New — Mini Editor"] {
-        display: none !important;
-    }
-
-    .ui-sorting--with-tabs {
-        margin-top: 0px !important;
     }
 }
 
