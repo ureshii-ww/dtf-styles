@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.4
+@version        1.5.5
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -195,7 +195,6 @@ body {
 .v-range__bar,
 .v-range__point::after,
 .v-checkbox:hover .v-checkbox__control,
-.gallery-image__media-settings--small,
 .v-etc__dropdown,
 .v-etc__item:first-child::before,
 .league-block-card,
@@ -309,7 +308,8 @@ body {
 .comments_form--banned-panel .restriction--comments,
 .v-field__wrapper,
 .wrapper,
-.notifications__loader {
+.notifications__loader,
+.gallery-image__media-settings--small {
     background-color: var(--color-04ev) !important;
 }
 
@@ -504,7 +504,6 @@ body {
 .popover-item:hover, .popover-item--focused,
 .v-calendar__arrow:hover,
 .v-range__handle::after,
-.gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
 .v-etc__item:hover,
 .v-etc__item:first-child:hover::before,
 .comment__self--author .comment-user__name,
@@ -833,7 +832,8 @@ announcement-stats,
 .v-list-subsites-item__title,
 .v-field__wrapper .v-text-input__input,
 .bp-unit-link__description,
-.v-popup-content__body {
+.v-popup-content__body,
+.gallery-image__media-settings--small .upload-button {
     color: var(--text-color-gray) !important;
 }
 
@@ -1333,7 +1333,6 @@ a.content-header-author:hover .content-header-author__name,
 .v-list-subsites__more,
 a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .select__current:hover,
-.upload-button,
 .adviser__close,
 .adviser__show-next,
 .tab__label:hover,
@@ -2582,12 +2581,6 @@ a.comment__avatar:hover + a.comment__author,
     border-color: var(--text-color-gray);
 }
 
-.gallery-image__media .upload-button {
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-}
-
 .cdx-icon--cover-blue {
     filter: invert(0) grayscale(100%) opacity(100%) brightness(130%) !important;
 }
@@ -2614,21 +2607,29 @@ a.comment__avatar:hover + a.comment__author,
     box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
 }
 
-.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button {
+.gallery-image__media-settings .upload-button,
+.gallery-image__media-settings .media-tool-settings,
+.gallery-image__media-dots {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button:hover,
-.gallery-image__media-dots:hover {
-    background: rgba(0,0,0,0.75) !important;
-}
-
 .gallery-image__media-settings .media-tool-settings__item--active {
-    background-color: transparent !important;
+    background-color: rgba(255,255,255,0.15) !important;
 }
 
-.gallery-image__media-settings .media-tool-settings__item:hover {
-    background-color: rgba(255,255,255,0.15) !important;
+.gallery-image__media-settings--small .upload-button,
+.gallery-image__media-settings--small .media-tool-settings {
+    background-color: var(--color-04ev) !important;
+}
+
+.gallery-image__media-settings--small .upload-button:hover,
+.gallery-image__media-settings--small .media-tool-settings-item:hover,
+.gallery-image__media-settings--small .media-tool-settings__item--active {
+    background-color: var(--hover-04ev) !important;
+}
+
+.gallery-image__media-settings--small .upload-button__inner {
+    background-color: transparent !important;
 }
 
 .ce-toolbox__item-icon {
