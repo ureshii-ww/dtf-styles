@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.5
+@version        1.5.6
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1251,7 +1251,8 @@ attachButton:hover,
 .v-field__wrapper .v-text-input--disabled .v-text-input__input,
 .bookmarks_return,
 .get-api-token__text--warn,
-.v-text-area__countdown {
+.v-text-area__countdown,
+.twitter-tweet p {
     color: var(--text-color-minor) !important;
 }
 
@@ -3346,6 +3347,11 @@ a.comment__avatar:hover + a.comment__author,
 .notify .notify-item--error {
     border-left-color: var(--text-color-red) !important;
 }
+
+.andropov_telegram__text b,
+.andropov_telegram__text strong {
+    font-weight: 700 !important;
+}
 /*******************************************************************************************************************/
 /******* HLJS THEME FOR BLOCK CODE *******/
 .hljs-comment,
@@ -3834,6 +3840,10 @@ if hideRecommendations {
 .ui-button--1,
 #s42-feed-link-new-entries-badge {
     color: #000;
+}
+
+.wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text {
+    color: #000 !important;
 }
 
 .sidebar-tree-list-item--active,
