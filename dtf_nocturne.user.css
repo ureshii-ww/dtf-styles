@@ -1492,8 +1492,7 @@ a.comment__avatar:hover + a.comment__author,
 .v-tab:hover,
 .league-block a,
 .editor .ce-redactor a:not(.t-link-inline):not(.andropov_link),
-.comment__detail.comment__detail--author,
-.comment__detail.comment__detail--author:hover {
+.comment__detail.comment__detail--author {
     color: var(--text-color-blue) !important;
 }
 
