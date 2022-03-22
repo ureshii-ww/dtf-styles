@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.16
+@version        1.5.17
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1369,7 +1369,6 @@ a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .andropov_tweet__user:hover .andropov_telegram__user__name,
 .andropov_tweet__user:hover .andropov_tweet__user__name,
 .andropov_tweet__user:hover .andropov_tweet__user__nickname,
-.notify .notify-item p a,
 .advice__caption a,
 .advice__list a,
 .andropov_telegram__text a,
@@ -1378,7 +1377,6 @@ a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .island__info a,
 .island__list__link,
 .subsite_about__text a,
-.notify .notify-item p a,
 .advice__caption a,
 .advice__list a,
 .andropov_telegram__text a,
@@ -1540,7 +1538,6 @@ a.comment__avatar:hover + a.comment__author,
 .adviser__close:hover,
 .adviser__show-next:hover,
 .authorCard__karma--negative,
-.notify .notify-item p a:hover,
 .advice__caption a:hover,
 .advice__list a:hover,
 .andropov_telegram__text a:hover,
@@ -1615,7 +1612,6 @@ a.comment__avatar:hover + a.comment__author,
 .vote .vote__users__item--plus,
 .v-number-change--positive,
 .v-subscribe-button .icon--ui_check,
-.notify .notify-item--success,
 .authorCard__karma--positive,
 .widget_comment__likes,
 .chat-header-info .online,
@@ -1843,6 +1839,16 @@ a.comment__avatar:hover + a.comment__author,
 
 #ui_info path {
     fill: var(--color-01ev)
+}
+
+#v_cancel path:nth-child(4) {
+    fill: var(--text-color-red);
+    stroke: var(--text-color-red);
+}
+
+#v_success path:nth-child(4) {
+    fill: var(--text-color-green);
+    stroke: var(--text-color-green);
 }
 
 .v-checkbox:hover .v-checkbox__control,
@@ -2372,10 +2378,6 @@ a.comment__avatar:hover + a.comment__author,
     border-radius: 2px;
 }
 
-.notify .notify-item--success {
-    border-left-color: var(--text-color-green);
-}
-
 .ui_sub_menu--bordered:before {
     border-color: var(--color-04ev) !important;
 }
@@ -2711,7 +2713,6 @@ a.comment__avatar:hover + a.comment__author,
     background-color: var(--text-color-blue);
 }
 
-.notify .notify-item p a:hover,
 .advice__caption a:hover,
 .advice__list a:hover,
 .andropov_telegram__text a:hover,
@@ -3372,10 +3373,6 @@ a.comment__avatar:hover + a.comment__author,
 
 .ad-contacts__user:after {
     background: none;
-}
-
-.notify .notify-item--error {
-    border-left-color: var(--text-color-red) !important;
 }
 
 .andropov_telegram__text b,
