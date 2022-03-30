@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.24
+@version        1.5.25
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -673,7 +673,8 @@ body {
 .l-island-bg .u-notification--unread,
 .l-island-bg .u-notification:hover,
 .league-block,
-.get-api-token__text--token {
+.get-api-token__text--token,
+.uploader__inner {
     background-color: var(--hover-01ev) !important;
 }
 
@@ -1520,7 +1521,8 @@ a.comment__avatar:hover + a.comment__author,
 .league-block a,
 .editor .ce-redactor a:not(.t-link-inline):not(.andropov_link),
 .comment__detail.comment__detail--author,
-.comments-header__action--active {
+.comments-header__action--active,
+.uploader__upload-icon {
     color: var(--text-color-blue) !important;
 }
 
@@ -1747,7 +1749,8 @@ a.comment__avatar:hover + a.comment__author,
 .comments_pseudo_form--banned-panel .restriction--comments,
 .comments_form--banned-panel .restriction--comments,
 .v-popup-header,
-.get-api-token__text--token {
+.get-api-token__text--token,
+.uploader__inner {
     border: none !important;
 }
 
@@ -1874,6 +1877,11 @@ a.comment__avatar:hover + a.comment__author,
 .v-radio--checked .v-radio__control
 .v-radio--checked:hover .v-radio__control {
     border-color: var(--back-color-blue-button);
+}
+
+.loader {
+    border: 2px solid var(--back-color-blue-button) !important;
+    border-top-color: transparent !important
 }
 
 .v-calendar__button--primary:hover {
@@ -2021,6 +2029,10 @@ a.comment__avatar:hover + a.comment__author,
 
 .v-split-button {
     color: #FFF;
+}
+
+.uploader__inner--covered:hover .uploader__upload-icon--hidden {
+    color: #fff !important;
 }
 
 .kojur-nav__item a {
