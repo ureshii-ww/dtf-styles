@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.21
+@version        1.5.22
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -851,7 +851,9 @@ announcement-stats,
 .v-field__wrapper .v-text-input__input,
 .bp-unit-link__description,
 .v-popup-content__body,
-.gallery-image__media-settings--small .upload-button {
+.gallery-image__media-settings--small .upload-button,
+.popover-item__main .popover-item__label,
+.popover-item__icon {
     color: var(--text-color-gray) !important;
 }
 
@@ -1887,6 +1889,11 @@ a.comment__avatar:hover + a.comment__author,
     --shine-color: var(--text-color-gray);
 }
 
+.comment__avatar--online::after {
+    box-shadow: 0 0 0 var(--stroke) var(--color-01ev);
+    -webkit-box-shadow: 0 0 0 var(--stroke) var(--color-01ev);
+}
+
 .dummy #site_logo path {
     fill: var(--text-color-gray);
 }
@@ -2065,12 +2072,12 @@ a.comment__avatar:hover + a.comment__author,
 }
 
 @css {
-    .popover-item__label[style="color: rgb(46, 168, 58);"] {
-        color:var(--text-color-green) !important
+    .popover-item__label[style="color: rgb(233, 42, 64);"] {
+        color: var(--text-color-red) !important;
     }
 
-    .popover-item__label[style="color: rgb(229, 46, 58);"] {
-        color:var(--text-color-red) !important
+    .popover-item[style="--color:#E92A40;"] .popover-item__icon {
+        color: var(--text-color-red) !important;
     }
 }
 
