@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.34
+@version        1.5.35
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
 @var            checkbox  alternativeSidebars 'Альтернативный вид боковых панелей' 0
 @var            checkbox  alternativeThreads 'Альтернативный вид веток комментариев' 0
-@var            checkbox  oldCommentsAvatars 'Квадратные аватарки' 0
 @var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
+@var            checkbox  oldAvatars 'Квадратные аватарки' 0
 @var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
 @var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
 @var            checkbox  imgBrightness 'Затемнять изображения' 0
@@ -19,6 +19,7 @@
 @var            checkbox  likesBack 'Убрать фон у лайков' 1
 @var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
 @var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
+@var            checkbox  hideDonate 'Кнопку кнопку "Поддержать"' 0
 @var            checkbox  hideRecommendations 'Скрыть рекомендации' 0
 ==/UserStyle== */
 
@@ -327,7 +328,8 @@ body {
 .v-field__wrapper,
 .wrapper,
 .notifications__loader,
-.gallery-image__media-settings--small {
+.gallery-image__media-settings--small,
+.amount-select__button {
     background-color: var(--color-04ev) !important;
 }
 
@@ -1106,7 +1108,6 @@ attachButton:hover,
 .etc_control,
 .vote .vote__value,
 .vote .vote__button,
-.search .icon,
 .bubble__container .search input::placeholder,
 .list__dummy,
 .content-header-author__repost,
@@ -1527,7 +1528,9 @@ a.comment__avatar:hover + a.comment__author,
 .editor .ce-redactor a:not(.t-link-inline):not(.andropov_link),
 .comment__detail.comment__detail--author,
 .comments-header__action--active,
-.uploader__upload-icon {
+.uploader__upload-icon,
+.search__button:hover,
+.search--active .search__button {
     color: var(--text-color-blue) !important;
 }
 
@@ -1615,13 +1618,18 @@ a.comment__avatar:hover + a.comment__author,
 .favorite_marker--active .bookmarks_return,
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
 .bookmark:hover .bookmark__title,
-.bookmark--active .bookmark__title {
+.bookmark--active .bookmark__title,
+.v-field__error {
     color: var(--text-color-red) !important;
 }
 
 .league-block-card a:hover,
 .league-block a:hover {
     border-bottom-color: var(--text-color-red);
+}
+
+.v-field--invalid > .v-field__wrapper {
+    border-color: var(--text-color-red);
 }
 
 .vote--sum-positive .vote__value,
@@ -1832,8 +1840,14 @@ a.comment__avatar:hover + a.comment__author,
 .v-select-tag,
 .ui-rounded-button__indicator,
 .v-radio--checked .v-radio__control,
-.v-radio--checked:hover .v-radio__control {
+.v-radio--checked:hover .v-radio__control,
+.navigation-create .v-button {
     background-color: var(--back-color-blue-button) !important;
+}
+
+.v-radio:hover .v-radio__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
 }
 
 .chat-dropdown-pointer {
@@ -2025,17 +2039,9 @@ a.comment__avatar:hover + a.comment__author,
     /*НЕ ТРОГАТЬ*/
 }
 
-@media (max-width: 719px) {
+@media (max-width: 859px) {
     .search__field {
         background-color: var(--color-12ev);
-    }
-
-    .search .icon {
-        color: var(--text-color-gray) !important;
-    }
-
-    .search__field .icon {
-        color: var(--text-color-minor) !important;
     }
 }
 
@@ -3170,6 +3176,20 @@ a.comment__avatar:hover + a.comment__author,
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
 }
+
+.amount-select .v-field--selected .v-field__wrapper {
+    border-color: var(--back-color-blue-button) !important;
+}
+
+.amount-select__button--active {
+    border-color: var(--back-color-blue-button) !important;
+    color: var(--text-color-gray) !important;
+}
+
+.amount-select__button:hover {
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
@@ -3768,9 +3788,10 @@ if verticalImageViewInFeed {
     }
 }
 
-if oldCommentsAvatars {
+if oldAvatars {
     .comment__avatar,
-    .subsite-card__avatar {
+    .subsite-card__avatar,
+    .site-header-container .navigation-user-profile__avatar-image {
         border-radius: 7px;
     }
 }
@@ -3806,6 +3827,12 @@ if hideTrashSidebar {
     .sidebar-tree-list-item[href="/events"],
     .sidebar-tree-list-item[href="/companies"] {
         display: none;
+    }
+}
+
+if hideDonate {
+    .site-header .support {
+        display: none !important;
     }
 }
 
@@ -3853,6 +3880,11 @@ if hideRecommendations {
 .quiz__item__progressbar,
 .ui-tab--active .ui-tab__label:after {
     background-color: var(--site-color) !important;
+}
+
+.v-radio:hover .v-radio__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
+    box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
 }
 
 .sidebar__footer__item--sponsor span {
@@ -3920,7 +3952,8 @@ if hideRecommendations {
     color: #000;
 }
 
-.wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text {
+.wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text,
+.navigation-create .v-button {
     color: #000 !important;
 }
 
@@ -3956,6 +3989,11 @@ if hideRecommendations {
 .quiz__item__progressbar,
 .ui-tab--active .ui-tab__label:after {
     background-color: var(--site-color) !important;
+}
+
+.v-radio:hover .v-radio__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
+    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
 }
 
 .sidebar__footer__item--sponsor span {
