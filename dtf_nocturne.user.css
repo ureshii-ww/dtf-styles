@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.35
+@version        1.5.36
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -395,7 +395,7 @@ body {
 .header__content::before,
 .editor-cp,
 .editor-cp__content::before,
-.editor__actions {
+.writing__actions {
     background-color: var(--color-02ev) !important;
 }
 
@@ -444,7 +444,7 @@ body {
 .booster-promo__button,
 .wtf_bubble-body,
 .vacancy_footer,
-.editor__authors,
+.writing__authors,
 .l-editor textarea,
 .v-popup-fp-window,
 .v-mobile-menu__header,
@@ -606,7 +606,8 @@ body {
 .comment--pinned .andropov_link,
 .content--embed .andropov_tweet,
 .content--embed .andropov_telegram,
-.l-island-bg .notify-new-items-label {
+.l-island-bg .notify-new-items-label,
+.upload-button:hover .upload-button__inner {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -1080,7 +1081,8 @@ attachButton:hover,
 .v-popup-header,
 .bp-unit-link__title,
 .news-widget__load-more,
-.comments-header__title {
+.comments-header__title,
+.writing-select__current {
     color: var(--text-color-title) !important;
 }
 
@@ -1530,13 +1532,22 @@ a.comment__avatar:hover + a.comment__author,
 .comments-header__action--active,
 .uploader__upload-icon,
 .search__button:hover,
-.search--active .search__button {
+.search--active .search__button,
+.writing-select__current:hover,
+.gallery-image .upload-button,
+.gallery__items .upload-button {
     color: var(--text-color-blue) !important;
 }
 
 .league-block-card a,
 .league-block a {
     border-bottom-color: var(--text-color-blue);
+}
+
+.gallery-item--preview::after,
+.gallery-image--preview::after {
+    border: 2px solid var(--back-color-blue-button);
+    border-top-color: transparent;
 }
 
 .t-link-inline:hover,
@@ -2714,7 +2725,8 @@ a.comment__avatar:hover + a.comment__author,
 .gallery-image__media-settings .upload-button,
 .gallery-image__media-settings .media-tool-settings,
 .gallery-image__media-dots {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    color: var(--text-color-title) !important;
 }
 
 .gallery-image__media-settings .media-tool-settings__item--active {
