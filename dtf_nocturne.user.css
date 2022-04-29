@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.36
+@version        1.5.37
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -16,7 +16,6 @@
 @var            checkbox  editorHeaderTop 'Переместить кнопки в редакторе наверх' 0
 @var            checkbox  reversedEditorButtons 'Отразить кнопки в редакторе' 0
 @var            checkbox  showHideBlockButton 'Показать кнопку скрытия блока в редакторе' 0
-@var            checkbox  likesBack 'Убрать фон у лайков' 1
 @var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
 @var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
 @var            checkbox  hideDonate 'Кнопку кнопку "Поддержать"' 0
@@ -1550,6 +1549,10 @@ a.comment__avatar:hover + a.comment__author,
     border-top-color: transparent;
 }
 
+.vote__button:hover {
+    --color-background: transparent !important;
+}
+
 .t-link-inline:hover,
 .sidebar__footer__icon--youtube,
 .vote--sum-negative .vote__value,
@@ -2131,6 +2134,14 @@ a.comment__avatar:hover + a.comment__author,
     .popover-item[style*="#E92A40;"] .popover-item__label,
     .popover-item[style*="#E92A40;"] .popover-item__icon {
         color: var(--text-color-red) !important;
+    }
+
+    .animated-arrow path[fill="rgb(46,169,59)"] {
+        fill: var(--text-color-green) !important;
+    }
+
+    .animated-arrow path[fill="rgb(230,46,59)"] {
+        fill: var(--text-color-red) !important;
     }
 }
 
@@ -2914,14 +2925,6 @@ a.comment__avatar:hover + a.comment__author,
     fill: #b183d7;
 }
 
-.vote--comment.vote--sum-positive .vote__value {
-    background-color: var(--back-green);
-}
-
-.vote--comment.vote--sum-negative .vote__value {
-    background-color: var(--back-red);
-}
-
 @media (max-width: 859px) {
     .vote--comment .vote__value {
         background-color: transparent !important;
@@ -3600,15 +3603,6 @@ if alternativePost{
         width: 16px;
         height: 16px;
         margin-right: 5px;
-    }
-}
-
-if likesBack{
-    .vote--content.vote--voted-positive .vote__button--plus,
-    .vote--content.vote--voted-negative .vote__button--minus,
-    .vote--content .vote__button--plus:hover,
-    .vote--content .vote__button--minus:hover {
-        background-color: transparent !important;
     }
 }
 
