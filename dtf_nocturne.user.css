@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.38
+@version        1.5.39
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -353,7 +353,8 @@ body {
 .chat-messages--compact .chat-messages__unread-label span,
 .wtf_bc--skin--bg-gray,
 .mini-editor__button,
-.mobile-navbar {
+.mobile-navbar,
+.filters-popup__header {
     background-color: var(--color-03ev) !important;
 }
 
@@ -459,7 +460,8 @@ body {
 .search-filters-footer,
 .v-popup-header,
 .l-island-bg .u-notification,
-.feed-navigation {
+.feed-navigation,
+.filters-popup__content {
     background-color: var(--color-01ev) !important;
 }
 
@@ -859,7 +861,9 @@ announcement-stats,
 .gallery-image__media-settings--small .upload-button,
 .popover-item__main .popover-item__label,
 .popover-item__icon,
-.v-split-button__dropdown {
+.v-split-button__dropdown,
+.v-island .icon--v_block_set,
+.v-checkbox__caption {
     color: var(--text-color-gray) !important;
 }
 
@@ -1081,7 +1085,10 @@ attachButton:hover,
 .bp-unit-link__title,
 .news-widget__load-more,
 .comments-header__title,
-.writing-select__current {
+.writing-select__current,
+.filters-popup__title,
+#v_cross,
+.search-filter__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1779,7 +1786,8 @@ a.comment__avatar:hover + a.comment__author,
 .comments_form--banned-panel .restriction--comments,
 .v-popup-header,
 .get-api-token__text--token,
-.uploader__inner {
+.uploader__inner,
+.filters-popup__header {
     border: none !important;
 }
 
@@ -1859,11 +1867,6 @@ a.comment__avatar:hover + a.comment__author,
     background-color: var(--back-color-blue-button) !important;
 }
 
-.v-radio:hover .v-radio__control {
-    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
-    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
-}
-
 .chat-dropdown-pointer {
     background-color: rgba(30, 30, 30, .94) !important;
 }
@@ -1916,6 +1919,12 @@ a.comment__avatar:hover + a.comment__author,
 .v-radio--checked .v-radio__control
 .v-radio--checked:hover .v-radio__control {
     border-color: var(--back-color-blue-button);
+}
+
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
 }
 
 .loader {
@@ -3876,9 +3885,15 @@ if hideRecommendations {
     background-color: var(--site-color) !important;
 }
 
-.v-radio:hover .v-radio__control {
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
     -webkit-box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
     box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
+}
+
+.v-field--focused .v-field__wrapper {
+    -webkit-box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12) !important;
 }
 
 .sidebar__footer__item--sponsor span {
@@ -3985,9 +4000,15 @@ if hideRecommendations {
     background-color: var(--site-color) !important;
 }
 
-.v-radio:hover .v-radio__control {
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
     -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
     box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
+}
+
+.v-field--focused .v-field__wrapper {
+    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
 }
 
 .sidebar__footer__item--sponsor span {
