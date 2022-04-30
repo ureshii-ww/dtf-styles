@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.40
+@version        1.5.41
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3418,6 +3418,8 @@ a.comment__avatar:hover + a.comment__author,
 
 .v-button--plus {
     background-image: linear-gradient(72.98deg, #7463ea 0%, #534bae 25%, #333a82 100%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .v-button--plus:hover {
@@ -3940,6 +3942,14 @@ if hideRecommendations {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #e57373), color-stop(7%, #e57373), to(#af4448));
     background-image: linear-gradient(90deg, #e57373 -41%, #e57373 7%, #af4448 100%);
 }
+
+.v-button--plus {
+    background-image: linear-gradient(72.98deg, #e57373 0%, #af4448 25%, #8b373a 100%);
+}
+
+.v-button--plus:hover {
+    background-image: linear-gradient(-72.98deg, #e57373 0%, #af4448 25%, #8b373a 100%);
+}
 }
 
 @-moz-document domain("tjournal.ru") {
@@ -3957,14 +3967,17 @@ if hideRecommendations {
 .v-button--blue .v-button__label,
 .v-button--blue .v-button__icon,
 .ui-button--1,
-#s42-feed-link-new-entries-badge,
-.v-checkbox__icon {
-    color: #000;
+.v-checkbox__icon,
+.page--plus .plus-buy {
+    color: var(--color-00ev);
 }
 
 .wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text,
-.navigation-create .v-button {
-    color: #000 !important;
+.navigation-create .v-button,
+.v-button--plus,
+.v-plus-badge,
+.block-special-button a {
+    color: var(--color-00ev) !important;
 }
 
 .sidebar-tree-list-item--active,
@@ -4057,6 +4070,14 @@ if hideRecommendations {
 .plus-badge {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
     background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
+}
+
+.v-button--plus {
+    background-image: linear-gradient(72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
+}
+
+.v-button--plus:hover {
+    background-image: linear-gradient(-72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
 }
 }
 
