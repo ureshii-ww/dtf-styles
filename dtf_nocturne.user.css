@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.42
+@version        1.5.43
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -461,7 +461,9 @@ body {
 .v-popup-header,
 .l-island-bg .u-notification,
 .feed-navigation,
-.filters-popup__content {
+.filters-popup__content,
+.writing__footer,
+.writing-footer {
     background-color: var(--color-01ev) !important;
 }
 
@@ -3636,57 +3638,17 @@ if imgBrightness {
 }
 
 if editorHeaderTop {
-    @media (min-width: 860px) {
-        .page--editor .wrapper {
-            padding-top: 0 !important;
-        }
-
-        .page--editor .header {
-            margin-bottom: 30px;
-            top: 60px !important;
-        }
-
-        .page--editor .tab__content {
-            bottom: auto !important;
-        }
-
-        .tab--active .tab__label:after {
-            bottom: 0 !important;
-            top: auto !important;
-        }
-
-        .header__left {
-            order: 2 !important;
-            margin-left: auto !important;
-            margin-right: 0 !important;
-            flex-direction: row-reverse !important;
-        }
-
-        .header__left .v-button:not(:last-child) {
-            margin-right: 0 !important;
-            margin-left: 12px !important;
-        }
-
-        .header__right {
-            margin-left: 0 !important;
-            margin-right: 20px !important;
-        }
-
-        .header__right .tab__label {
-            padding: 0 12px 0 0 !important;
-        }
-
-        .tab--active .tab__label:after {
-            left: 0 !important;
-        }
-
-        .editor__actions {
-            order: 0;
-            top: 0;
-        }
-    }
-
     @media (min-width: 1025px) {
+        .writing__footer {
+            order: unset;
+            align-items: end;
+            height: 50px;
+        }
+
+        .writing-footer {
+            height: 50px;
+        }
+
         .editor-cp-tab__content {
             top: auto;
             bottom: auto;
@@ -3696,51 +3658,33 @@ if editorHeaderTop {
             bottom: 0;
             top: auto;
         }
-    }
 
-
-    .page--editor .header {
-        order: unset;
+        .editor-cp-tabs {
+            display: flex !important;
+        }
     }
 }
 
 if reversedEditorButtons {
     @media (min-width: 1025px) {
-        .editor-cp__content {
+        .writing-footer__content,
+        .writing-footer__left {
             flex-direction: row-reverse;
         }
 
-        .editor-cp__left {
+        .writing-footer__left {
             margin-right: 0;
             margin-left: auto;
             flex-direction: row-reverse;
         }
 
-        .editor-cp__right {
+        .writing-footer__right {
             margin-right: 20px;
             margin-left: 0;
         }
 
-        .editor-cp-tab--active .editor-cp-tab__label:after {
-            left: 0;
-            right: 0;
-        }
-
         .editor-cp-tab__label {
             padding: 0;
-        }
-
-        .editor-cp__left .v-button:first-of-type {
-            margin-right: 0;
-        }
-
-        .editor-cp__left .v-button:last-of-type {
-            margin-right: 12px;
-        }
-
-        .editor-cp__autosave {
-            margin-left: 0;
-            margin-right: 14px;
         }
     }
 }
