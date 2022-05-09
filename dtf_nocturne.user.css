@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.43
+@version        1.5.44
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1673,6 +1673,10 @@ a.comment__avatar:hover + a.comment__author,
     color: var(--text-color-green) !important;
 }
 
+.typograph-success::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%2356D469' d='M7 0a7 7 0 100 14A7 7 0 007 0zM5.92 10.23L2.69 7.01l1.24-1.24 1.98 1.99 4.21-4.21 1.24 1.24-5.44 5.44z'/%3E%3C/svg%3E")
+}
+
 .content-header-label {
     color: var(--color-yellow) !important;
 }
@@ -3204,6 +3208,16 @@ a.comment__avatar:hover + a.comment__author,
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
 }
+
+@media (min-width: 1025px) {
+    .writing-footer__right {
+        padding-bottom: var(--offset-bottom);
+    }
+
+    .editor-cp-tabs {
+        display: flex !important;
+    }
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
@@ -3657,10 +3671,6 @@ if editorHeaderTop {
         .editor-cp-tab--active .editor-cp-tab__label:after {
             bottom: 0;
             top: auto;
-        }
-
-        .editor-cp-tabs {
-            display: flex !important;
         }
     }
 }
