@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.45
+@version        1.5.46
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -235,7 +235,7 @@ body {
 }
 
 .comments_pseudo_form,
-.comments_form,
+.comment-form,
 .andropov_link,
 .authorCard,
 .content-image--with_background,
@@ -323,7 +323,7 @@ body {
 .content--embed,
 .block-code,
 .comments_pseudo_form--banned-panel .restriction--comments,
-.comments_form--banned-panel .restriction--comments,
+.comment-form--banned-panel .restriction--comments,
 .v-field__wrapper,
 .wrapper,
 .notifications__loader,
@@ -1789,7 +1789,7 @@ a.comment__avatar:hover + a.comment__author,
 .notifications__header,
 .mobile-bar__profile--is-active .navigation-user-profile__avatar-image,
 .comments_pseudo_form--banned-panel .restriction--comments,
-.comments_form--banned-panel .restriction--comments,
+.comment-form--banned-panel .restriction--comments,
 .v-popup-header,
 .get-api-token__text--token,
 .uploader__inner,
@@ -2906,7 +2906,7 @@ a.comment__avatar:hover + a.comment__author,
 
 .authorCard,
 .comments_pseudo_form,
-.comments_form {
+.comment-form {
     border-radius: 8px;
 }
 
@@ -3089,13 +3089,13 @@ a.comment__avatar:hover + a.comment__author,
     color: rgba(18, 18, 18, 0.6);
 }
 
-.comments_form--focused {
+.comment-form--focused {
     border-color: var(--back-color-blue-button) !important;
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
 }
 
-.comments_form:hover {
+.comment-form:hover {
     border-color: var(--text-color-blue);
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
