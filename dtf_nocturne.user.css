@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.47
+@version        1.5.48
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -18,7 +18,7 @@
 @var            checkbox  showHideBlockButton 'Показать кнопку скрытия блока в редакторе' 0
 @var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
 @var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
-@var            checkbox  hideDonate 'Кнопку кнопку "Поддержать"' 0
+@var            checkbox  hideDonate 'Скрыть кнопку "Поддержать"' 0
 @var            checkbox  hideRecommendations 'Скрыть рекомендации' 0
 ==/UserStyle== */
 
@@ -3939,7 +3939,8 @@ if hideRecommendations {
 .navigation-create .v-button,
 .v-button--plus,
 .v-plus-badge,
-.block-special-button a {
+.block-special-button a,
+.comments_updates__counter {
     color: var(--color-00ev) !important;
 }
 
