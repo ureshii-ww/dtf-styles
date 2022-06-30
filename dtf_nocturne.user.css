@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.50
+@version        1.5.51
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -216,7 +216,8 @@ body {
 .v-etc__dropdown,
 .v-etc__item:first-child::before,
 .league-block-card,
-.v-radio:hover .v-radio__control     {
+.v-radio:hover .v-radio__control,
+.account-menu-root {
     background-color: var(--color-08ev) !important;
 }
 
@@ -865,7 +866,8 @@ announcement-stats,
 .popover-item__icon,
 .v-split-button__dropdown,
 .v-island .icon--v_block_set,
-.v-checkbox__caption {
+.v-checkbox__caption,
+.account-menu__item {
     color: var(--text-color-gray) !important;
 }
 
@@ -1090,7 +1092,8 @@ attachButton:hover,
 .writing-select__current,
 .filters-popup__title,
 #v_cross,
-.search-filter__title {
+.search-filter__title,
+.account-menu__user-card {
     color: var(--text-color-title) !important;
 }
 
@@ -1642,7 +1645,8 @@ a.comment__avatar:hover + a.comment__author,
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
 .bookmark:hover .bookmark__title,
 .bookmark--active .bookmark__title,
-.v-field__error {
+.v-field__error,
+[data-gtm="Account — Exit — Click"] {
     color: var(--text-color-red) !important;
 }
 
@@ -1852,6 +1856,10 @@ a.comment__avatar:hover + a.comment__author,
 .v-tab--active,
 .comments_updates__counter {
     font-weight: 500;
+}
+
+.user-card__text {
+    font-weight: 500 !important;
 }
 
 .v-split-button,
@@ -3752,10 +3760,14 @@ if verticalImageViewInFeed {
 }
 
 if oldAvatars {
-    .comment__avatar,
+    .comment__avatar__image,
     .subsite-card__avatar,
     .site-header-container .navigation-user-profile__avatar-image {
         border-radius: 7px;
+    }
+
+    .user-card__avatar {
+        border-radius: 7px !important;
     }
 }
 
