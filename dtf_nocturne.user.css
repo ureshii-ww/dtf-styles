@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.5.52
+@version        1.6.0
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -10,6 +10,7 @@
 @var            checkbox  alternativeThreads 'Альтернативный вид веток комментариев' 0
 @var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
 @var            checkbox  oldAvatars 'Квадратные аватарки' 0
+@var            checkbox  alternativeAccountMenu 'Альтернативный вид меню профиля' 0
 @var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
 @var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
 @var            checkbox  imgBrightness 'Затемнять изображения' 0
@@ -1654,8 +1655,7 @@ a.comment__avatar:hover + a.comment__author,
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
 .bookmark:hover .bookmark__title,
 .bookmark--active .bookmark__title,
-.v-field__error,
-[data-gtm="Account — Exit — Click"] {
+.v-field__error {
     color: var(--text-color-red) !important;
 }
 
@@ -3826,6 +3826,43 @@ if hideRecommendations {
         .recommendation-feed {
             display: none;
         }
+}
+
+if alternativeAccountMenu {
+    .account-menu__title {
+        margin-bottom: 2px !important;
+    }
+
+    @media (min-width: 720px) {
+        .account-menu__items-group {
+            margin-top: 2px !important;
+        }
+    }
+
+    .account-menu__subsite-wrapper,
+    .account-menu__button-wrapper,
+    .account-menu__item-wrapper {
+        padding: 0px 0px !important;
+    }
+
+    .account-menu__subsite-wrapper:not(:last-child),
+    .account-menu__button-wrapper:not(:last-child),
+    .account-menu__item-wrapper:not(:last-child) {
+        margin-bottom: 2px !important;
+    }
+
+    [data-gtm="Account — Exit — Click"] {
+        color: var(--text-color-red) !important;
+    }
+
+    .navigation-user__account-menu {
+        width: auto !important;
+        max-width: 300px;
+    }
+
+    .account-menu__item {
+        min-width: 230px;
+    }
 }
 }
 
