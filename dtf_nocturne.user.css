@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.6.1
+@version        1.6.2
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -11,6 +11,7 @@
 @var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
 @var            checkbox  oldAvatars 'Квадратные аватарки' 0
 @var            checkbox  alternativeAccountMenu 'Альтернативный вид меню профиля' 0
+@var            checkbox  alternativeQuoteBlock 'Альтернативный вид блока цитаты' 0
 @var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
 @var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
 @var            checkbox  imgBrightness 'Затемнять изображения' 0
@@ -1556,7 +1557,8 @@ a.comment__avatar:hover + a.comment__author,
 .search--active .search__button,
 .writing-select__current:hover,
 .gallery-image .upload-button,
-.gallery__items .upload-button {
+.gallery__items .upload-button,
+.block-quote__content .icon {
     color: var(--text-color-blue) !important;
 }
 
@@ -3876,6 +3878,20 @@ if alternativeAccountMenu {
         font-weight: 400 !important;
     }
 }
+
+if alternativeQuoteBlock {
+    .block-quote__content {
+        background-color: var(--hover-01ev);
+        border-radius: 8px;
+        padding: 12px 12px;
+        grid-template-columns: 36px auto;
+    }
+
+    .block-quote__content .icon {
+        width: 36px;
+        height: 36px;
+    }
+}
 }
 
 @-moz-document domain("vc.ru") {
@@ -3900,7 +3916,8 @@ if alternativeAccountMenu {
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+.block-quote__content .icon {
     color: var(--site-color) !important;
 }
 
@@ -4025,7 +4042,8 @@ if alternativeAccountMenu {
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+.block-quote__content .icon {
     color: var(--site-color) !important;
 }
 
