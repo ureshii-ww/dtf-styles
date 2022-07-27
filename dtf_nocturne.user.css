@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.7.0
+@version        1.7.1
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1313,7 +1313,18 @@ attachButton:hover,
 .comment--is-removed-creator .comment__author:hover,
 .comment--is-removed-creator .comment__text,
 .bookmark__title,
-.updown__icons {
+.updown__icons,
+.writing-footer__autosave,
+.quote-tool [contenteditable]:empty::before,
+.quote-tool [contenteditable] p:first-of-type:empty::before,
+.writing .ce-paragraph::before,
+.writing .ce-header::before,
+.gallery-image__inputs .input--title:empty:before,
+.writing .cdx-input::before,
+.incut-tool [contenteditable]:empty::before, 
+.incut-tool [contenteditable] p:first-of-type:empty::before,
+.audio-tool-title::-webkit-input-placeholder,
+.quiz-tool-input:empty:before {
     color: var(--text-color-minor) !important;
 }
 
@@ -1557,7 +1568,8 @@ a.comment__avatar:hover + a.comment__author,
 .writing-select__current:hover,
 .gallery-image .upload-button,
 .gallery__items .upload-button,
-.block-quote__content .icon {
+.block-quote__content .icon,
+.editor-content .quote-tool__layout-icon {
     color: var(--text-color-blue) !important;
 }
 
