@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.6.3
+@version        1.7.1
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -12,7 +12,6 @@
 @var            checkbox  oldAvatars 'Квадратные аватарки' 0
 @var            checkbox  alternativeAccountMenu 'Альтернативный вид меню профиля' 0
 @var            checkbox  alternativeQuoteBlock 'Альтернативный вид блока цитаты' 0
-@var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
 @var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
 @var            checkbox  imgBrightness 'Затемнять изображения' 0
 @var            checkbox  editorHeaderTop 'Переместить кнопки в редакторе наверх' 0
@@ -1314,7 +1313,18 @@ attachButton:hover,
 .comment--is-removed-creator .comment__author:hover,
 .comment--is-removed-creator .comment__text,
 .bookmark__title,
-.updown__icons {
+.updown__icons,
+.writing-footer__autosave,
+.quote-tool [contenteditable]:empty::before,
+.quote-tool [contenteditable] p:first-of-type:empty::before,
+.writing .ce-paragraph::before,
+.writing .ce-header::before,
+.gallery-image__inputs .input--title:empty:before,
+.writing .cdx-input::before,
+.incut-tool [contenteditable]:empty::before, 
+.incut-tool [contenteditable] p:first-of-type:empty::before,
+.audio-tool-title::-webkit-input-placeholder,
+.quiz-tool-input:empty:before {
     color: var(--text-color-minor) !important;
 }
 
@@ -1558,7 +1568,8 @@ a.comment__avatar:hover + a.comment__author,
 .writing-select__current:hover,
 .gallery-image .upload-button,
 .gallery__items .upload-button,
-.block-quote__content .icon {
+.block-quote__content .icon,
+.editor-content .quote-tool__layout-icon {
     color: var(--text-color-blue) !important;
 }
 
@@ -3766,12 +3777,6 @@ if alternativeHiddenBlock {
     }
 }
 
-if verticalImageViewInFeed {
-    .feed__item .content-image--vertical:not(.content-image--with_background) .andropov_image {
-        margin: 0 auto 0 auto;
-    }
-}
-
 if oldAvatars {
     .comment__avatar__image,
     .subsite-card__avatar,
@@ -3883,9 +3888,10 @@ if alternativeQuoteBlock {
     .block-quote__content {
         background-color: var(--hover-01ev);
         border-radius: 8px;
-        padding: 12px 12px;
+        padding: 24px 12px;
         grid-template-columns: 36px auto;
         max-width: 600px;
+        row-gap: 16px;
     }
 
     .block-quote__content .icon {
