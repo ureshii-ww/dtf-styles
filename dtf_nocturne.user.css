@@ -3888,9 +3888,10 @@ if alternativeQuoteBlock {
     .block-quote__content {
         background-color: var(--hover-01ev);
         border-radius: 8px;
-        padding: 12px 12px;
+        padding: 24px 12px;
         grid-template-columns: 36px auto;
         max-width: 600px;
+        row-gap: 16px;
     }
 
     .block-quote__content .icon {
