@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.7.1
+@version        1.7.2
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -877,7 +877,8 @@ announcement-stats,
 .v-split-button__dropdown,
 .v-island .icon--v_block_set,
 .v-checkbox__caption,
-.account-menu__item {
+.account-menu__item,
+.v-header__tabs .v-tab {
     color: var(--text-color-gray) !important;
 }
 
@@ -1103,7 +1104,9 @@ attachButton:hover,
 .filters-popup__title,
 #v_cross,
 .search-filter__title,
-.account-menu__user-card {
+.account-menu__user-card,
+.v-header__tabs .v-tab--active,
+.account-menu__title {
     color: var(--text-color-title) !important;
 }
 
@@ -1569,7 +1572,8 @@ a.comment__avatar:hover + a.comment__author,
 .gallery-image .upload-button,
 .gallery__items .upload-button,
 .block-quote__content .icon,
-.editor-content .quote-tool__layout-icon {
+.editor-content .quote-tool__layout-icon,
+.v-subscribe-button--inline .v-button {
     color: var(--text-color-blue) !important;
 }
 
@@ -2107,7 +2111,11 @@ a.comment__avatar:hover + a.comment__author,
 
 
 
-.v-split-button {
+.v-split-button,
+.v-button--blue .v-button__label,
+.v-button--blue .v-button__icon,
+.navigation-create .v-button .v-button__label,
+.navigation-create .v-button .v-button__icon  {
     color: #FFF;
 }
 
@@ -2206,11 +2214,6 @@ a.comment__avatar:hover + a.comment__author,
 
 .bookmarks .ui-rounded-button__link:hover,
 .sorting-filters .ui-rounded-button__link:hover {
-    color: var(--text-color-blue) !important;
-}
-
-.v-subscribe-button--inline .v-button:hover {
-    opacity: 1 !important;
     color: var(--text-color-blue) !important;
 }
 
