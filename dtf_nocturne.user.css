@@ -1,23 +1,27 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.3.12
+@version        1.6.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
 @preprocessor stylus
-@var            checkbox  likesBack "Убрать фон у лайков" 1
-@var            checkbox  scrollbar  "Перекрасить скроллбар" 1
-@var            checkbox  alternativePost "Уменьшить сообщение о репосте" 0
-@var            checkbox  imgBrightness "Затемнять изображения" 0
-@var            checkbox  editorHeaderTop "Переместить кнопки в редакторе наверх" 0
-@var            checkbox  reversedEditorButtons "Отразить кнопки в редакторе" 0
-@var            checkbox  alternativeHiddenBlock "Альтернативный вид скрытого блока (с разымытием)" 0
-@var            checkbox  showHideBlockButton "Показать кнопку скрытия блока в редакторе" 0
-@var            checkbox  hideMiniEditorInFeed "Скрыть поле создания поста в ленте" 0
-@var            checkbox  verticalImageViewInFeed "Центрировать вертикальные картинки в ленте" 0
-@var            checkbox  oldCommentsAvatars "Квадратные аватарки у комментариев" 0
-@var            checkbox  alternativeThreads "Альтернативный вид веток комментариев" 0
+@var            checkbox  alternativeSidebars 'Альтернативный вид боковых панелей' 0
+@var            checkbox  alternativeThreads 'Альтернативный вид веток комментариев' 0
+@var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
+@var            checkbox  oldAvatars 'Квадратные аватарки' 0
+@var            checkbox  alternativeAccountMenu 'Альтернативный вид меню профиля' 0
+@var            checkbox  alternativeQuoteBlock 'Альтернативный вид блока цитаты' 0
+@var            checkbox  verticalImageViewInFeed 'Центрировать вертикальные картинки в ленте' 0
+@var            checkbox  alternativePost 'Уменьшить сообщение о репосте' 0
+@var            checkbox  imgBrightness 'Затемнять изображения' 0
+@var            checkbox  editorHeaderTop 'Переместить кнопки в редакторе наверх' 0
+@var            checkbox  reversedEditorButtons 'Отразить кнопки в редакторе' 0
+@var            checkbox  showHideBlockButton 'Показать кнопку скрытия блока в редакторе' 0
+@var            checkbox  hideAllFeedSidebar 'Скрыть кнопки "Популярное" и "Свежее"' 0
+@var            checkbox  hideTrashSidebar 'Скрыть кнопки "Кабинет", "Вакансии" и т.п.' 0
+@var            checkbox  hideDonate 'Скрыть кнопку "Поддержать"' 0
+@var            checkbox  hideRecommendations 'Скрыть рекомендации' 0
 ==/UserStyle== */
 
 @-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
@@ -60,33 +64,66 @@
     --hover-16ev: #3d3d3d;
     --hover-24ev: #404040;
 
-    --s42-spfb-logo-url: url("https://serguun42.ru/tampermonkey/stonks-tagger/stonks_logo_dark.svg");
+    color-scheme: dark;
+
     --switcher-layout-background: var(--color-16ev);
     --switcher-layout-text: var(--text-color-title);
     --primary-color: var(--text-color-blue);
     --switchers-color: var(--text-color-blue);
     --switchers-background-color: var(--hover-16ev);
+    --verified-svg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' id='ui_verified'%3E%3Cpath fill='%23AAB6FE' fill-rule='evenodd' d='M0 7a7 7 0 1114 0A7 7 0 010 7zm2.695.009l3.22 3.221 5.445-5.444-1.237-1.238-4.208 4.208-1.983-1.984-1.237 1.237z' clip-rule='evenodd'%3E%3C/path%3E%3Cpath fill='%23fff' fill-opacity='.2' fill-rule='evenodd' d='M0 7a7 7 0 1114 0A7 7 0 010 7zm2.695.009l3.22 3.221 5.445-5.444-1.237-1.238-4.208 4.208-1.983-1.984-1.237 1.237z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* Ник Пользователя */
 .layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div[class]:not([class=""]) > a:nth-child(1) > div:nth-child(2) {
     color: var(--text-color-title);
 }
+/* Ник Пользователя hover */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div[class]:not([class=""]) > a:nth-child(1):hover > div:nth-child(2) {
+    color: var(--text-color-blue);
+}
 /* Время */
 .layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(2) {
     color: var(--text-color-minor);
+}
+/* Время  hover*/
+.layout__right-column > div > div > div:nth-of-type(2) > div > div:nth-child(2) > div > div[class]:not([class=""]) > a:nth-child(2):hover {
+    color: var(--text-color-blue);
 }
 /* Текст комментария */
 .layout__right-column > div > div > div:nth-of-type(2) > div > div > div > a {
     color: var(--text-color-gray);
 }
 /* Заголовок поста */
-.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div > a[title] {
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div {
     color: var(--text-color-title);
+}
+/* Заголовок поста hover */
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div:hover,
+.layout__right-column > div > div > div:nth-of-type(2) > div > div > div > div > a:hover {
+    color: var(--text-color-blue);
 }
 /* Надпись Комментарии */
 .layout__right-column > div > div > div > div > div > span {
     color: var(--text-color-title);
+}
+
+.page--index > div[class^="_"] > .l-island-a div {
+    color: var(--text-color-title);
+}
+
+.page--index .slick-slider .slick-slide > div > div > a,
+.page--index > div[class^="_"] > div:nth-child(2) > div:nth-child(2) > div {
+    background-color: var(--color-01ev);
+    color: var(--text-color-gray);
+}
+
+.page--index > div[class^="_"] > div:nth-child(2) > div:nth-child(2) > div > svg > path {
+    fill: var(--text-color-title);
+}
+
+.page--index .slick-slider .slick-slide > div > div > a > div > svg > path {
+    fill: var(--text-color-blue);
 }
 
 body {
@@ -98,16 +135,16 @@ body {
 }
 
 /*  ELEVATION SETTINGS */
-#notify .notify__item,
+.notify .notify-item,
 .live-stream,
 .head-notifies__panel,
 .messenger-panel__down {
     background-color: var(--color-24ev) !important;
 }
 
-.site-header-user .bubble,
-.site-header-user .bubble:before,
-.site-header-user .item,
+.site-header__item .bubble,
+.site-header__item .bubble:before,
+.site-header__item .item,
 .head-notifies__panel,
 .messenger-panel__down,
 .v-split-button__dropdown,
@@ -120,12 +157,12 @@ body {
     background-color: var(--color-16ev) !important;
 }
 
-.site-header,
 .u-notification--unread,
 .floating-popup__button .ui-button,
 .andropov_uploader__preview_item__remove,
 .ce-toolbox-search,
-.cdx-inline-toolbar__input {
+.cdx-inline-toolbar__input,
+.mobile-bar {
     background-color: var(--color-12ev) !important;
 }
 
@@ -169,7 +206,6 @@ body {
 .repost_button__list .bubble .item,
 .v-shares-popover,
 .site-names__list, .site-names__list.active,
-.s42-stonks-popup,
 .tjnames__list, .site-names__list,
 .tab__content .item,
 .__vcbf__popup,
@@ -179,9 +215,11 @@ body {
 .v-range__bar,
 .v-range__point::after,
 .v-checkbox:hover .v-checkbox__control,
-.gallery-image__media-settings--small,
 .v-etc__dropdown,
-.v-etc__item:first-child::before {
+.v-etc__item:first-child::before,
+.league-block-card,
+.v-radio:hover .v-radio__control,
+.account-menu-root {
     background-color: var(--color-08ev) !important;
 }
 
@@ -200,7 +238,7 @@ body {
 }
 
 .comments_pseudo_form,
-.comments_form,
+.comment-form,
 .andropov_link,
 .authorCard,
 .content-image--with_background,
@@ -268,7 +306,7 @@ body {
 .form2__field--text .text__input,
 .form2__field--advanced_list .text__input,
 .inline-dropdown,
-.head-notifies__items-wrapper,
+.u-notification,
 .messenger-panel__down-list,
 .audio_player__control__panel,
 .etc-controls__dropdown,
@@ -282,10 +320,18 @@ body {
 .editor-history-item,
 .editor-cp-tab__content,
 .block-hidden,
-.v-field__wrapper,
 .v-calendar,
 .v-calendar__notice,
-.social-links__item {
+.social-links__item,
+.content--embed,
+.block-code,
+.comments_pseudo_form--banned-panel .restriction--comments,
+.comment-form--banned-panel .restriction--comments,
+.v-field__wrapper,
+.wrapper,
+.notifications__loader,
+.gallery-image__media-settings--small,
+.amount-select__button {
     background-color: var(--color-04ev) !important;
 }
 
@@ -310,7 +356,8 @@ body {
 .chat-messages--compact .chat-messages__unread-label span,
 .wtf_bc--skin--bg-gray,
 .mini-editor__button,
-.mobile-navbar {
+.mobile-navbar,
+.filters-popup__header {
     background-color: var(--color-03ev) !important;
 }
 
@@ -351,7 +398,7 @@ body {
 .header__content::before,
 .editor-cp,
 .editor-cp__content::before,
-.editor__actions {
+.writing__actions {
     background-color: var(--color-02ev) !important;
 }
 
@@ -400,7 +447,7 @@ body {
 .booster-promo__button,
 .wtf_bubble-body,
 .vacancy_footer,
-.editor__authors,
+.writing__authors,
 .l-editor textarea,
 .v-popup-fp-window,
 .v-mobile-menu__header,
@@ -412,7 +459,14 @@ body {
 .mobile-tab__icon,
 .commercial-tabs,
 .comment__expand,
-.auth__controls-container {
+.auth__controls-container,
+.search-filters-footer,
+.v-popup-header,
+.l-island-bg .u-notification,
+.feed-navigation,
+.filters-popup__content,
+.writing__footer,
+.writing-footer {
     background-color: var(--color-01ev) !important;
 }
 
@@ -422,40 +476,28 @@ body {
 .l-page--loading,
 .layout,
 .v-checkbox__control,
-.sidebar__footer {
+.sidebar__footer,
+.v-radio__control {
     background-color: var(--color-00ev) !important;
 }
 
 .sidebar,
-.live,
 .sidebar-tree-list__show-more-button,
 .layout__left-column,
-.live__caption,
-.live__content  {
-    background-color: transparent !important;
-}
-
-
-@media (max-width: 859px) {
-    .sidebar,
-    .live,
-    .sidebar-tree-list__show-more-button,
-    .layout__left-column,
-    .live__caption,
-    .live__content {
-        background-color: var(--color-00ev) !important;
-    }
+.layout__right-column  {
+    background-color: var(--color-00ev) !important;
 }
 
 /* Hovers */
-.site-header-user .item:hover,
-.site-header-user .item--selected,
+.site-header__item .item:hover,
+.site-header__item .item--selected,
 .v-split-button-option:hover,
 .search-dropdown-item--focused,
 .search-dropdown-item--submit:hover,
 .input-suggestion__item--selected[data-v-608bac96],
 .input-suggestion__item[data-v-608bac96]:hover,
-.notify-new-items-label {
+.notify-new-items-label,
+.anonymous-dummy__socials .v-button {
     background-color: var(--hover-16ev) !important;
 }
 
@@ -489,10 +531,10 @@ body {
 .popover-item:hover, .popover-item--focused,
 .v-calendar__arrow:hover,
 .v-range__handle::after,
-.gallery-image__media-settings--small .media-tool-settings > .media-tool-settings__item:hover,
 .v-etc__item:hover,
 .v-etc__item:first-child:hover::before,
-.comment__self--author .comment-user__name {
+.comment__self--author .comment-user__name,
+.comment__author--highlighted {
     background-color: var(--hover-08ev) !important;
 }
 
@@ -502,6 +544,15 @@ body {
 
 .wtf_broadcast .wtf_bc-feed .wtf_bc--feed-item .wtf_bc--feed-item--share .wtf_bc--feed-item--share--list span:not(:first-child) {
     border-top-color: var(--hover-08ev) !important;
+}
+
+@media (min-width: 720px) {
+    .account-menu__user-card:hover,
+    .account-menu__item:hover,
+    .account-menu__subsite:hover,
+    .account-menu__button:hover {
+        background-color: var(--hover-08ev) !important;
+    }
 }
 
 .page--editor .bubble .item--selected,
@@ -552,9 +603,26 @@ body {
 .v-calendar__cell--hovered,
 .v-calendar__cell--selected .v-calendar__day,
 .social-links__item:hover,
-.ce-toolbox__item--selected, 
+.ce-toolbox__item--selected,
 .ce-toolbox__item:not(.no-hover):hover,
-.ce-block-settings__item--active {
+.ce-block-settings__item--active,
+.content--embed .content-image--with_background,
+.content--embed .andropov_link,
+.content--embed .block-incut,
+.content--embed .block-quote--default,
+.content--embed .block-code,
+.content--embed .block-number,
+.content--embed .quiz,
+.content--embed .block-audio,
+.content--embed .audio_player__control__panel,
+.comment--new .andropov_link,
+.comment--highlighted .andropov_link,
+.comments__pinned .andropov_link,
+.comment--pinned .andropov_link,
+.content--embed .andropov_tweet,
+.content--embed .andropov_telegram,
+.l-island-bg .notify-new-items-label,
+.upload-button:hover .upload-button__inner {
     background-color: var(--hover-04ev) !important;
 }
 
@@ -607,13 +675,32 @@ body {
 .ui_modal_window__title__input,
 .ui_modal_window__textarea,
 .commercial-list__item:hover, .commercial-list__item--active,
-.dstr-unit__outer,
+.dstr-fl__outer,
 .sidebar-tree-list-item__child-item:hover,
-.comment__space--highlighted::before, 
+.comment__space--highlighted::before,
 .comment__space--new::before,
 .comment__space--pinned::before,
-.comment__space--with-donate::before {
+.comment__space--with-donate::before,
+.comment--highlighted .comment__branches::before,
+.comment--highlighted .comment__content::before,
+.comment--new .comment__branches::before,
+.comment--new .comment__content::before,
+.comment--pinned .comment__branches::before,
+.comment--pinned .comment__content::before,
+.comment--with-donate .comment__branches::before,
+.comment--with-donate .comment__content::before,
+.l-island-bg .u-notification--unread,
+.l-island-bg .u-notification:hover,
+.league-block,
+.get-api-token__text--token,
+.uploader__inner,
+.content-image {
     background-color: var(--hover-01ev) !important;
+}
+
+.comment--highlighted,
+.comment--new {
+    --background-color: var(--hover-01ev) !important;
 }
 
 .u-notification--blue.u-notification--bg,
@@ -622,12 +709,11 @@ body {
     background-color: var(--hover-00ev) !important;
 }
 
-.site-header,
 .search--active .search__input,
 .search--filled .search__input,
 .search-dropdown,
 .search-dropdown-item--string,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .bubble,
 .bubble:before,
 .item,
@@ -645,6 +731,8 @@ body {
 .ui-rounded-button__link,
 .widget_entry__description,
 .widget_wrapper--type-blue .widget_wrapper__title,
+.widget_wrapper--type-yellow .widget_wrapper__title,
+.widget_wrapper--type-pink .widget_wrapper__title,
 .widget_subsite__rank,
 .blogs_entries__desc,
 .widget_comment__content__text,
@@ -749,8 +837,6 @@ announcement-stats,
 .ng-binding,
 .wtf_bubble-body textarea,
 .ui_modal_window__textarea,
-.s42-stonks-popup,
-.s42-stonks-popup__text-regular,
 .adult__message,
 .mdl-radio__sub-label,
 .msngrConfirmMessage,
@@ -776,13 +862,28 @@ announcement-stats,
 .user-settings__navigation .v-list-tab__icon,
 .v-text-area__input,
 .ce-popover__close svg path,
-.cdx-inline-toolbar__button-wrapper {
+.cdx-inline-toolbar__button-wrapper,
+.mobile-bar__feed,
+.mobile-bar__messenger,
+.mobile-bar__notifications,
+.mobile-bar__profile,
+.v-popup-header__btn,
+.v-list-subsites-item__title,
+.v-field__wrapper .v-text-input__input,
+.bp-unit-link__description,
+.v-popup-content__body,
+.gallery-image__media-settings--small .upload-button,
+.popover-item__main .popover-item__label,
+.popover-item__icon,
+.v-split-button__dropdown,
+.v-island .icon--v_block_set,
+.v-checkbox__caption,
+.account-menu__item {
     color: var(--text-color-gray) !important;
 }
 
 .item--selected,
 .u-notification__content__title a,
-.head-notifies__header-title,
 .messenger-panel__down-head,
 .channel-item__name,
 .item__badge,
@@ -793,7 +894,7 @@ announcement-stats,
 .live__item--comment .live__item__title,
 .news_widget__load_more,
 .news_widget__header,
-.v-tab__label,
+.v-tab,
 .content-header__title,
 .widget_entry__subsite__avatar__title,
 .widget_entry__title,
@@ -869,7 +970,7 @@ attachButton:hover,
 .subsite_head__description b,
 .user-option b,
 .comments__title__long,
-#notify .notify__item,
+.notify .notify-item,
 .andropov_telegram__user__name,
 .andropov_tweet__user__name,
 .floating_screen_film__title,
@@ -927,8 +1028,6 @@ attachButton:hover,
 #INVADERS-POINTS,
 .floating-popup__title,
 .andropov_preview__title,
-.widget_wrapper--type-yellow .widget_wrapper__title,
-.widget_wrapper--type-pink .widget_wrapper__title,
 .events_widget__title,
 .events_widget__item__title,
 .island--company_entries .island__header__title,
@@ -952,8 +1051,6 @@ attachButton:hover,
 .wtf_bc--header--counter.ng-binding,
 .wtf_bc--username.ng-binding,
 .system-message a:hover,
-.s42-stonks-popup__text-splited-right span:last-child,
-.s42-stonks-popup__big-text,
 .tjnames__list b,
 .adult__title,
 .__vcbf__popup-header_name,
@@ -980,23 +1077,34 @@ attachButton:hover,
 .ad-user__name,
 .subsite-ban-popup__title,
 .comment-user__name,
+.comment__author,
 .ce-popover__close:hover svg path,
 .ce-popover__title,
-.content b, 
-.content strong, 
-.editor .ce-redactor b, 
-.editor .ce-redactor strong, 
-.miniEditor .ce-redactor b, 
-.miniEditor .ce-redactor strong, 
-.subsite_head__description b, 
-.user-option b, 
-.editor h2.ce-header, 
-.miniEditor h2.ce-header, 
-.editor h3.ce-header, 
-.miniEditor h3.ce-header, 
-.editor h4.ce-header, 
-.miniEditor h4.ce-header, 
-.ce-block-settings__item--active {
+.content b,
+.content strong,
+.editor .ce-redactor b,
+.editor .ce-redactor strong,
+.miniEditor .ce-redactor b,
+.miniEditor .ce-redactor strong,
+.subsite_head__description b,
+.user-option b,
+.editor h2.ce-header,
+.miniEditor h2.ce-header,
+.editor h3.ce-header,
+.miniEditor h3.ce-header,
+.editor h4.ce-header,
+.miniEditor h4.ce-header,
+.ce-block-settings__item--active,
+.notifications__title,
+.v-popup-header,
+.bp-unit-link__title,
+.news-widget__load-more,
+.comments-header__title,
+.writing-select__current,
+.filters-popup__title,
+#v_cross,
+.search-filter__title,
+.account-menu__user-card {
     color: var(--text-color-title) !important;
 }
 
@@ -1024,7 +1132,6 @@ attachButton:hover,
 .etc_control,
 .vote .vote__value,
 .vote .vote__button,
-.search .icon,
 .bubble__container .search input::placeholder,
 .list__dummy,
 .content-header-author__repost,
@@ -1125,8 +1232,8 @@ attachButton:hover,
 #INVADERS-NAVIGATION,
 .form2__field label,
 .andropov_preview--link .andropov_preview__hostname,
-.content__updating, 
-.content-info, 
+.content__updating,
+.content-info,
 .v-shares__button,
 .entry_stub__option[data-state="2"],
 .profile_comment_favorite__expand,
@@ -1145,7 +1252,6 @@ attachButton:hover,
 .dummy__text,
 .ui_modal_window__textarea::placeholder,
 .chat-dropdown-pointer,
-.s42-stonks-popup__text-off,
 .auth-email-recover,
 .v-form-input input::placeholder,
 .l-editor textarea::placeholder,
@@ -1159,8 +1265,6 @@ attachButton:hover,
 .v-calendar__notice,
 .bc-form-range__ends,
 .bc-form-range__hint,
-.search__field .v-field:not(.v-field--focused) .v-field__wrapper:not(:hover) .v-text-input__input::placeholder,
-.v-text-input__input::placeholder,
 .editor-cp__autosave,
 .gallery-image__inputs .input--author:empty::before,
 .gallery-image__inputs .input--author,
@@ -1182,20 +1286,45 @@ attachButton:hover,
 .comment__replied_to,
 .comment__text__edited,
 .comment__ico,
-.comment__self--ignored .comment__text, 
+.comment__self--ignored .comment__text,
 .comment__self--removed .comment__text,
-.ce-toolbox-search input::placeholder, 
-.ce-toolbox-search-icon, 
+.ce-toolbox-search input::placeholder,
+.ce-toolbox-search-icon,
 .ce-toolbox__not-found,
-.cdx-inline-toolbar__input::placeholder, 
-.anchor-tool__input::placeholder {
+.cdx-inline-toolbar__input::placeholder,
+.anchor-tool__input::placeholder,
+.v-repost__button,
+.comment__icon,
+.comment__action,
+.v-popup-window__close,
+.comment--removed,
+.v-field__wrapper .v-text-input__input::placeholder,
+.v-field__wrapper .v-text-input--disabled .v-text-input__input,
+.bookmarks_return,
+.get-api-token__text--warn,
+.v-text-area__countdown,
+.twitter-tweet p,
+.andropov_telegram__text--reply-to,
+.andropov_tweet__text--reply-to,
+.comment__text--deleted,
+.comment--is-frozen-creator .comment__author,
+.comment--is-frozen-creator .comment__author:hover,
+.comment--is-frozen-creator .comment__text,
+.comment--is-removed-creator .comment__author,
+.comment--is-removed-creator .comment__author:hover,
+.comment--is-removed-creator .comment__text,
+.bookmark__title,
+.updown__icons {
     color: var(--text-color-minor) !important;
 }
 
-.site-header-logo:hover,
+.v-field__wrapper .v-text-input--disabled .v-text-input__input {
+    -webkit-text-fill-color: var(--text-color-minor) !important;
+}
+
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover,
 .t-link-inline,
 .u-notification__content__button,
@@ -1258,7 +1387,7 @@ a.content-header-author:hover .content-header-author__name,
 .vacancies_widget__item__company:hover,
 .subsites_tune__select-all,
 .t-link-inline,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .profile_comment_favorite__user__name:hover,
 .v-list__more,
 .donate-cabinet-header a,
@@ -1267,7 +1396,6 @@ a.content-header-author:hover .content-header-author__name,
 .v-list-subsites__more,
 a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .select__current:hover,
-.upload-button,
 .adviser__close,
 .adviser__show-next,
 .tab__label:hover,
@@ -1281,7 +1409,6 @@ a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .andropov_tweet__user:hover .andropov_telegram__user__name,
 .andropov_tweet__user:hover .andropov_tweet__user__name,
 .andropov_tweet__user:hover .andropov_tweet__user__nickname,
-#notify .notify__item p a,
 .advice__caption a,
 .advice__list a,
 .andropov_telegram__text a,
@@ -1290,7 +1417,6 @@ a.v-list-subsites-item__main:hover .v-list-subsites-item__label,
 .island__info a,
 .island__list__link,
 .subsite_about__text a,
-#notify .notify__item p a,
 .advice__caption a,
 .advice__list a,
 .andropov_telegram__text a,
@@ -1312,6 +1438,7 @@ a.v-list__item:hover,
 .content h4 a,
 .content ol a,
 .content p a,
+.l-island-a a b,
 .content ul a,
 .page--error .error__message a,
 .profile_comment_favorite__text a,
@@ -1372,7 +1499,7 @@ a.v-list__item:hover,
 .audio_player__control__pause:hover,
 .audio_player__control__rate:hover,
 .audio_player__control__mute:hover,
-.audio_player__control__volume:hover, 
+.audio_player__control__volume:hover,
 .v-shares__button:hover,
 .content-header__subscribe .ui-button,
 .content-header__subscribe .ui-button .icon,
@@ -1389,10 +1516,9 @@ a.v-list__item:hover,
 .wtf_broadcast .wtf_bc-copyright a:hover,
 .wtf_bc--username.ng-binding:hover,
 .restriction a,
-.s42-stonks-popup__text-marked,
 .editor-subsite-select__current:hover,
 .editor-cp-tab__label:hover,
-.dstr-unit__text:hover,
+.dstr-fl__text:hover,
 .block-hidden__button,
 .boost_panel__msg,
 .bc-form-hidden-block__label,
@@ -1403,8 +1529,52 @@ a.v-list__item:hover,
 .comment__replied_to:hover,
 .comment__expand,
 .comment__text a,
-.cdx-inline-toolbar__button-wrapper--active {
+.cdx-inline-toolbar__button-wrapper--active,
+.v-repost__button:hover .v-repost__counter,
+.v-repost--active .v-repost__button,
+.v-repost .popover-item__slot,
+.comment__action:hover,
+.comment__detail:hover,
+.comment__detail .time:hover,
+.comment__icon-action:hover,
+a.comment__author:hover,
+a.comment__avatar:hover + a.comment__author,
+.comment__inline-action,
+.editor-cp-tab--active .editor-cp-tab__label,
+.mobile-bar__feed--is-active,
+.mobile-bar__messenger--is-active,
+.mobile-bar__notifications--is-active,
+.mobile-bar__link:hover .mobile-bar__icon,
+.v-popup-window__close:hover,
+.league-block-card a,
+.v-tab:hover,
+.league-block a,
+.editor .ce-redactor a:not(.t-link-inline):not(.andropov_link),
+.comment__detail.comment__detail--author,
+.comments-header__action--active,
+.uploader__upload-icon,
+.search__button:hover,
+.search--active .search__button,
+.writing-select__current:hover,
+.gallery-image .upload-button,
+.gallery__items .upload-button,
+.block-quote__content .icon {
     color: var(--text-color-blue) !important;
+}
+
+.league-block-card a,
+.league-block a {
+    border-bottom-color: var(--text-color-blue);
+}
+
+.gallery-item--preview::after,
+.gallery-image--preview::after {
+    border: 2px solid var(--back-color-blue-button);
+    border-top-color: transparent;
+}
+
+.vote__button:hover {
+    --color-background: transparent !important;
 }
 
 .t-link-inline:hover,
@@ -1413,12 +1583,9 @@ a.v-list__item:hover,
 .vote--voted-negative .vote__button--minus,
 .vote__button--minus:hover,
 .vote .vote__users__item--minus,
-.favorite_marker--active .favorite_marker__count,
 .subsites_tune__select-all:hover,
 .t-link-inline:hover,
 .auth-form__help:hover,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .favorite_marker__count,
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .favorite_marker__title,
 .v-list__more:hover,
 .donate-cabinet-header a:hover,
 .v-dummy__text a:hover,
@@ -1428,7 +1595,6 @@ a.v-list__item:hover,
 .adviser__close:hover,
 .adviser__show-next:hover,
 .authorCard__karma--negative,
-#notify .notify__item p a:hover,
 .advice__caption a:hover,
 .advice__list a:hover,
 .andropov_telegram__text a:hover,
@@ -1447,6 +1613,7 @@ a.v-list__item:hover,
 .content h4 a:hover,
 .content ol a:hover,
 .content p a:hover,
+.l-island-a a b:hover,
 .content ul a:hover,
 .page--error .error__message a:hover,
 .profile_comment_favorite__text a:hover,
@@ -1475,8 +1642,6 @@ a.v-list__item:hover,
 .v-form__legal a:hover,
 .t-link-site:hover,
 .kojur-nav__item a:hover,
-.s42-stonks-popup__text-red,
-.s42-stonks-popup__text-marked:hover,
 .remove-tool--confirm,
 .auth-email-recover:hover,
 .__vcbf__popup-header_karma--negative,
@@ -1484,8 +1649,25 @@ a.v-list__item:hover,
 .bc-form-hidden-block__label:hover,
 .v-calendar__day--current,
 .comment__expand:hover,
-.comment__text a:hover {
+.comment__text a:hover,
+.comment__inline-action:hover,
+.league-block-card a:hover,
+.league-block a:hover,
+.favorite_marker--active .bookmarks_return,
+.favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
+.bookmark:hover .bookmark__title,
+.bookmark--active .bookmark__title,
+.v-field__error {
     color: var(--text-color-red) !important;
+}
+
+.league-block-card a:hover,
+.league-block a:hover {
+    border-bottom-color: var(--text-color-red);
+}
+
+.v-field--invalid > .v-field__wrapper {
+    border-color: var(--text-color-red);
 }
 
 .vote--sum-positive .vote__value,
@@ -1494,7 +1676,6 @@ a.v-list__item:hover,
 .vote .vote__users__item--plus,
 .v-number-change--positive,
 .v-subscribe-button .icon--ui_check,
-#notify .notify__item--success,
 .authorCard__karma--positive,
 .widget_comment__likes,
 .chat-header-info .online,
@@ -1502,31 +1683,35 @@ a.v-list__item:hover,
 .subsite__trend .icon--ui_arrow_up,
 .ui-button--success .icon,
 .v-message__title .icon--ui_check,
-.s42-stonks-popup__text-green,
 .__vcbf__popup-header_karma--positive,
 .spotify-sidebar-button {
     color: var(--text-color-green) !important;
+}
+
+.typograph-success::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%2356D469' d='M7 0a7 7 0 100 14A7 7 0 007 0zM5.92 10.23L2.69 7.01l1.24-1.24 1.98 1.99 4.21-4.21 1.24 1.24-5.44 5.44z'/%3E%3C/svg%3E")
 }
 
 .content-header-label {
     color: var(--color-yellow) !important;
 }
 
-.site-header,
-.v-split-button,
-.s42-stonks-popup__footer__button {
+.v-split-button {
     box-shadow: none;
+}
+
+.mobile-bar__profile--is-active .navigation-user-profile__avatar-image {
+    box-shadow: inset 0 0 0 2px var(--text-color-blue) !important;
 }
 
 .bubble,
 .bubble:before,
 .head-notifies__panel,
 .messenger-panel__down,
-.head-notifies__footer,
 .messenger-panel__down-footer,
 .u-notification--border,
-.head-notifies__header,
-.head-notifies__footer,
+.notifications__header,
+.notifications__footer,
 .messenger-panel__down-footer,
 .messenger-panel__down-head,
 .email_subscribe_vue__form,
@@ -1614,7 +1799,16 @@ a.v-list__item:hover,
 .wtf_bc--og.wtf_bc--skin--bg-gray,
 .ui_modal_window__title__input,
 .tjnames__list, .site-names__list,
-.ce-popover {
+.ce-popover,
+.editor-history-item,
+.notifications__header,
+.mobile-bar__profile--is-active .navigation-user-profile__avatar-image,
+.comments_pseudo_form--banned-panel .restriction--comments,
+.comment-form--banned-panel .restriction--comments,
+.v-popup-header,
+.get-api-token__text--token,
+.uploader__inner,
+.filters-popup__header {
     border: none !important;
 }
 
@@ -1622,7 +1816,7 @@ a.v-list__item:hover,
 .messenger-panel__down,
 .v-split-button__dropdown,
 .search-dropdown,
-.site-header-user .bubble,
+.site-header__item .bubble,
 .etc_control__list,
 .vote .vote__users,
 .bubble,
@@ -1635,40 +1829,54 @@ a.v-list__item:hover,
 .shares--mobile .shares__open,
 .shares--open .shares__close,
 .etc-controls__dropdown,
-#notify .notify__item,
+.notify .notify-item,
 .inline-dropdown,
 .m-floating,
 .v-shares-popover,
 .site-names__list, .site-names__list.active,
 .floating_player,
 .floating_screen_film--fixed,
-.s42-stonks-popup,
 .tjnames__list, .site-names__list,
 .ce-popover,
 .__vcbf__popup,
 .__vcbf__popup::before,
 .popover,
-.gallery-image__media-settings--small {
+.gallery-image__media-settings--small,
+.league-block-card {
     box-shadow: rgba(8, 8, 8, 0.25) 0px 6px 12px -2px, rgba(8, 8, 8, 0.3) 0px 3px 7px -3px !important;
 }
 
-.dstr-unit__text-link:hover,
-.dstr-unit__close:hover,
+.dstr-fl__text-link:hover,
+.dstr-fl__close:hover,
 .block-hidden__button:hover {
     opacity: 1;
+}
+
+.ripples {
+    background-color: var(--text-color-blue);
 }
 
 .spotify-sidebar-button:hover {
     background-color: transparent;
 }
 
+.v-tab {
+    font-weight: 400;
+}
+
+.v-tab--active,
+.comments_updates__counter {
+    font-weight: 500;
+}
+
+.user-card__text {
+    font-weight: 500 !important;
+}
+
 .v-split-button,
-.site-header-progressbar__runner,
 .sidebar__button .v-button,
 .sidebar-tree-list-item__child-item--with-badge::after,
 .wtf_bc--need-more-items--button,
-.s42-stonks-popup__footer__button,
-#s42-feed-link-new-entries-badge,
 .sidebar-tree-list-item__badge,
 .editor-cp__left .v-button--blue,
 .v-calendar__button--primary,
@@ -1678,12 +1886,11 @@ a.v-list__item:hover,
 .v-checkbox--checked .v-checkbox__control,
 .v-checkbox--checked:hover .v-checkbox__control,
 .v-select-tag,
-.ui-rounded-button__indicator {
+.ui-rounded-button__indicator,
+.v-radio--checked .v-radio__control,
+.v-radio--checked:hover .v-radio__control,
+.navigation-create .v-button {
     background-color: var(--back-color-blue-button) !important;
-}
-
-.s42-stonks-popup__footer__button:hover {
-    background-color: var(--blue-button-hover) !important;
 }
 
 .chat-dropdown-pointer {
@@ -1710,33 +1917,116 @@ a.v-list__item:hover,
     fill: var(--text-color-title) !important;
 }
 
+#ui_info path {
+    fill: var(--color-01ev)
+}
+
+#v_cancel path:nth-child(4) {
+    fill: var(--text-color-red);
+    stroke: var(--text-color-red);
+}
+
+#v_success path:nth-child(4) {
+    fill: var(--text-color-green);
+    stroke: var(--text-color-green);
+}
+
+#v_success path:nth-last-child(3),
+#v_success path:nth-last-child(2),
+#v_cancel path:nth-last-child(3),
+#v_cancel path:nth-last-child(2) {
+    stroke-opacity: 0;
+}
+
 .v-checkbox:hover .v-checkbox__control,
 .v-checkbox--checked .v-checkbox__control,
-.v-checkbox--checked:hover .v-checkbox__control {
+.v-checkbox--checked:hover .v-checkbox__control,
+.v-radio:hover .v-radio__control,
+.v-radio--checked .v-radio__control
+.v-radio--checked:hover .v-radio__control {
     border-color: var(--back-color-blue-button);
 }
 
-.v-calendar__button:hover .v-calendar__button--primary:hover {
-    background-color: var(--back-color-blue-button) !important;
-    opacity: 0.8;
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.12);
+}
+
+.loader {
+    border: 2px solid var(--back-color-blue-button) !important;
+    border-top-color: transparent !important
+}
+
+.v-calendar__button--primary:hover {
+    background-color: var(--blue-button-hover) !important;
+}
+
+.comments__content_wrapper__button {
+    border-color: transparent;
+}
+
+.news-widget-skeleton .line {
+    --base-color: var(--text-color-minor);
+    --shine-color: var(--text-color-gray);
+}
+
+.comment__avatar--online::after {
+    background-color: var(--text-color-green);
+    box-shadow: 0 0 0 var(--stroke) var(--color-01ev);
+    -webkit-box-shadow: 0 0 0 var(--stroke) var(--color-01ev);
+}
+
+.dummy #site_logo path {
+    fill: var(--text-color-gray);
+}
+
+.dummy .title {
+    color: var(--text-color-title);
+}
+
+.dummy .text {
+    color: var(--text-color-gray);
+}
+
+.dummy .share_button {
+    color: var(--text-color-title);
+    border: transparent;
+    background-color: var(--hover-04ev);
+}
+
+.dummy .start {
+    background-color: var(--back-color-blue-button);
+    color: var(--text-color-title);
+}
+
+.dummy .start:hover {
+    background-color: var(--blue-button-hover);
 }
 
 /* Header */
-#ui_briefcase path {
-    stroke: var(--text-color-gray) !important;
+.site-header,
+.site-header-container {
+    background-color: var(--color-12ev);
+    color: var(--text-color-gray);
+    box-shadow: none;
 }
 
-#ui_diamond path {
-    fill: var(--text-color-gray) !important;
+.site-header-logo:hover {
+    color: var(--text-color-blue);
 }
 
-.site-header-user-profile__toggle:hover {
+.navigation-profile__toggle:hover {
     opacity: 1;
 }
 
 .head-notifies--showed .head-notifies__toggler .icon,
-.head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.head-notifies__toggler:hover .icon {
+    color: var(--text-color-blue);
+    fill: var(--text-color-blue);
+}
+
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--text-color-blue);
     opacity: 1;
@@ -1745,12 +2035,34 @@ a.v-list__item:hover,
 .item--selected {
     font-weight: 500 !important;
 }
+
 .head-notifies--showed .head-notifies__toggler::after {
     border-bottom: 7px solid var(--color-24ev);
 }
 
 .head-notifies__badge {
     background-color: var(--text-color-red);
+}
+
+.site-header-progressbar__runner {
+    background-color: var(--back-color-blue-button);
+}
+
+#ui_briefcase path {
+    stroke: var(--text-color-gray) !important;
+}
+
+#ui_diamond path {
+    fill: var(--text-color-gray) !important;
+}
+
+#ui_blank path {
+    stroke: var(--text-color-gray) !important;
+}
+
+#v_google_night path,
+#v_apple_night path {
+    fill: var(--color-01ev);
 }
 
 .u-notification__content__button:hover {
@@ -1776,22 +2088,20 @@ a.v-list__item:hover,
     /*НЕ ТРОГАТЬ*/
 }
 
-@media (max-width: 719px) {
+@media (max-width: 859px) {
     .search__field {
         background-color: var(--color-12ev);
     }
-
-    .search .icon {
-        color: var(--text-color-gray) !important;
-    }
-
-    .search__field .icon {
-        color: var(--text-color-minor) !important;
-    }
 }
+
+
 
 .v-split-button {
     color: #FFF;
+}
+
+.uploader__inner--covered:hover .uploader__upload-icon--hidden {
+    color: #fff !important;
 }
 
 .kojur-nav__item a {
@@ -1814,15 +2124,6 @@ a.v-list__item:hover,
     fill: var(--text-color-blue) !important;
 }
 
-.s42-stonks-popup__head {
-    border-color: var(--border-color);
-}
-
-.s42-stonks-popup__footer__button--light,
-.s42-stonks-popup__footer__button--light:hover {
-    background-color: transparent !important;
-}
-
 .comments__item__reply:hover .icon {
     stroke: var(--text-color-blue);
 }
@@ -1843,27 +2144,75 @@ a.v-list__item:hover,
     --icon-color: var(--text-color-blue);
 }
 
+.v-popup-window__close {
+    opacity: 1;
+}
+
+.ui_modal_window__close .icon {
+    fill: var(--text-color-minor);
+}
+
+.v-split-button__dropdown .v-split-button-option:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.v-split-button__dropdown .v-split-button-option:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
 @css {
-    .popover-item__label[style="color: rgb(46, 168, 58);"] {
-        color:var(--text-color-green) !important
+    .popover-item[style*="#2EA83A;"] .popover-item__label {
+        color: var(--text-color-green) !important;
     }
 
-    .popover-item__label[style="color: rgb(229, 46, 58);"] {
-        color:var(--text-color-red) !important
+    .popover-item[style*="#E52E3A;"] .popover-item__label,
+    .popover-item[style*="#E92A40;"] .popover-item__label,
+    .popover-item[style*="#E92A40;"] .popover-item__icon {
+        color: var(--text-color-red) !important;
+    }
+
+    .animated-arrow path[fill="rgb(46,169,59)"] {
+        fill: var(--text-color-green) !important;
+    }
+
+    .animated-arrow path[fill="rgb(230,46,59)"] {
+        fill: var(--text-color-red) !important;
     }
 }
 
-.search__field .v-field--focused .v-field__wrapper {
-    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    border-color: var(--back-color-blue-button) !important;
+.v-subscribe-button--inline .v-button {
+    background-color: transparent !important;
 }
 
-.search__field .v-field:not(.v-field--focused) .v-field__wrapper:hover {
-    border-color: var(--text-color-blue);
-    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
-    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
+    color: var(--text-color-title) !important;
+    background-color: transparent !important;
+    font-weight: 500 !important;
 }
+
+.bookmarks .ui-rounded-button__link:hover,
+.sorting-filters .ui-rounded-button__link:hover {
+    color: var(--text-color-blue) !important;
+}
+
+.v-subscribe-button--inline .v-button:hover {
+    opacity: 1 !important;
+    color: var(--text-color-blue) !important;
+}
+
+.switcher {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    --size: 32px !important;
+}
+
+.switcher:before {
+    background-color: var(--hover-08ev) !important;
+}
+
 /*--------------------------------------------------------*/
 /* Left bar */
 .sidebar-tree-list-item__child-item::before {
@@ -1941,7 +2290,9 @@ a.v-list__item:hover,
 .comments_counter:hover .comments_counter__count__unit,
 .comments_counter:hover .comments_counter__count__value,
 .comments_counter:hover .comments_counter__count__value_new.comments_counter__count__value_new,
-.comments_counter:hover .comments_counter__count__ico svg {
+.comments_counter:hover .comments_counter__count__ico svg,
+.v-repost__button:hover .icon,
+.v-repost--active .v-repost__button .icon {
     fill: var(--text-color-blue) !important;
 }
 
@@ -1955,12 +2306,15 @@ a.v-list__item:hover,
     background-color: var(--back-color-blue-button);
 }
 
-.favorite_marker .icon,
-.comments_counter__count__ico svg {
+.bookmark .icon {
+    fill: var(--text-color-minor) !important;
+}
+
+.comments_counter__count__ico svg,
+.v-repost__button .icon {
     fill: var(--text-color-minor);
 }
 
-.favorite_marker .icon,
 .comments__item__replied_to .icon {
     stroke: #747474;
 }
@@ -1969,9 +2323,8 @@ a.v-list__item:hover,
     stroke: var(--text-color-blue);
 }
 
-.favorite_marker--active .icon {
-    fill: var(--text-color-red);
-    stroke: var(--text-color-red);
+.bookmark--active .icon {
+    fill: var(--text-color-red) !important;
 }
 
 .widget_wrapper--type-blue .widget_wrapper__item {
@@ -1989,6 +2342,11 @@ a.v-list__item:hover,
 .ui-button--5:active {
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.08), 0 -1px 0 rgba(0, 0, 0, 0.05), -1px 0 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.08), 0 -1px 0 rgba(0, 0, 0, 0.05), -1px 0 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05)
+}
+
+.content--embed {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .widget_wrapper__more {
@@ -2048,9 +2406,8 @@ a.v-list__item:hover,
     display: none;
 }
 
-.favorite_marker:hover:not(.favorite_marker--just_clicked) .icon {
-    fill: var(--text-color-red);
-    stroke: var(--text-color-red);
+.bookmark:hover:not(.bookmark--just_clicked) .icon {
+    fill: var(--text-color-red) !important;
 }
 
 .v-shares .popover .icon--v_bookmark_solid {
@@ -2101,10 +2458,17 @@ a.v-list__item:hover,
     fill: var(--text-color-red) !important;
 }
 
+#anon-notification path {
+    fill: var(--text-color-blue);
+}
+
+#anon-notification rect:first-child {
+    fill: var(--hover-16ev);
+}
+
 .ui-dotted-button span {
     border-color: var(--text-color-title) !important;
 }
-
 
 .subsites_tune__item__check {
     border-color: var(--text-color-minor);
@@ -2144,10 +2508,6 @@ a.v-list__item:hover,
     border-radius: 2px;
 }
 
-#notify .notify__item--success {
-    border-left-color: var(--text-color-green);
-}
-
 .ui_sub_menu--bordered:before {
     border-color: var(--color-04ev) !important;
 }
@@ -2159,12 +2519,6 @@ a.v-list__item:hover,
 .page--error .error__ico {
     fill: var(--text-color-gray);
 }
-
-/*if noTitle{
-    .content--short.content--notitle {
-        font-size: 16px;
-    }
-}*/
 
 .booster-promo__button:hover {
     opacity: 1;
@@ -2227,18 +2581,6 @@ a.v-list__item:hover,
 
 
 @media (min-width: 860px) {
-    .profile_comment_favorite .vote__value {
-        background-color: var(--color-02ev);
-    }
-
-    .profile_comment_favorite .vote--sum-positive .vote__value {
-        background: var(--back-green);
-    }
-
-    .profile_comment_favorite .vote--sum-negative .vote__value {
-        background: var(--back-red);
-    }
-
     .notifications-header::after {
         background: var(--border-color-dim);
     }
@@ -2307,8 +2649,8 @@ a.v-list__item:hover,
     border-color: var(--border-color-dim);
 }
 
-.cdx-plugin-settings__item svg {
-    fill: var(--text-color-gray);
+.cdx-plugin-settings__item svg path {
+    stroke: var(--text-color-gray);
 }
 
 .ce-settings__anchor-hash {
@@ -2376,7 +2718,8 @@ a.v-list__item:hover,
 }
 
 .editor .ce-redactor a,
-.miniEditor .ce-redactor a {
+.miniEditor .ce-redactor a,
+.editor .ce-redactor a:not(.t-link-inline):not(.andropov_link) {
     border-color: var(--text-color-blue);
 }
 
@@ -2387,12 +2730,6 @@ a.v-list__item:hover,
 .gallery-image--with-border .gallery-image__media img,
 .gallery-image--with-border .gallery-image__media video {
     border-color: var(--text-color-gray);
-}
-
-.gallery-image__media .upload-button {
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cdx-icon--cover-blue {
@@ -2421,29 +2758,30 @@ a.v-list__item:hover,
     box-shadow: 0 0 0 var(--search-bottom-offset) var(--color-08ev);
 }
 
-.v-field--focused .v-field__wrapper {
-    border-color: var(--back-color-blue-button);
-}
-
-.v-field__wrapper:hover {
-    border-color: var(--back-color-blue-button);
-}
-
-.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-.gallery-image__media-settings:not(.gallery-image__media-settings--small) .upload-button:hover,
-.gallery-image__media-dots:hover {
-    background: rgba(0,0,0,0.75) !important;
+.gallery-image__media-settings .upload-button,
+.gallery-image__media-settings .media-tool-settings,
+.gallery-image__media-dots {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    color: var(--text-color-title) !important;
 }
 
 .gallery-image__media-settings .media-tool-settings__item--active {
-    background-color: transparent !important;
+    background-color: rgba(255,255,255,0.15) !important;
 }
 
-.gallery-image__media-settings .media-tool-settings__item:hover {
-    background-color: rgba(255,255,255,0.15) !important; 
+.gallery-image__media-settings--small .upload-button,
+.gallery-image__media-settings--small .media-tool-settings {
+    background-color: var(--color-04ev) !important;
+}
+
+.gallery-image__media-settings--small .upload-button:hover,
+.gallery-image__media-settings--small .media-tool-settings-item:hover,
+.gallery-image__media-settings--small .media-tool-settings__item--active {
+    background-color: var(--hover-04ev) !important;
+}
+
+.gallery-image__media-settings--small .upload-button__inner {
+    background-color: transparent !important;
 }
 
 .ce-toolbox__item-icon {
@@ -2494,7 +2832,6 @@ a.v-list__item:hover,
     background-color: var(--text-color-blue);
 }
 
-#notify .notify__item p a:hover,
 .advice__caption a:hover,
 .advice__list a:hover,
 .andropov_telegram__text a:hover,
@@ -2591,7 +2928,7 @@ a.v-list__item:hover,
 
 .authorCard,
 .comments_pseudo_form,
-.comments_form {
+.comment-form {
     border-radius: 8px;
 }
 
@@ -2613,12 +2950,10 @@ a.v-list__item:hover,
     fill: #b183d7;
 }
 
-.vote--comment.vote--sum-positive .vote__value {
-    background-color: var(--back-green);
-}
-
-.vote--comment.vote--sum-negative .vote__value {
-    background-color: var(--back-red);
+@media (max-width: 859px) {
+    .vote--comment .vote__value {
+        background-color: transparent !important;
+    }
 }
 
 .comments__item__children {
@@ -2684,6 +3019,10 @@ a.v-list__item:hover,
 
 .switcher-layout__header__supporting-text {
     color: var(--text-color-minor);
+}
+
+.league-block-card::before {
+    border-top-color: var(--color-08ev);
 }
 
 .shares--desktop .shares__close,
@@ -2772,13 +3111,13 @@ a.v-list__item:hover,
     color: rgba(18, 18, 18, 0.6);
 }
 
-.comments_form--focused {
+.comment-form--focused {
     border-color: var(--back-color-blue-button) !important;
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
 }
 
-.comments_form:hover {
+.comment-form:hover {
     border-color: var(--text-color-blue);
     -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
     box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2);
@@ -2800,23 +3139,24 @@ a.v-list__item:hover,
 }
 
 .thesis__custom_button {
-  color: var(--text-color-minor);
-  border-color: var(--text-color-minor);
+    color: var(--text-color-minor);
+    border-color: var(--text-color-minor);
 }
 
 .comments_pseudo_form__text {
-  color: var(--text-color-minor)
+    color: var(--text-color-minor)
 }
 
-.comments {
-    --color-branch: #595959;
-    --color-branch-hover: var(--text-color-blue);
+.comment__branch,
+.comment__branch:not(.comment__branch--max-level):last-child::before {
+    border-color: #595959;
 }
 
-.comment__status::after {
-    background-color: var(--text-color-green);
-    box-shadow: 0 0 0  1px var(--color-01ev);
-    -webkit-box-shadow: 0 0 0  1px var(--color-01ev);
+.comment__branch--highlighted:not(.comment__branch--no-border),
+.comment__branch--highlighted:not(.comment__branch--max-level):last-child::before {
+    border-color: var(--text-color-blue);
+    box-shadow: inset 1px 0 0 0 var(--text-color-blue);
+    -webkit-box-shadow: inset 1px 0 0 0 var(--text-color-blue);
 }
 
 .comments__item__status::after {
@@ -2824,7 +3164,7 @@ a.v-list__item:hover,
     border-color: var(--color-01ev);
 }
 
-.comment__space--highlighted::before, 
+.comment__space--highlighted::before,
 .comment__space--new::before,
 .comment__space--pinned::before,
 .comment__space--with-donate::before {
@@ -2832,12 +3172,8 @@ a.v-list__item:hover,
     -webkit-box-shadow: 0 0 0 4px var(--color-01ev);
 }
 
-.comment__children > .comment:not(.comment--level-last):last-child {
-    -webkit-box-shadow: calc(var(--offset-branch)*-1 - 1px) 0 0 0 var(--color-01ev);
-    box-shadow: calc(var(--offset-branch)*-1 - 1px) 0 0 0 var(--color-01ev);
-}
-
-.comment__self--author .comment-user__name {
+.comment__self--author .comment-user__name,
+.comment__author--highlighted {
     padding: 0 5px;
 }
 
@@ -2858,6 +3194,51 @@ a.v-list__item:hover,
     box-shadow: 0 1px 2px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.06),inset 0 -1px 0 rgba(0,0,0,.12),inset 1px 0 0 rgba(0,0,0,.06),inset -1px 0 0 rgba(0,0,0,.06);
 }
 
+.v-field:not(.v-field--focused).v-field--disabled .v-field__wrapper:hover {
+    border-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.v-field:not(.v-field--focused) .v-field__wrapper:hover {
+    border-color: var(--text-color-blue) !important;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
+
+.v-field--focused .v-field__wrapper {
+    border-color: var(--back-color-blue-button) !important;
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
+
+.amount-select .v-field--selected .v-field__wrapper {
+    border-color: var(--back-color-blue-button) !important;
+}
+
+.amount-select__button--active {
+    border-color: var(--back-color-blue-button) !important;
+    color: var(--text-color-gray) !important;
+}
+
+.amount-select__button:hover {
+    -webkit-box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.2) !important;
+}
+
+@media (min-width: 1025px) {
+    .writing-footer__right {
+        padding-bottom: var(--offset-bottom);
+    }
+
+    .editor-cp-tabs {
+        display: flex !important;
+    }
+
+    .writing-footer__etc {
+        display: none;
+    }
+}
 /******************************************************************/
 /* Messenger */
 .aside__header-button svg path,
@@ -3022,12 +3403,12 @@ a.v-list__item:hover,
     }
 }
 
-.social-links__item--active, 
+.social-links__item--active,
 .social-links__item--active:hover {
     background-color: var(--text-color-blue) !important;
 }
 
-.social-links__item--active .social-links__title, 
+.social-links__item--active .social-links__title,
 .social-links__item--active .social-links__icon,,
 .social-links__item--active .social-links__item-delete
 .social-links__item--active .social-links__item-delete:hover {
@@ -3052,7 +3433,7 @@ a.v-list__item:hover,
 }
 
 .v-header-cover {
-    background-color: var(--text-color-blue) !important;
+    background-color: var(--hover-01ev) !important;
 }
 
 /* Rating */
@@ -3074,6 +3455,8 @@ a.v-list__item:hover,
 
 .v-button--plus {
     background-image: linear-gradient(72.98deg, #7463ea 0%, #534bae 25%, #333a82 100%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .v-button--plus:hover {
@@ -3122,8 +3505,9 @@ a.v-list__item:hover,
     background: none;
 }
 
-#notify .notify__item--error {
-    border-left-color: var(--text-color-red) !important;
+.andropov_telegram__text b,
+.andropov_telegram__text strong {
+    font-weight: 700 !important;
 }
 /*******************************************************************************************************************/
 /******* HLJS THEME FOR BLOCK CODE *******/
@@ -3239,25 +3623,11 @@ input[type="color" i] {
 
 #listedBlockDTFKEKW ol li::marker{
     color: var(--text-color-gray) !important;
-};
+}
 
-
-if scrollbar{
-    ::-webkit-scrollbar {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        width: 12px;
-        background-color: #333437;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        background-color: #555;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 12px;
-    }
+.editor-cp-tab__content {
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.25);
 }
 
 if alternativePost{
@@ -3272,67 +3642,23 @@ if alternativePost{
     }
 }
 
-/*if messagesScroll{
-    .chat-messages {
-        margin-right: 0 !important;
-    }
-}*/
-
-if likesBack{
-    .vote--content.vote--voted-positive .vote__button--plus:before,
-    .vote--content.vote--voted-negative .vote__button--minus:before,
-    .vote--content .vote__button--plus:hover:before,
-    .vote--content .vote__button--minus:hover:before {
-        background-color: transparent !important;
-    }
-}
-
-/*if standardSidebars {
+if alternativeSidebars {
     .sidebar,
-    .live,
-    .sidebar-tree-list__show-more-button,
-    .layout__left-column,
-    .live__caption,
-    .live__content  {
-        background-color: transparent !important;
-    }
-
-    .sidebar__footer {
-        background-color: var(--color-00ev) !important;
-    }
-
-    .u-notification--blue.u-notification--bg,
-    .u-notification--green.u-notification--bg,
-    .u-notification--red.u-notification--bg {
-        background-color: var(--hover-00ev) !important;
-    }
-
-    .sidebar-tree-list-item--active,
-    .sidebar-tree-list-item:hover {
+    .sidebar__footer,
+    .layout__right-column,
+    .sidebar-tree-list__show-more-button {
         background-color: var(--color-01ev) !important;
     }
 
-    .sidebar-tree-list-item__child-item:hover {
+    .sidebar-tree-list-item--active,
+    .sidebar-tree-list-item:hover,
+    .sidebar-tree-list-item__child-item:hover,
+    .u-notification--blue.u-notification--bg,
+    .u-notification--green.u-notification--bg,
+    .u-notification--red.u-notification--bg {
         background-color: var(--hover-01ev) !important;
     }
-
-    @media (max-width: 1560px) and (min-width: 860px) {
-        .page--entry {
-            border: none !important;
-        }
-    }
-
-    @media (max-width: 859px) {
-        .sidebar,
-        .live,
-        .sidebar-tree-list__show-more-button,
-        .layout__left-column,
-        .live__caption,
-        .live__content {
-            background-color: var(--color-00ev) !important;
-        }
-    }
-}*/
+}
 
 if imgBrightness {
     .andropov_image__inner img, .andropov_video, .gall__item, .block-person .andropov_image {
@@ -3347,57 +3673,17 @@ if imgBrightness {
 }
 
 if editorHeaderTop {
-    @media (min-width: 860px) {
-        .page--editor .wrapper {
-            padding-top: 0 !important;
-        }
-        
-        .page--editor .header {
-            margin-bottom: 30px;
-            top: 60px !important;
-        }
-        
-        .page--editor .tab__content {
-            bottom: auto !important;
-        }
-        
-        .tab--active .tab__label:after {
-            bottom: 0 !important;
-            top: auto !important;
-        }
-
-        .header__left {
-            order: 2 !important;
-            margin-left: auto !important;
-            margin-right: 0 !important;
-            flex-direction: row-reverse !important;
-        }
-
-        .header__left .v-button:not(:last-child) {
-            margin-right: 0 !important;
-            margin-left: 12px !important;
-        }
-
-        .header__right {
-            margin-left: 0 !important;
-            margin-right: 20px !important;
-        }
-
-        .header__right .tab__label {
-            padding: 0 12px 0 0 !important;
-        }
-
-        .tab--active .tab__label:after {
-            left: 0 !important;
-        }
-
-        .editor__actions {
-            order: 0;
-            top: 0;
-        }
-    }
-
     @media (min-width: 1025px) {
+        .writing__footer {
+            order: unset;
+            align-items: end;
+            height: 50px;
+        }
+
+        .writing-footer {
+            height: 50px;
+        }
+
         .editor-cp-tab__content {
             top: auto;
             bottom: auto;
@@ -3408,50 +3694,32 @@ if editorHeaderTop {
             top: auto;
         }
     }
-
-    
-    .page--editor .header {
-        order: unset;
-    }
 }
 
 if reversedEditorButtons {
     @media (min-width: 1025px) {
-        .editor-cp__content {
+        .writing-footer__content,
+        .writing-footer__left {
             flex-direction: row-reverse;
         }
 
-        .editor-cp__left {
+        .writing-footer__left {
             margin-right: 0;
             margin-left: auto;
-            flex-direction: row-reverse; 
+            flex-direction: row-reverse;
         }
 
-        .editor-cp__right {
+        .writing-footer__right {
             margin-right: 20px;
             margin-left: 0;
-        }
-
-        .editor-cp-tab--active .editor-cp-tab__label:after {
-            left: 0;
-            right: 0;
         }
 
         .editor-cp-tab__label {
             padding: 0;
         }
 
-        .editor-cp__left .v-button:first-of-type {
-            margin-right: 0;
-        }
-
-        .editor-cp__left .v-button:last-of-type {
-            margin-right: 12px;
-        }
-
-        .editor-cp__autosave {
-            margin-left: 0;
-            margin-right: 14px;
+        .writing-footer__autosave {
+            width: 120px;
         }
     }
 }
@@ -3498,53 +3766,133 @@ if alternativeHiddenBlock {
     }
 }
 
-if hideMiniEditorInFeed {
-    .page--index > .mini-editor {
-        display: none;
-    }
-
-    .app--content-feed #page_wrapper {
-        padding-top: 0;
-    }
-}
-
 if verticalImageViewInFeed {
     .feed__item .content-image--vertical:not(.content-image--with_background) .andropov_image {
         margin: 0 auto 0 auto;
     }
 }
 
-if oldCommentsAvatars {
-    .comment__avatar {
+if oldAvatars {
+    .comment__avatar__image,
+    .subsite-card__avatar,
+    .site-header-container .navigation-user-profile__avatar-image {
         border-radius: 7px;
     }
 
-    .comment__status {
-        -webkit-transform: translate(-8px,4px);
-        transform: translate(-8px,4px);
+    .user-card__avatar,
+    .subsite__image {
+        border-radius: 7px !important;
     }
-
-    .comment__avatar::after {
-        display: none;
-    }   
 }
 
 if alternativeThreads {
-    .comment__children > .comment:not(.comment--level-last):last-child {
-        -webkit-box-shadow: -19px 0 0 0 var(--color-01ev);
-        box-shadow: -19px 0 0 0 var(--color-01ev);
+    .comment__branch--hidden {
+        visibility: inherit;
     }
 
-    .comment__other:hover>.comment__children>.comment:not(.comment--level-last):last-child::before {
-        bottom: auto;
+    .comment__branch--no-border {
+        height: auto;
+    }
+
+    .comment__branch--highlighted {
+        border-color: var(--text-color-blue);
+        box-shadow: inset 1px 0 0 0 var(--text-color-blue);
+        -webkit-box-shadow: inset 1px 0 0 0 var(--text-color-blue);
     }
 }
 
-/*if hideShittyButton {
-    .ui-filters__inner > .ui-rounded-button:nth-of-type(3) {
+if hideAllFeedSidebar {
+    .sidebar-tree-list-item[href="/new"],
+    .sidebar-tree-list-item[href="/popular"] {
+        display: none;
+    }
+}
+
+if hideTrashSidebar {
+    .sidebar-tree-list-item[href="/cabinet"],
+    .sidebar-tree-list-item[href="/job"],
+    .sidebar-tree-list-item[href="/rating"],
+    .sidebar-tree-list-item[href="/subs"],
+    .sidebar-tree-list-item[href="/events"],
+    .sidebar-tree-list-item[href="/companies"] {
+        display: none;
+    }
+}
+
+if hideDonate {
+    .site-header .support {
         display: none !important;
     }
-}*/
+}
+
+if hideRecommendations {
+        .recommendation-feed {
+            display: none;
+        }
+}
+
+if alternativeAccountMenu {
+    .account-menu__title {
+        margin-bottom: 2px !important;
+    }
+
+    @media (min-width: 720px) {
+        .account-menu__items-group {
+            margin-top: 2px !important;
+        }
+    }
+
+    .account-menu__subsite-wrapper,
+    .account-menu__button-wrapper,
+    .account-menu__item-wrapper {
+        padding: 0px 0px !important;
+    }
+
+    .account-menu__subsite-wrapper:not(:last-child),
+    .account-menu__button-wrapper:not(:last-child),
+    .account-menu__item-wrapper:not(:last-child) {
+        margin-bottom: 2px !important;
+    }
+
+    [data-gtm="Account — Exit — Click"] {
+        color: var(--text-color-red) !important;
+    }
+
+    .navigation-user__account-menu {
+        width: auto !important;
+        max-width: 300px;
+    }
+
+    .account-menu__item {
+        min-width: 230px;
+    }
+    @media (min-width: 720px) {
+        .user-card__avatar {
+            width: 28px !important;
+            height: 28px !important;
+        }
+    }
+
+    .user-card__text {
+        color: var(--text-color-gray) !important;
+        font-weight: 400 !important;
+    }
+}
+
+if alternativeQuoteBlock {
+    .block-quote__content {
+        background-color: var(--hover-01ev);
+        border-radius: 8px;
+        padding: 12px 12px;
+        grid-template-columns: 36px auto;
+        max-width: 600px;
+    }
+
+    .block-quote__content .icon {
+        width: 36px;
+        height: 36px;
+    }
+}
 }
 
 @-moz-document domain("vc.ru") {
@@ -3561,16 +3909,22 @@ if alternativeThreads {
 .sidebar-tree-list-item__child-item--active,
 .site-header-burger:hover,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .ui-rounded-button--active .ui-rounded-button__link,
 .content-editorial-tick,
 .site-header-logo:hover,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+.block-quote__content .icon {
     color: var(--site-color) !important;
+}
+
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
+    color: var(--text-color-title) !important;
 }
 
 .sidebar__footer__item--sponsor span,
@@ -3581,13 +3935,29 @@ if alternativeThreads {
     background-color: var(--site-color) !important;
 }
 
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
+    box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12);
+}
+
+.v-field--focused .v-field__wrapper,
+.comment-form--focused {
+    -webkit-box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(175, 68, 72, 0.12) !important;
+}
+
+.sidebar__footer__item--sponsor span {
+    -webkit-text-fill-color: var(--site-color) !important;
+}
+
 .st0 {
     fill: var(--text-color-gray) !important;
 }
 
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--site-color) !important;
 }
@@ -3621,6 +3991,14 @@ if alternativeThreads {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #e57373), color-stop(7%, #e57373), to(#af4448));
     background-image: linear-gradient(90deg, #e57373 -41%, #e57373 7%, #af4448 100%);
 }
+
+.v-button--plus {
+    background-image: linear-gradient(72.98deg, #e57373 0%, #af4448 25%, #8b373a 100%);
+}
+
+.v-button--plus:hover {
+    background-image: linear-gradient(-72.98deg, #e57373 0%, #af4448 25%, #8b373a 100%);
+}
 }
 
 @-moz-document domain("tjournal.ru") {
@@ -3638,8 +4016,18 @@ if alternativeThreads {
 .v-button--blue .v-button__label,
 .v-button--blue .v-button__icon,
 .ui-button--1,
-#s42-feed-link-new-entries-badge {
-    color: #000;
+.v-checkbox__icon,
+.page--plus .plus-buy {
+    color: var(--color-00ev);
+}
+
+.wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text,
+.navigation-create .v-button,
+.v-button--plus,
+.v-plus-badge,
+.block-special-button a,
+.comments_updates__counter {
+    color: var(--color-00ev) !important;
 }
 
 .sidebar-tree-list-item--active,
@@ -3647,16 +4035,26 @@ if alternativeThreads {
 .sidebar-tree-list-item__child-item--active,
 .site-header-burger:hover,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .ui-rounded-button--active .ui-rounded-button__link,
 .content-editorial-tick,
 .site-header-logo:hover,
-.site-header-user-login:hover,
+.navigation-user-login:hover,
 .quiz__panel__button,
 .quiz__panel__button__label,
 .quiz__item__voted__count,
-.page--plus .plus-features__item .icon {
+.page--plus .plus-features__item .icon,
+.block-quote__content .icon {
     color: var(--site-color) !important;
+}
+
+.page--index .slick-slider .slick-slide > div > div > a > div > svg > path {
+    fill: var(--site-color);
+}
+
+.bookmarks .ui-rounded-button__link,
+.sorting-filters .ui-rounded-button__link {
+    color: var(--text-color-title) !important;
 }
 
 .sidebar__footer__item--sponsor span,
@@ -3667,18 +4065,40 @@ if alternativeThreads {
     background-color: var(--site-color) !important;
 }
 
+.v-radio:hover .v-radio__control,
+.v-checkbox:hover .v-checkbox__control {
+    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
+    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
+}
+
+.v-field--focused .v-field__wrapper,
+.comment-form--focused {
+    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
+}
+
+.sidebar__footer__item--sponsor span {
+    -webkit-text-fill-color: var(--site-color) !important;
+}
+
 .st0 {
     fill: var(--text-color-gray) !important;
 }
 
 .head-notifies--showed .head-notifies__toggler .icon,
 .head-notifies__toggler:hover .icon,
-.site-header-user-profile__toggle:hover,
+.navigation-user-profile__toggle:hover,
 .site-header-burger:hover {
     fill: var(--site-color) !important;
 }
 
-.new-entries-horizon svg [data-accent-color-stroke] {
+path[stroke="#EEA502"] {
+    fill: none !important;
+    stroke: var(--site-color) !important;
+}
+
+.new-entries-horizon svg [data-accent-color-stroke],
+.league-logo path {
     stroke: var(--site-color);
 }
 
@@ -3707,6 +4127,14 @@ if alternativeThreads {
 .plus-badge {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
     background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
+}
+
+.v-button--plus {
+    background-image: linear-gradient(72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
+}
+
+.v-button--plus:hover {
+    background-image: linear-gradient(-72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
 }
 }
 
@@ -3823,70 +4251,8 @@ html[stylus-iframe*="vc.ru"] .Footer {
 }
 }
 
-@-moz-document url-prefix("https://api.dtf.ru/") {
+@-moz-document url-prefix("https://api.dtf.ru/"), url-prefix("https://api.tjournal.ru/"), url-prefix("https://api.vс.ru/") {
 body {
     color: var(--text-color-gray);
-}
-}
-
-@-moz-document domain("twitter.com") {
-:root {
-    --text-color-gray: rgba(255, 255, 255, 0.69);
-    --text-color-title: rgba(255, 255, 255, 0.87);
-    --text-color-blue: #AAB6FE;
-    --text-color-minor: rgba(255, 255, 255, 0.38);
-    --text-color-red: #ff5857;
-    --back-color-blue-button: #534bae;
-    --blue-button-hover: #49599a;
-    --color-04ev: #272727;
-    --color-06ev: #2c2c2c;
-    --color-08ev: #2f2f2f;
-    --color-12ev: #333333;
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-9x6qib {
-    border: none !important;
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-zv2cs0 {
-    background-color: rgba(170, 182, 254, 0.1);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-14lw9ot {
-    background-color: var(--color-06ev);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-1u4rsef {
-    background-color: var(--color-08ev);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-vqp9x9 {
-    background-color: var(--color-12ev);    
-}
-html[stylus-iframe*="tjournal.ru"] .r-vrwoeq{
-    background-color: var(--text-color-minor);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0 {
-    color: var(--text-color-title);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-d0pm55.r-bcqeeo.r-1ny4l3l.r-1ddef8g.r-qvutc0,
-html[stylus-iframe*="tjournal.ru"] .css-901oao.css-bfa6kz.r-hkyrab.r-1qd0xha.r-a023e6.r-vw2c0b.r-ad9z0x.r-bcqeeo.r-3s2u2q.r-qvutc0:hover,
-html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.css-16my406.r-1re7ezh.r-1loqt21.r-1qd0xha.r-ad9z0x.r-bcqeeo.r-qvutc0:hover,
-html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1q142lx.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-a5pmau.r-bcqeeo.r-1ny4l3l.r-1ddef8g.r-qvutc0 {
-    color: var(--text-color-blue) !important;
-}
-html[stylus-iframe*="tjournal.ru"] .css-4rbku5.css-18t94o4.css-901oao.r-1re7ezh.r-1loqt21.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-d0pm55.r-bcqeeo.r-qvutc0 {
-    color: var(--text-color-minor) !important;
-}
-html[stylus-iframe*="tjournal.ru"] .css-901oao.r-hkyrab.r-1dqbpge.r-1qd0xha.r-1b6yd1w.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0,
-html[stylus-iframe*="tjournal.ru"] .r-1re7ezh,
-html[stylus-iframe*="tjournal.ru"] .r-hkyrab {
-    color: var(--text-color-gray);
-}
-    
-html[stylus-iframe*="tjournal.ru"] .r-13gxpu9 {
-    color: var(--text-color-blue);
 }
 }
