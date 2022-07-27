@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.7.2
+@version        1.7.3
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -1324,7 +1324,7 @@ attachButton:hover,
 .writing .ce-header::before,
 .gallery-image__inputs .input--title:empty:before,
 .writing .cdx-input::before,
-.incut-tool [contenteditable]:empty::before, 
+.incut-tool [contenteditable]:empty::before,
 .incut-tool [contenteditable] p:first-of-type:empty::before,
 .audio-tool-title::-webkit-input-placeholder,
 .quiz-tool-input:empty:before {
@@ -4031,7 +4031,8 @@ if alternativeQuoteBlock {
 }
 
 .wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text,
-.navigation-create .v-button,
+.navigation-create .v-button .v-button__label,
+.navigation-create .v-button .v-button__icon,
 .v-button--plus,
 .v-plus-badge,
 .block-special-button a,
