@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.9.0
+@version        1.9.1
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -3956,6 +3956,9 @@ if alternativeQuoteBlock {
     }
 }
 
+}
+
+@-moz-document domain("dtf.ru") {
 if alternativeLikes {
     .content-footer__item:first-child {
         order: 5;
@@ -3994,6 +3997,15 @@ if alternativeLikes {
     .comment__action--etc {
         order: 11;
         margin-left: 0;
+    }
+    
+    .comments_counter__count:first-child {
+        order: 2;
+    }
+    
+    .comments_counter__count:last-child {
+        order: 1;
+        margin-right: 4px;
     }
 }
 
@@ -4103,6 +4115,7 @@ if alternativeLikes {
 .v-button--plus:hover {
     background-image: linear-gradient(-72.98deg, #e57373 0%, #af4448 25%, #8b373a 100%);
 }
+
 }
 
 @-moz-document domain("tjournal.ru") {
@@ -4272,10 +4285,12 @@ html[stylus-iframe*="tjournal.ru"] .Footer,
 html[stylus-iframe*="vc.ru"] .Footer {
     border-color: var(--text-color-minor);
 }
+
 }
 
 @-moz-document url-prefix("https://api.dtf.ru/"), url-prefix("https://api.tjournal.ru/"), url-prefix("https://api.vс.ru/") {
 body {
     color: var(--text-color-gray);
 }
+
 }
