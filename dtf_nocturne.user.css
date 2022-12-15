@@ -4009,7 +4009,7 @@ if alternativeLikes {
     }
     
     .comments_counter--num .comments_counter__count__value {
-        margin-left: 4px;
+        margin-left: 4px !important;
     }
 }
 
