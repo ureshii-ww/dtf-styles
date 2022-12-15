@@ -4007,6 +4007,10 @@ if alternativeLikes {
         order: 1;
         margin-right: 4px;
     }
+    
+    .comments_counter--num .comments_counter__count__value {
+        margin-left: 4px;
+    }
 }
 
 }
