@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.7.2
+@version        1.8.0
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -23,7 +23,7 @@
 @var            checkbox  hideRecommendations 'Скрыть рекомендации' 0
 ==/UserStyle== */
 
-@-moz-document domain("dtf.ru"), domain("tjournal.ru"), domain("vc.ru") {
+@-moz-document domain("dtf.ru"), domain("vc.ru") {
 :root {
     --text-color-gray: rgba(255, 255, 255, 0.69);
     --text-color-title: rgba(255, 255, 255, 0.87);
@@ -1324,7 +1324,7 @@ attachButton:hover,
 .writing .ce-header::before,
 .gallery-image__inputs .input--title:empty:before,
 .writing .cdx-input::before,
-.incut-tool [contenteditable]:empty::before, 
+.incut-tool [contenteditable]:empty::before,
 .incut-tool [contenteditable] p:first-of-type:empty::before,
 .audio-tool-title::-webkit-input-placeholder,
 .quiz-tool-input:empty:before {
@@ -4012,139 +4012,58 @@ if alternativeQuoteBlock {
 
 @-moz-document domain("tjournal.ru") {
 :root {
+    color-scheme: dark;
+    
     --back-color-blue-button: #f9a825;
     --blue-button-hover: #fbc02d;
-    --site-color: rgba(255, 224, 130, 0.93);
-    --primary-color: var(--back-color-blue-button);
-    --switchers-color: var(--back-color-blue-button);
+    
+    --text-color-gray: rgba(255, 255, 255, 0.69);
+    --text-color-title: rgba(255, 255, 255, 0.87);
+    --text-color-blue: #AAB6FE;
+    --text-color-minor: rgba(255, 255, 255, 0.38);
+    --text-color-red: #ff5857;
+    
+    --color-00ev: #121212;
+    --color-01ev: #1e1e1e;
+    --color-12ev: #333333;
+    
+    --hover-01ev: #272727;
+    
+    --color-brand: var(--back-color-blue-button);
+    --color-bg-backdrop: var(--color-00ev);
+    --color-bg-primary: var(--color-01ev);
+    --color-text-primary: var(--text-color-gray);
+    --color-text-link: var(--text-color-blue);
+    --color-text-secondary: var(--text-color-minor);
 }
 
-.v-split-button,
-.new_entries__counter,
-.page--editor .icon--writing-save,
-.v-button--blue .v-button__label,
-.v-button--blue .v-button__icon,
-.ui-button--1,
-.v-checkbox__icon,
-.page--plus .plus-buy {
-    color: var(--color-00ev);
+.stub h1,
+.content-header__title,
+.post__title,
+.block-header {
+    color: var(--text-color-title)
 }
 
-.wtf_broadcast .wtf_bc--need-more-items .wtf_bc--need-more-items--text,
-.navigation-create .v-button,
-.v-button--plus,
-.v-plus-badge,
-.block-special-button a,
-.comments_updates__counter {
-    color: var(--color-00ev) !important;
+.app__header {
+    background-color: var(--color-12ev)
 }
 
-.sidebar-tree-list-item--active,
-.sidebar-tree-list-item--active:not(.sidebar-tree-list-item--with-active-child) .sidebar-tree-list-item__icon,
-.sidebar-tree-list-item__child-item--active,
-.site-header-burger:hover,
-.head-notifies__toggler:hover .icon,
-.navigation-user-profile__toggle:hover,
-.ui-rounded-button--active .ui-rounded-button__link,
-.content-editorial-tick,
-.site-header-logo:hover,
-.navigation-user-login:hover,
-.quiz__panel__button,
-.quiz__panel__button__label,
-.quiz__item__voted__count,
-.page--plus .plus-features__item .icon,
-.block-quote__content .icon {
-    color: var(--site-color) !important;
+.archive-item:hover {
+    opacity: 1
 }
 
-.page--index .slick-slider .slick-slide > div > div > a > div > svg > path {
-    fill: var(--site-color);
+body a:hover {
+    color: var(--text-color-red)
 }
 
-.bookmarks .ui-rounded-button__link,
-.sorting-filters .ui-rounded-button__link {
-    color: var(--text-color-title) !important;
+.archive-item:hover .archive-item__title {
+    color: var(--text-color-blue)
 }
 
-.sidebar__footer__item--sponsor span,
-.v-tab--active .v-tab__label::after,
-.quiz__item__progressbar__runner,
-.quiz__item__progressbar,
-.ui-tab--active .ui-tab__label:after {
-    background-color: var(--site-color) !important;
+.block-warning {
+    background-color: var(--hover-01ev)
 }
 
-.v-radio:hover .v-radio__control,
-.v-checkbox:hover .v-checkbox__control {
-    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
-    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12);
-}
-
-.v-field--focused .v-field__wrapper,
-.comment-form--focused {
-    -webkit-box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
-    box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.12) !important;
-}
-
-.sidebar__footer__item--sponsor span {
-    -webkit-text-fill-color: var(--site-color) !important;
-}
-
-.st0 {
-    fill: var(--text-color-gray) !important;
-}
-
-.head-notifies--showed .head-notifies__toggler .icon,
-.head-notifies__toggler:hover .icon,
-.navigation-user-profile__toggle:hover,
-.site-header-burger:hover {
-    fill: var(--site-color) !important;
-}
-
-path[stroke="#EEA502"] {
-    fill: none !important;
-    stroke: var(--site-color) !important;
-}
-
-.new-entries-horizon svg [data-accent-color-stroke],
-.league-logo path {
-    stroke: var(--site-color);
-}
-
-.widget_wrapper--type-yellow .widget_wrapper__item {
-    border-color: var(--border-color) !important;
-}
-
-.widget_wrapper--type-yellow .widget_wrapper__col:after,
-.island--blogs_entries .blogs_entries__item:before {
-    background-color: var(--border-color) !important;
-}
-
-.quiz__item__check {
-    border-color: var(--site-color);
-}
-
-.quiz__panel__button__label {
-    border-color: var(--site-color);
-}
-
-.v-plus-badge {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
-    background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
-}
-
-.plus-badge {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(-41%, #ffe082), color-stop(7%, #fbc02d), to(#f9a825));
-    background-image: linear-gradient(90deg, #ffe082 -41%, #fbc02d 7%, #f9a825 100%);
-}
-
-.v-button--plus {
-    background-image: linear-gradient(72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
-}
-
-.v-button--plus:hover {
-    background-image: linear-gradient(-72.98deg, #ffe082 0%, #f9a825 25%, #e5991f 100%);
-}
 }
 
 @-moz-document domain("instagram.com") {
