@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DTF Nocturne
 @namespace      github.com/openstyles/stylus
-@version        1.8.0
+@version        1.9.0
 @description    💗💗💗
 @author         Ureshii 死者, helped by selpast, prostagma?
 @homepageURL    https://dtf.ru/u/197370-le-mort-joyeux/255051-le-dtf-nocturne
@@ -9,6 +9,7 @@
 @var            checkbox  alternativeSidebars 'Альтернативный вид боковых панелей' 0
 @var            checkbox  alternativeThreads 'Альтернативный вид веток комментариев' 0
 @var            checkbox  alternativeHiddenBlock 'Альтернативный вид скрытого блока (с разымытием)' 0
+@var            checkbox  alternativeLikes 'Альтернативный вид лайков (справа)' 0
 @var            checkbox  oldAvatars 'Квадратные аватарки' 0
 @var            checkbox  alternativeAccountMenu 'Альтернативный вид меню профиля' 0
 @var            checkbox  alternativeQuoteBlock 'Альтернативный вид блока цитаты' 0
@@ -1327,7 +1328,8 @@ attachButton:hover,
 .incut-tool [contenteditable]:empty::before,
 .incut-tool [contenteditable] p:first-of-type:empty::before,
 .audio-tool-title::-webkit-input-placeholder,
-.quiz-tool-input:empty:before {
+.quiz-tool-input:empty:before,
+.like-button {
     color: var(--text-color-minor) !important;
 }
 
@@ -1573,7 +1575,8 @@ a.comment__avatar:hover + a.comment__author,
 .gallery__items .upload-button,
 .block-quote__content .icon,
 .editor-content .quote-tool__layout-icon,
-.v-subscribe-button--inline .v-button {
+.v-subscribe-button--inline .v-button,
+.v-repost:hover .v-repost__button {
     color: var(--text-color-blue) !important;
 }
 
@@ -1672,7 +1675,8 @@ a.comment__avatar:hover + a.comment__author,
 .favorite_marker:hover:not(.favorite_marker--just_clicked) .bookmarks_return,
 .bookmark:hover .bookmark__title,
 .bookmark--active .bookmark__title,
-.v-field__error {
+.v-field__error,
+.like-button--active {
     color: var(--text-color-red) !important;
 }
 
@@ -2019,6 +2023,58 @@ a.comment__avatar:hover + a.comment__author,
     background-color: var(--blue-button-hover);
 }
 
+/* New Likes */
+.comments_counter__count__ico::before, 
+.v-repost::before, 
+.bookmark::before,
+.like-button__icon::before {
+    background-color: transparent !important;
+}
+
+.like-button--action-like {
+    --like-color-text-hover: var(--text-color-red);
+    --like-color-background-hover: var(--text-color-red);
+    --like-color-active: var(--text-color-red);
+}
+
+#v_like_active path {
+    fill: var(--text-color-red);
+}
+
+.like-button--action-like .like-button__lottie svg defs linearGradient stop {
+    stop-color: var(--text-color-red);
+}
+
+.like-button--action-like .like-button__lottie svg g g:first-child:last-child path {
+    fill: var(--text-color-red);
+}
+
+.like-button--action-like .like-button__lottie svg g g:not(:first-child):not(:last-child) path {
+    stroke: var(--text-color-red);
+}
+
+.like-button--action-dislike {
+    --like-color-text-hover: var(--back-color-blue-button);
+    --like-color-background-hover:  var(--back-color-blue-button);
+    --like-color-active: var(--back-color-blue-button);
+}
+
+#v_dislike_active path {
+    fill: var(--back-color-blue-button) !important;
+}
+
+.like-button--action-dislike .like-button__lottie svg defs linearGradient stop {
+    stop-color: var(--back-color-blue-button);
+}
+
+.like-button--action-dislike .like-button__lottie svg g g:not(:nth-child(2)) path {
+    fill: var(--back-color-blue-button);
+}
+
+.like-button--action-dislike .like-button__lottie svg g g:nth-child(2) path {
+    stroke: var(--back-color-blue-button);
+}
+
 /* Header */
 .site-header,
 .site-header-container {
@@ -2299,14 +2355,12 @@ a.comment__avatar:hover + a.comment__author,
     background-color: var(--text-color-red);
 }
 
-.comments_counter--has_new .comments_counter__count__ico svg,
 .comments_counter--has_new .comments_counter__count__value_new svg,
 .comments_counter:hover .comments_counter__count__unit,
 .comments_counter:hover .comments_counter__count__value,
 .comments_counter:hover .comments_counter__count__value_new.comments_counter__count__value_new,
 .comments_counter:hover .comments_counter__count__ico svg,
-.v-repost__button:hover .icon,
-.v-repost--active .v-repost__button .icon {
+.v-repost__button:hover .icon {
     fill: var(--text-color-blue) !important;
 }
 
@@ -2324,8 +2378,7 @@ a.comment__avatar:hover + a.comment__author,
     fill: var(--text-color-minor) !important;
 }
 
-.comments_counter__count__ico svg,
-.v-repost__button .icon {
+.comments_counter__count__ico svg {
     fill: var(--text-color-minor);
 }
 
@@ -3902,6 +3955,48 @@ if alternativeQuoteBlock {
         height: 36px;
     }
 }
+
+if alternativeLikes {
+    .content-footer__item:first-child {
+        order: 5;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .like-button--action-like .like-button__icon {
+        margin-right: 0;
+    }
+
+    .like-button--action-like .like-button__count {
+        margin-left: 10px;
+    }
+
+    .content-footer__item--right {
+        order: 6;
+        margin-left: 0px;
+    }
+
+    .comment__action {
+        order: 10;
+    }
+
+    .comment__content .like-button--action-like {
+        order: 12;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .comment__content .like-button--action-dislike {
+        order: 13;
+        margin-left: 0;
+    }
+
+    .comment__action--etc {
+        order: 11;
+        margin-left: 0;
+    }
+}
+
 }
 
 @-moz-document domain("vc.ru") {
